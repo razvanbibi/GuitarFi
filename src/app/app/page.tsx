@@ -1045,14 +1045,14 @@ export default function HomePage() {
     const APP_URL = "https://celo-daily.vercel.app/";
 
     const text =
-      "CeloDaily\n\n" +
+      "GuitarFi\n\n" +
       "Building a daily habit on Celo. Checking in, growing my streak, earning 0xtxn.\n\n" +
       "Join the journey 👇";
 
     try {
       if (navigator.share) {
         await navigator.share({
-          title: "CeloDaily",
+          title: "GuitarFi",
           text,
           url: APP_URL,
         });
@@ -1431,7 +1431,7 @@ export default function HomePage() {
                 className={`text-base font-semibold tracking-tight ${isDarkMode ? "text-sky-100" : "text-slate-900"
                   }`}
               >
-                CeloDaily
+                GuitarFi
               </span>
 
               <span
@@ -2751,7 +2751,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-semibold">Welcome to CeloDaily</span>
+                <span className="text-sm font-semibold">Welcome to GuitarFi</span>
                 <span className="text-[11px] text-slate-300">
                   Check in every day on Celo, grow your streak and earn 0xtxn rewards.
                 </span>
@@ -3406,7 +3406,7 @@ export default function HomePage() {
           </div>
 
           <div className="mt-3 text-center text-[10px] text-slate-500">
-            © 2026 CeloDaily by{" "}
+            © 2026 GuitarFi by{" "}
             <a
               href="https://celoscan.io/token/0xf3473730b41f0f5720bc8aa8fade0480062125ba"
               target="_blank"
@@ -3438,7 +3438,7 @@ export default function HomePage() {
           >
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-sm font-semibold flex items-center gap-1">
-                <span>About CeloDaily</span>
+                <span>About GuitarFi</span>
                 <span>📒</span>
               </h3>
               <button
@@ -3451,7 +3451,7 @@ export default function HomePage() {
             </div>
 
             <p className="mb-2 text-[11px] text-slate-300">
-              CeloDaily is a miniapp where you Check-in to the Celo network every day to increase your streak and unlock 0xtxn rewards.
+              GuitarFi is a miniapp where you Check-in to the Celo network every day to increase your streak and unlock 0xtxn rewards.
             </p>
 
             <p className="mb-2 text-[11px] text-slate-300">
@@ -3523,7 +3523,7 @@ export default function HomePage() {
                 }
   `}
             >
-              {hasIdentityNFT ? "Your Identity" : "Mint Your CeloDaily Identity"}
+              {hasIdentityNFT ? "Your Identity" : "Mint Your GuitarFi Identity"}
 
               {/* subtle underline glow */}
               {hasIdentityNFT && (
@@ -3612,7 +3612,7 @@ export default function HomePage() {
 
               <div className="flex items-center justify-center gap-2 pt-2 text-[10px] text-slate-400 text-center">
                 <img src="/logo-0x.png" className="h-4 w-4" />
-                CeloDaily Identity NFT
+                GuitarFi Identity NFT
               </div>
             </div>
 
