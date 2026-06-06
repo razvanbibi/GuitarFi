@@ -20,7 +20,7 @@ export default function LandingPage() {
         <div className="text-white text-2xl font-bold tracking-wide">
           🎸 GuitarFi
         </div>
-
+ 
         <Link
           href="/app"
           className="
