@@ -1420,7 +1420,7 @@ export default function HomePage() {
           <div className="flex items-center gap-2">
             <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center">
               <img
-                src={isDarkMode ? "/logo-0x.jpg" : "/logo-0x-day.png"}
+                src={isDarkMode ? "/logo-0x.jpg" : "/logo-0x-day.jng"}
                 alt="0x logo"
                 className="h-full w-full object-contain transition-opacity duration-200"
               />
