@@ -1,0 +1,407 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes toast-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.02);
+    box-shadow: 0 12px 40px 0 rgba(56, 189, 248, 0.45);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 8px 30px 0 rgba(15, 23, 42, 0.9);
+  }
+}
+
+@keyframes overlayFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(4px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: blur(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== Header micro-animations ===== */
+
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.55);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+    filter: brightness(1.15);
+  }
+}
+
+@keyframes badge-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes badge-glow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4));
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.9));
+    transform: scale(1.15);
+  }
+}
+
+@keyframes flashGlow {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes basedPop {
+  0% {
+    transform: scale(0.9);
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.08);
+    letter-spacing: 0.14em;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    letter-spacing: 0.12em;
+  }
+}
+
+@keyframes basedBlock {
+  0% {
+    transform: translateX(-8px) scale(0.9);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateX(2px) scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes avatar-run {
+  from {
+    left: 5%;
+    transform: translateX(-50%) translateY(-6px) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    left: var(--target-x);
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes avatar-fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes leg-run {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.leg {
+  width: 5px;
+  height: 10px;
+  background: white;
+  border-radius: 3px;
+}
+
+.leg-left {
+  animation: leg-run 0.2s infinite alternate;
+}
+
+.leg-right {
+  animation: leg-run 0.2s infinite alternate-reverse;
+}
+
+@keyframes leg-run {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes breath {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0.0);
+  }
+
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+  }
+}
+
+@keyframes identityPulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0));
+    opacity: 1;
+  }
+
+  50% {
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.45));
+    opacity: 0.95;
+  }
+}
+
+/* BaseDaily — DAY MODE BACKGROUND (Spark / Base style) */
+.basedaily-day-bg {
+  position: absolute;
+  inset: 0;
+  background-color: #f6f7f9;
+  /* Base app white */
+  overflow: hidden;
+}
+
+/* SOFT COLOR FLOW (MAIN FEEL) */
+.basedaily-day-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1100px 520px at 120% -10%,
+      rgba(56, 189, 248, 0.35),
+      transparent 60%),
+    radial-gradient(900px 460px at -20% 45%,
+      rgba(34, 197, 94, 0.28),
+      transparent 55%),
+    radial-gradient(800px 400px at 50% 120%,
+      rgba(99, 102, 241, 0.22),
+      transparent 60%);
+}
+
+/* DIAGONAL FLOW LINES (VISIBLE + NON-UNIFORM) */
+.basedaily-day-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    /* MAIN FLOW LINES */
+    repeating-linear-gradient(135deg,
+      rgba(15, 23, 42, 0.18) 0px,
+      rgba(15, 23, 42, 0.18) 1px,
+      transparent 1px,
+      transparent 140px),
+
+    /* SECONDARY SOFT LINES */
+    repeating-linear-gradient(135deg,
+      rgba(15, 23, 42, 0.08) 0px,
+      rgba(15, 23, 42, 0.08) 1px,
+      transparent 1px,
+      transparent 70px);
+
+  opacity: 0.75;
+}
+
+/* BaseDaily — Drawer Day Mode Background */
+.basedaily-drawer-day {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(135deg,
+      rgba(15, 23, 42, 0.03) 0%,
+      rgba(15, 23, 42, 0.015) 40%,
+      rgba(255, 255, 255, 0) 70%),
+    repeating-linear-gradient(135deg,
+      rgba(15, 23, 42, 0.04) 0px,
+      rgba(15, 23, 42, 0.04) 1px,
+      transparent 1px,
+      transparent 36px);
+}
+
+@keyframes avatar-float {
+  0% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.9;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px) scale(1.15);
+    opacity: 0;
+  }
+}
+
+.animate-avatar-float {
+  animation-name: avatar-float;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.you-row-highlight {
+  position: relative;
+}
+
+.you-row-highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(120deg,
+      rgba(56, 189, 248, 0.28),
+      rgba(99, 102, 241, 0.28),
+      rgba(56, 189, 248, 0.28));
+  background-size: 200% 200%;
+  animation: youGlow 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.you-row-highlight>* {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes youGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes vaultPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.88) translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
