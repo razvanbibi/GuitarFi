@@ -2175,33 +2175,7 @@ export default function HomePage() {
             Gold, Diamond and Legendary/Loyalty badges will unlock at different
             milestones.
           </p>
-          {/* your badges */}
-          <div className="mt-1 grid grid-cols-2 gap-2 text-xs">
-            <BadgeCard
-              icon="🥈"
-              name="Silver"
-              owned={Math.max(totalSilverCount - pendingSilverCount, 0)}
-              isDarkMode={isDarkMode}
-            />
-            <BadgeCard
-              icon="🥇"
-              name="Gold"
-              owned={Math.max(totalGoldCount - pendingGoldCount, 0)}
-              isDarkMode={isDarkMode}
-            />
-            <BadgeCard
-              icon="💎"
-              name="Diamond"
-              owned={Math.max(totalDiamondCount - pendingDiamondCount, 0)}
-              isDarkMode={isDarkMode}
-            />
-            <BadgeCard
-              icon="🌟"
-              name="Legendary / Loyalty"
-              owned={Math.max(totalLegendaryCount - pendingLegendaryCount, 0)}
-              isDarkMode={isDarkMode}
-            />
-          </div>
+          
         </section>
         {/* Donation */}
         <section
@@ -3220,52 +3194,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* 🏅 Badges */}
-              <div className="flex flex-col items-center relative">
-                <button
-                  type="button"
-                  onClick={() => setShowBadgeInfo((v) => !v)}
-                  className="flex flex-col items-center active:scale-95 transition active:scale-[0.98]"
-                >
-                  <p className="text-lg">🏅</p>
-                  <p
-                    className={`
-            font-semibold
-            ${isDarkMode ? "text-slate-100" : "text-slate-900"}
-          `}
-                  >
-                    {totalSilverCount + totalGoldCount + totalDiamondCount + totalLegendaryCount}
-                  </p>
-                  <p
-                    className={`
-            ${isDarkMode ? "text-slate-400" : "text-slate-900"}
-          `}
-                  >
-                    Badges
-                  </p>
-                </button>
-
-                {showBadgeInfo && (
-                  <div
-                    className="
-            absolute top-full mt-2 left-1/2 -translate-x-1/2
-            bg-slate-950/95 backdrop-blur-xl
-            border border-white/10
-            rounded-xl px-3 py-2
-            text-[11px] text-slate-200
-            shadow-2xl z-50
-            animate-[toast-pop_0.18s_ease-out]
-          "
-                  >
-                    <div className="flex flex-col gap-1 whitespace-nowrap">
-                      <span>🥈 Silver: {totalSilverCount}</span>
-                      <span>🥇 Gold: {totalGoldCount}</span>
-                      <span>💎 Diamond: {totalDiamondCount}</span>
-                      <span>🌟 Legendary: {totalLegendaryCount}</span>
-                    </div>
-                  </div>
-                )}
-              </div>
+        
 
               {/* 💰 0xtxn */}
               <div>
@@ -3452,18 +3381,6 @@ export default function HomePage() {
 
             <p className="mb-2 text-[11px] text-slate-300">
               GuitarFi is a miniapp where you Check-in to the Celo network every day to increase your streak and unlock 0xtxn rewards.
-            </p>
-
-            <p className="mb-2 text-[11px] text-slate-300">
-              Daily reward = celo reward × your current streak. The more days of streak
-              , the more 0xtxn will be accumulated in the pending balance, which you can claim later with one click.
-            </p>
-
-            <p className="mb-2 text-[11px] text-slate-300">
-              Badges are unlocked at specific milestones:
-              7 days = Silver, 15 days = Gold, 30 days = Diamond, 100 days = Legendary / Loyalty.
-              When you check-in, new badges are added to the pending list on milestone days, and when you claim
-              those badges are minted in your wallet.
             </p>
 
             <p className="text-[11px] text-slate-400">
