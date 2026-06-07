@@ -1805,6 +1805,63 @@ ${showExploreMenu
           </section>
 
 
+          <section
+            className={`
+    relative
+    overflow-hidden
+    p-4
+    ${isDarkMode ? glassCard : ""}
+  `}
+          >
+            {/* glow */}
+            <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-sky-500/10 blur-3xl" />
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-between">
+                <h2
+                  className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                >
+                  🎸 Guitar Vibes
+                </h2>
+
+                <span className="text-[10px] px-2 py-1 rounded-full bg-sky-500/10 text-sky-300">
+                  NEW
+                </span>
+              </div>
+
+              <p
+                className={`mt-2 text-xs ${isDarkMode ? "text-slate-400" : "text-slate-700"
+                  }`}
+              >
+                Keep your streak alive and let the music grow.
+              </p>
+
+              {/* quote */}
+              <div
+                className="
+        mt-4
+        rounded-2xl
+        border border-white/10
+        bg-slate-950/40
+        p-3
+      "
+              >
+                <p className="text-sm italic text-sky-300">
+                  “Every streak adds another note to your song.”
+                </p>
+              </div>
+
+              {/* animated notes */}
+              <div className="mt-4 flex items-center gap-3 text-xl">
+                <span className="animate-bounce">♪</span>
+                <span className="animate-bounce delay-100">♫</span>
+                <span className="animate-bounce delay-200">♬</span>
+              </div>
+            </div>
+          </section>
+
+
           {/* Today card */}
           <section
             className={`
