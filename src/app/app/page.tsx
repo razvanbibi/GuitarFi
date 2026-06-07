@@ -1415,7 +1415,7 @@ export default function HomePage() {
       />
 
       {/* content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pt-6 flex-1">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pt-6 flex-1 flex flex-col">
         {/* Header */}
         <header className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -2253,6 +2253,8 @@ export default function HomePage() {
         )}
 
 </div>
+
+
 
         {/* Footer */}
         <footer
