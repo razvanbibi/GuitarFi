@@ -1393,8 +1393,9 @@ export default function HomePage() {
 
   return (
     <main
-      className={`min-h-screen relative overflow-hidden ${isDarkMode ? "text-slate-50" : "text-slate-900"
-        }`}
+       className={`min-h-screen flex flex-col relative overflow-hidden ${
+    isDarkMode ? "text-slate-50" : "text-slate-900"
+  }`}
       style={{
         backgroundImage: isDarkMode ? "url('/bg-lamp.jpg')" : undefined,
         backgroundSize: "cover",
@@ -1414,7 +1415,7 @@ export default function HomePage() {
       />
 
       {/* content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pb-10 pt-6">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pt-6 flex-1">
         {/* Header */}
         <header className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
@@ -2255,7 +2256,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <footer
-          className={`pt-3 mt-4 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
+          className={`mt-auto pt-3 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
             }`}
         >
           <span className={isDarkMode ? "" : "text-slate-900"}>
