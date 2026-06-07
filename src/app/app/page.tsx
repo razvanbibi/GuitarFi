@@ -1958,7 +1958,6 @@ text-left
                     >
                       Unclaimed badges
                     </span>
-
                     <div className="flex items-center gap-2 transition-all duration-500">
                       {pendingSilverCount > 0
                         ? <BadgeGlow icon="🥈" count={pendingSilverCount} />
