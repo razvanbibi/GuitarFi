@@ -1768,7 +1768,7 @@ export default function HomePage() {
                   setTimeout(() => setShowRewardsTip(false), 2000);
                 }}
               >
-                <span className="text-lg">💰</span> Rewards
+                <span className="text-lg"></span> Rewards
               </button>
 
               {showRewardsTip && (
@@ -2034,7 +2034,7 @@ export default function HomePage() {
                   setTimeout(() => setShowBadgesTip(false), 2000);
                 }}
               >
-                <span className="text-lg">🏅</span> GuitarPath
+                <span className="text-lg"></span> GuitarPath
               </button>
               
             </div>
