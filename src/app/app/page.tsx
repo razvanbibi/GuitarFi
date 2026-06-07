@@ -2258,7 +2258,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <footer
-          className={`mt-auto pt-3 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
+          className={`mt-auto pt-3 pb-3 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
             }`}
         >
           <span className={isDarkMode ? "" : "text-slate-900"}>
