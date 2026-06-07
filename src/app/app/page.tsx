@@ -1465,7 +1465,9 @@ export default function HomePage() {
           </button>
         </header>
 
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6"></div>
+        
+
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
 
         {/* Welcome / wallet card */}
         <section
@@ -2248,6 +2250,8 @@ export default function HomePage() {
             {status}
           </div>
         )}
+
+</div>
 
         {/* Footer */}
         <footer
