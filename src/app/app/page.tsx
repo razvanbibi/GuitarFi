@@ -1507,7 +1507,16 @@ export default function HomePage() {
 
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+        <div
+          className="
+    grid
+    grid-cols-1
+    lg:grid-cols-3
+    gap-6
+    mt-6
+    items-start
+  "
+        >
 
           {/* Welcome / wallet card */}
           <section
@@ -1535,7 +1544,7 @@ export default function HomePage() {
 
             </div>
 
-            <div className="mt-4">
+           <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1580,13 +1589,18 @@ ${showTradeMenu
               {showTradeMenu && (
                 <div
                   className="
-    mt-2
-    ml-4
-    flex flex-col gap-2
-    w-fit
-    animate-[fade-up_0.25s_ease-out]
-  "
-                >
+      absolute
+      left-0
+      top-full
+      mt-2
+      z-50
+
+      flex flex-col gap-2
+      w-fit
+
+      animate-[fade-up_0.25s_ease-out]
+    "
+  >
 
                   <button
                     className="
@@ -1654,7 +1668,7 @@ ${showTradeMenu
               )}
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1699,13 +1713,18 @@ ${showExploreMenu
               {showExploreMenu && (
                 <div
                   className="
-    mt-2
-    ml-4
-    flex flex-col gap-2
-    w-fit
-    animate-[fade-up_0.25s_ease-out]
-  "
-                >
+      absolute
+      left-0
+      top-full
+      mt-2
+      z-50
+
+      flex flex-col gap-2
+      w-fit
+
+      animate-[fade-up_0.25s_ease-out]
+    "
+  >
 
                   <button
                     onClick={() => {
