@@ -1609,6 +1609,83 @@ text-left
                   </div>
                 )}
               </div>
+
+<div className="mt-4">
+
+                <button
+                  onClick={() => setShowTradeMenu(!showTradeMenu)}
+                  className="
+    inline-flex
+    items-center
+    gap-3
+    rounded-2xl
+    px-5 py-3
+    bg-slate-900/80
+    border border-white/10
+    text-slate-100
+    hover:bg-slate-800
+    transition
+"
+                >
+                  <span className="font-semibold">
+                    Explore
+                  </span>
+
+                  <span>
+                    {showTradeMenu ? "−" : "+"}
+                  </span>
+                </button>
+                {showTradeMenu && (
+                  <div className="mt-2 flex flex-col gap-2 w-fit">
+
+                    <button
+                      className="
+    rounded-xl
+px-5 py-2.5
+min-w-[140px]
+text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Vault
+                    </button>
+
+                    <button
+                      className="
+    rounded-xl
+px-5 py-2.5
+min-w-[140px]
+text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Identity
+                    </button>
+
+                    <button
+                      className="
+    rounded-xl
+px-5 py-2.5
+min-w-[140px]
+text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Donate
+                    </button>
+                  </div>
+                )}
+              </div>
+
           </section>
 
 
