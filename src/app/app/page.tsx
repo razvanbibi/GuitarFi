@@ -1578,49 +1578,75 @@ ${showTradeMenu
                 </span>
               </button>
               {showTradeMenu && (
-                <div className="mt-2 flex flex-col gap-2 w-fit">
+                <div
+  className="
+    mt-2
+    ml-4
+    flex flex-col gap-2
+    w-fit
+    animate-[fade-up_0.25s_ease-out]
+  "
+>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120x]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Deposit
                   </button>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Buy
                   </button>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Withdraw
                   </button>
@@ -1671,49 +1697,75 @@ ${showExploreMenu
                 </span>
               </button>
               {showExploreMenu && (
-                <div className="mt-2 flex flex-col gap-2 w-fit">
+                <div
+  className="
+    mt-2
+    ml-4
+    flex flex-col gap-2
+    w-fit
+    animate-[fade-up_0.25s_ease-out]
+  "
+>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Vault
                   </button>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Identity
                   </button>
 
                   <button
                     className="
-    rounded-xl
-px-5 py-2.5
-min-w-[140px]
-text-left
-    bg-slate-900/70
-    border border-white/5
-    hover:bg-slate-800
-    transition
-  "
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
+
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
                   >
                     Donate
                   </button>
