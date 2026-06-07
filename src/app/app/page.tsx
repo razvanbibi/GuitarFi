@@ -246,7 +246,7 @@ export default function HomePage() {
   }, []);
 
 
-  // ---- helpers for localStorage-based daily check-in ----
+  // ---- helpers for localStorage-based daily gm ----
   function getTodayId() {
     const d = new Date();
     return `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`;
@@ -672,7 +672,7 @@ export default function HomePage() {
         return;
       }
       setLoading(true);
-      setStatus("Sending check-in transaction...");
+      setStatus("Sending Gm transaction...");
       const prevPending = pendingTokens ?? BigInt(0);
 
       await ensureCeloNetwork();
@@ -689,7 +689,7 @@ export default function HomePage() {
       const tx = await contract.checkIn();
 
       await tx.wait();
-      setStatus("Check-in confirmed 🎉");
+      setStatus("Gm confirmed 🎉");
 
 
       const result = await refreshData();
@@ -735,7 +735,7 @@ export default function HomePage() {
         showToast(
           {
             type: "checkin",
-            message: "Check-in successful 🎉",
+            message: "Gm successful 🎉",
           },
           2000
         );
@@ -752,7 +752,7 @@ export default function HomePage() {
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
-        "Check-in failed."
+        "Gm failed."
       );
     } finally {
       setLoading(false);
@@ -1968,8 +1968,8 @@ ${showExploreMenu
               {account
                 ? hasCheckedInToday
                   ? "You've already checked in today. Come back tomorrow!"
-                  : "Tap check-in to unlock today’s 0xtxn reward."
-                : "Connect your wallet to start your daily check-in streak."}
+                  : "Tap Gm to unlock today’s 0xtxn reward."
+                : "Connect your wallet to start your daily Gm streak."}
             </p>
 
             {account && (
@@ -1989,11 +1989,11 @@ ${showExploreMenu
                             cursor-not-allowed
                            "
                     >
-                      Checked-in
+                      Gutarist
                     </button>
 
                     <span className="text-[11px] text-slate-400">
-                      Next check-in in {getTimeUntilTomorrowUTC()}
+                      Next Gm in {getTimeUntilTomorrowUTC()}
                     </span>
                   </div>
 
@@ -2014,7 +2014,7 @@ ${showExploreMenu
           ${loading ? "opacity-70" : ""}
         `}
                   >
-                    {loading ? "Processing…" : "Check-in"}
+                    {loading ? "Processing…" : "Gm"}
                   </button>
                 )}
               </div>
@@ -2057,7 +2057,7 @@ ${showExploreMenu
                     px-3 py-2 text-[11px] text-slate-200">
                     <p className="font-semibold text-sky-300 mb-1">How rewards work</p>
                     <ul className="list-disc pl-4 space-y-1 relative">
-                      <li>Check-in once per day</li>
+                      <li>GM once per day</li>
 
                       <li>Each streak day increases reward (n×100)</li>
 
@@ -2972,7 +2972,7 @@ ${showExploreMenu
             </div>
 
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
-              <li>Tap <span className="font-semibold">Check-in</span> once per day to keep your streak alive.</li>
+              <li>Tap <span className="font-semibold">Gm</span> once per day to keep your streak alive.</li>
               <li>Claim your <span className="font-semibold">0xtxn</span> rewards when the button turns pink.</li>
               <li>Tip in Mento Dollar (USDm) to climb the supporter leaderboard.</li>
             </ul>
@@ -3000,7 +3000,7 @@ ${showExploreMenu
             <div className="flex flex-col">
               <span className="font-semibold">
                 {toast.type === "checkin"
-                  ? "Check-in reward"
+                  ? "Gm reward"
                   : toast.message.toLowerCase().includes("donated")
                     ? "Thank you for your support"
                     : "Reward claimed"}
@@ -3619,7 +3619,7 @@ ${showExploreMenu
             </div>
 
             <p className="mb-2 text-[11px] text-slate-300">
-              GuitarFi is a miniapp where you Check-in to the Celo network every day to increase your streak and unlock 0xtxn rewards.
+              GuitarFi is a miniapp where you Gm to the Celo network every day to increase your streak and unlock 0xtxn rewards.
             </p>
 
             <p className="text-[11px] text-slate-400">
