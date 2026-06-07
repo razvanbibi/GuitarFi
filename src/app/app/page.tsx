@@ -1465,6 +1465,8 @@ export default function HomePage() {
           </button>
         </header>
 
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6"></div>
+
         {/* Welcome / wallet card */}
         <section
           className={`
