@@ -1521,7 +1521,8 @@ export default function HomePage() {
           {/* Welcome / wallet card */}
           <section
             className={`
-    p-4 space-y-3
+    
+              p-4 space-y-3
     ${isDarkMode ? glassCard : ""}
   `}
           >
@@ -1544,7 +1545,7 @@ export default function HomePage() {
 
             </div>
 
-           <div className="mt-4 relative">
+           <div className="mt-4 relative min-h-[70px]">
 
               <button
                 onClick={() => {
@@ -1590,14 +1591,11 @@ ${showTradeMenu
                 <div
                   className="
       absolute
-      left-0
-      top-full
-      mt-2
+      left-[180px]
+      top-0
       z-50
 
       flex flex-col gap-2
-      w-fit
-
       animate-[fade-up_0.25s_ease-out]
     "
   >
@@ -1668,7 +1666,7 @@ ${showTradeMenu
               )}
             </div>
 
-            <div className="mt-4 relative">
+           <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1714,14 +1712,11 @@ ${showExploreMenu
                 <div
                   className="
       absolute
-      left-0
-      top-full
-      mt-2
+      left-[180px]
+      -top-[65px]
       z-50
 
       flex flex-col gap-2
-      w-fit
-
       animate-[fade-up_0.25s_ease-out]
     "
   >
@@ -1827,7 +1822,7 @@ ${showExploreMenu
           <section
             className={`
     relative
-    overflow-hidden
+    overflow-visible
     p-4
     ${isDarkMode ? glassCard : ""}
   `}
