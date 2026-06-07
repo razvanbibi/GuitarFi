@@ -1526,21 +1526,30 @@ export default function HomePage() {
                 />
               </div>
 
-              <div className="mt-4">
+              
+
+
+             
+
+
+            </div>
+
+            <div className="mt-4">
 
                 <button
                   onClick={() => setShowTradeMenu(!showTradeMenu)}
                   className="
-    w-full
+    inline-flex
+    items-center
+    gap-3
     rounded-2xl
-    px-4 py-3
-    flex items-center justify-between
+    px-5 py-3
     bg-slate-900/80
     border border-white/10
     text-slate-100
     hover:bg-slate-800
     transition
-  "
+"
                 >
                   <span className="font-semibold">
                     Trade
@@ -1551,13 +1560,14 @@ export default function HomePage() {
                   </span>
                 </button>
                 {showTradeMenu && (
-                  <div className="mt-2 flex flex-col gap-2">
+                  <div className="mt-2 flex flex-col gap-2 w-fit">
 
                     <button
                       className="
     rounded-xl
-    px-4 py-3
-    text-left
+px-5 py-2.5
+min-w-[140px]
+text-left
     bg-slate-900/70
     border border-white/5
     hover:bg-slate-800
@@ -1570,8 +1580,9 @@ export default function HomePage() {
                     <button
                       className="
     rounded-xl
-    px-4 py-3
-    text-left
+px-5 py-2.5
+min-w-[140px]
+text-left
     bg-slate-900/70
     border border-white/5
     hover:bg-slate-800
@@ -1584,8 +1595,9 @@ export default function HomePage() {
                     <button
                       className="
     rounded-xl
-    px-4 py-3
-    text-left
+px-5 py-2.5
+min-w-[140px]
+text-left
     bg-slate-900/70
     border border-white/5
     hover:bg-slate-800
@@ -1597,12 +1609,6 @@ export default function HomePage() {
                   </div>
                 )}
               </div>
-
-
-              {/* right wallet / connect */}
-
-
-            </div>
           </section>
 
 

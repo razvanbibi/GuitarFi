@@ -17,7 +17,7 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
               isDarkMode ? "text-sky-200" : "text-slate-900"
             }`}
           >
-            {account ? "streaker" : "friend"}
+            {account ? "guitarist" : "friend"}
           </span>{" "}
           👋
         </>
