@@ -727,7 +727,7 @@ export default function HomePage() {
         showToast(
           {
             type: "checkin",
-            message: `+${formatToken(diff)} 0xtxn unlocked`,
+            message: `+${formatToken(diff)} GTR unlocked`,
           },
           2000
         );
@@ -840,7 +840,7 @@ export default function HomePage() {
       showToast(
         {
           type: "claim",
-          message: `Claimed ${formatToken(claimAmount!)} 0xtxn`,
+          message: `Claimed ${formatToken(claimAmount!)} GTR`,
         },
         2500
       );
@@ -1048,7 +1048,7 @@ export default function HomePage() {
 
     const text =
       "GuitarFi\n\n" +
-      "Building a daily habit on Celo. Checking in, growing my streak, earning 0xtxn.\n\n" +
+      "Building a daily habit on Celo. Checking in, growing my streak, earning GTR.\n\n" +
       "Join the journey 👇";
 
     try {
@@ -2025,7 +2025,7 @@ ${showExploreMenu
               {account
                 ? hasCheckedInToday
                   ? "You've already checked in today. Come back tomorrow!"
-                  : "Tap Gm to unlock today’s 0xtxn reward."
+                  : "Tap Gm to unlock today’s GTR reward."
                 : "Connect your wallet to start your daily Gm streak."}
             </p>
 
@@ -2142,7 +2142,7 @@ ${showExploreMenu
     transition-all duration-500
   `}
               >
-                {/* LEFT: 0xtxn hero */}
+                {/* LEFT: GTR hero */}
                 <div
                   className={`
       flex flex-col
@@ -2169,7 +2169,7 @@ ${showExploreMenu
       drop-shadow-[0_0_6px_rgba(56,189,248,0.45)]
     `}
                     >
-                      0xtxn
+                      GTR
                     </span>
                   </span>
 
@@ -2616,7 +2616,7 @@ ${showExploreMenu
                 alt="0xtxn logo"
                 className="h-5 w-5 rounded-sm object-contain"
               />
-              <span className="font-medium">0xtxn</span>
+              <span className="font-medium">GTR</span>
             </span>
           </a>
         </footer>
@@ -3023,14 +3023,14 @@ ${showExploreMenu
               <div className="flex flex-col">
                 <span className="text-sm font-semibold">Welcome to GuitarFi</span>
                 <span className="text-[11px] text-slate-300">
-                  Check in every day on Celo, grow your streak and earn 0xtxn rewards.
+                  Gn every day on Celo, grow your streak and earn GTR rewards.
                 </span>
               </div>
             </div>
 
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
               <li>Tap <span className="font-semibold">Gm</span> once per day to keep your streak alive.</li>
-              <li>Claim your <span className="font-semibold">0xtxn</span> rewards when the button turns pink.</li>
+              <li>Claim your <span className="font-semibold">GTR</span> rewards when the button turns pink.</li>
               <li>Tip in Mento Dollar (USDm) to climb the supporter leaderboard.</li>
             </ul>
 
@@ -3492,7 +3492,7 @@ ${showExploreMenu
 
 
 
-              {/* 💰 0xtxn */}
+              {/* 💰 GTR */}
               <div>
                 <p className="text-lg">💰</p>
                 <p
@@ -3508,7 +3508,7 @@ ${showExploreMenu
           ${isDarkMode ? "text-slate-400" : "text-slate-900"}
         `}
                 >
-                  0xtxn
+                  GTR
                 </p>
               </div>
 
@@ -3638,7 +3638,7 @@ ${showExploreMenu
               rel="noreferrer"
               className="text-sky-500 hover:underline"
             >
-              0xtxn
+              GTR
             </a>{" "}
             — All rights reserved.
           </div>
@@ -3676,7 +3676,7 @@ ${showExploreMenu
             </div>
 
             <p className="mb-2 text-[11px] text-slate-300">
-              GuitarFi is a miniapp where you Gm to the Celo network every day to increase your streak and unlock 0xtxn rewards.
+              GuitarFi is a miniapp where you Gm to the Celo network every day to increase your streak and unlock GTR rewards.
             </p>
 
             <p className="text-[11px] text-slate-400">
