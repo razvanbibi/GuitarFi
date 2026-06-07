@@ -1788,34 +1788,14 @@ export default function HomePage() {
                     >
                       Badge milestones unlock bonus rewards
 
-                      {showBadgeTooltip && (
-                        <div className="absolute left-0 top-7 z-50 w-64 rounded-xl border border-cyan-500/30 bg-[#020817] p-3 shadow-2xl">
-                          <ul className="space-y-1 pl-4 text-white">
-                            <li>🥈 Silver → +1,500 0xtxn</li>
-                            <li>🥇 Gold → +5,000 0xtxn</li>
-                            <li>💎 Diamond → +25,000 0xtxn</li>
-                            <li>🌟 Legendary → +500,000 0xtxn</li>
-                          </ul>
-                        </div>
-                      )}
+                  
                     </li>
-
-                    <li>Miss a day → streak resets</li>
-
-                    <li>Rewards stack until you claim</li>
                   </ul>
                 </div>
               )}
             </div>
 
-            <HoverInfo title="How rewards work">
-              <ul className="list-disc pl-4 space-y-1">
-                <li>Check-in once per day</li>
-                <li>Each streak day increases reward (n*100)</li>
-                <li>Miss a day → streak resets</li>
-                <li>Rewards stack until you claim</li>
-              </ul>
-            </HoverInfo>
+          
           </div>
 
           <div className="space-y-2 text-sm">
