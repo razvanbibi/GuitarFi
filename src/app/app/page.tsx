@@ -114,6 +114,7 @@ export default function HomePage() {
 
 
   const [showDonate, setShowDonate] = useState(false);
+  const [showTradeMenu, setShowTradeMenu] = useState(false);
 
   const [showVault, setShowVault] = useState(false);
 
@@ -1393,9 +1394,8 @@ export default function HomePage() {
 
   return (
     <main
-       className={`min-h-screen flex flex-col relative overflow-hidden ${
-    isDarkMode ? "text-slate-50" : "text-slate-900"
-  }`}
+      className={`min-h-screen flex flex-col relative overflow-hidden ${isDarkMode ? "text-slate-50" : "text-slate-900"
+        }`}
       style={{
         backgroundImage: isDarkMode ? "url('/bg-lamp.jpg')" : undefined,
         backgroundSize: "cover",
@@ -1446,27 +1446,27 @@ export default function HomePage() {
 
           </div>
 
-<div className="shrink-0 ml-auto mr-4">
-              {account ? (
-                <div className="flex flex-col items-end gap-1 pr-2">
-                  {/* Wallet + Celo */}
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[10px] text-slate-500">Wallet</span>
-                    <span className="flex items-center gap-1 text-[10px] text-emerald-400">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                      {isMiniPay ? "MiniPay" : "Celo"}
-                    </span>
-                  </div>
-
-                  {/* address */}
-                  <span className="text-[11px] px-2 py-1 rounded-full bg-slate-950/70 text-slate-100 mt-0.5">
-                    {account.slice(0, 4)}…{account.slice(-4)}
+          <div className="shrink-0 ml-auto mr-4">
+            {account ? (
+              <div className="flex flex-col items-end gap-1 pr-2">
+                {/* Wallet + Celo */}
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] text-slate-500">Wallet</span>
+                  <span className="flex items-center gap-1 text-[10px] text-emerald-400">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    {isMiniPay ? "MiniPay" : "Celo"}
                   </span>
                 </div>
-              ) : (
-                <button
-                  onClick={connectWallet}
-                  className="
+
+                {/* address */}
+                <span className="text-[11px] px-2 py-1 rounded-full bg-slate-950/70 text-slate-100 mt-0.5">
+                  {account.slice(0, 4)}…{account.slice(-4)}
+                </span>
+              </div>
+            ) : (
+              <button
+                onClick={connectWallet}
+                className="
         px-3 py-1.5
         rounded-full
         text-[11px] font-semibold
@@ -1477,12 +1477,12 @@ export default function HomePage() {
         active:scale-95
         transition
       "
-                >
-                  Connect
-                </button>
-              )}
-            </div>
-          
+              >
+                Connect
+              </button>
+            )}
+          </div>
+
           <button
             onClick={() => setDrawerOpen(true)}
             className="
@@ -1504,89 +1504,161 @@ export default function HomePage() {
           </button>
         </header>
 
-        
 
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
 
-        {/* Welcome / wallet card */}
-        <section
-          className={`
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+
+          {/* Welcome / wallet card */}
+          <section
+            className={`
     p-4 space-y-3
     ${isDarkMode ? glassCard : ""}
   `}
-        >
+          >
 
-          {/* top row */}
-          <div className="flex items-start justify-between gap-3">
-            {/* left text */}
-            <div className="flex-1">
-              <TodayMessageLoop
-                isDarkMode={isDarkMode}
-                account={account}
-              />
-            </div>
-
-
-            {/* right wallet / connect */}
-            
-
-          </div>
-        </section>
-
-
-        {/* Today card */}
-        <section
-          className={`
-    p-4 space-y-3
-    ${isDarkMode ? glassCard : ""}
-  `}
-        >
-
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold text-slate-100 flex items-center gap-2">
-              <CeloBlockLogo
-                checkedIn={hasCheckedInToday}
-                isDark={isDarkMode}
-              />
-            </h2>
-            {/* RIGHT: stats */}
-            <div className="flex gap-6 text-center">
-
-              <div>
-                <div
-                  className={`text-xl font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
-                    }`}
-                >
-
-                  {streakNumber}
-                </div>
-                <div
-                  className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
-                    }`}
-                >
-                  Current
-                </div>
-
+            {/* top row */}
+            <div className="flex items-start justify-between gap-3">
+              {/* left text */}
+              <div className="flex-1">
+                <TodayMessageLoop
+                  isDarkMode={isDarkMode}
+                  account={account}
+                />
               </div>
 
-              <div className="relative">
-                <div
-                  className={`text-xl font-semibold ${isDarkMode ? "text-sky-300" : "text-sky-500"
-                    }`}
-                >
-                  {highestNumber}
-                </div>
-                <AvatarBubbleStream avatar={profileAvatar || "/avatar.png"} />
+              <div className="mt-4">
 
-                <div
-                  className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
-                    }`}
+                <button
+                  onClick={() => setShowTradeMenu(!showTradeMenu)}
+                  className="
+    w-full
+    rounded-2xl
+    px-4 py-3
+    flex items-center justify-between
+    bg-slate-900/80
+    border border-white/10
+    text-slate-100
+    hover:bg-slate-800
+    transition
+  "
                 >
-                  Highest
-                </div>
-                {showLeaderboard && (
+                  <span className="font-semibold">
+                    Trade
+                  </span>
+
+                  <span>
+                    {showTradeMenu ? "−" : "+"}
+                  </span>
+                </button>
+                {showTradeMenu && (
+                  <div className="mt-2 flex flex-col gap-2">
+
+                    <button
+                      className="
+    rounded-xl
+    px-4 py-3
+    text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Deposit
+                    </button>
+
+                    <button
+                      className="
+    rounded-xl
+    px-4 py-3
+    text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Buy
+                    </button>
+
+                    <button
+                      className="
+    rounded-xl
+    px-4 py-3
+    text-left
+    bg-slate-900/70
+    border border-white/5
+    hover:bg-slate-800
+    transition
+  "
+                    >
+                      Withdraw
+                    </button>
+                  </div>
+                )}
+              </div>
+
+
+              {/* right wallet / connect */}
+
+
+            </div>
+          </section>
+
+
+          {/* Today card */}
+          <section
+            className={`
+    p-4 space-y-3
+    ${isDarkMode ? glassCard : ""}
+  `}
+          >
+
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-semibold text-slate-100 flex items-center gap-2">
+                <CeloBlockLogo
+                  checkedIn={hasCheckedInToday}
+                  isDark={isDarkMode}
+                />
+              </h2>
+              {/* RIGHT: stats */}
+              <div className="flex gap-6 text-center">
+
+                <div>
                   <div
-                    className={`
+                    className={`text-xl font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                      }`}
+                  >
+
+                    {streakNumber}
+                  </div>
+                  <div
+                    className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                      }`}
+                  >
+                    Current
+                  </div>
+
+                </div>
+
+                <div className="relative">
+                  <div
+                    className={`text-xl font-semibold ${isDarkMode ? "text-sky-300" : "text-sky-500"
+                      }`}
+                  >
+                    {highestNumber}
+                  </div>
+                  <AvatarBubbleStream avatar={profileAvatar || "/avatar.png"} />
+
+                  <div
+                    className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                      }`}
+                  >
+                    Highest
+                  </div>
+                  {showLeaderboard && (
+                    <div
+                      className={`
       absolute
       right-3
       top-[58px]
@@ -1599,72 +1671,72 @@ export default function HomePage() {
       z-20
 
       ${isDarkMode
-                        ? "bg-slate-950/90 text-slate-200"
-                        : "bg-white text-slate-900 border border-slate-200 shadow-lg"
-                      }
+                          ? "bg-slate-950/90 text-slate-200"
+                          : "bg-white text-slate-900 border border-slate-200 shadow-lg"
+                        }
     `}
-                  >
+                    >
 
 
-                    {leaderboardLoading && <p className="text-slate-400">Loading…</p>}
+                      {leaderboardLoading && <p className="text-slate-400">Loading…</p>}
 
-                    {!leaderboardLoading && leaderboard.length === 0 && (
-                      <p className="text-slate-400">No data yet</p>
-                    )}
+                      {!leaderboardLoading && leaderboard.length === 0 && (
+                        <p className="text-slate-400">No data yet</p>
+                      )}
 
-                    <ul className="space-y-2">
-                      {leaderboard.map((u, i) => (
-                        <li
-                          key={u.address}
-                          className={`relative flex items-center justify-between ${u.address.toLowerCase() === account?.toLowerCase()
-                            ? "you-row-highlight"
-                            : ""
-                            }`}
-                        >
+                      <ul className="space-y-2">
+                        {leaderboard.map((u, i) => (
+                          <li
+                            key={u.address}
+                            className={`relative flex items-center justify-between ${u.address.toLowerCase() === account?.toLowerCase()
+                              ? "you-row-highlight"
+                              : ""
+                              }`}
+                          >
 
 
-                          <div className="flex items-center gap-2">
-                            <img
-                              src={
-                                u.address.toLowerCase() === account?.toLowerCase()
-                                  ? profileAvatar || "/avatar.png"
-                                  : u.avatar || "/avatar.png"
-                              }
-                              className="h-6 w-6 rounded-full object-cover ring-1 ring-sky-400/30"
-                            />
+                            <div className="flex items-center gap-2">
+                              <img
+                                src={
+                                  u.address.toLowerCase() === account?.toLowerCase()
+                                    ? profileAvatar || "/avatar.png"
+                                    : u.avatar || "/avatar.png"
+                                }
+                                className="h-6 w-6 rounded-full object-cover ring-1 ring-sky-400/30"
+                              />
 
-                            <span>
-                              #{i + 1}{" "}
-                              {u.name
-                                ? u.name
-                                : `${u.address.slice(0, 6)}…${u.address.slice(-4)}`}
-                            </span>
+                              <span>
+                                #{i + 1}{" "}
+                                {u.name
+                                  ? u.name
+                                  : `${u.address.slice(0, 6)}…${u.address.slice(-4)}`}
+                              </span>
 
-                          </div>
-                          <span
-                            className={`
+                            </div>
+                            <span
+                              className={`
     font-semibold
     ${isDarkMode ? "text-slate-200" : "text-sky-500"}
   `}
-                          >
-                            {u.highestStreak}
-                          </span>
+                            >
+                              {u.highestStreak}
+                            </span>
 
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
-                {/* 🏆 Leaderboard button — EXACT RED BOX POSITION */}
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setShowLeaderboard(true);
-                    loadLeaderboard();
-                  }}
+                  {/* 🏆 Leaderboard button — EXACT RED BOX POSITION */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowLeaderboard(true);
+                      loadLeaderboard();
+                    }}
 
-                  className={`
+                    className={`
   absolute
   mt-1 left-1/2 -translate-x-1/2
   h-7 w-7
@@ -1680,34 +1752,34 @@ export default function HomePage() {
   ${showLeaderboard ? "opacity-0 pointer-events-none" : ""}
 `}
 
-                >
-                  🏆
-                </button>
+                  >
+                    🏆
+                  </button>
+
+                </div>
 
               </div>
-
             </div>
-          </div>
 
-          <p
-            className={`text-xs -mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-900"
-              }`}
-          >
+            <p
+              className={`text-xs -mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                }`}
+            >
 
-            {account
-              ? hasCheckedInToday
-                ? "You've already checked in today. Come back tomorrow!"
-                : "Tap check-in to unlock today’s 0xtxn reward."
-              : "Connect your wallet to start your daily check-in streak."}
-          </p>
+              {account
+                ? hasCheckedInToday
+                  ? "You've already checked in today. Come back tomorrow!"
+                  : "Tap check-in to unlock today’s 0xtxn reward."
+                : "Connect your wallet to start your daily check-in streak."}
+            </p>
 
-          {account && (
-            <div className="flex justify-center mt-2">
-              {hasCheckedInToday ? (
-                <div className="flex flex-col items-center gap-1">
-                  <button
-                    disabled
-                    className="
+            {account && (
+              <div className="flex justify-center mt-2">
+                {hasCheckedInToday ? (
+                  <div className="flex flex-col items-center gap-1">
+                    <button
+                      disabled
+                      className="
                       inline-flex items-center justify-center
                        px-8 py-3 rounded-full
                         text-base font-semibold
@@ -1717,21 +1789,21 @@ export default function HomePage() {
                             shadow-inner shadow-emerald-900/40
                             cursor-not-allowed
                            "
-                  >
-                    Checked-in
-                  </button>
+                    >
+                      Checked-in
+                    </button>
 
-                  <span className="text-[11px] text-slate-400">
-                    Next check-in in {getTimeUntilTomorrowUTC()}
-                  </span>
-                </div>
+                    <span className="text-[11px] text-slate-400">
+                      Next check-in in {getTimeUntilTomorrowUTC()}
+                    </span>
+                  </div>
 
 
-              ) : (
-                <button
-                  onClick={handleCheckIn}
-                  disabled={loading || paused === true}
-                  className={`
+                ) : (
+                  <button
+                    onClick={handleCheckIn}
+                    disabled={loading || paused === true}
+                    className={`
           inline-flex items-center justify-center
           px-8 py-3 rounded-full
           text-base font-semibold
@@ -1742,170 +1814,170 @@ export default function HomePage() {
           text-slate-950 hover:brightness-110 active:scale-95
           ${loading ? "opacity-70" : ""}
         `}
-                >
-                  {loading ? "Processing…" : "Check-in"}
-                </button>
-              )}
-            </div>
-          )}
+                  >
+                    {loading ? "Processing…" : "Check-in"}
+                  </button>
+                )}
+              </div>
+            )}
 
-          {paused && (
-            <p className="text-[11px] text-amber-300 mt-1">
-              The contract is currently paused. Please try again later.
-            </p>
-          )}
-        </section>
+            {paused && (
+              <p className="text-[11px] text-amber-300 mt-1">
+                The contract is currently paused. Please try again later.
+              </p>
+            )}
+          </section>
 
-        {/* Rewards card */}
+          {/* Rewards card */}
 
-        <section
-          className={`
+          <section
+            className={`
     p-4 space-y-3
     ${isDarkMode ? glassCard : ""}
     ${flashGlow ? "ring-2 ring-sky-400 animate-pulse" : ""}
   `}
-        >
+          >
 
-          <div className="relative group inline-flex">
-            <div className="relative inline-flex">
-              <button
-                className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
-                  }`}
-                onClick={() => {
-                  setShowRewardsTip(true);
-                  setTimeout(() => setShowRewardsTip(false), 2000);
-                }}
-              >
-                <span className="text-lg"></span> Rewards
-              </button>
+            <div className="relative group inline-flex">
+              <div className="relative inline-flex">
+                <button
+                  className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                  onClick={() => {
+                    setShowRewardsTip(true);
+                    setTimeout(() => setShowRewardsTip(false), 2000);
+                  }}
+                >
+                  <span className="text-lg"></span> Rewards
+                </button>
 
-              {showRewardsTip && (
-                <div className="absolute z-50 top-full mt-2 w-64 rounded-2xl
+                {showRewardsTip && (
+                  <div className="absolute z-50 top-full mt-2 w-64 rounded-2xl
                     bg-slate-950/95 backdrop-blur-xl
                     border border-white/10 shadow-2xl
                     px-3 py-2 text-[11px] text-slate-200">
-                  <p className="font-semibold text-sky-300 mb-1">How rewards work</p>
-                  <ul className="list-disc pl-4 space-y-1 relative">
-                    <li>Check-in once per day</li>
+                    <p className="font-semibold text-sky-300 mb-1">How rewards work</p>
+                    <ul className="list-disc pl-4 space-y-1 relative">
+                      <li>Check-in once per day</li>
 
-                    <li>Each streak day increases reward (n×100)</li>
+                      <li>Each streak day increases reward (n×100)</li>
 
-                    <li
-                      className="relative cursor-pointer text-cyan-300"
-                      onClick={() => setShowBadgeTooltip(!showBadgeTooltip)}
-                    >
-                      Badge milestones unlock bonus rewards
+                      <li
+                        className="relative cursor-pointer text-cyan-300"
+                        onClick={() => setShowBadgeTooltip(!showBadgeTooltip)}
+                      >
+                        Badge milestones unlock bonus rewards
 
-                  
-                    </li>
-                  </ul>
-                </div>
-              )}
+
+                      </li>
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+
             </div>
 
-          
-          </div>
-
-          <div className="space-y-2 text-sm">
-            <div
-              className={`
+            <div className="space-y-2 text-sm">
+              <div
+                className={`
     flex w-full items-start justify-between
     py-3
     transition-all duration-500
   `}
-            >
-              {/* LEFT: 0xtxn hero */}
-              <div
-                className={`
+              >
+                {/* LEFT: 0xtxn hero */}
+                <div
+                  className={`
       flex flex-col
       transition-all duration-500
       ${hasUnclaimedBadges ? "items-start" : "items-center w-full"}
     `}
-              >
-                <span
-                  className={`
+                >
+                  <span
+                    className={`
     text-[12px]
     uppercase
     tracking-wide
     flex items-center gap-1
     ${isDarkMode ? "text-slate-400" : "text-slate-900"}
   `}
-                >
-                  Unclaimed
-                  <span
-                    className={`
+                  >
+                    Unclaimed
+                    <span
+                      className={`
       font-extrabold
       tracking-tight
       bg-gradient-to-r from-sky-400 to-blue-500
       bg-clip-text text-transparent
       drop-shadow-[0_0_6px_rgba(56,189,248,0.45)]
     `}
-                  >
-                    0xtxn
+                    >
+                      0xtxn
+                    </span>
                   </span>
-                </span>
 
 
-                <span
-                  className={`text-3xl font-bold tracking-tight ${isDarkMode ? "text-sky-200" : "text-sky-500"
-                    }`}
-                >
-                  {unclaimedReadable ?? "0"}
-                </span>
-              </div>
-              {/* RIGHT: Unclaimed badges */}
-              <div className="flex flex-col items-end gap-1">
+                  <span
+                    className={`text-3xl font-bold tracking-tight ${isDarkMode ? "text-sky-200" : "text-sky-500"
+                      }`}
+                  >
+                    {unclaimedReadable ?? "0"}
+                  </span>
+                </div>
+                {/* RIGHT: Unclaimed badges */}
+                <div className="flex flex-col items-end gap-1">
 
-                {/* Badge label + icons ONLY */}
-                <div
-                  className={`
+                  {/* Badge label + icons ONLY */}
+                  <div
+                    className={`
       flex flex-col items-end gap-1
       transition-all duration-500
       ${hasUnclaimedBadges ? "" : "opacity-40 grayscale"}
     `}
-                >
-                  <span
-                    className={`
+                  >
+                    <span
+                      className={`
         text-[12px] uppercase tracking-wide
         transition-all duration-300
         ${hasUnclaimedBadges
-                        ? isDarkMode
-                          ? "text-slate-400"
-                          : "text-slate-900"
-                        : isDarkMode
-                          ? "text-slate-500"
-                          : "text-slate-700"
-                      }
+                          ? isDarkMode
+                            ? "text-slate-400"
+                            : "text-slate-900"
+                          : isDarkMode
+                            ? "text-slate-500"
+                            : "text-slate-700"
+                        }
       `}
-                  >
-                    Unclaimed badges
-                  </span>
+                    >
+                      Unclaimed badges
+                    </span>
 
-                  <div className="flex items-center gap-2 transition-all duration-500">
-                    {pendingSilverCount > 0
-                      ? <BadgeGlow icon="🥈" count={pendingSilverCount} />
-                      : <BadgeGhost icon="🥈" />
-                    }
+                    <div className="flex items-center gap-2 transition-all duration-500">
+                      {pendingSilverCount > 0
+                        ? <BadgeGlow icon="🥈" count={pendingSilverCount} />
+                        : <BadgeGhost icon="🥈" />
+                      }
 
-                    {pendingGoldCount > 0
-                      ? <BadgeGlow icon="🥇" count={pendingGoldCount} />
-                      : <BadgeGhost icon="🥇" />
-                    }
-                    {pendingDiamondCount > 0
-                      ? <BadgeGlow icon="💎" count={pendingDiamondCount} />
-                      : <BadgeGhost icon="💎" />
-                    }
-                    {pendingLegendaryCount > 0
-                      ? <BadgeGlow icon="🌟" count={pendingLegendaryCount} />
-                      : <BadgeGhost icon="🌟" />
-                    }
+                      {pendingGoldCount > 0
+                        ? <BadgeGlow icon="🥇" count={pendingGoldCount} />
+                        : <BadgeGhost icon="🥇" />
+                      }
+                      {pendingDiamondCount > 0
+                        ? <BadgeGlow icon="💎" count={pendingDiamondCount} />
+                        : <BadgeGhost icon="💎" />
+                      }
+                      {pendingLegendaryCount > 0
+                        ? <BadgeGlow icon="🌟" count={pendingLegendaryCount} />
+                        : <BadgeGhost icon="🌟" />
+                      }
+                    </div>
                   </div>
-                </div>
 
-                {/* ✅ Identity button — ALWAYS LIVE */}
-                <button
-                  onClick={() => setShowMintIdentity(true)}
-                  className={`
+                  {/* ✅ Identity button — ALWAYS LIVE */}
+                  <button
+                    onClick={() => setShowMintIdentity(true)}
+                    className={`
   group
   relative
   isolate
@@ -1926,7 +1998,7 @@ export default function HomePage() {
   hover:scale-[1.03]
 
   ${isDarkMode
-                      ? `
+                        ? `
         border-white/15
         bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
         text-slate-400
@@ -1934,7 +2006,7 @@ export default function HomePage() {
         hover:border-white/30
         hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
       `
-                      : `
+                        : `
         border-sky-300/40
         bg-[linear-gradient(135deg,rgba(255,255,255,0.95),rgba(230,240,255,0.72))]
         text-slate-800
@@ -1942,7 +2014,7 @@ export default function HomePage() {
         hover:border-sky-400/60
         hover:shadow-[0_15px_45px_rgba(56,189,248,0.28)]
       `
-                    }
+                      }
 
   before:absolute
   before:inset-0
@@ -1961,13 +2033,13 @@ export default function HomePage() {
   [&>span]:relative
   [&>span]:z-10
 `}
-                >
-                  {hasIdentityNFT ? "View Identity" : "Mint Identity"}
-                </button>
+                  >
+                    {hasIdentityNFT ? "View Identity" : "Mint Identity"}
+                  </button>
 
-                <button
-                  onClick={() => setShowVault(true)}
-                  className="
+                  <button
+                    onClick={() => setShowVault(true)}
+                    className="
     flex h-10 w-10 items-center justify-center
     overflow-hidden
     rounded-2xl
@@ -1975,287 +2047,287 @@ export default function HomePage() {
     transition-all
     hover:scale-105
   "
-                >
+                  >
 
-                  <Image
-                    src="/vault.png"
-                    alt="Vault"
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
+                    <Image
+                      src="/vault.png"
+                      alt="Vault"
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                    />
 
-                </button>
+                  </button>
 
+                </div>
               </div>
             </div>
-          </div>
-          {account && (
-            <div className="flex justify-center mt-2">
-              <button
-                onClick={handleClaimAll}
-                disabled={!!(loading || !pendingTokens || pendingTokens === BigInt(0) || paused)}
-                className={`
+            {account && (
+              <div className="flex justify-center mt-2">
+                <button
+                  onClick={handleClaimAll}
+                  disabled={!!(loading || !pendingTokens || pendingTokens === BigInt(0) || paused)}
+                  className={`
     inline-flex items-center justify-center
     px-8 py-3 rounded-full
     text-base font-semibold
     transition
     shadow-lg
     ${rewardTier === "low"
-                    ? "bg-gradient-to-r from-purple-500 to-indigo-500 shadow-purple-900/50 text-slate-50"
-                    : rewardTier === "mid"
-                      ? "bg-gradient-to-r from-sky-500 to-blue-500 shadow-blue-900/50 text-slate-50"
-                      : rewardTier === "big"
-                        ? "bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-900 shadow-amber-500/60"
-                        : "bg-fuchsia-900/40 text-fuchsia-200/80"
-                  }
+                      ? "bg-gradient-to-r from-purple-500 to-indigo-500 shadow-purple-900/50 text-slate-50"
+                      : rewardTier === "mid"
+                        ? "bg-gradient-to-r from-sky-500 to-blue-500 shadow-blue-900/50 text-slate-50"
+                        : rewardTier === "big"
+                          ? "bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-900 shadow-amber-500/60"
+                          : "bg-fuchsia-900/40 text-fuchsia-200/80"
+                    }
     ${loading || !pendingTokens || pendingTokens === BigInt(0) || paused
-                    ? "opacity-40 cursor-not-allowed"
-                    : "hover:brightness-110 active:scale-95"
-                  }
+                      ? "opacity-40 cursor-not-allowed"
+                      : "hover:brightness-110 active:scale-95"
+                    }
   `}
-              >
-                {(pendingTokens ?? BigInt(0)) > BigInt(0)
-                  ? "Claim all"
-                  : recentlyClaimed
-                    ? "Claimed"
-                    : "Claimed"}
-              </button>
-            </div>
-          )}
-        </section>
+                >
+                  {(pendingTokens ?? BigInt(0)) > BigInt(0)
+                    ? "Claim all"
+                    : recentlyClaimed
+                      ? "Claimed"
+                      : "Claimed"}
+                </button>
+              </div>
+            )}
+          </section>
 
-        {/* Badge progress + badge list */}
-        <section
-          className={`
+          {/* Badge progress + badge list */}
+          <section
+            className={`
     p-4 space-y-3
     ${isDarkMode ? glassCard : ""}
   `}
-        >
-          <div className="relative group inline-flex">
-            <div className="relative inline-flex">
-              <button
-                className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
-                  }`}
-                onClick={() => {
-                  setShowBadgesTip(true);
-                  setTimeout(() => setShowBadgesTip(false), 2000);
-                }}
-              >
-                <span className="text-lg"></span> GuitarPath
-              </button>
-              
-            </div>
-            
-          </div>
-          {/* progress path */}
-          <div className="relative mt-1 mb-2"
-            onClick={() => {
-              const runner = document.getElementById("avatar-runner");
-              if (!runner) return;
-              runner.style.setProperty(
-                "--target-x",
-                `${badgeProgress * 100}%`
-              );
-              runner.classList.remove("hidden");
-              runner.style.animation = "avatar-run 3s ease-out forwards";
-              // hide original avatar briefly
-              const originals = document.querySelectorAll("[data-avatar-main]");
-              originals.forEach(el => {
-                (el as HTMLElement).style.opacity = "0";
-              });
-            }}
           >
-            {/* base line */}
-            <div className="relative h-[2px] w-full rounded-full bg-slate-700/70 overflow-hidden">
-              {/* progress fill */}
-              <div
-                className="
+            <div className="relative group inline-flex">
+              <div className="relative inline-flex">
+                <button
+                  className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                  onClick={() => {
+                    setShowBadgesTip(true);
+                    setTimeout(() => setShowBadgesTip(false), 2000);
+                  }}
+                >
+                  <span className="text-lg"></span> GuitarPath
+                </button>
+
+              </div>
+
+            </div>
+            {/* progress path */}
+            <div className="relative mt-1 mb-2"
+              onClick={() => {
+                const runner = document.getElementById("avatar-runner");
+                if (!runner) return;
+                runner.style.setProperty(
+                  "--target-x",
+                  `${badgeProgress * 100}%`
+                );
+                runner.classList.remove("hidden");
+                runner.style.animation = "avatar-run 3s ease-out forwards";
+                // hide original avatar briefly
+                const originals = document.querySelectorAll("[data-avatar-main]");
+                originals.forEach(el => {
+                  (el as HTMLElement).style.opacity = "0";
+                });
+              }}
+            >
+              {/* base line */}
+              <div className="relative h-[2px] w-full rounded-full bg-slate-700/70 overflow-hidden">
+                {/* progress fill */}
+                <div
+                  className="
       absolute left-0 top-0 h-full
       bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500
       transition-all duration-700 ease-out
                "
+                  style={{
+                    width: `${badgeProgress * 100}%`,
+                  }}
+                />
+              </div>
+              {/* badge icons – SKETCH BASED POSITIONS */}
+              <div className="absolute inset-0 -top-3 text-lg">
+                <span className="absolute left-[28%] -translate-x-1/2">🥈</span>
+                <span className="absolute left-[52%] -translate-x-1/2">🥇</span>
+                <span className="absolute left-[74%] -translate-x-1/2">💎</span>
+                <span className="absolute left-[92%] -translate-x-1/2">🌟</span>
+              </div>
+
+              {/* avatar progress */}
+              <div
+                data-avatar-main
+                className="absolute -top-5 h-7 w-7 rounded-full ring-2 ring-sky-400 bg-slate-900 overflow-hidden shadow-lg shadow-sky-900 transition-all"
                 style={{
-                  width: `${badgeProgress * 100}%`,
+                  left: `${badgeProgress * 100}%`,
+                  transform: "translateX(-50%)",
                 }}
-              />
-            </div>
-            {/* badge icons – SKETCH BASED POSITIONS */}
-            <div className="absolute inset-0 -top-3 text-lg">
-              <span className="absolute left-[28%] -translate-x-1/2">🥈</span>
-              <span className="absolute left-[52%] -translate-x-1/2">🥇</span>
-              <span className="absolute left-[74%] -translate-x-1/2">💎</span>
-              <span className="absolute left-[92%] -translate-x-1/2">🌟</span>
-            </div>
-
-            {/* avatar progress */}
-            <div
-              data-avatar-main
-              className="absolute -top-5 h-7 w-7 rounded-full ring-2 ring-sky-400 bg-slate-900 overflow-hidden shadow-lg shadow-sky-900 transition-all"
-              style={{
-                left: `${badgeProgress * 100}%`,
-                transform: "translateX(-50%)",
-              }}
-            >
-              <img
-                src={profileAvatar || "/avatar.png"}
-                alt="User avatar"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            {/* RUN ANIMATION OVERLAY (visual only) */}
-            <div
-              id="avatar-runner"
-              onAnimationEnd={() => {
-                const runner = document.getElementById("avatar-runner");
-                if (!runner) return;
-
-                runner.classList.add("hidden");
-                runner.style.animation = "none";
-
-                const originals = document.querySelectorAll("[data-avatar-main]");
-                originals.forEach(el => {
-                  (el as HTMLElement).style.opacity = "1";
-                });
-              }}
-              className="pointer-events-none absolute -top-8 hidden"
-              style={{ left: "5%", transform: "translateX(-50%)" }}
-            >
-              {/* avatar bubble */}
-              <div className="relative h-7 w-7 rounded-full overflow-hidden ring-2 ring-sky-400 bg-slate-900 z-10">
+              >
                 <img
                   src={profileAvatar || "/avatar.png"}
+                  alt="User avatar"
                   className="h-full w-full object-cover"
                 />
               </div>
-              {/* legs — OUTSIDE avatar */}
-              <div className="absolute top-[28px] left-1/2 -translate-x-1/2 flex gap-[4px]">
-                <span className="leg leg-left" />
-                <span className="leg leg-right" />
+              {/* RUN ANIMATION OVERLAY (visual only) */}
+              <div
+                id="avatar-runner"
+                onAnimationEnd={() => {
+                  const runner = document.getElementById("avatar-runner");
+                  if (!runner) return;
+
+                  runner.classList.add("hidden");
+                  runner.style.animation = "none";
+
+                  const originals = document.querySelectorAll("[data-avatar-main]");
+                  originals.forEach(el => {
+                    (el as HTMLElement).style.opacity = "1";
+                  });
+                }}
+                className="pointer-events-none absolute -top-8 hidden"
+                style={{ left: "5%", transform: "translateX(-50%)" }}
+              >
+                {/* avatar bubble */}
+                <div className="relative h-7 w-7 rounded-full overflow-hidden ring-2 ring-sky-400 bg-slate-900 z-10">
+                  <img
+                    src={profileAvatar || "/avatar.png"}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                {/* legs — OUTSIDE avatar */}
+                <div className="absolute top-[28px] left-1/2 -translate-x-1/2 flex gap-[4px]">
+                  <span className="leg leg-left" />
+                  <span className="leg leg-right" />
+                </div>
               </div>
             </div>
-          </div>
-          
-          
-        </section>
-        {/* Donation */}
-        <section
-          className={`
+
+
+          </section>
+          {/* Donation */}
+          <section
+            className={`
     p-4 space-y-3
     ${isDarkMode ? glassCard : ""}
   `}
-        >
-          <button
-            type="button"
-            onClick={() => setShowDonate((v) => !v)}
-            className="w-full flex items-center justify-between text-sm font-semibold text-slate-100 active:scale-[0.98] transition-transform
-            "
           >
-            <span
-              className={`flex items-center gap-2 ${isDarkMode ? "text-slate-100" : "text-slate-900"
-                }`}
+            <button
+              type="button"
+              onClick={() => setShowDonate((v) => !v)}
+              className="w-full flex items-center justify-between text-sm font-semibold text-slate-100 active:scale-[0.98] transition-transform
+            "
             >
-              <span className="text-lg">💙</span> Support creator
-            </span>
-            <span
-              className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
-                }`}
-            >
-              {showDonate ? "Hide" : "Tip in USDm on Celo"}
-            </span>
-          </button>
+              <span
+                className={`flex items-center gap-2 ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                  }`}
+              >
+                <span className="text-lg">💙</span> Support creator
+              </span>
+              <span
+                className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                  }`}
+              >
+                {showDonate ? "Hide" : "Tip in USDm on Celo"}
+              </span>
+            </button>
 
-          {showDonate && (
-            <div className="mt-3 space-y-3 text-xs bg-slate-950/80 rounded-2xl p-3 shadow-inner shadow-slate-950">
-              <p className="text-slate-300">Tip in USDm on Celo</p>
+            {showDonate && (
+              <div className="mt-3 space-y-3 text-xs bg-slate-950/80 rounded-2xl p-3 shadow-inner shadow-slate-950">
+                <p className="text-slate-300">Tip in USDm on Celo</p>
 
-              <div className="flex flex-wrap gap-2">
-                {[1, 5, 10, 100].map((v) => (
-                  <button
-                    key={v}
-                    type="button"
-                    onClick={() => handleSelectDonation(v)}
-                    className={`px-3 py-1.5 rounded-full border text-xs active:scale-[0.98] transition-transform
+                <div className="flex flex-wrap gap-2">
+                  {[1, 5, 10, 100].map((v) => (
+                    <button
+                      key={v}
+                      type="button"
+                      onClick={() => handleSelectDonation(v)}
+                      className={`px-3 py-1.5 rounded-full border text-xs active:scale-[0.98] transition-transform
                         ${donationAmount === v.toString()
-                        ? "border-sky-400 bg-sky-500/10 text-sky-200"
-                        : "border-slate-700 bg-slate-900 text-slate-300"
+                          ? "border-sky-400 bg-sky-500/10 text-sky-200"
+                          : "border-slate-700 bg-slate-900 text-slate-300"
+                        }`}
+                    >
+                      {v} USDm
+                    </button>
+                  ))}
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <input
+                    type="number"
+                    min={0}
+                    value={donationAmount}
+                    onChange={(e) => setDonationAmount(e.target.value)}
+                    className={`flex-1 rounded-xl px-3 py-2 text-xs outline-none focus:border-sky-400 ${isDarkMode
+                      ? "bg-slate-900 border border-slate-700 text-slate-100"
+                      : "bg-white border border-slate-300 text-slate-900"
                       }`}
-                  >
-                    {v} USDm
-                  </button>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-2">
-                <input
-                  type="number"
-                  min={0}
-                  value={donationAmount}
-                  onChange={(e) => setDonationAmount(e.target.value)}
-                  className={`flex-1 rounded-xl px-3 py-2 text-xs outline-none focus:border-sky-400 ${isDarkMode
-                    ? "bg-slate-900 border border-slate-700 text-slate-100"
-                    : "bg-white border border-slate-300 text-slate-900"
-                    }`}
-                  placeholder="Custom amount"
-                />
-                <button
-                  type="button"
-                  onClick={handleDonateClick}
-                  className="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition active:scale-[0.98] transition-transform
+                    placeholder="Custom amount"
+                  />
+                  <button
+                    type="button"
+                    onClick={handleDonateClick}
+                    className="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-xs transition active:scale-[0.98] transition-transform
                   "
-                >
-                  Donate
-                </button>
-              </div>
+                  >
+                    Donate
+                  </button>
+                </div>
 
-              <div className="space-y-1">
-                <p className="text-[11px] text-slate-500">Top supporters</p>
-                {topSupporters.length === 0 ? (
-                  <p className="text-[11px] text-slate-500">No supporters yet.</p>
-                ) : (
-                  <ul className="text-[11px] text-slate-400 space-y-1">
-                    {topSupporters.map((s, i) => (
-                      <li
-                        key={s.address}
-                        className="flex items-center justify-between"
-                      >
-                        <div className="flex items-center gap-2">
-                          {s.avatar ? (
-                            <img
-                              src={s.avatar}
-                              alt={s.name || s.address}
-                              className="h-5 w-5 rounded-full"
-                            />
-                          ) : (
-                            <div className="h-5 w-5 rounded-full bg-slate-700" />
-                          )}
+                <div className="space-y-1">
+                  <p className="text-[11px] text-slate-500">Top supporters</p>
+                  {topSupporters.length === 0 ? (
+                    <p className="text-[11px] text-slate-500">No supporters yet.</p>
+                  ) : (
+                    <ul className="text-[11px] text-slate-400 space-y-1">
+                      {topSupporters.map((s, i) => (
+                        <li
+                          key={s.address}
+                          className="flex items-center justify-between"
+                        >
+                          <div className="flex items-center gap-2">
+                            {s.avatar ? (
+                              <img
+                                src={s.avatar}
+                                alt={s.name || s.address}
+                                className="h-5 w-5 rounded-full"
+                              />
+                            ) : (
+                              <div className="h-5 w-5 rounded-full bg-slate-700" />
+                            )}
+                            <span className="text-[11px]">
+                              #{i + 1}{" "}
+                              {s.name ||
+                                `${s.address.slice(0, 6)}…${s.address.slice(-4)}`}
+                            </span>
+                          </div>
                           <span className="text-[11px]">
-                            #{i + 1}{" "}
-                            {s.name ||
-                              `${s.address.slice(0, 6)}…${s.address.slice(-4)}`}
+                            {s.total.toFixed(2)} USDm
                           </span>
-                        </div>
-                        <span className="text-[11px]">
-                          {s.total.toFixed(2)} USDm
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
 
+              </div>
+            )}
+          </section>
+
+          {/* Status */}
+          {status && (
+            <div className="mt-2 text-[11px] text-amber-200 bg-amber-950/40 rounded-2xl p-2.5 whitespace-pre-wrap shadow-inner shadow-amber-900/60">
+              {status}
             </div>
           )}
-        </section>
 
-        {/* Status */}
-        {status && (
-          <div className="mt-2 text-[11px] text-amber-200 bg-amber-950/40 rounded-2xl p-2.5 whitespace-pre-wrap shadow-inner shadow-amber-900/60">
-            {status}
-          </div>
-        )}
-
-</div>
+        </div>
 
 
 
@@ -3159,7 +3231,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-        
+
 
               {/* 💰 0xtxn */}
               <div>
