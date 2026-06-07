@@ -2054,31 +2054,11 @@ export default function HomePage() {
                   setTimeout(() => setShowBadgesTip(false), 2000);
                 }}
               >
-                <span className="text-lg">🏅</span> Badges
+                <span className="text-lg">🏅</span> GuitarPath
               </button>
-              {showBadgesTip && (
-                <div className="absolute z-50 top-full mt-2 w-64 rounded-2xl
-                    bg-slate-950/95 backdrop-blur-xl
-                    border border-white/10 shadow-2xl
-                    px-3 py-2 text-[11px] text-slate-200">
-                  <p className="font-semibold text-sky-300 mb-1">Badge milestones</p>
-                  <ul className="list-disc pl-4 space-y-1">
-                    <li>🥈 Silver — 7 days</li>
-                    <li>🥇 Gold — 15 days</li>
-                    <li>💎 Diamond — 30 days</li>
-                    <li>🌟 Legendary — 100 days</li>
-                  </ul>
-                </div>
-              )}
+              
             </div>
-            <HoverInfo title="Badge milestones">
-              <ul className="list-disc pl-4 space-y-1">
-                <li>🥈 Silver — 7 days</li>
-                <li>🥇 Gold — 15 days</li>
-                <li>💎 Diamond — 30 days</li>
-                <li>🌟 Legendary — 100 days</li>
-              </ul>
-            </HoverInfo>
+            
           </div>
           {/* progress path */}
           <div className="relative mt-1 mb-2"
@@ -2167,14 +2147,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <p
-            className={`text-[11px] ${isDarkMode ? "text-slate-500" : "text-slate-900"
-              }`}
-          >
-            As your streak grows, your avatar moves along the badge path. Silver,
-            Gold, Diamond and Legendary/Loyalty badges will unlock at different
-            milestones.
-          </p>
+          
           
         </section>
         {/* Donation */}
