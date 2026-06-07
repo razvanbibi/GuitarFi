@@ -387,9 +387,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -400,8 +402,59 @@ body {
     opacity: 0;
     transform: scale(0.88) translateY(18px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+
+.music-note {
+  position: absolute;
+  font-size: 18px;
+  color: rgba(56, 189, 248, 0.8);
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  animation: floatMusic 8s linear infinite;
+  opacity: 0;
+}
+
+.note-1 {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.note-2 {
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.note-3 {
+  left: 70%;
+  animation-delay: 4s;
+}
+
+.note-4 {
+  left: 25%;
+  animation-delay: 6s;
+}
+
+@keyframes floatMusic {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0;
   }
 }

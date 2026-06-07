@@ -1579,14 +1579,14 @@ ${showTradeMenu
               </button>
               {showTradeMenu && (
                 <div
-  className="
+                  className="
     mt-2
     ml-4
     flex flex-col gap-2
     w-fit
     animate-[fade-up_0.25s_ease-out]
   "
->
+                >
 
                   <button
                     className="
@@ -1698,14 +1698,14 @@ ${showExploreMenu
               </button>
               {showExploreMenu && (
                 <div
-  className="
+                  className="
     mt-2
     ml-4
     flex flex-col gap-2
     w-fit
     animate-[fade-up_0.25s_ease-out]
   "
->
+                >
 
                   <button
                     className="
@@ -1771,6 +1771,19 @@ ${showExploreMenu
                   </button>
                 </div>
               )}
+
+
+
+              <div className="pointer-events-none absolute right-8 bottom-6 w-40 h-28 overflow-hidden">
+                <div className="absolute right-16 bottom-8 text-5xl opacity-10">
+                  🎸
+                </div>
+                <span className="music-note note-1">♪</span>
+                <span className="music-note note-2">♫</span>
+                <span className="music-note note-3">♬</span>
+                <span className="music-note note-4">♪</span>
+              </div>
+
             </div>
 
           </section>
