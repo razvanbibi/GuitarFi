@@ -1414,7 +1414,7 @@ export default function HomePage() {
       />
 
       {/* content */}
-      <div className="relative z-10 mx-auto max-w-md px-4 pb-10 pt-6 space-y-4">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pb-10 pt-6">
         {/* Header */}
         <header className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
