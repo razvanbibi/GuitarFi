@@ -115,6 +115,7 @@ export default function HomePage() {
 
   const [showDonate, setShowDonate] = useState(false);
   const [showTradeMenu, setShowTradeMenu] = useState(false);
+  const [showExploreMenu, setShowExploreMenu] = useState(false);
 
   const [showVault, setShowVault] = useState(false);
 
@@ -1526,44 +1527,61 @@ export default function HomePage() {
                 />
               </div>
 
-              
 
 
-             
+
+
 
 
             </div>
 
             <div className="mt-4">
 
-                <button
-                  onClick={() => setShowTradeMenu(!showTradeMenu)}
-                  className="
-    inline-flex
-    items-center
-    gap-3
-    rounded-2xl
-    px-5 py-3
-    bg-slate-900/80
-    border border-white/10
-    text-slate-100
-    hover:bg-slate-800
-    transition
-"
-                >
-                  <span className="font-semibold">
-                    Trade
-                  </span>
+              <button
+                onClick={() => {
+                  setShowTradeMenu(!showTradeMenu);
+                  setShowExploreMenu(false);
+                }}
+                className={`
+inline-flex
+items-center
+gap-3
+rounded-2xl
+px-5 py-3
+transition-all
+duration-300
 
-                  <span>
-                    {showTradeMenu ? "−" : "+"}
-                  </span>
-                </button>
-                {showTradeMenu && (
-                  <div className="mt-2 flex flex-col gap-2 w-fit">
+${showTradeMenu
+                    ? `
+      bg-gradient-to-r
+      from-sky-500/20
+      to-indigo-500/20
+      border border-sky-400/40
+      text-sky-300
+      shadow-[0_0_20px_rgba(56,189,248,0.25)]
+    `
+                    : `
+      bg-slate-900/80
+      border border-white/10
+      text-slate-100
+      hover:bg-slate-800
+    `
+                  }
+`}
+              >
+                <span className="font-semibold">
+                  Trade
+                </span>
 
-                    <button
-                      className="
+                <span>
+                  {showTradeMenu ? "−" : "+"}
+                </span>
+              </button>
+              {showTradeMenu && (
+                <div className="mt-2 flex flex-col gap-2 w-fit">
+
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1573,12 +1591,12 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Deposit
-                    </button>
+                  >
+                    Deposit
+                  </button>
 
-                    <button
-                      className="
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1588,12 +1606,12 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Buy
-                    </button>
+                  >
+                    Buy
+                  </button>
 
-                    <button
-                      className="
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1603,43 +1621,60 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Withdraw
-                    </button>
-                  </div>
-                )}
-              </div>
+                  >
+                    Withdraw
+                  </button>
+                </div>
+              )}
+            </div>
 
-<div className="mt-4">
+            <div className="mt-4">
 
-                <button
-                  onClick={() => setShowTradeMenu(!showTradeMenu)}
-                  className="
-    inline-flex
-    items-center
-    gap-3
-    rounded-2xl
-    px-5 py-3
-    bg-slate-900/80
-    border border-white/10
-    text-slate-100
-    hover:bg-slate-800
-    transition
-"
-                >
-                  <span className="font-semibold">
-                    Explore
-                  </span>
+              <button
+                onClick={() => {
+                  setShowExploreMenu(!showExploreMenu);
+                  setShowTradeMenu(false);
+                }}
+                className={`
+inline-flex
+items-center
+gap-3
+rounded-2xl
+px-5 py-3
+transition-all
+duration-300
 
-                  <span>
-                    {showTradeMenu ? "−" : "+"}
-                  </span>
-                </button>
-                {showTradeMenu && (
-                  <div className="mt-2 flex flex-col gap-2 w-fit">
+${showExploreMenu
+                    ? `
+      bg-gradient-to-r
+      from-violet-500/20
+      to-fuchsia-500/20
+      border border-violet-400/40
+      text-violet-300
+      shadow-[0_0_20px_rgba(168,85,247,0.25)]
+    `
+                    : `
+      bg-slate-900/80
+      border border-white/10
+      text-slate-100
+      hover:bg-slate-800
+    `
+                  }
+`}
+              >
+                <span className="font-semibold">
+                  Explore
+                </span>
 
-                    <button
-                      className="
+                <span>
+                  {showExploreMenu ? "−" : "+"}
+                </span>
+              </button>
+              {showExploreMenu && (
+                <div className="mt-2 flex flex-col gap-2 w-fit">
+
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1649,12 +1684,12 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Vault
-                    </button>
+                  >
+                    Vault
+                  </button>
 
-                    <button
-                      className="
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1664,12 +1699,12 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Identity
-                    </button>
+                  >
+                    Identity
+                  </button>
 
-                    <button
-                      className="
+                  <button
+                    className="
     rounded-xl
 px-5 py-2.5
 min-w-[140px]
@@ -1679,12 +1714,12 @@ text-left
     hover:bg-slate-800
     transition
   "
-                    >
-                      Donate
-                    </button>
-                  </div>
-                )}
-              </div>
+                  >
+                    Donate
+                  </button>
+                </div>
+              )}
+            </div>
 
           </section>
 
