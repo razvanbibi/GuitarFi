@@ -412,49 +412,74 @@ body {
 
 .music-note {
   position: absolute;
-  font-size: 18px;
-  color: rgba(56, 189, 248, 0.8);
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
-  animation: floatMusic 8s linear infinite;
+  right: 90px;
+  bottom: 45px;
+
+  font-size: 22px;
+  color: #38bdf8;
+
   opacity: 0;
+
+  animation: floatMusic 6s linear infinite;
 }
 
 .note-1 {
-  left: 10%;
   animation-delay: 0s;
 }
 
 .note-2 {
-  left: 40%;
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 .note-3 {
-  left: 70%;
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .note-4 {
-  left: 25%;
-  animation-delay: 6s;
+  animation-delay: 4.5s;
 }
 
 @keyframes floatMusic {
   0% {
-    transform: translateY(40px) scale(0.8);
+    transform: translate(0, 0) scale(.8);
     opacity: 0;
   }
 
-  20% {
+  15% {
     opacity: 1;
   }
 
-  80% {
-    opacity: 1;
+  35% {
+    transform: translate(-10px, -70px);
+  }
+
+  60% {
+    transform: translate(12px, -140px);
   }
 
   100% {
-    transform: translateY(-80px) scale(1.2);
+    transform: translate(-5px, -230px) scale(1.3);
     opacity: 0;
   }
+}
+
+
+@keyframes donateGlow {
+  0% {
+    box-shadow: 0 0 12px rgba(56,189,248,.10);
+  }
+
+  50% {
+    box-shadow:
+      0 0 25px rgba(56,189,248,.22),
+      0 0 45px rgba(56,189,248,.10);
+  }
+
+  100% {
+    box-shadow: 0 0 12px rgba(56,189,248,.10);
+  }
+}
+
+.donate-card-glow {
+  animation: donateGlow 3s ease-in-out infinite;
 }

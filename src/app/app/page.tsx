@@ -1708,6 +1708,10 @@ ${showExploreMenu
                 >
 
                   <button
+                    onClick={() => {
+                      setShowVault(true);
+                      setShowExploreMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
@@ -1729,6 +1733,10 @@ ${showExploreMenu
                   </button>
 
                   <button
+                    onClick={() => {
+                      setShowMintIdentity(true);
+                      setShowExploreMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
@@ -1750,6 +1758,10 @@ ${showExploreMenu
                   </button>
 
                   <button
+                    onClick={() => {
+                      setShowDonate(true);
+                      setShowExploreMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
@@ -1774,16 +1786,20 @@ ${showExploreMenu
 
 
 
-              <div className="pointer-events-none absolute right-8 bottom-6 w-40 h-28 overflow-hidden">
-                <div className="absolute right-16 bottom-8 text-5xl opacity-10">
-                  🎸
-                </div>
-                <span className="music-note note-1">♪</span>
-                <span className="music-note note-2">♫</span>
-                <span className="music-note note-3">♬</span>
-                <span className="music-note note-4">♪</span>
+
+
+            </div>
+
+            {/* Guitar Animation */}
+            <div className="pointer-events-none absolute inset-0 overflow-visible">
+              <div className="absolute right-10 bottom-8 text-5xl opacity-10">
+                🎸
               </div>
 
+              <span className="music-note note-1">♪</span>
+              <span className="music-note note-2">♫</span>
+              <span className="music-note note-3">♬</span>
+              <span className="music-note note-4">♪</span>
             </div>
 
           </section>
@@ -2396,7 +2412,11 @@ ${showExploreMenu
           <section
             className={`
     p-4 space-y-3
+    transition-all duration-500
+
     ${isDarkMode ? glassCard : ""}
+
+    ${showDonate ? "donate-card-glow border border-sky-400/30" : ""}
   `}
           >
             <button
