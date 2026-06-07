@@ -2159,10 +2159,10 @@ text-left
               </div>
               {/* badge icons – SKETCH BASED POSITIONS */}
               <div className="absolute inset-0 -top-3 text-lg">
-                <span className="absolute left-[28%] -translate-x-1/2">🥈</span>
-                <span className="absolute left-[52%] -translate-x-1/2">🥇</span>
-                <span className="absolute left-[74%] -translate-x-1/2">💎</span>
-                <span className="absolute left-[92%] -translate-x-1/2">🌟</span>
+                <span className="absolute left-[28%] -translate-x-1/2"></span>
+                <span className="absolute left-[52%] -translate-x-1/2"></span>
+                <span className="absolute left-[74%] -translate-x-1/2"></span>
+                <span className="absolute left-[92%] -translate-x-1/2"></span>
               </div>
 
               {/* avatar progress */}
