@@ -8,7 +8,6 @@ const NFT_CONTRACT = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
 const NFT_ABI = [
   "function ownerOf(uint256 tokenId) view returns (address)"
 ];
-
 export async function GET(
   req: Request,
   { params }: { params: { tokenId: string } }
@@ -23,7 +22,6 @@ export async function GET(
   const profile = await getProfile(owner);
   const { contract } = getReadOnlyContractServer();
   const highestStreak = Number(await contract.highestStreak(owner));
-
   return NextResponse.json({
     name: profile?.name
       ? `CeloDaily Identity — ${profile.name}`
