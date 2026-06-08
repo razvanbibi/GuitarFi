@@ -1763,7 +1763,6 @@ ${showExploreMenu
 
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
@@ -1785,7 +1784,6 @@ ${showExploreMenu
 
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
 
@@ -1797,7 +1795,6 @@ ${showExploreMenu
                   </button>
                 </div>
               )}
-
 
 
 
