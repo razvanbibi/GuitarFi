@@ -1542,7 +1542,7 @@ export default function HomePage() {
 
             </div>
 
-           <div className="mt-4 relative min-h-[70px]">
+            <div className="mt-4 relative min-h-[70px]">
 
               <button
                 onClick={() => {
@@ -1595,7 +1595,7 @@ ${showTradeMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-  >
+                >
 
                   <button
                     className="
@@ -1663,7 +1663,7 @@ ${showTradeMenu
               )}
             </div>
 
-           <div className="mt-4 relative">
+            <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1716,7 +1716,7 @@ ${showExploreMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-  >
+                >
 
                   <button
                     onClick={() => {
@@ -3353,6 +3353,50 @@ ${showExploreMenu
             >
               ✕
             </button>
+          </div>
+
+          <div className="space-y-1">
+
+            <button className="drawer-item drawer-active">
+              🏠 Dashboard
+            </button>
+
+            <button className="drawer-item">
+              ☑️ Quests
+            </button>
+
+            <button className="drawer-item">
+              🔄 Trade
+            </button>
+
+            <button className="drawer-item">
+              ⭕ Explore
+            </button>
+
+            <button className="drawer-item">
+              🎁 Rewards
+            </button>
+
+            <button className="drawer-item">
+              🎸 GuitarPath
+            </button>
+
+            <button className="drawer-item">
+              🏆 Leaderboard
+            </button>
+
+            <button className="drawer-item">
+              🖼️ NFT Collection
+            </button>
+
+            <button className="drawer-item">
+              🛟 Support
+            </button>
+
+            <button className="drawer-item">
+              ⚙️ Settings
+            </button>
+
           </div>
 
           <div
