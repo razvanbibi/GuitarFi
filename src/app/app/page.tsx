@@ -2062,33 +2062,6 @@ ${showExploreMenu
                     </div>
                   )}
 
-                  {/* 🏆 Leaderboard button — EXACT RED BOX POSITION */}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setShowLeaderboard(true);
-                      loadLeaderboard();
-                    }}
-
-                    className={`
-  absolute
-  mt-1 left-1/2 -translate-x-1/2
-  h-7 w-7
-  rounded-full
-  flex items-center justify-center
-  bg-slate-900/70
-  border border-white/10
-  shadow-md
-  text-sm
-  hover:bg-slate-800
-  active:scale-95
-  transition
-  ${showLeaderboard ? "opacity-0 pointer-events-none" : ""}
-`}
-
-                  >
-                    🏆
-                  </button>
 
                 </div>
 
