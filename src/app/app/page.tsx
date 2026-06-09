@@ -2964,7 +2964,7 @@ active:scale-95
               </div>
 
               <div
-  className="
+                className="
   px-3 py-1
 
   rounded-full
@@ -2979,9 +2979,9 @@ active:scale-95
 
   backdrop-blur-xl
 "
->
-  SWAP
-</div>
+              >
+                SWAP
+              </div>
 
             </div>
 
@@ -3093,9 +3093,9 @@ active:scale-95
             {/* BUTTON */}
 
             <button
-  onClick={handleConvert}
-  disabled={loading}
-  className="
+              onClick={handleConvert}
+              disabled={loading}
+              className="
   group
   relative
 
@@ -3125,10 +3125,10 @@ active:scale-95
 
   disabled:opacity-50
 "
->
-  {/* Glow */}
-  <div
-    className="
+            >
+              {/* Glow */}
+              <div
+                className="
     absolute
     inset-0
 
@@ -3141,11 +3141,11 @@ active:scale-95
     rgba(56,189,248,0.22),
     transparent_70%)]
   "
-  />
+              />
 
-  {/* Moving shine */}
-  <div
-    className="
+              {/* Moving shine */}
+              <div
+                className="
     absolute
     inset-0
 
@@ -3162,12 +3162,12 @@ active:scale-95
       transparent
     )]
   "
-  />
+              />
 
-  <div className="relative z-10 flex items-center justify-center gap-3">
+              <div className="relative z-10 flex items-center justify-center gap-3">
 
-    <div
-      className="
+                <div
+                  className="
       flex
       h-9
       w-9
@@ -3182,22 +3182,22 @@ active:scale-95
 
       text-sky-300
     "
-    >
-      ⇄
-    </div>
+                >
+                  ⇄
+                </div>
 
-    <div className="flex flex-col items-start">
-      <span className="text-sm font-semibold text-white">
-        Convert to GTR
-      </span>
+                <div className="flex flex-col items-start">
+                  <span className="text-sm font-semibold text-white">
+                    Convert to GTR
+                  </span>
 
-      <span className="text-[10px] text-slate-400">
-        Instant swap
-      </span>
-    </div>
+                  <span className="text-[10px] text-slate-400">
+                    Instant swap
+                  </span>
+                </div>
 
-  </div>
-</button>
+              </div>
+            </button>
 
           </section>
 
@@ -3323,28 +3323,165 @@ active:scale-95
               {/* CTA */}
               <button
                 className="
-      mt-4
-      w-full
-      py-3
+  group
+  relative
 
-      rounded-2xl
+  w-full
+  overflow-hidden
 
-      bg-gradient-to-r
-      from-violet-900
-      via-purple-800
-      to-violet-900
+  rounded-[28px]
 
-      text-sm
-      font-medium
-      text-violet-100
+  border border-white/10
 
-      hover:brightness-110
-      active:scale-[0.98]
+  bg-[linear-gradient(
+    135deg,
+    rgba(30,41,59,0.95),
+    rgba(88,28,135,0.55),
+    rgba(15,23,42,0.95)
+  )]
+
+  p-[1px]
+
+  transition-all
+  duration-500
+
+  hover:scale-[1.015]
+  hover:shadow-[0_0_60px_rgba(168,85,247,0.25)]
+
+  active:scale-[0.985]
+"
+              >
+                {/* Animated border */}
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition-opacity
+    duration-500
+
+    bg-[conic-gradient(
+      from_180deg,
+      transparent,
+      rgba(168,85,247,0.7),
+      transparent,
+      rgba(59,130,246,0.7),
+      transparent
+    )]
+
+    animate-[spin_6s_linear_infinite]
+  "
+                />
+
+                <div
+                  className="
+    relative
+
+    flex items-center
+    justify-between
+
+    rounded-[27px]
+
+    bg-[#050816]/95
+
+    px-5
+    py-4
+  "
+                >
+                  {/* Left */}
+                  <div className="flex items-center gap-4">
+
+                    <div
+                      className="
+        relative
+
+        flex
+        h-12
+        w-12
+
+        items-center
+        justify-center
+
+        rounded-2xl
+
+        bg-gradient-to-br
+        from-violet-500/20
+        to-sky-500/20
+
+        border border-white/10
+      "
+                    >
+                      <div
+                        className="
+          absolute inset-0
+          rounded-2xl
+
+          bg-violet-500/20
+          blur-xl
+        "
+                      />
+
+                      <span className="relative text-xl">
+                        🎸
+                      </span>
+                    </div>
+
+                    <div className="text-left">
+                      <div
+                        className="
+          text-sm
+          font-bold
+
+          bg-gradient-to-r
+          from-white
+          via-violet-200
+          to-sky-300
+
+          bg-clip-text
+          text-transparent
+        "
+                      >
+                        Guitar Collection
+                      </div>
+
+                      <div className="text-[11px] text-slate-400">
+                        View your premium NFTs
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Right */}
+                  <div
+                    className="
+      flex
+      h-10
+      w-10
+
+      items-center
+      justify-center
+
+      rounded-full
+
+      bg-white/5
+
+      border border-white/10
+
+      text-violet-300
 
       transition-all
+      duration-300
+
+      group-hover:translate-x-1
+      group-hover:bg-violet-500/15
     "
-              >
-                View Collection
+                  >
+                    →
+                  </div>
+
+                </div>
               </button>
             </div>
 
