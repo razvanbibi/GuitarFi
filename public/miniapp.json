@@ -8,7 +8,5 @@
     "wallet": "required",
     "chain": ["base"]
   },
-  "entrypoints": [
-  
-  ]
+ 
 }
