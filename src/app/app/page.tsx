@@ -2046,7 +2046,9 @@ ${showExploreMenu
                       <span className="text-sm font-semibold text-white">
                         Play Guitar Tune
                       </span>
-
+<span className="text-[8px] text-slate-400">
+        Cost 50 GTR per play
+      </span>
 
                     </div>
 
@@ -2660,8 +2662,8 @@ active:scale-95
                     <Image
                       src="/vault.png"
                       alt="Vault"
-                      width={32}
-                      height={32}
+                      width={55}
+                      height={55}
                       className="object-contain"
                     />
 
