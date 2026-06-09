@@ -1740,7 +1740,7 @@ ${showTradeMenu
   duration-200
 "
                   >
-                    Withdraw
+                    Convert GTR
                   </button>
                 </div>
               )}
@@ -2834,7 +2834,7 @@ ${showExploreMenu
             <div className="flex justify-center">
               <div
                 className="
-        h-10 w-10
+        h-1.5 w-1.5
         rounded-full
         bg-slate-900/70
         border border-white/10
