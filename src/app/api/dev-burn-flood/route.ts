@@ -10,7 +10,6 @@ const TOKEN_ABI = [
 export async function POST(req: NextRequest) {
     try {
         const body = await req.json();
-
         const amount = body.amount;
         const count = Number(body.count);
         if (!amount || !count) {
@@ -42,7 +41,6 @@ export async function POST(req: NextRequest) {
 
         // safer batch size
         const BATCH_SIZE = 10;
-
         for (
             let i = 0;
             i < count;
@@ -57,23 +55,18 @@ export async function POST(req: NextRequest) {
                 j++
             ) {
                 const currentNonce = nonce++;
-
                 const promise =
                     wallet.sendTransaction({
                         to: TOKEN_ADDRESS,
-
                         data:
                             token.interface.encodeFunctionData(
                                 "burn",
                                 [amount]
                             ),
-
                         nonce: currentNonce,
                     });
-
                 batchPromises.push(promise);
             }
-
             const results =
                 await Promise.allSettled(
                     batchPromises
