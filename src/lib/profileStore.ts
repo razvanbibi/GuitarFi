@@ -43,9 +43,5 @@ export async function getProfile(address: string) {
   };
 }
 
-export async function getProfiles(addresses: string[]) {
-
-  
-}
 
 
