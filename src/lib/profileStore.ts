@@ -24,24 +24,6 @@ export async function saveProfile(
   };
 
 
-export async function getProfile(address: string) {
-  const res = await redis.hgetall<{
-    name?: string;
-    avatar?: string;
-    highestStreak?: string;
-  }>(KEY_PREFIX + address.toLowerCase());
-
-  if (!res) return null;
-
-  return {
-    name: res.name ?? null,
-    avatar: res.avatar ?? null,
-    highestStreak: res.highestStreak
-      ? Number(res.highestStreak)
-      : null,
-      
-  };
-}
 
 
 
