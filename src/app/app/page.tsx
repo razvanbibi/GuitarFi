@@ -1719,7 +1719,7 @@ ${showTradeMenu
   duration-200
 "
                   >
-                    Buy
+                    Deposit Celo 
                   </button>
 
                   <button
