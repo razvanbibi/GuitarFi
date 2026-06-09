@@ -185,10 +185,10 @@ export default function HomePage() {
   const [currentTune, setCurrentTune] = useState("");
 
   const [convertToken, setConvertToken] =
-  useState("USDm");
+    useState("USDm");
 
-const [convertAmount, setConvertAmount] =
-  useState("1");
+  const [convertAmount, setConvertAmount] =
+    useState("1");
 
 
 
@@ -564,24 +564,24 @@ const [convertAmount, setConvertAmount] =
 
   async function handleConvert() {
 
-  try {
+    try {
 
-    setStatus(
-      `Converting ${convertAmount} ${convertToken} to GTR...`
-    );
+      setStatus(
+        `Converting ${convertAmount} ${convertToken} to GTR...`
+      );
 
-    // future:
-    // approve
-    // swap contract
-    // wait tx
+      // future:
+      // approve
+      // swap contract
+      // wait tx
 
-  } catch (err) {
+    } catch (err) {
 
-    console.error(err);
+      console.error(err);
+
+    }
 
   }
-
-}
   async function connectWallet() {
     try {
       setStatus(null);
@@ -682,41 +682,41 @@ const [convertAmount, setConvertAmount] =
     }
   }
 
-const tunes = [
-  {
-    name: "Sunset Strings",
-    file: "/music/tune1.mp3",
-  },
-  {
-    name: "Midnight Solo",
-    file: "/music/tune2.mp3",
-  },
-  {
-    name: "Ocean Chords",
-    file: "/music/tune3.mp3",
-  },
-  {
-    name: "Golden Melody",
-    file: "/music/tune4.mp3",
-  },
-];
+  const tunes = [
+    {
+      name: "Sunset Strings",
+      file: "/music/tune1.mp3",
+    },
+    {
+      name: "Midnight Solo",
+      file: "/music/tune2.mp3",
+    },
+    {
+      name: "Ocean Chords",
+      file: "/music/tune3.mp3",
+    },
+    {
+      name: "Golden Melody",
+      file: "/music/tune4.mp3",
+    },
+  ];
 
-async function handlePlayTune() {
-  try {
+  async function handlePlayTune() {
+    try {
 
-    const random =
-      tunes[Math.floor(Math.random() * tunes.length)];
+      const random =
+        tunes[Math.floor(Math.random() * tunes.length)];
 
-    setCurrentTune(random.name);
+      setCurrentTune(random.name);
 
-    const audio = new Audio(random.file);
+      const audio = new Audio(random.file);
 
-    audio.play();
+      audio.play();
 
-  } catch (err) {
-    console.error(err);
+    } catch (err) {
+      console.error(err);
+    }
   }
-}
 
 
   function showToast(next: Toast, durationMs = 2000) {
@@ -819,6 +819,23 @@ async function handlePlayTune() {
       );
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function handleTap() {
+    try {
+
+      setStatus("Tap transaction coming soon 🎸");
+
+      // future:
+      // send tx
+      // reward user
+      // play tune
+
+    } catch (err) {
+
+      console.error(err);
+
     }
   }
 
@@ -1608,7 +1625,7 @@ async function handlePlayTune() {
 
             </div>
 
-           <div className="mt-4 relative min-h-[70px]">
+            <div className="mt-4 relative min-h-[70px]">
 
               <button
                 onClick={() => {
@@ -1661,7 +1678,7 @@ ${showTradeMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-  >
+                >
 
                   <button
                     className="
@@ -1729,7 +1746,7 @@ ${showTradeMenu
               )}
             </div>
 
-           <div className="mt-4 relative">
+            <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1782,7 +1799,7 @@ ${showExploreMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-  >
+                >
 
                   <button
                     onClick={() => {
@@ -1913,7 +1930,7 @@ ${showExploreMenu
 
               {/* quote */}
               <div
-  className="
+                className="
     mt-4
     rounded-2xl
     border border-sky-500/20
@@ -1922,11 +1939,11 @@ ${showExploreMenu
     flex flex-col items-center
     gap-3
   "
->
-  <button
-    onClick={handlePlayTune}
-    disabled={loading}
-    className="
+              >
+                <button
+                  onClick={handlePlayTune}
+                  disabled={loading}
+                  className="
       px-6 py-3
       rounded-full
       bg-gradient-to-r
@@ -1942,14 +1959,14 @@ ${showExploreMenu
 
       transition-all
     "
-  >
-    ▶ Play Guitar Tune
-  </button>
+                >
+                  ▶ Play Guitar Tune
+                </button>
 
-  <p className="text-xs text-slate-400">
-    Unlock a fresh melody on every play.
-  </p>
-</div>
+                <p className="text-xs text-slate-400">
+                  Unlock a fresh melody on every play.
+                </p>
+              </div>
 
               {/* animated notes */}
               <div className="mt-4 flex items-center gap-3 text-xl">
@@ -1958,10 +1975,10 @@ ${showExploreMenu
                 <span className="animate-bounce delay-200">♬</span>
 
                 {currentTune && (
-    <div className="text-xs text-sky-300">
-      Now playing: {currentTune}
-    </div>
-  )}
+                  <div className="text-xs text-sky-300">
+                    Now playing: {currentTune}
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -2108,7 +2125,7 @@ ${showExploreMenu
             </p>
 
             {account && (
-              <div className="flex justify-center mt-2">
+              <div className="flex justify-center gap-4 mt-2">
                 {hasCheckedInToday ? (
                   <div className="flex flex-col items-center gap-1">
                     <button
@@ -2152,8 +2169,44 @@ ${showExploreMenu
                     {loading ? "Processing…" : "Gm"}
                   </button>
                 )}
+                <div className="flex flex-col items-center gap-1">
+
+                  <button
+                    onClick={handleTap}
+                    disabled={loading}
+                    className="
+      inline-flex items-center justify-center
+      px-8 py-3 rounded-full
+
+      text-base font-semibold
+
+      transition
+      shadow-lg shadow-amber-900/50
+
+      bg-gradient-to-r
+      from-amber-400
+      via-yellow-300
+      to-orange-400
+
+      text-slate-950
+
+      hover:brightness-110
+      active:scale-95
+    "
+                  >
+                    Tap
+                  </button>
+
+                  <span className="text-[11px] text-slate-400">
+                    Tap to earn GTR
+                  </span>
+
+                </div>
+
               </div>
+
             )}
+
 
             {paused && (
               <p className="text-[11px] text-amber-300 mt-1">
@@ -2162,7 +2215,7 @@ ${showExploreMenu
             )}
 
 
-<div className="relative group inline-flex">
+            <div className="relative group inline-flex">
               <div className="relative inline-flex">
                 <button
                   className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
@@ -2538,75 +2591,73 @@ ${showExploreMenu
 
           {/* USDm Vault Quick Actions */}
 
-<section
-  className={`
+          <section
+            className={`
     p-4 space-y-4
     ${isDarkMode ? glassCard : ""}
   `}
->
+          >
 
-  <div className="flex items-center justify-between">
-    <div>
-      <h2
-        className={`text-sm font-semibold ${
-          isDarkMode ? "text-slate-100" : "text-slate-900"
-        }`}
-      >
-        CELO Vault
-      </h2>
+            <div className="flex items-center justify-between">
+              <div>
+                <h2
+                  className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                >
+                  CELO Vault
+                </h2>
 
-      <p
-        className={`text-xs mt-1 ${
-          isDarkMode ? "text-slate-400" : "text-slate-600"
-        }`}
-      >
-        Deposit or withdraw your CELO instantly
-      </p>
-    </div>
+                <p
+                  className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
+                    }`}
+                >
+                  Deposit or withdraw your CELO instantly
+                </p>
+              </div>
 
-    <div
-      className="
+              <div
+                className="
         px-3 py-1
         rounded-full
         bg-emerald-500/10
         text-emerald-300
         text-xs
       "
-    >
-      LIVE
-    </div>
-  </div>
+              >
+                LIVE
+              </div>
+            </div>
 
-  {/* Balance */}
+            {/* Balance */}
 
-  <div
-    className="
+            <div
+              className="
       rounded-2xl
       border border-white/10
       bg-slate-950/30
       p-3
     "
-  >
-    <p className="text-[11px] text-slate-400">
-      Your Vault Balance
-    </p>
+            >
+              <p className="text-[11px] text-slate-400">
+                Your Vault Balance
+              </p>
 
-    <p className="text-xl font-bold text-white">
-      {userVaultBalance} CELO
-    </p>
-  </div>
+              <p className="text-xl font-bold text-white">
+                {userVaultBalance} CELO
+              </p>
+            </div>
 
-  {/* Amount */}
+            {/* Amount */}
 
-  <div>
-    <input
-      type="number"
-      min="0"
-      value={vaultAmount}
-      onChange={(e) => setVaultAmount(e.target.value)}
-      placeholder="Enter amount"
+            <div>
+              <input
+                type="number"
+                min="0"
+                value={vaultAmount}
+                onChange={(e) => setVaultAmount(e.target.value)}
+                placeholder="Enter amount"
 
-      className="
+                className="
         w-full
         rounded-2xl
         border border-white/10
@@ -2619,17 +2670,17 @@ ${showExploreMenu
 
         focus:border-sky-400
       "
-    />
-  </div>
+              />
+            </div>
 
-  {/* Buttons */}
+            {/* Buttons */}
 
-  <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3">
 
-    <button
-      onClick={handleVaultDeposit}
-      disabled={loading}
-      className="
+              <button
+                onClick={handleVaultDeposit}
+                disabled={loading}
+                className="
         rounded-2xl
         py-3
 
@@ -2646,14 +2697,14 @@ ${showExploreMenu
 
         transition
       "
-    >
-      Deposit Celo
-    </button>
+              >
+                Deposit Celo
+              </button>
 
-    <button
-      onClick={handleVaultWithdraw}
-      disabled={loading}
-      className="
+              <button
+                onClick={handleVaultWithdraw}
+                disabled={loading}
+                className="
         rounded-2xl
         py-3
 
@@ -2670,121 +2721,119 @@ ${showExploreMenu
 
         transition
       "
-    >
-      Withdraw Celo
-    </button>
+              >
+                Withdraw Celo
+              </button>
 
-  </div>
+            </div>
 
-</section>
+          </section>
 
-{/* GTR Converter */}
+          {/* GTR Converter */}
 
-<section
-  className={`
+          <section
+            className={`
     p-4 space-y-4
     ${isDarkMode ? glassCard : ""}
   `}
->
+          >
 
-  <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between">
 
-    <div>
-      <h2
-        className={`text-sm font-semibold ${
-          isDarkMode ? "text-slate-100" : "text-slate-900"
-        }`}
-      >
-        🔄 Convert to GTR
-      </h2>
+              <div>
+                <h2
+                  className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                >
+                  🔄 Convert to GTR
+                </h2>
 
-      <p
-        className={`text-xs mt-1 ${
-          isDarkMode ? "text-slate-400" : "text-slate-600"
-        }`}
-      >
-        Swap CELO or USDm for GTR
-      </p>
-    </div>
+                <p
+                  className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
+                    }`}
+                >
+                  Swap CELO or USDm for GTR
+                </p>
+              </div>
 
-    <div
-      className="
+              <div
+                className="
         px-3 py-1
         rounded-full
         bg-sky-500/10
         text-sky-300
         text-xs
       "
-    >
-      BETA
-    </div>
+              >
+                BETA
+              </div>
 
-  </div>
+            </div>
 
-  {/* FROM */}
+            {/* FROM */}
 
-  <div className="space-y-2">
+            <div className="space-y-2">
 
-    <label className="text-xs text-slate-400">
-      From
-    </label>
+              <label className="text-xs text-slate-400">
+                From
+              </label>
 
-    <div
-      className="
+              <div
+                className="
         flex items-center gap-3
         rounded-2xl
         border border-white/10
         bg-slate-950/40
         p-3
       "
-    >
+              >
 
-      <select
-        value={convertToken}
-        onChange={(e) =>
-          setConvertToken(e.target.value)
-        }
-        className="
+                <select
+                  value={convertToken}
+                  onChange={(e) =>
+                    setConvertToken(e.target.value)
+                  }
+                  className="
           bg-transparent
           outline-none
           text-white
         "
-      >
-        <option value="CELO">
-          CELO
-        </option>
+                >
+                  <option value="CELO">
+                    CELO
+                  </option>
 
-        <option value="USDm">
-          USDm
-        </option>
-      </select>
+                  <option value="USDm">
+                    USDm
+                  </option>
+                </select>
 
-      <input
-        type="number"
-        min="0"
-        value={convertAmount}
-        onChange={(e) =>
-          setConvertAmount(e.target.value)
-        }
-        placeholder="0.00"
-        className="
+                <input
+                  type="number"
+                  min="0"
+                  value={convertAmount}
+                  onChange={(e) =>
+                    setConvertAmount(e.target.value)
+                  }
+                  placeholder="0.00"
+                  className="
           flex-1
           bg-transparent
           outline-none
           text-right
           text-white
         "
-      />
+                />
 
-    </div>
+              </div>
 
-  </div>
+            </div>
 
-  {/* ARROW */}
+            {/* ARROW */}
 
-  <div className="flex justify-center">
-    <div
-      className="
+            <div className="flex justify-center">
+              <div
+                className="
         h-10 w-10
         rounded-full
         bg-slate-900/70
@@ -2792,46 +2841,46 @@ ${showExploreMenu
 
         flex items-center justify-center
       "
-    >
-      ↓
-    </div>
-  </div>
+              >
+                ↓
+              </div>
+            </div>
 
-  {/* TO */}
+            {/* TO */}
 
-  <div
-    className="
+            <div
+              className="
       rounded-2xl
       border border-sky-500/20
       bg-sky-500/5
       p-3
     "
-  >
+            >
 
-    <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between">
 
-      <span className="text-xs text-slate-400">
-        You Receive
-      </span>
+                <span className="text-xs text-slate-400">
+                  You Receive
+                </span>
 
-      <span className="text-xs text-sky-300">
-        GTR
-      </span>
+                <span className="text-xs text-sky-300">
+                  GTR
+                </span>
 
-    </div>
+              </div>
 
-    <div className="mt-2 text-2xl font-bold text-sky-200">
-      {}
-    </div>
+              <div className="mt-2 text-2xl font-bold text-sky-200">
+                { }
+              </div>
 
-  </div>
+            </div>
 
-  {/* BUTTON */}
+            {/* BUTTON */}
 
-  <button
-    onClick={handleConvert}
-    disabled={loading}
-    className="
+            <button
+              onClick={handleConvert}
+              disabled={loading}
+              className="
       w-full
 
       rounded-2xl
@@ -2851,11 +2900,11 @@ ${showExploreMenu
 
       transition
     "
-  >
-    Convert to GTR
-  </button>
+            >
+              Convert to GTR
+            </button>
 
-</section>
+          </section>
 
 
 
@@ -2867,10 +2916,10 @@ ${showExploreMenu
     ${isDarkMode ? glassCard : ""}
   `}
           >
-           
-<span className="text-xs text-sky-300">
-        Empty
-      </span>
+
+            <span className="text-xs text-sky-300">
+              Empty
+            </span>
 
           </section>
 
@@ -3758,7 +3807,7 @@ ${showExploreMenu
             </button>
           </div>
 
-          
+
 
           <div
             className={`rounded-2xl px-3 py-2.5 flex items-center justify-between gap-3 border 
