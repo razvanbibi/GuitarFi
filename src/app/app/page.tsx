@@ -2917,9 +2917,141 @@ ${showExploreMenu
   `}
           >
 
-            <span className="text-xs text-sky-300">
-              Empty
-            </span>
+            <div
+              className="
+    rounded-3xl
+    border border-violet-500/10
+    bg-[#050816]/90
+    backdrop-blur-xl
+    p-4
+    shadow-[0_0_40px_rgba(80,0,255,0.08)]
+  "
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-sm font-semibold text-white">
+                  My Guitar NFTs
+                </h2>
+              </div>
+
+              {/* NFT Grid */}
+              <div className="grid grid-cols-3 gap-3">
+
+                {/* Acoustic */}
+                <div
+                  className="
+        rounded-2xl
+        border border-white/5
+        bg-gradient-to-b
+        from-violet-950/40
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+      "
+                >
+                  <img
+                    src="/nfts/acoustic.jpg"
+                    alt="Acoustic"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Acoustic
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+                {/* Electric */}
+                <div
+                  className="
+        rounded-2xl
+        border border-violet-500/20
+        bg-gradient-to-b
+        from-violet-900/30
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+      "
+                >
+                  <img
+                    src="/nfts/electric.jpg"
+                    alt="Electric"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Electric
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+                {/* Golden */}
+                <div
+                  className="
+        rounded-2xl
+        border border-amber-400/40
+        bg-gradient-to-b
+        from-amber-500/10
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+
+        shadow-[0_0_18px_rgba(251,191,36,0.25)]
+      "
+                >
+                  <img
+                    src="/nfts/golden.jpg"
+                    alt="Golden Guitar"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Golden Guitar
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+              </div>
+
+              {/* CTA */}
+              <button
+                className="
+      mt-4
+      w-full
+      py-3
+
+      rounded-2xl
+
+      bg-gradient-to-r
+      from-violet-900
+      via-purple-800
+      to-violet-900
+
+      text-sm
+      font-medium
+      text-violet-100
+
+      hover:brightness-110
+      active:scale-[0.98]
+
+      transition-all
+    "
+              >
+                View Collection
+              </button>
+            </div>
 
           </section>
 
