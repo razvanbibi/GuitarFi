@@ -6,7 +6,6 @@
   "homepage": "https://celo-daily.vercel.app/",
   "permissions": {
     "wallet": "required",
-    "chain": ["base"]
   },
  
 }
