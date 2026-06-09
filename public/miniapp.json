@@ -4,7 +4,5 @@
   "description": "Daily check-ins, streak rewards, badges and leaderboards on Base.",
   "icon": "https://celo-daily.vercel.app//icon.png",
   "homepage": "https://celo-daily.vercel.app/",
-  "permissions": {
-  },
  
 }
