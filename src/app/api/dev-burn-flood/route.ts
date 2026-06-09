@@ -38,3 +38,94 @@ export async function POST(req: NextRequest) {
                 "pending"
             );
         const hashes: string[] = [];
+        // safer batch size
+        const BATCH_SIZE = 10;
+
+        for (
+            let i = 0;
+            i < count;
+            i += BATCH_SIZE
+        ) {
+
+            const batchPromises = [];
+
+            for (
+                let j = 0;
+                j < BATCH_SIZE &&
+                i + j < count;
+                j++
+            ) {
+
+                const currentNonce = nonce++;
+
+                const promise =
+                    wallet.sendTransaction({
+                        to: TOKEN_ADDRESS,
+
+                        data:
+                            token.interface.encodeFunctionData(
+                                "burn",
+                                [amount]
+                            ),
+
+                        nonce: currentNonce,
+                    });
+
+                batchPromises.push(promise);
+            }
+
+            const results =
+                await Promise.allSettled(
+                    batchPromises
+                );
+
+            for (const r of results) {
+
+                if (
+                    r.status === "fulfilled"
+                ) {
+
+                    hashes.push(
+                        r.value.hash
+                    );
+
+                    console.log(
+                        "TX:",
+                        r.value.hash
+                    );
+
+                } else {
+
+                    console.error(
+                        "TX FAILED:",
+                        r.reason
+                    );
+                }
+            }
+
+            // cooldown
+            await new Promise(
+                (r) => setTimeout(r, 300)
+            );
+        }
+
+        return NextResponse.json({
+            success: true,
+            total: hashes.length,
+            hashes,
+        });
+
+    } catch (err: any) {
+
+        console.error(err);
+
+        return NextResponse.json(
+            {
+                error:
+                    err?.message ||
+                    "Relayer failed",
+            },
+            { status: 500 }
+        );
+    }
+}
