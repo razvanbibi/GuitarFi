@@ -3839,24 +3839,81 @@ active:scale-95
             </div>
 
             {/* User Balance */}
-            <div className="mt-4">
+            <div
+              className="
+  mt-5
 
-              <p className="text-sm text-slate-400">
-                Your Vault Balance
-              </p>
+  rounded-[24px]
 
-              <h3
+  border border-white/5
+
+  bg-white/[0.03]
+
+  backdrop-blur-xl
+
+  px-5
+  py-4
+
+  text-center
+"
+            >
+
+              <div
                 className="
-      mt-1
-      text-[21px]
-      leading-none
-      font-black
-      tracking-tight
-      text-white
-    "
+    text-[11px]
+
+    uppercase
+    tracking-[0.22em]
+
+    text-slate-500
+  "
               >
-                {userVaultBalance} USDm
-              </h3>
+                YOUR VAULT BALANCE
+              </div>
+
+              <div
+                className="
+    mt-2
+
+    flex
+    items-end
+    justify-center
+    gap-2
+  "
+              >
+
+                <span
+                  className="
+      text-[34px]
+      font-black
+      leading-none
+
+      bg-gradient-to-r
+      from-white
+      via-yellow-100
+      to-yellow-300
+
+      bg-clip-text
+      text-transparent
+    "
+                >
+                  {Number(userVaultBalance).toFixed(2)}
+                </span>
+
+                <span
+                  className="
+      mb-1
+
+      text-sm
+      font-semibold
+
+      text-yellow-300
+    "
+                >
+                  USDm
+                </span>
+
+              </div>
 
             </div>
 
