@@ -5,7 +5,6 @@
   "icon": "https://celo-daily.vercel.app//icon.png",
   "homepage": "https://celo-daily.vercel.app/",
   "permissions": {
-    "wallet": "required",
   },
  
 }
