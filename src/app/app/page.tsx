@@ -1698,7 +1698,7 @@ ${showTradeMenu
   duration-200
 "
                   >
-                    Deposit
+                    Deposit USDm
                   </button>
 
                   <button
