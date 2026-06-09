@@ -184,6 +184,12 @@ export default function HomePage() {
 
   const [currentTune, setCurrentTune] = useState("");
 
+  const [convertToken, setConvertToken] =
+  useState("USDm");
+
+const [convertAmount, setConvertAmount] =
+  useState("1");
+
 
 
   // একবারই ছোট onboarding দেখাবে
@@ -555,6 +561,27 @@ export default function HomePage() {
     }
   }
 
+
+  async function handleConvert() {
+
+  try {
+
+    setStatus(
+      `Converting ${convertAmount} ${convertToken} to GTR...`
+    );
+
+    // future:
+    // approve
+    // swap contract
+    // wait tx
+
+  } catch (err) {
+
+    console.error(err);
+
+  }
+
+}
   async function connectWallet() {
     try {
       setStatus(null);
@@ -2403,6 +2430,330 @@ ${showExploreMenu
             )}
           </section>
 
+          {/* USDm Vault Quick Actions */}
+
+<section
+  className={`
+    p-4 space-y-4
+    ${isDarkMode ? glassCard : ""}
+  `}
+>
+
+  <div className="flex items-center justify-between">
+    <div>
+      <h2
+        className={`text-sm font-semibold ${
+          isDarkMode ? "text-slate-100" : "text-slate-900"
+        }`}
+      >
+        CELO Vault
+      </h2>
+
+      <p
+        className={`text-xs mt-1 ${
+          isDarkMode ? "text-slate-400" : "text-slate-600"
+        }`}
+      >
+        Deposit or withdraw your CELO instantly
+      </p>
+    </div>
+
+    <div
+      className="
+        px-3 py-1
+        rounded-full
+        bg-emerald-500/10
+        text-emerald-300
+        text-xs
+      "
+    >
+      LIVE
+    </div>
+  </div>
+
+  {/* Balance */}
+
+  <div
+    className="
+      rounded-2xl
+      border border-white/10
+      bg-slate-950/30
+      p-3
+    "
+  >
+    <p className="text-[11px] text-slate-400">
+      Your Vault Balance
+    </p>
+
+    <p className="text-xl font-bold text-white">
+      {userVaultBalance} CELO
+    </p>
+  </div>
+
+  {/* Amount */}
+
+  <div>
+    <input
+      type="number"
+      min="0"
+      value={vaultAmount}
+      onChange={(e) => setVaultAmount(e.target.value)}
+      placeholder="Enter amount"
+
+      className="
+        w-full
+        rounded-2xl
+        border border-white/10
+        bg-slate-950/40
+
+        px-4 py-3
+
+        text-white
+        outline-none
+
+        focus:border-sky-400
+      "
+    />
+  </div>
+
+  {/* Buttons */}
+
+  <div className="grid grid-cols-2 gap-3">
+
+    <button
+      onClick={handleVaultDeposit}
+      disabled={loading}
+      className="
+        rounded-2xl
+        py-3
+
+        font-semibold
+
+        bg-gradient-to-r
+        from-emerald-500
+        to-green-500
+
+        text-slate-950
+
+        hover:brightness-110
+        active:scale-95
+
+        transition
+      "
+    >
+      Deposit Celo
+    </button>
+
+    <button
+      onClick={handleVaultWithdraw}
+      disabled={loading}
+      className="
+        rounded-2xl
+        py-3
+
+        font-semibold
+
+        bg-gradient-to-r
+        from-amber-400
+        to-yellow-300
+
+        text-slate-950
+
+        hover:brightness-110
+        active:scale-95
+
+        transition
+      "
+    >
+      Withdraw Celo
+    </button>
+
+  </div>
+
+</section>
+
+{/* GTR Converter */}
+
+<section
+  className={`
+    p-4 space-y-4
+    ${isDarkMode ? glassCard : ""}
+  `}
+>
+
+  <div className="flex items-center justify-between">
+
+    <div>
+      <h2
+        className={`text-sm font-semibold ${
+          isDarkMode ? "text-slate-100" : "text-slate-900"
+        }`}
+      >
+        🔄 Convert to GTR
+      </h2>
+
+      <p
+        className={`text-xs mt-1 ${
+          isDarkMode ? "text-slate-400" : "text-slate-600"
+        }`}
+      >
+        Swap CELO or USDm for GTR
+      </p>
+    </div>
+
+    <div
+      className="
+        px-3 py-1
+        rounded-full
+        bg-sky-500/10
+        text-sky-300
+        text-xs
+      "
+    >
+      BETA
+    </div>
+
+  </div>
+
+  {/* FROM */}
+
+  <div className="space-y-2">
+
+    <label className="text-xs text-slate-400">
+      From
+    </label>
+
+    <div
+      className="
+        flex items-center gap-3
+        rounded-2xl
+        border border-white/10
+        bg-slate-950/40
+        p-3
+      "
+    >
+
+      <select
+        value={convertToken}
+        onChange={(e) =>
+          setConvertToken(e.target.value)
+        }
+        className="
+          bg-transparent
+          outline-none
+          text-white
+        "
+      >
+        <option value="CELO">
+          CELO
+        </option>
+
+        <option value="USDm">
+          USDm
+        </option>
+      </select>
+
+      <input
+        type="number"
+        min="0"
+        value={convertAmount}
+        onChange={(e) =>
+          setConvertAmount(e.target.value)
+        }
+        placeholder="0.00"
+        className="
+          flex-1
+          bg-transparent
+          outline-none
+          text-right
+          text-white
+        "
+      />
+
+    </div>
+
+  </div>
+
+  {/* ARROW */}
+
+  <div className="flex justify-center">
+    <div
+      className="
+        h-10 w-10
+        rounded-full
+        bg-slate-900/70
+        border border-white/10
+
+        flex items-center justify-center
+      "
+    >
+      ↓
+    </div>
+  </div>
+
+  {/* TO */}
+
+  <div
+    className="
+      rounded-2xl
+      border border-sky-500/20
+      bg-sky-500/5
+      p-3
+    "
+  >
+
+    <div className="flex items-center justify-between">
+
+      <span className="text-xs text-slate-400">
+        You Receive
+      </span>
+
+      <span className="text-xs text-sky-300">
+        GTR
+      </span>
+
+    </div>
+
+    <div className="mt-2 text-2xl font-bold text-sky-200">
+      {}
+    </div>
+
+  </div>
+
+  {/* BUTTON */}
+
+  <button
+    onClick={handleConvert}
+    disabled={loading}
+    className="
+      w-full
+
+      rounded-2xl
+      py-3
+
+      font-semibold
+
+      bg-gradient-to-r
+      from-sky-500
+      via-blue-500
+      to-indigo-500
+
+      text-slate-950
+
+      hover:brightness-110
+      active:scale-95
+
+      transition
+    "
+  >
+    Convert to GTR
+  </button>
+
+</section>
+
+
+
+
           {/* Badge progress + badge list */}
           <section
             className={`
@@ -2516,6 +2867,9 @@ ${showExploreMenu
 
 
           </section>
+
+
+
           {/* Donation */}
           <section
             className={`
