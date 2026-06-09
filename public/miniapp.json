@@ -9,9 +9,6 @@
     "chain": ["base"]
   },
   "entrypoints": [
-    {
-      "path": "/",
-      "name": "Home"
-    }
+  
   ]
 }
