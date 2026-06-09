@@ -182,6 +182,8 @@ export default function HomePage() {
   const [isMiniPay, setIsMiniPay] = useState(false);
   const [showBadgeTooltip, setShowBadgeTooltip] = useState(false);
 
+  const [currentTune, setCurrentTune] = useState("");
+
 
 
   // একবারই ছোট onboarding দেখাবে
@@ -652,6 +654,43 @@ export default function HomePage() {
       setLoading(false);
     }
   }
+
+const tunes = [
+  {
+    name: "Sunset Strings",
+    file: "/music/tune1.mp3",
+  },
+  {
+    name: "Midnight Solo",
+    file: "/music/tune2.mp3",
+  },
+  {
+    name: "Ocean Chords",
+    file: "/music/tune3.mp3",
+  },
+  {
+    name: "Golden Melody",
+    file: "/music/tune4.mp3",
+  },
+];
+
+async function handlePlayTune() {
+  try {
+
+    const random =
+      tunes[Math.floor(Math.random() * tunes.length)];
+
+    setCurrentTune(random.name);
+
+    const audio = new Audio(random.file);
+
+    audio.play();
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
 
   function showToast(next: Toast, durationMs = 2000) {
     setToast(next);
@@ -1542,7 +1581,7 @@ export default function HomePage() {
 
             </div>
 
-            <div className="mt-4 relative min-h-[70px]">
+           <div className="mt-4 relative min-h-[70px]">
 
               <button
                 onClick={() => {
@@ -1595,7 +1634,7 @@ ${showTradeMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-                >
+  >
 
                   <button
                     className="
@@ -1663,7 +1702,7 @@ ${showTradeMenu
               )}
             </div>
 
-            <div className="mt-4 relative">
+           <div className="mt-4 relative">
 
               <button
                 onClick={() => {
@@ -1716,7 +1755,7 @@ ${showExploreMenu
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
-                >
+  >
 
                   <button
                     onClick={() => {
@@ -1830,7 +1869,7 @@ ${showExploreMenu
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-                  🎸 Guitar Vibes
+                  Tune zone
                 </h2>
 
                 <span className="text-[10px] px-2 py-1 rounded-full bg-sky-500/10 text-sky-300">
@@ -1847,24 +1886,55 @@ ${showExploreMenu
 
               {/* quote */}
               <div
-                className="
-        mt-4
-        rounded-2xl
-        border border-white/10
-        bg-slate-950/40
-        p-3
-      "
-              >
-                <p className="text-sm italic text-sky-300">
-                  “Every streak adds another note to your song.”
-                </p>
-              </div>
+  className="
+    mt-4
+    rounded-2xl
+    border border-sky-500/20
+    bg-slate-950/40
+    p-4
+    flex flex-col items-center
+    gap-3
+  "
+>
+  <button
+    onClick={handlePlayTune}
+    disabled={loading}
+    className="
+      px-6 py-3
+      rounded-full
+      bg-gradient-to-r
+      from-sky-500
+      via-blue-500
+      to-indigo-500
+
+      text-slate-950
+      font-bold
+
+      hover:brightness-110
+      active:scale-95
+
+      transition-all
+    "
+  >
+    ▶ Play Guitar Tune
+  </button>
+
+  <p className="text-xs text-slate-400">
+    Unlock a fresh melody on every play.
+  </p>
+</div>
 
               {/* animated notes */}
               <div className="mt-4 flex items-center gap-3 text-xl">
                 <span className="animate-bounce">♪</span>
                 <span className="animate-bounce delay-100">♫</span>
                 <span className="animate-bounce delay-200">♬</span>
+
+                {currentTune && (
+    <div className="text-xs text-sky-300">
+      Now playing: {currentTune}
+    </div>
+  )}
               </div>
             </div>
           </section>
@@ -3355,49 +3425,7 @@ ${showExploreMenu
             </button>
           </div>
 
-          <div className="space-y-1">
-
-            <button className="drawer-item drawer-active">
-              🏠 Dashboard
-            </button>
-
-            <button className="drawer-item">
-              ☑️ Quests
-            </button>
-
-            <button className="drawer-item">
-              🔄 Trade
-            </button>
-
-            <button className="drawer-item">
-              ⭕ Explore
-            </button>
-
-            <button className="drawer-item">
-              🎁 Rewards
-            </button>
-
-            <button className="drawer-item">
-              🎸 GuitarPath
-            </button>
-
-            <button className="drawer-item">
-              🏆 Leaderboard
-            </button>
-
-            <button className="drawer-item">
-              🖼️ NFT Collection
-            </button>
-
-            <button className="drawer-item">
-              🛟 Support
-            </button>
-
-            <button className="drawer-item">
-              ⚙️ Settings
-            </button>
-
-          </div>
+          
 
           <div
             className={`rounded-2xl px-3 py-2.5 flex items-center justify-between gap-3 border 
@@ -3926,47 +3954,6 @@ ${showExploreMenu
     </main>
   );
 }
-
-function DrawerItem({
-  icon,
-  label,
-  active = false,
-}: {
-  icon: string;
-  label: string;
-  active?: boolean;
-}) {
-  return (
-    <button
-      className={`
-        w-full
-        flex
-        items-center
-        justify-between
-
-        px-3
-        py-3
-
-        rounded-xl
-        transition-all
-
-        ${
-          active
-            ? "bg-gradient-to-r from-violet-600/40 to-indigo-600/40 text-white"
-            : "hover:bg-white/5 text-slate-300"
-        }
-      `}
-    >
-      <div className="flex items-center gap-3">
-        <span>{icon}</span>
-        <span>{label}</span>
-      </div>
-
-      {active && <span>›</span>}
-    </button>
-  );
-}
-
 
 function BadgeCard({
   icon,
