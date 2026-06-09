@@ -1,5 +1,5 @@
 export const runtime = "nodejs";
-import { getProfile } from "@/lib/profileStore";
+
 import { getReadOnlyContractServer } from "@/lib/contract.server";
 import { ethers } from "ethers";
 const NFT_CONTRACT = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
@@ -15,12 +15,11 @@ export async function GET(
   const nft = new ethers.Contract(NFT_CONTRACT, NFT_ABI, provider);
   const owner = await nft.ownerOf(tokenId);
 
-  const profile = await getProfile(owner);
+
   const { contract } = getReadOnlyContractServer();
   const highestStreak = Number(await contract.highestStreak(owner));
 
-  const avatar =
-    profile?.avatar ?? "https://celo-daily.vercel.app/avatar.png";
+  
 
   async function fetchAsBase64(url: string): Promise<string | null> {
   try {
@@ -33,10 +32,9 @@ export async function GET(
     return null;
   }
 }
-const avatarUrl =
-  profile?.avatar ?? "https://celo-daily.vercel.app/avatar.png";
 
-const avatarBase64 = await fetchAsBase64(avatarUrl);
+
+
 const logoBase64 = await fetchAsBase64(
   "https://celo-daily.vercel.app/logo-0x.png"
 );
@@ -93,7 +91,7 @@ const logoBase64 = await fetchAsBase64(
 
   <!-- avatar -->
   <image
-  xlink:href="${avatarBase64 ?? ""}"
+ 
   x="72" y="48"
   width="48" height="48"
   clip-path="url(#avatarClip)"/>
@@ -105,7 +103,7 @@ const logoBase64 = await fetchAsBase64(
     fill="#e5e7eb"
     font-size="15"
     font-weight="600">
-    ${profile?.name ?? "Celo user"}
+  
   </text>
 
   <!-- fid -->
