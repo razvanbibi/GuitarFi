@@ -22,7 +22,7 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           👋
         </>
       ),
-      second: "Check in every day to grow your streak and earn 0xtxn.",
+      second: "Check in every day to grow your streak and earn GTR.",
       hero: true,
     },
     {

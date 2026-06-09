@@ -1740,7 +1740,7 @@ ${showTradeMenu
   duration-200
 "
                   >
-                    Convert GTR
+                    Convert to GTR
                   </button>
                 </div>
               )}
@@ -1916,9 +1916,22 @@ ${showExploreMenu
                   Tune zone
                 </h2>
 
-                <span className="text-[10px] px-2 py-1 rounded-full bg-sky-500/10 text-sky-300">
-                  NEW
-                </span>
+                
+                <span
+  className="
+  px-2 py-1
+  rounded-full
+
+  text-[10px]
+
+  bg-cyan-500/10
+  text-cyan-300
+
+  border border-cyan-400/10
+"
+>
+  ONCHAIN MUSIC
+</span>
               </div>
 
               <p
@@ -1941,27 +1954,103 @@ ${showExploreMenu
   "
               >
                 <button
-                  onClick={handlePlayTune}
-                  disabled={loading}
-                  className="
-      px-6 py-3
+  onClick={handlePlayTune}
+  disabled={loading}
+  className="
+  group
+  relative
+
+  overflow-hidden
+
+  h-16
+  w-full
+
+  rounded-[22px]
+
+  border border-cyan-400/20
+
+  bg-[linear-gradient(135deg,
+  rgba(6,182,212,0.12),
+  rgba(59,130,246,0.10),
+  rgba(15,23,42,0.95))]
+
+  backdrop-blur-xl
+
+  transition-all
+  duration-500
+
+  hover:border-cyan-400/40
+  hover:shadow-[0_0_40px_rgba(34,211,238,0.18)]
+
+  active:scale-[0.98]
+"
+>
+  {/* Glow */}
+  <div
+    className="
+    absolute
+    inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(34,211,238,0.18),
+    transparent_65%)]
+  "
+  />
+
+  {/* Moving Shine */}
+  <div
+    className="
+    absolute
+    inset-0
+
+    -translate-x-[150%]
+    group-hover:translate-x-[150%]
+
+    transition-transform
+    duration-[1800ms]
+
+    bg-[linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent)]
+  "
+  />
+
+  <div className="relative z-10 flex items-center justify-center gap-3">
+    
+    <div
+      className="
+      flex
+      h-10 w-10
+      items-center justify-center
+
       rounded-full
-      bg-gradient-to-r
-      from-sky-500
-      via-blue-500
-      to-indigo-500
 
-      text-slate-950
-      font-bold
+      bg-cyan-400/10
+      border border-cyan-300/20
 
-      hover:brightness-110
-      active:scale-95
-
-      transition-all
+      text-cyan-300
     "
-                >
-                  ▶ Play Guitar Tune
-                </button>
+    >
+      ▶
+    </div>
+
+    <div className="flex flex-col items-start">
+      <span className="text-sm font-semibold text-white">
+        Play Guitar Tune
+      </span>
+
+      
+    </div>
+
+  </div>
+</button>
 
                 <p className="text-xs text-slate-400">
                   Unlock a fresh melody on every play.
@@ -2154,17 +2243,34 @@ ${showExploreMenu
                   <button
                     onClick={handleCheckIn}
                     disabled={loading || paused === true}
-                    className={`
-          inline-flex items-center justify-center
-          px-8 py-3 rounded-full
-          text-base font-semibold
-          transition
-          shadow-lg shadow-emerald-900/70
-          animate-[breathe_4.2s_ease-in-out_infinite]
-          bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-500
-          text-slate-950 hover:brightness-110 active:scale-95
-          ${loading ? "opacity-70" : ""}
-        `}
+                    className="
+group
+relative
+
+h-14
+w-24
+
+rounded-full
+
+bg-white/[0.06]
+backdrop-blur-xl
+
+border border-white/10
+
+text-white
+font-semibold
+text-sm
+
+transition-all
+duration-300
+
+hover:border-sky-400/40
+hover:bg-sky-500/10
+
+hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
+
+active:scale-95
+"
                   >
                     {loading ? "Processing…" : "Gm"}
                   </button>
@@ -2175,24 +2281,33 @@ ${showExploreMenu
                     onClick={handleTap}
                     disabled={loading}
                     className="
-      inline-flex items-center justify-center
-      px-8 py-3 rounded-full
+group
+relative
 
-      text-base font-semibold
+h-14
+w-24
 
-      transition
-      shadow-lg shadow-amber-900/50
+rounded-full
 
-      bg-gradient-to-r
-      from-amber-400
-      via-yellow-300
-      to-orange-400
+bg-white/[0.06]
+backdrop-blur-xl
 
-      text-slate-950
+border border-white/10
 
-      hover:brightness-110
-      active:scale-95
-    "
+text-white
+font-semibold
+text-sm
+
+transition-all
+duration-300
+
+hover:border-sky-400/40
+hover:bg-sky-500/10
+
+hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
+
+active:scale-95
+"
                   >
                     Tap
                   </button>
