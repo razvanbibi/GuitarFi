@@ -2160,6 +2160,112 @@ ${showExploreMenu
                 The contract is currently paused. Please try again later.
               </p>
             )}
+
+
+<div className="relative group inline-flex">
+              <div className="relative inline-flex">
+                <button
+                  className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                  onClick={() => {
+                    setShowBadgesTip(true);
+                    setTimeout(() => setShowBadgesTip(false), 2000);
+                  }}
+                >
+                  <span className="text-lg"></span> GuitarPath
+                </button>
+
+              </div>
+
+            </div>
+            {/* progress path */}
+            <div className="relative mt-1 mb-2"
+              onClick={() => {
+                const runner = document.getElementById("avatar-runner");
+                if (!runner) return;
+                runner.style.setProperty(
+                  "--target-x",
+                  `${badgeProgress * 100}%`
+                );
+                runner.classList.remove("hidden");
+                runner.style.animation = "avatar-run 3s ease-out forwards";
+                // hide original avatar briefly
+                const originals = document.querySelectorAll("[data-avatar-main]");
+                originals.forEach(el => {
+                  (el as HTMLElement).style.opacity = "0";
+                });
+              }}
+            >
+              {/* base line */}
+              <div className="relative h-[2px] w-full rounded-full bg-slate-700/70 overflow-hidden">
+                {/* progress fill */}
+                <div
+                  className="
+      absolute left-0 top-0 h-full
+      bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500
+      transition-all duration-700 ease-out
+               "
+                  style={{
+                    width: `${badgeProgress * 100}%`,
+                  }}
+                />
+              </div>
+              {/* badge icons – SKETCH BASED POSITIONS */}
+              <div className="absolute inset-0 -top-3 text-lg">
+                <span className="absolute left-[28%] -translate-x-1/2"></span>
+                <span className="absolute left-[52%] -translate-x-1/2"></span>
+                <span className="absolute left-[74%] -translate-x-1/2"></span>
+                <span className="absolute left-[92%] -translate-x-1/2"></span>
+              </div>
+
+              {/* avatar progress */}
+              <div
+                data-avatar-main
+                className="absolute -top-5 h-7 w-7 rounded-full ring-2 ring-sky-400 bg-slate-900 overflow-hidden shadow-lg shadow-sky-900 transition-all"
+                style={{
+                  left: `${badgeProgress * 100}%`,
+                  transform: "translateX(-50%)",
+                }}
+              >
+                <img
+                  src={profileAvatar || "/avatar.png"}
+                  alt="User avatar"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              {/* RUN ANIMATION OVERLAY (visual only) */}
+              <div
+                id="avatar-runner"
+                onAnimationEnd={() => {
+                  const runner = document.getElementById("avatar-runner");
+                  if (!runner) return;
+
+                  runner.classList.add("hidden");
+                  runner.style.animation = "none";
+
+                  const originals = document.querySelectorAll("[data-avatar-main]");
+                  originals.forEach(el => {
+                    (el as HTMLElement).style.opacity = "1";
+                  });
+                }}
+                className="pointer-events-none absolute -top-8 hidden"
+                style={{ left: "5%", transform: "translateX(-50%)" }}
+              >
+                {/* avatar bubble */}
+                <div className="relative h-7 w-7 rounded-full overflow-hidden ring-2 ring-sky-400 bg-slate-900 z-10">
+                  <img
+                    src={profileAvatar || "/avatar.png"}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                {/* legs — OUTSIDE avatar */}
+                <div className="absolute top-[28px] left-1/2 -translate-x-1/2 flex gap-[4px]">
+                  <span className="leg leg-left" />
+                  <span className="leg leg-right" />
+                </div>
+              </div>
+            </div>
+
           </section>
 
           {/* Rewards card */}
@@ -2761,110 +2867,10 @@ ${showExploreMenu
     ${isDarkMode ? glassCard : ""}
   `}
           >
-            <div className="relative group inline-flex">
-              <div className="relative inline-flex">
-                <button
-                  className={`text-sm font-semibold flex items-center gap-2 select-none ${isDarkMode ? "text-slate-100" : "text-slate-900"
-                    }`}
-                  onClick={() => {
-                    setShowBadgesTip(true);
-                    setTimeout(() => setShowBadgesTip(false), 2000);
-                  }}
-                >
-                  <span className="text-lg"></span> GuitarPath
-                </button>
-
-              </div>
-
-            </div>
-            {/* progress path */}
-            <div className="relative mt-1 mb-2"
-              onClick={() => {
-                const runner = document.getElementById("avatar-runner");
-                if (!runner) return;
-                runner.style.setProperty(
-                  "--target-x",
-                  `${badgeProgress * 100}%`
-                );
-                runner.classList.remove("hidden");
-                runner.style.animation = "avatar-run 3s ease-out forwards";
-                // hide original avatar briefly
-                const originals = document.querySelectorAll("[data-avatar-main]");
-                originals.forEach(el => {
-                  (el as HTMLElement).style.opacity = "0";
-                });
-              }}
-            >
-              {/* base line */}
-              <div className="relative h-[2px] w-full rounded-full bg-slate-700/70 overflow-hidden">
-                {/* progress fill */}
-                <div
-                  className="
-      absolute left-0 top-0 h-full
-      bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500
-      transition-all duration-700 ease-out
-               "
-                  style={{
-                    width: `${badgeProgress * 100}%`,
-                  }}
-                />
-              </div>
-              {/* badge icons – SKETCH BASED POSITIONS */}
-              <div className="absolute inset-0 -top-3 text-lg">
-                <span className="absolute left-[28%] -translate-x-1/2"></span>
-                <span className="absolute left-[52%] -translate-x-1/2"></span>
-                <span className="absolute left-[74%] -translate-x-1/2"></span>
-                <span className="absolute left-[92%] -translate-x-1/2"></span>
-              </div>
-
-              {/* avatar progress */}
-              <div
-                data-avatar-main
-                className="absolute -top-5 h-7 w-7 rounded-full ring-2 ring-sky-400 bg-slate-900 overflow-hidden shadow-lg shadow-sky-900 transition-all"
-                style={{
-                  left: `${badgeProgress * 100}%`,
-                  transform: "translateX(-50%)",
-                }}
-              >
-                <img
-                  src={profileAvatar || "/avatar.png"}
-                  alt="User avatar"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              {/* RUN ANIMATION OVERLAY (visual only) */}
-              <div
-                id="avatar-runner"
-                onAnimationEnd={() => {
-                  const runner = document.getElementById("avatar-runner");
-                  if (!runner) return;
-
-                  runner.classList.add("hidden");
-                  runner.style.animation = "none";
-
-                  const originals = document.querySelectorAll("[data-avatar-main]");
-                  originals.forEach(el => {
-                    (el as HTMLElement).style.opacity = "1";
-                  });
-                }}
-                className="pointer-events-none absolute -top-8 hidden"
-                style={{ left: "5%", transform: "translateX(-50%)" }}
-              >
-                {/* avatar bubble */}
-                <div className="relative h-7 w-7 rounded-full overflow-hidden ring-2 ring-sky-400 bg-slate-900 z-10">
-                  <img
-                    src={profileAvatar || "/avatar.png"}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                {/* legs — OUTSIDE avatar */}
-                <div className="absolute top-[28px] left-1/2 -translate-x-1/2 flex gap-[4px]">
-                  <span className="leg leg-left" />
-                  <span className="leg leg-right" />
-                </div>
-              </div>
-            </div>
-
+           
+<span className="text-xs text-sky-300">
+        Empty
+      </span>
 
           </section>
 
