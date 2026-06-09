@@ -1681,6 +1681,10 @@ ${showTradeMenu
                 >
 
                   <button
+                    onClick={() => {
+                      setShowVault(true);
+                      setShowExploreMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
@@ -1802,10 +1806,7 @@ ${showExploreMenu
                 >
 
                   <button
-                    onClick={() => {
-                      setShowVault(true);
-                      setShowExploreMenu(false);
-                    }}
+
                     className="
   rounded-xl
   px-4 py-2
@@ -1823,7 +1824,7 @@ ${showExploreMenu
   duration-200
 "
                   >
-                    Vault
+                    Nexttt
                   </button>
 
                   <button
@@ -3046,20 +3047,7 @@ active:scale-95
 
             {/* ARROW */}
 
-            <div className="flex justify-center">
-              <div
-                className="
-        h-1.5 w-1.5
-        rounded-full
-        bg-slate-900/70
-        border border-white/10
 
-        flex items-center justify-center
-      "
-              >
-                ↓
-              </div>
-            </div>
 
             {/* TO */}
 
@@ -3510,7 +3498,7 @@ active:scale-95
                 className={`flex items-center gap-2 ${isDarkMode ? "text-slate-100" : "text-slate-900"
                   }`}
               >
-                <span className="text-lg">💙</span> Support creator
+                <span className="text-lg"></span> Support creator
               </span>
               <span
                 className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
@@ -3932,46 +3920,140 @@ active:scale-95
                 <button
                   onClick={handleVaultDeposit}
                   className="
-        flex items-center justify-center gap-2
-        rounded-2xl
-        bg-[#f5c842]
-        py-4
-        text-[17px]
-        font-black
-        text-black
-        shadow-[0_8px_30px_rgba(245,200,66,0.28)]
-        transition-all
-        hover:scale-[1.02]
-      "
-                >
-                  <span className="text-lg">
-                    ↓
-                  </span>
+  group
+  relative
+  overflow-hidden
 
-                  Deposit
+  rounded-[24px]
+
+  border
+  border-emerald-400/20
+
+  bg-[linear-gradient(
+    135deg,
+    rgba(16,185,129,0.25),
+    rgba(5,150,105,0.08)
+  )]
+
+  py-4
+
+  transition-all
+  duration-500
+
+  hover:scale-[1.03]
+  hover:border-emerald-300/40
+  hover:shadow-[0_0_40px_rgba(16,185,129,0.25)]
+
+  active:scale-[0.97]
+"
+                >
+                  <div
+                    className="
+    absolute inset-0
+
+    bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.2),transparent_50%)]
+
+    opacity-70
+  "
+                  />
+
+                  <div className="relative flex flex-col items-center gap-1">
+
+                    <div
+                      className="
+      h-12 w-12
+      rounded-2xl
+
+      flex items-center justify-center
+
+      bg-emerald-400/10
+      border border-emerald-300/20
+
+      text-2xl
+    "
+                    >
+                      ↓
+                    </div>
+
+                    <span className="text-sm font-bold text-emerald-300">
+                      Deposit
+                    </span>
+
+                    <span className="text-[10px] text-slate-400">
+                      Add USDm
+                    </span>
+
+                  </div>
                 </button>
 
                 {/* Withdraw */}
                 <button
                   onClick={handleVaultWithdraw}
                   className="
-        flex items-center justify-center gap-2
-        rounded-2xl
-        border border-white/10
-        bg-[#111827]
-        py-4
-        text-[17px]
-        font-black
-        text-white
-        transition-all
-        hover:bg-[#182033]
-      "
-                >
-                  <span className="text-lg text-yellow-300">
-                    ↑
-                  </span>
+  group
+  relative
+  overflow-hidden
 
-                  Withdraw
+  rounded-[24px]
+
+  border
+  border-amber-400/20
+
+  bg-[linear-gradient(
+    135deg,
+    rgba(251,191,36,0.22),
+    rgba(245,158,11,0.08)
+  )]
+
+  py-4
+
+  transition-all
+  duration-500
+
+  hover:scale-[1.03]
+  hover:border-amber-300/40
+  hover:shadow-[0_0_40px_rgba(251,191,36,0.25)]
+
+  active:scale-[0.97]
+"
+                >
+                  <div
+                    className="
+    absolute inset-0
+
+    bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.2),transparent_50%)]
+
+    opacity-70
+  "
+                  />
+
+                  <div className="relative flex flex-col items-center gap-1">
+
+                    <div
+                      className="
+      h-12 w-12
+      rounded-2xl
+
+      flex items-center justify-center
+
+      bg-amber-400/10
+      border border-amber-300/20
+
+      text-2xl
+    "
+                    >
+                      ↑
+                    </div>
+
+                    <span className="text-sm font-bold text-amber-300">
+                      Withdraw
+                    </span>
+
+                    <span className="text-[10px] text-slate-400">
+                      Redeem USDm
+                    </span>
+
+                  </div>
                 </button>
 
               </div>
