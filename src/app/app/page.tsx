@@ -1719,7 +1719,7 @@ ${showTradeMenu
   duration-200
 "
                   >
-                    Deposit Celo 
+                    Deposit Celo
                   </button>
 
                   <button
@@ -1916,9 +1916,9 @@ ${showExploreMenu
                   Tune zone
                 </h2>
 
-                
+
                 <span
-  className="
+                  className="
   px-2 py-1
   rounded-full
 
@@ -1929,9 +1929,9 @@ ${showExploreMenu
 
   border border-cyan-400/10
 "
->
-  ONCHAIN MUSIC
-</span>
+                >
+                  ONCHAIN MUSIC
+                </span>
               </div>
 
               <p
@@ -1954,9 +1954,9 @@ ${showExploreMenu
   "
               >
                 <button
-  onClick={handlePlayTune}
-  disabled={loading}
-  className="
+                  onClick={handlePlayTune}
+                  disabled={loading}
+                  className="
   group
   relative
 
@@ -1984,10 +1984,10 @@ ${showExploreMenu
 
   active:scale-[0.98]
 "
->
-  {/* Glow */}
-  <div
-    className="
+                >
+                  {/* Glow */}
+                  <div
+                    className="
     absolute
     inset-0
 
@@ -2000,11 +2000,11 @@ ${showExploreMenu
     rgba(34,211,238,0.18),
     transparent_65%)]
   "
-  />
+                  />
 
-  {/* Moving Shine */}
-  <div
-    className="
+                  {/* Moving Shine */}
+                  <div
+                    className="
     absolute
     inset-0
 
@@ -2020,12 +2020,12 @@ ${showExploreMenu
     rgba(255,255,255,0.12),
     transparent)]
   "
-  />
+                  />
 
-  <div className="relative z-10 flex items-center justify-center gap-3">
-    
-    <div
-      className="
+                  <div className="relative z-10 flex items-center justify-center gap-3">
+
+                    <div
+                      className="
       flex
       h-10 w-10
       items-center justify-center
@@ -2037,20 +2037,20 @@ ${showExploreMenu
 
       text-cyan-300
     "
-    >
-      ▶
-    </div>
+                    >
+                      ▶
+                    </div>
 
-    <div className="flex flex-col items-start">
-      <span className="text-sm font-semibold text-white">
-        Play Guitar Tune
-      </span>
+                    <div className="flex flex-col items-start">
+                      <span className="text-sm font-semibold text-white">
+                        Play Guitar Tune
+                      </span>
 
-      
-    </div>
 
-  </div>
-</button>
+                    </div>
+
+                  </div>
+                </button>
 
                 <p className="text-xs text-slate-400">
                   Unlock a fresh melody on every play.
@@ -2796,24 +2796,70 @@ active:scale-95
                 onClick={handleVaultDeposit}
                 disabled={loading}
                 className="
-        rounded-2xl
-        py-3
+  group
+  relative
 
-        font-semibold
+  overflow-hidden
 
-        bg-gradient-to-r
-        from-emerald-500
-        to-green-500
+  rounded-[20px]
 
-        text-slate-950
+  border border-emerald-400/20
 
-        hover:brightness-110
-        active:scale-95
+  bg-[linear-gradient(135deg,
+  rgba(16,185,129,0.18),
+  rgba(5,150,105,0.08),
+  rgba(15,23,42,0.95))]
 
-        transition
-      "
+  py-3.5
+
+  transition-all
+  duration-500
+
+  hover:border-emerald-400/50
+  hover:shadow-[0_0_35px_rgba(16,185,129,0.20)]
+
+  active:scale-[0.97]
+"
               >
-                Deposit Celo
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(16,185,129,0.20),
+    transparent_70%)]
+  "
+                />
+
+                <div className="relative z-10 flex items-center justify-center gap-2">
+
+                  <div
+                    className="
+      flex h-8 w-8
+      items-center justify-center
+
+      rounded-full
+
+      bg-emerald-400/10
+      border border-emerald-300/20
+
+      text-emerald-300
+      text-sm
+    "
+                  >
+                    ↓
+                  </div>
+
+                  <span className="font-semibold text-white">
+                    Deposit
+                  </span>
+
+                </div>
               </button>
 
               <button
