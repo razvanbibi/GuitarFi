@@ -8,7 +8,6 @@ const TOKEN_ABI = [
     "function burn(uint256 amount) external"
 ];
 export async function POST(req: NextRequest) {
-
     try {
         const body = await req.json();
 
@@ -49,7 +48,6 @@ export async function POST(req: NextRequest) {
             i < count;
             i += BATCH_SIZE
         ) {
-
             const batchPromises = [];
 
             for (
@@ -58,7 +56,6 @@ export async function POST(req: NextRequest) {
                 i + j < count;
                 j++
             ) {
-
                 const currentNonce = nonce++;
 
                 const promise =
