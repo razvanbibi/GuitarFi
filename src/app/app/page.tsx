@@ -2866,24 +2866,70 @@ active:scale-95
                 onClick={handleVaultWithdraw}
                 disabled={loading}
                 className="
-        rounded-2xl
-        py-3
+  group
+  relative
 
-        font-semibold
+  overflow-hidden
 
-        bg-gradient-to-r
-        from-amber-400
-        to-yellow-300
+  rounded-[20px]
 
-        text-slate-950
+  border border-amber-400/20
 
-        hover:brightness-110
-        active:scale-95
+  bg-[linear-gradient(135deg,
+  rgba(251,191,36,0.18),
+  rgba(245,158,11,0.08),
+  rgba(15,23,42,0.95))]
 
-        transition
-      "
+  py-3.5
+
+  transition-all
+  duration-500
+
+  hover:border-amber-400/50
+  hover:shadow-[0_0_35px_rgba(251,191,36,0.18)]
+
+  active:scale-[0.97]
+"
               >
-                Withdraw Celo
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(251,191,36,0.20),
+    transparent_70%)]
+  "
+                />
+
+                <div className="relative z-10 flex items-center justify-center gap-2">
+
+                  <div
+                    className="
+      flex h-8 w-8
+      items-center justify-center
+
+      rounded-full
+
+      bg-amber-400/10
+      border border-amber-300/20
+
+      text-amber-300
+      text-sm
+    "
+                  >
+                    ↑
+                  </div>
+
+                  <span className="font-semibold text-white">
+                    Withdraw
+                  </span>
+
+                </div>
               </button>
 
             </div>
@@ -2918,16 +2964,24 @@ active:scale-95
               </div>
 
               <div
-                className="
-        px-3 py-1
-        rounded-full
-        bg-sky-500/10
-        text-sky-300
-        text-xs
-      "
-              >
-                BETA
-              </div>
+  className="
+  px-3 py-1
+
+  rounded-full
+
+  border border-sky-400/20
+
+  bg-sky-500/10
+
+  text-sky-300
+  text-[10px]
+  font-medium
+
+  backdrop-blur-xl
+"
+>
+  SWAP
+</div>
 
             </div>
 
@@ -3039,31 +3093,111 @@ active:scale-95
             {/* BUTTON */}
 
             <button
-              onClick={handleConvert}
-              disabled={loading}
-              className="
-      w-full
+  onClick={handleConvert}
+  disabled={loading}
+  className="
+  group
+  relative
 
-      rounded-2xl
-      py-3
+  w-full
+  h-16
 
-      font-semibold
+  overflow-hidden
 
-      bg-gradient-to-r
-      from-sky-500
-      via-blue-500
-      to-indigo-500
+  rounded-[22px]
 
-      text-slate-950
+  border border-sky-400/20
 
-      hover:brightness-110
-      active:scale-95
+  bg-[linear-gradient(135deg,
+  rgba(14,165,233,0.18),
+  rgba(59,130,246,0.12),
+  rgba(15,23,42,0.95))]
 
-      transition
+  backdrop-blur-xl
+
+  transition-all
+  duration-500
+
+  hover:border-sky-400/50
+  hover:shadow-[0_0_40px_rgba(56,189,248,0.20)]
+
+  active:scale-[0.98]
+
+  disabled:opacity-50
+"
+>
+  {/* Glow */}
+  <div
+    className="
+    absolute
+    inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(56,189,248,0.22),
+    transparent_70%)]
+  "
+  />
+
+  {/* Moving shine */}
+  <div
+    className="
+    absolute
+    inset-0
+
+    -translate-x-[160%]
+    group-hover:translate-x-[160%]
+
+    transition-transform
+    duration-[1800ms]
+
+    bg-[linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.10),
+      transparent
+    )]
+  "
+  />
+
+  <div className="relative z-10 flex items-center justify-center gap-3">
+
+    <div
+      className="
+      flex
+      h-9
+      w-9
+
+      items-center
+      justify-center
+
+      rounded-full
+
+      bg-sky-400/10
+      border border-sky-300/20
+
+      text-sky-300
     "
-            >
-              Convert to GTR
-            </button>
+    >
+      ⇄
+    </div>
+
+    <div className="flex flex-col items-start">
+      <span className="text-sm font-semibold text-white">
+        Convert to GTR
+      </span>
+
+      <span className="text-[10px] text-slate-400">
+        Instant swap
+      </span>
+    </div>
+
+  </div>
+</button>
 
           </section>
 
