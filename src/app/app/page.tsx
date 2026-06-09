@@ -4723,25 +4723,7 @@ active:scale-95
             </div>
           </div>
 
-          <div className="pt-2">
-            <button
-              onClick={() => setShowDevPanel(true)}
-              className={`
-    w-full
-    rounded-xl
-    px-3 py-2
-    text-xs
-    font-semibold
-    transition
-    ${isDarkMode
-                  ? "bg-slate-950/60 border border-white/5 text-slate-300 hover:bg-slate-800"
-                  : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50"
-                }
-  `}
-            >
-              Dev panel
-            </button>
-          </div>
+          
 
           {/* bottom row */}
           <div className="mt-auto flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
@@ -4793,6 +4775,27 @@ active:scale-95
               </span>
             </button>
 
+          </div>
+
+
+<div className="pt-2">
+            <button
+              onClick={() => setShowDevPanel(true)}
+              className={`
+    w-full
+    rounded-xl
+    px-3 py-2
+    text-xs
+    font-semibold
+    transition
+    ${isDarkMode
+                  ? "bg-slate-800/60 border border-white/5 text-slate-300 hover:bg-slate-800"
+                  : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50"
+                }
+  `}
+            >
+              Dev panel
+            </button>
           </div>
 
           <div className="mt-3 text-center text-[10px] text-slate-500">
