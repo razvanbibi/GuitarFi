@@ -28,20 +28,17 @@ export async function POST(req: NextRequest) {
                 PRIVATE_KEY,
                 provider
             );
-
         const token =
             new ethers.Contract(
                 TOKEN_ADDRESS,
                 TOKEN_ABI,
                 wallet
             );
-
         let nonce =
             await provider.getTransactionCount(
                 wallet.address,
                 "pending"
             );
-
         const hashes: string[] = [];
 
         // safer batch size
