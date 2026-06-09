@@ -3927,6 +3927,47 @@ ${showExploreMenu
   );
 }
 
+function DrawerItem({
+  icon,
+  label,
+  active = false,
+}: {
+  icon: string;
+  label: string;
+  active?: boolean;
+}) {
+  return (
+    <button
+      className={`
+        w-full
+        flex
+        items-center
+        justify-between
+
+        px-3
+        py-3
+
+        rounded-xl
+        transition-all
+
+        ${
+          active
+            ? "bg-gradient-to-r from-violet-600/40 to-indigo-600/40 text-white"
+            : "hover:bg-white/5 text-slate-300"
+        }
+      `}
+    >
+      <div className="flex items-center gap-3">
+        <span>{icon}</span>
+        <span>{label}</span>
+      </div>
+
+      {active && <span>›</span>}
+    </button>
+  );
+}
+
+
 function BadgeCard({
   icon,
   name,
