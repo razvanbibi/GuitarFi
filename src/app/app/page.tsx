@@ -1934,7 +1934,6 @@ ${showExploreMenu
                   ONCHAIN MUSIC
                 </span>
               </div>
-
               <p
                 className={`mt-2 text-xs ${isDarkMode ? "text-slate-400" : "text-slate-700"
                   }`}
