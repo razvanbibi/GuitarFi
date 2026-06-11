@@ -747,3 +747,27 @@ export async function getIdentityContractWithSigner() {
     contract,
   };
 }
+
+export async function getIdentityReadOnlyContract() {
+  const eth = getEthereum();
+
+  if (!eth)
+    throw new Error(
+      "Wallet not found"
+    );
+
+  const provider =
+    new BrowserProvider(eth);
+
+  const contract =
+    new Contract(
+      GUITARFI_IDENTITY_CONTRACT,
+      GUITARFI_IDENTITY_ABI,
+      provider
+    );
+
+  return {
+    provider,
+    contract,
+  };
+}
