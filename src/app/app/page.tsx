@@ -1086,6 +1086,52 @@ export default function HomePage() {
     }
   }
 
+  async function loadIdentity() {
+    try {
+
+      if (!account) return;
+
+      const { contract } =
+        await getIdentityReadOnlyContract();
+
+      const tokenId =
+        await contract.mintedToken(account);
+
+      if (
+        !tokenId ||
+        tokenId === BigInt(0)
+      ) {
+        setHasIdentity(false);
+        return;
+      }
+
+      setHasIdentity(true);
+
+      const uri =
+        await contract.tokenURI(tokenId);
+
+      setIdentityURI(uri);
+
+      const res =
+        await fetch(uri);
+
+      const metadata =
+        await res.json();
+
+      setIdentityMetadata(metadata);
+
+      if (metadata.image) {
+        setIdentityImage(metadata.image);
+      }
+
+    } catch (err) {
+      console.error(
+        "Identity load failed",
+        err
+      );
+    }
+  }
+
 
   const rewardTier = getRewardTier(pendingTokens);
 
