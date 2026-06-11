@@ -263,6 +263,22 @@ export default function HomePage() {
     }
   }, []);
 
+  useEffect(() => {
+
+    if (
+      account &&
+      hasIdentityNFT
+    ) {
+
+      loadIdentity();
+
+    }
+
+  }, [
+    account,
+    hasIdentityNFT
+  ]);
+
 
   // ---- helpers for localStorage-based daily gm ----
   function getTodayId() {
