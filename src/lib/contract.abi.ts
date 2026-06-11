@@ -18,5 +18,5 @@ export const OXTXN_STREAK_ABI = [
   
 ] as const;
 export const OXTXN_STREAK_CONTRACT =
-  "0xd7fbd56e05f29184e235C991e680f1D57e1C7924" as const;
+  "0x3C9A2992B29DD130b8E678E00eEdE76b717Ee885";
   
