@@ -424,7 +424,13 @@ export default function HomePage() {
       await tx.wait();
 
       setHasIdentityNFT(true);
-      setStatus("Identity NFT minted 🎉");
+
+      await loadIdentity();
+
+      setStatus(
+        "Identity NFT minted 🎉"
+      );
+
       setShowMintIdentity(false);
 
     } catch (err: any) {
