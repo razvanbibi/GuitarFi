@@ -468,6 +468,62 @@ export const CELODAILY_VAULT_ABI = [
     ],
   },
 
+  {
+    type: "function",
+    name: "getUserTotalDeposited",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "user",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
+  {
+    type: "function",
+    name: "getUserTotalWithdrawn",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "user",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "totalDonated",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+
 ] as const;
 
 export const GUITARFI_IDENTITY_ABI = [
