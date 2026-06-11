@@ -10,6 +10,8 @@ import {
   getVaultContractWithSigner,
   getVaultReadOnlyContract,
   OXTXN_STREAK_CONTRACT,
+  getIdentityContractWithSigner,
+  getIdentityReadOnlyContract,
 } from "@/lib/contract";
 
 import Image from "next/image";
@@ -191,7 +193,11 @@ export default function HomePage() {
   const [convertAmount, setConvertAmount] =
     useState("1");
 
+const [hasIdentity, setHasIdentity] =
+  useState(false);
 
+const [identityURI, setIdentityURI] =
+  useState("");
 
   // একবারই ছোট onboarding দেখাবে
   useEffect(() => {
