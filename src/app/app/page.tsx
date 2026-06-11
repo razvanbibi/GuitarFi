@@ -102,11 +102,6 @@ export default function HomePage() {
   const [recentlyClaimed, setRecentlyClaimed] = useState(false);
   const [toast, setToast] = useState<Toast>(null);
 
-  const [totalSilver, setTotalSilver] = useState<bigint | null>(null);
-  const [totalGold, setTotalGold] = useState<bigint | null>(null);
-  const [totalDiamond, setTotalDiamond] = useState<bigint | null>(null);
-  const [totalLegendary, setTotalLegendary] = useState<bigint | null>(null);
-
   const [pendingNFT1, setpendingNFT1] = useState<bigint | null>(null);
   const [pendingNFT2, setpendingNFT2] = useState<bigint | null>(null);
   const [pendingNFT3, setpendingNFT3] = useState<bigint | null>(null);
@@ -2689,7 +2684,7 @@ active:scale-95
                         className="relative cursor-pointer text-cyan-300"
                         onClick={() => setShowBadgeTooltip(!showBadgeTooltip)}
                       >
-                        Badge milestones unlock bonus rewards
+                        Badge milestones unlock collectible Guitar NFTs
 
 
                       </li>
