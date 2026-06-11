@@ -372,6 +372,33 @@ export const CELODAILY_VAULT_ABI = [
 
 ] as const;
 
+export const GUITARFI_IDENTITY_ABI = [
+  {
+    type: "function",
+    name: "mint",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "balanceOf",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "owner",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+] as const;
+
 
 
 // MetaMask আছে কিনা চেক
