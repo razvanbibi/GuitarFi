@@ -329,6 +329,44 @@ export const CELODAILY_VAULT_ABI = [
     inputs: [],
     outputs: [{ name: "", type: "uint256" }],
   },
+
+  {
+    type: "function",
+    name: "depositCelo",
+    stateMutability: "payable",
+    inputs: [],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "withdrawCelo",
+    stateMutability: "nonpayable",
+    inputs: [
+      {
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "getUserCeloBalance",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "user",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
 ] as const;
 
 
