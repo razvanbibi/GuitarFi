@@ -824,17 +824,41 @@ export default function HomePage() {
 
   async function handleTap() {
     try {
+      if (!account) {
+        setStatus("Connect wallet first");
+        return;
+      }
 
-      setStatus("Tap transaction coming soon 🎸");
+      setLoading(true);
 
-      // future:
-      // send tx
-      // reward user
-      // play tune
+      const { contract } =
+        await getContractWithSigner();
 
-    } catch (err) {
+      setStatus("Confirm tap...");
+
+      const tx = await contract.tap();
+
+      await tx.wait();
+
+      setStatus(
+        "Tap successful 🎸 +0.01 GTR"
+      );
+
+      await refreshData();
+
+    } catch (err: any) {
 
       console.error(err);
+
+      setStatus(
+        err?.shortMessage ??
+        err?.message ??
+        "Tap failed"
+      );
+
+    } finally {
+
+      setLoading(false);
 
     }
   }
@@ -2045,9 +2069,9 @@ ${showExploreMenu
                       <span className="text-sm font-semibold text-white">
                         Play Guitar Tune
                       </span>
-<span className="text-[8px] text-slate-400">
-        Cost 50 GTR per play
-      </span>
+                      <span className="text-[8px] text-slate-400">
+                        Cost 50 GTR per play
+                      </span>
 
                     </div>
 
@@ -4724,7 +4748,7 @@ active:scale-95
             </div>
           </div>
 
-          
+
 
           {/* bottom row */}
           <div className="mt-auto flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
@@ -4779,7 +4803,7 @@ active:scale-95
           </div>
 
 
-<div className="pt-2">
+          <div className="pt-2">
             <button
               onClick={() => setShowDevPanel(true)}
               className={`
