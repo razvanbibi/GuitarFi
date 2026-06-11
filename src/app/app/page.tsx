@@ -702,29 +702,35 @@ export default function HomePage() {
         hs,
         pt,
         isPaused,
-        pSil,
-        pGold,
-        pDia,
-        pLeg,
-        tSil,
-        tGold,
-        tDia,
-        tLeg,
         tEarned,
+
+        nft1,
+        nft2,
+        nft3,
+        nft4,
+        nft5,
+        nft31,
+
       ] = await Promise.all([
+
         contract.streak(account),
+
         contract.highestStreak(account),
+
         contract.pendingTokens(account),
+
         contract.paused(),
-        contract.pendingSilver(account),
-        contract.pendingGold(account),
-        contract.pendingDiamond(account),
-        contract.pendingLegendary(account),
-        contract.totalSilver(account),
-        contract.totalGold(account),
-        contract.totalDiamond(account),
-        contract.totalLegendary(account),
+
         contract.totalEarnedTokens(account),
+
+        contract.pendingNFTs(account, 1),
+        contract.pendingNFTs(account, 2),
+        contract.pendingNFTs(account, 3),
+        contract.pendingNFTs(account, 4),
+        contract.pendingNFTs(account, 5),
+
+        contract.pendingNFTs(account, 31),
+
       ]);
 
       setStreak(st);
@@ -733,17 +739,10 @@ export default function HomePage() {
       setPendingRewards(formatToken(pt));
       setPaused(isPaused);
 
-      // pending badges
-      setPendingSilver(pSil);
-      setPendingGold(pGold);
-      setPendingDiamond(pDia);
-      setPendingLegendary(pLeg);
-
-      // lifetime totals
-      setTotalSilver(tSil);
-      setTotalGold(tGold);
-      setTotalDiamond(tDia);
-      setTotalLegendary(tLeg);
+      setPendingSilver(nft1);
+      setPendingGold(nft2);
+      setPendingDiamond(nft3);
+      setPendingLegendary(nft31);
       setTotalEarned(tEarned);
 
       return { pending: pt };
