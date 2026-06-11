@@ -9,6 +9,7 @@ import {
   getTokenContractWithSigner,
   getVaultContractWithSigner,
   getVaultReadOnlyContract,
+  OXTXN_STREAK_CONTRACT,
 } from "@/lib/contract";
 
 import Image from "next/image";
@@ -563,25 +564,97 @@ export default function HomePage() {
 
 
   async function handleConvert() {
-
     try {
 
+      if (!account) {
+        setStatus("Connect wallet first");
+        return;
+      }
+
+      setLoading(true);
+
+      const amount =
+        convertToken === "USDm"
+          ? ethers.parseUnits(convertAmount, 18)
+          : ethers.parseEther(convertAmount);
+
+      // ------------------
+      // USDm -> GTR
+      // ------------------
+
+      if (convertToken === "USDm") {
+
+        setStatus("Approve USDm...");
+
+        const { usdc } =
+          await getUSDmContractWithSigner();
+
+        const approveTx =
+          await usdc.approve(
+            OXTXN_STREAK_CONTRACT,
+            amount
+          );
+
+        await approveTx.wait();
+
+        setStatus("Converting USDm to GTR...");
+
+        const { contract } =
+          await getContractWithSigner();
+
+        const tx =
+          await contract.convertUSDMToGTR(
+            amount
+          );
+
+        await tx.wait();
+
+      }
+
+      // ------------------
+      // CELO -> GTR
+      // ------------------
+
+      else {
+
+        setStatus("Converting CELO to GTR...");
+
+        const { contract } =
+          await getContractWithSigner();
+
+        const tx =
+          await contract.convertCELOToGTR({
+            value: amount,
+          });
+
+        await tx.wait();
+
+      }
+
       setStatus(
-        `Converting ${convertAmount} ${convertToken} to GTR...`
+        `Successfully converted ${convertAmount} ${convertToken} to GTR 🎸`
       );
 
-      // future:
-      // approve
-      // swap contract
-      // wait tx
+      await refreshData();
 
-    } catch (err) {
+    } catch (err: any) {
 
       console.error(err);
 
-    }
+      setStatus(
+        err?.shortMessage ??
+        err?.message ??
+        "Conversion failed"
+      );
 
+    } finally {
+
+      setLoading(false);
+
+    }
   }
+
+
   async function connectWallet() {
     try {
       setStatus(null);
