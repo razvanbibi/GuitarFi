@@ -76,6 +76,22 @@ export const OXTXN_STREAK_ABI = [
   },
 
   {
+  type: "function",
+  name: "dailyTapBonusClaimed",
+  stateMutability: "view",
+  inputs: [{ name: "", type: "address" }],
+  outputs: [{ name: "", type: "bool" }],
+},
+
+{
+  type: "function",
+  name: "lastTapDay",
+  stateMutability: "view",
+  inputs: [{ name: "", type: "address" }],
+  outputs: [{ name: "", type: "uint256" }],
+},
+
+  {
     type: "function",
     name: "tap",
     stateMutability: "nonpayable",
