@@ -151,7 +151,7 @@ export default function HomePage() {
 
   const [showMintIdentity, setShowMintIdentity] = useState(false);
 
-  const IDENTITY_NFT_ADDRESS = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
+  const IDENTITY_NFT_ADDRESS = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
   const DEV_PASSWORD = "1245";
 
   const [hasIdentityNFT, setHasIdentityNFT] = useState<boolean | null>(null);
