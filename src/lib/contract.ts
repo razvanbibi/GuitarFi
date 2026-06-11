@@ -55,7 +55,7 @@ export const OXTXN_STREAK_ABI = [
   },
   {
     type: "function",
-    name: "getCurrentDay",
+    name: "getDay",
     stateMutability: "view",
     inputs: [],
     outputs: [{ name: "", type: "uint256" }],
@@ -68,6 +68,83 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
+
+  {
+    type: "function",
+    name: "tap",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "playTune",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
+
+  {
+    type: "function",
+    name: "convertUSDMToGTR",
+    stateMutability: "nonpayable",
+    inputs: [
+      {
+        name: "usdmAmount",
+        type: "uint256",
+      },
+    ],
+    outputs: [],
+  },
+
+  {
+    type: "function",
+    name: "convertCELOToGTR",
+    stateMutability: "payable",
+    inputs: [],
+    outputs: [],
+  },
+
+  {
+    type: "function",
+    name: "pendingNFTs",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "user",
+        type: "address",
+      },
+      {
+        name: "id",
+        type: "uint256",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
+  {
+    type: "function",
+    name: "dailyTapCount",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "user",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
   {
     type: "function",
     name: "claimAll",
@@ -82,16 +159,7 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
-  {
-    type: "function",
-    name: "reverse",
-    stateMutability: "nonpayable",
-    inputs: [
-      { name: "token", type: "address" },
-      { name: "amount", type: "uint256" }
-    ],
-    outputs: [],
-  },
+
 
   {
     "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
