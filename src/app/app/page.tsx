@@ -199,6 +199,7 @@ export default function HomePage() {
 
   const [identityMetadata, setIdentityMetadata] =
     useState<any>(null);
+  const [showIdentityRequired, setShowIdentityRequired] = useState(false);
 
   // একবারই ছোট onboarding দেখাবে
   useEffect(() => {
@@ -952,12 +953,19 @@ export default function HomePage() {
 
     } catch (err: any) {
       console.error(err);
-      setStatus(
+
+      const msg =
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
-        "Gm failed."
-      );
+        "";
+
+      if (msg.includes("Mint Identity First")) {
+        setShowIdentityRequired(true);
+        return;
+      }
+
+      setStatus(msg || "Gm failed.");
     } finally {
       setLoading(false);
     }
@@ -5024,6 +5032,66 @@ active:scale-95
 
       </div>
 
+      {showIdentityRequired && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center">
+          {/* overlay */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setShowIdentityRequired(false)}
+          />
+
+          {/* popup */}
+          <div
+            className="
+      relative z-10
+      w-[90%] max-w-xs
+      rounded-3xl
+      border border-sky-400/20
+      bg-slate-950/95
+      backdrop-blur-xl
+      p-5
+      shadow-[0_0_40px_rgba(56,189,248,0.2)]
+      "
+          >
+            <div className="text-center space-y-3">
+
+              <div className="text-4xl">
+                🪪
+              </div>
+
+              <h3 className="text-lg font-semibold text-white">
+                Mint Identity First
+              </h3>
+
+              <p className="text-xs text-slate-400">
+                You need a GuitarFi Identity NFT
+                before using this feature.
+              </p>
+
+              <button
+                onClick={() => {
+                  setShowIdentityRequired(false);
+                  setShowMintIdentity(true);
+                }}
+                className="
+          w-full
+          rounded-full
+          bg-sky-500
+          py-2.5
+          text-sm
+          font-semibold
+          text-slate-950
+          hover:bg-sky-400
+          transition
+          "
+              >
+                Open Identity Card
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* About us modal */}
       {aboutOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -5169,7 +5237,7 @@ active:scale-95
               <div className="flex items-center gap-3">
                 <img
                   src={
-                    
+
                     profileAvatar ||
                     "/avatar.png"
                   }
