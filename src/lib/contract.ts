@@ -551,6 +551,43 @@ export const GUITARFI_IDENTITY_ABI = [
       },
     ],
   },
+
+  {
+    type: "function",
+    name: "mintedToken",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "",
+        type: "address",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+
+  {
+    type: "function",
+    name: "tokenURI",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "tokenId",
+        type: "uint256",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "string",
+      },
+    ],
+  },
+
 ] as const;
 
 export const GUITARFI_BADGES_ABI = [
