@@ -402,6 +402,30 @@ export const GUITARFI_IDENTITY_ABI = [
   },
 ] as const;
 
+export const GUITARFI_BADGES_ABI = [
+  {
+    type: "function",
+    name: "balanceOf",
+    stateMutability: "view",
+    inputs: [
+      {
+        name: "account",
+        type: "address",
+      },
+      {
+        name: "id",
+        type: "uint256",
+      },
+    ],
+    outputs: [
+      {
+        name: "",
+        type: "uint256",
+      },
+    ],
+  },
+] as const;
+
 
 
 // MetaMask আছে কিনা চেক
