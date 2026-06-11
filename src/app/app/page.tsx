@@ -704,17 +704,57 @@ export default function HomePage() {
   async function handlePlayTune() {
     try {
 
+      if (!account) {
+        setStatus("Connect wallet first");
+        return;
+      }
+
+      setLoading(true);
+
+      const { contract } =
+        await getContractWithSigner();
+
+      setStatus(
+        "Playing tune onchain..."
+      );
+
+      const tx =
+        await contract.playTune();
+
+      await tx.wait();
+
       const random =
-        tunes[Math.floor(Math.random() * tunes.length)];
+        tunes[Math.floor(
+          Math.random() * tunes.length
+        )];
 
       setCurrentTune(random.name);
 
-      const audio = new Audio(random.file);
+      const audio =
+        new Audio(random.file);
 
       audio.play();
 
-    } catch (err) {
+      await refreshData();
+
+      setStatus(
+        "Tune played 🎸 NFT unlocked"
+      );
+
+    } catch (err: any) {
+
       console.error(err);
+
+      setStatus(
+        err?.shortMessage ??
+        err?.message ??
+        "Play failed"
+      );
+
+    } finally {
+
+      setLoading(false);
+
     }
   }
 
