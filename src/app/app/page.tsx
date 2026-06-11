@@ -1533,11 +1533,7 @@ export default function HomePage() {
   const baseEarned =
     totalEarned ? Number(formatToken(totalEarned)) : 0;
 
-  const bonusEarned =
-    (totalSilver ? Number(totalSilver) * 1500 : 0) +
-    (totalGold ? Number(totalGold) * 5000 : 0) +
-    (totalDiamond ? Number(totalDiamond) * 25000 : 0) +
-    (totalLegendary ? Number(totalLegendary) * 500000 : 0);
+  const bonusEarned = 0;
 
   const correctedTotalEarned =
     baseEarned + bonusEarned;
@@ -1545,10 +1541,7 @@ export default function HomePage() {
   const totalEarnedReadable =
     correctedTotalEarned.toLocaleString();
 
-  const totalSilverCount = totalSilver ? Number(totalSilver) : 0;
-  const totalGoldCount = totalGold ? Number(totalGold) : 0;
-  const totalDiamondCount = totalDiamond ? Number(totalDiamond) : 0;
-  const totalLegendaryCount = totalLegendary ? Number(totalLegendary) : 0;
+  
 
   const glassCard =
     "rounded-3xl bg-white/10 dark:bg-slate-900/55 backdrop-blur-[2px] " +
