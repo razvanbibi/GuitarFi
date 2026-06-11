@@ -13,6 +13,9 @@ export const OXTXN_TOKEN_CONTRACT =
 export const CELODAILY_VAULT_CONTRACT =
   "0x33FAF6C82003cCEA6a3F4A1d1e9ab9CB7DC40FD4";
 
+export const GUITARFI_IDENTITY_CONTRACT =
+  "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
+
 export const CELO_CHAIN_ID_HEX = "0xa4ec"; // 42220
 
 // আমাদের দরকারি ফাংশনের মিনিমাল ABI
