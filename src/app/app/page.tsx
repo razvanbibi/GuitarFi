@@ -193,11 +193,17 @@ export default function HomePage() {
   const [convertAmount, setConvertAmount] =
     useState("1");
 
-const [hasIdentity, setHasIdentity] =
-  useState(false);
+  const [hasIdentity, setHasIdentity] =
+    useState(false);
 
-const [identityURI, setIdentityURI] =
-  useState("");
+  const [identityURI, setIdentityURI] =
+    useState("");
+
+  const [identityImage, setIdentityImage] =
+    useState("");
+
+  const [identityMetadata, setIdentityMetadata] =
+    useState<any>(null);
 
   // একবারই ছোট onboarding দেখাবে
   useEffect(() => {
@@ -1547,7 +1553,7 @@ const [identityURI, setIdentityURI] =
   const totalEarnedReadable =
     correctedTotalEarned.toLocaleString();
 
-  
+
 
   const glassCard =
     "rounded-3xl bg-white/10 dark:bg-slate-900/55 backdrop-blur-[2px] " +
