@@ -107,10 +107,10 @@ export default function HomePage() {
   const [totalDiamond, setTotalDiamond] = useState<bigint | null>(null);
   const [totalLegendary, setTotalLegendary] = useState<bigint | null>(null);
 
-  const [pendingSilver, setPendingSilver] = useState<bigint | null>(null);
-  const [pendingGold, setPendingGold] = useState<bigint | null>(null);
-  const [pendingDiamond, setPendingDiamond] = useState<bigint | null>(null);
-  const [pendingLegendary, setPendingLegendary] = useState<bigint | null>(null);
+  const [pendingNFT1, setpendingNFT1] = useState<bigint | null>(null);
+  const [pendingNFT2, setpendingNFT2] = useState<bigint | null>(null);
+  const [pendingNFT3, setpendingNFT3] = useState<bigint | null>(null);
+  const [pendingNFT31, setpendingNFT31] = useState<bigint | null>(null);
 
 
   const [showDonate, setShowDonate] = useState(false);
@@ -773,10 +773,10 @@ export default function HomePage() {
       setPendingRewards(formatToken(pt));
       setPaused(isPaused);
 
-      setPendingSilver(nft1);
-      setPendingGold(nft2);
-      setPendingDiamond(nft3);
-      setPendingLegendary(nft31);
+      setpendingNFT1(nft1);
+      setpendingNFT2(nft2);
+      setpendingNFT3(nft3);
+      setpendingNFT31(nft31);
       setTotalEarned(tEarned);
 
       return { pending: pt };
@@ -1060,10 +1060,10 @@ export default function HomePage() {
 
       // 🔥 NEW LOGIC HERE
       const hasBadges =
-        (pendingSilver ?? BigInt(0)) > BigInt(0) ||
-        (pendingGold ?? BigInt(0)) > BigInt(0) ||
-        (pendingDiamond ?? BigInt(0)) > BigInt(0) ||
-        (pendingLegendary ?? BigInt(0)) > BigInt(0);
+        (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT31 ?? BigInt(0)) > BigInt(0);
 
       let tx;
 
@@ -1077,10 +1077,10 @@ export default function HomePage() {
 
       await tx.wait();
       setPendingTokens(BigInt(0));
-      setPendingSilver(BigInt(0));
-      setPendingGold(BigInt(0));
-      setPendingDiamond(BigInt(0));
-      setPendingLegendary(BigInt(0));
+      setpendingNFT1(BigInt(0));
+      setpendingNFT2(BigInt(0));
+      setpendingNFT3(BigInt(0));
+      setpendingNFT31(BigInt(0));
 
       setStatus("Claim successful 🎉");
 
@@ -1603,15 +1603,15 @@ export default function HomePage() {
 
   const highestNumber = highestStreak ? Number(highestStreak) : 0;
 
-  const pendingSilverCount = pendingSilver ? Number(pendingSilver) : 0;
-  const pendingGoldCount = pendingGold ? Number(pendingGold) : 0;
-  const pendingDiamondCount = pendingDiamond ? Number(pendingDiamond) : 0;
-  const pendingLegendaryCount = pendingLegendary ? Number(pendingLegendary) : 0;
+  const pendingNFT1Count = pendingNFT1 ? Number(pendingNFT1) : 0;
+  const pendingNFT2Count = pendingNFT2 ? Number(pendingNFT2) : 0;
+  const pendingNFT3Count = pendingNFT3 ? Number(pendingNFT3) : 0;
+  const pendingNFT31Count = pendingNFT31 ? Number(pendingNFT31) : 0;
   const hasUnclaimedBadges =
-    pendingSilverCount > 0 ||
-    pendingGoldCount > 0 ||
-    pendingDiamondCount > 0 ||
-    pendingLegendaryCount > 0;
+    pendingNFT1Count > 0 ||
+    pendingNFT2Count > 0 ||
+    pendingNFT3Count > 0 ||
+    pendingNFT31Count > 0;
 
 
   const baseEarned =
@@ -2776,22 +2776,22 @@ active:scale-95
                       Unclaimed badges
                     </span>
                     <div className="flex items-center gap-2 transition-all duration-500">
-                      {pendingSilverCount > 0
-                        ? <BadgeGlow icon="🎸" count={pendingSilverCount} />
+                      {pendingNFT1Count > 0
+                        ? <BadgeGlow icon="🎸" count={pendingNFT1Count} />
                         : <BadgeGhost icon="🎸" />
                       }
 
-                      {pendingGoldCount > 0
-                        ? <BadgeGlow icon="⚡" count={pendingGoldCount} />
+                      {pendingNFT2Count > 0
+                        ? <BadgeGlow icon="⚡" count={pendingNFT2Count} />
                         : <BadgeGhost icon="⚡" />
                       }
-                      {pendingDiamondCount > 0
-                        ? <BadgeGlow icon="🎵" count={pendingDiamondCount} />
+                      {pendingNFT3Count > 0
+                        ? <BadgeGlow icon="🎵" count={pendingNFT3Count} />
                         : <BadgeGhost icon="🎵" />
                       }
-                      {pendingLegendaryCount > 0
-                        ? <BadgeGlow icon="🌟" count={pendingLegendaryCount} />
-                        : <BadgeGhost icon="🌟" />
+                      {pendingNFT31Count > 0
+                        ? <BadgeGlow icon="🌌" count={pendingNFT31Count} />
+                        : <BadgeGhost icon="🌌" />
                       }
                     </div>
                   </div>
