@@ -1127,6 +1127,10 @@ export default function HomePage() {
         return;
       }
 
+      setIdentityTokenId(
+        Number(tokenId)
+      );
+
       setHasIdentity(true);
 
       const uri =
@@ -5169,7 +5173,11 @@ active:scale-95
 
               <div className="flex items-center gap-3">
                 <img
-                  src={profileAvatar || "/avatar.png"}
+                  src={
+                    
+                    profileAvatar ||
+                    "/avatar.png"
+                  }
                   className="h-12 w-12 rounded-full ring-2 ring-sky-400 animate-[breath_3.6s_ease-in-out_infinite]"
 
 
@@ -5179,7 +5187,9 @@ active:scale-95
                     {profileName || "Celo user"}
                   </p>
                   <p className="text-[11px] text-slate-400">
-
+                    {hasIdentity
+                      ? `GFID #${identityTokenId}`
+                      : "Identity not minted"}
                   </p>
                 </div>
               </div>
