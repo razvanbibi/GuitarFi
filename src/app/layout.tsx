@@ -4,10 +4,10 @@ import "@fontsource/geist-mono";   // Geist Mono font
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CeloDaily",
+  title: "GuitarFi",
   description: "Daily check-ins on Celo to grow your streak and earn rewards",
   openGraph: {
-    title: "CeloDaily",
+    title: "GuitarFi",
     description:
       "Building a daily habit on Celo",
     images: ["/og-banner.png"],
