@@ -2777,17 +2777,17 @@ active:scale-95
                     </span>
                     <div className="flex items-center gap-2 transition-all duration-500">
                       {pendingSilverCount > 0
-                        ? <BadgeGlow icon="🥈" count={pendingSilverCount} />
-                        : <BadgeGhost icon="🥈" />
+                        ? <BadgeGlow icon="🎸" count={pendingSilverCount} />
+                        : <BadgeGhost icon="🎸" />
                       }
 
                       {pendingGoldCount > 0
-                        ? <BadgeGlow icon="🥇" count={pendingGoldCount} />
-                        : <BadgeGhost icon="🥇" />
+                        ? <BadgeGlow icon="⚡" count={pendingGoldCount} />
+                        : <BadgeGhost icon="⚡" />
                       }
                       {pendingDiamondCount > 0
-                        ? <BadgeGlow icon="💎" count={pendingDiamondCount} />
-                        : <BadgeGhost icon="💎" />
+                        ? <BadgeGlow icon="🎵" count={pendingDiamondCount} />
+                        : <BadgeGhost icon="🎵" />
                       }
                       {pendingLegendaryCount > 0
                         ? <BadgeGlow icon="🌟" count={pendingLegendaryCount} />
