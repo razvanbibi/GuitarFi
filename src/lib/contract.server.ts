@@ -2,7 +2,6 @@
 import { JsonRpcProvider, Contract } from "ethers";
 import { OXTXN_STREAK_CONTRACT } from "./contract.abi";
 import { OXTXN_STREAK_ABI } from "./contract.abi";
-
 const RPC_URL = "https://forno.celo.org";
 export function getReadOnlyContractServer() {
   const provider = new JsonRpcProvider(RPC_URL);
