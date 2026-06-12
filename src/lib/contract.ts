@@ -81,7 +81,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [{ name: "", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
   },
-
   {
     type: "function",
     name: "tap",
