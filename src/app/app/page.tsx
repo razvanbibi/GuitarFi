@@ -883,6 +883,7 @@ export default function HomePage() {
         return;
       }
       setLoading(true);
+      setActiveAction("gm");
       setStatus("Sending Gm transaction...");
       const prevPending = pendingTokens ?? BigInt(0);
 
