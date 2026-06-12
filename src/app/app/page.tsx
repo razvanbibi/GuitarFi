@@ -2542,7 +2542,9 @@ hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
 active:scale-95
 "
                   >
-                    Tap
+                    {activeAction === "tap"
+                      ? "Processing..."
+                      : "Tap"}
                   </button>
 
                   <span className="text-[11px] text-slate-400">
