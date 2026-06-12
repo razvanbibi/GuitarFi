@@ -14,6 +14,5 @@ export function getReadOnlyContractServer() {
     OXTXN_STREAK_ABI,
     provider
   );
-
   return { contract };
 }
