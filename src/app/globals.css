@@ -483,3 +483,13 @@ body {
 .donate-card-glow {
   animation: donateGlow 3s ease-in-out infinite;
 }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-120px) rotate(12deg);
+  }
+
+  100% {
+    transform: translateX(400px) rotate(12deg);
+  }
+}
