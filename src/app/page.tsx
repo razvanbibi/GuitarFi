@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-
 export default function LandingPage() {
   return (
     <main className="relative min-h-screen overflow-hidden">
