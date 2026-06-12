@@ -11,7 +11,6 @@ export default function LandingPage() {
           backgroundImage: "url('/landing.jpg')",
         }}
       />
-
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
 
