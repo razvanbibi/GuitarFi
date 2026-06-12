@@ -36,7 +36,6 @@ export default function LandingPage() {
           Launch App
         </Link>
       </header>
-
       {/* Hero */}
       <section className="relative z-10 flex min-h-[85vh] items-center justify-center px-6">
         <div className="max-w-5xl text-center">
