@@ -1577,6 +1577,43 @@ export default function HomePage() {
     }
   }
 
+  async function handleDevWithdrawUSDM() {
+    try {
+      setDevRunning(true);
+
+      const { contract } =
+        await getContractWithSigner();
+
+      const tx =
+        await contract.withdrawUSDM(
+          ethers.parseUnits(
+            devWithdrawUSDM,
+            18
+          )
+        );
+
+      await tx.wait();
+
+      setStatus(
+        "USDm withdrawn successfully ✅"
+      );
+
+    } catch (err: any) {
+
+      console.error(err);
+
+      setStatus(
+        err?.message ??
+        "USDm withdraw failed"
+      );
+
+    } finally {
+
+      setDevRunning(false);
+
+    }
+  }
+
   async function loadVaultData() {
     try {
       if (!account) return;
