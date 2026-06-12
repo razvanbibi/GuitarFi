@@ -43,7 +43,6 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
 
   const timer = setTimeout(() => {
     setVisible(false);
-
     setTimeout(() => {
       setIndex((i) => (i + 1) % slides.length);
       setVisible(true);
