@@ -53,7 +53,6 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
 }, [index, slides]);
 
   const slide = slides[index];
-
   return (
     <div className="relative h-[38px] overflow-hidden">
       <div
