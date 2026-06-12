@@ -996,15 +996,20 @@ export default function HomePage() {
       await refreshData();
 
     } catch (err: any) {
-
       console.error(err);
 
-      setStatus(
+      const msg =
+        err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
-        "Tap failed"
-      );
+        "";
 
+      if (msg.includes("Mint Identity First")) {
+        setShowIdentityRequired(true);
+        return;
+      }
+
+      setStatus(msg || "Tap failed.");
     } finally {
 
       setLoading(false);
@@ -5094,7 +5099,7 @@ active:scale-95
   hover:scale-[1.03]
 
   ${isDarkMode
-                        ? `
+                    ? `
         border-white/15
         bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
         text-slate-400
@@ -5102,7 +5107,7 @@ active:scale-95
         hover:border-white/30
         hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
       `
-                        : `
+                    : `
         border-sky-300/40
         bg-[linear-gradient(135deg,rgba(255,255,255,0.95),rgba(230,240,255,0.72))]
         text-slate-800
@@ -5110,7 +5115,7 @@ active:scale-95
         hover:border-sky-400/60
         hover:shadow-[0_15px_45px_rgba(56,189,248,0.28)]
       `
-                      }
+                  }
 
   before:absolute
   before:inset-0
@@ -5129,7 +5134,7 @@ active:scale-95
   [&>span]:relative
   [&>span]:z-10
 `}
-                  >
+              >
                 Open Identity Card
               </button>
             </div>
