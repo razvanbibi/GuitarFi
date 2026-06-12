@@ -336,7 +336,30 @@ export const OXTXN_STREAK_ABI = [
     type: "function",
   },
 
-
+  {
+    type: "function",
+    name: "withdrawCELO",
+    stateMutability: "nonpayable",
+    inputs: [
+      {
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "withdrawUSDM",
+    stateMutability: "nonpayable",
+    inputs: [
+      {
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    outputs: [],
+  },
 
 ] as const;
 
