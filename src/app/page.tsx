@@ -72,7 +72,6 @@ export default function LandingPage() {
             Stake, play games, earn rewards and unlock
             exclusive utilities with Guitar Token.
           </p>
-
           <div className="mt-10 flex justify-center">
             <Link
               href="/app"
