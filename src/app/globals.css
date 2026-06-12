@@ -127,7 +127,6 @@ body {
     transform: scale(1.15);
   }
 }
-
 @keyframes flashGlow {
   0% {
     opacity: 0;
