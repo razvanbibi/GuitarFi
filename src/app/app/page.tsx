@@ -2503,7 +2503,9 @@ hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
 active:scale-95
 "
                   >
-                    {loading ? "Processing…" : "Gm"}
+                    {activeAction === "gm"
+                      ? "Processing..."
+                      : "Gm"}
                   </button>
                 )}
                 <div className="flex flex-col items-center gap-1">
