@@ -52,7 +52,6 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
   return () => clearTimeout(timer);
 }, [index, slides]);
 
-
   const slide = slides[index];
 
   return (
