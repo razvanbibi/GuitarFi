@@ -1,5 +1,4 @@
 export const runtime = "nodejs";
-
 import { getReadOnlyContractServer } from "@/lib/contract.server";
 import { ethers } from "ethers";
 const NFT_CONTRACT = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
