@@ -975,6 +975,7 @@ export default function HomePage() {
       setStatus(msg || "Gm failed.");
     } finally {
       setLoading(false);
+      setActiveAction(null);
     }
   }
 
