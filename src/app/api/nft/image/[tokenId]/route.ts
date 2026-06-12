@@ -16,7 +16,7 @@ export async function GET(
   const { contract } = getReadOnlyContractServer();
   const highestStreak = Number(await contract.highestStreak(owner));
 
-  
+
 
   async function fetchAsBase64(url: string): Promise<string | null> {
   try {
