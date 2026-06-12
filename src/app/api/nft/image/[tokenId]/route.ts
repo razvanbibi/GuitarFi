@@ -27,7 +27,6 @@ export async function GET(
   }
 }
 
-
 const logoBase64 = await fetchAsBase64(
   "https://celo-daily.vercel.app/logo-0x.png"
 );
