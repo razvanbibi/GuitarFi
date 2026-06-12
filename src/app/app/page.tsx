@@ -202,6 +202,9 @@ export default function HomePage() {
     useState<any>(null);
   const [showIdentityRequired, setShowIdentityRequired] = useState(false);
 
+  const [devWithdrawUSDM, setDevWithdrawUSDM] = useState("");
+  const [devWithdrawCELO, setDevWithdrawCELO] = useState("");
+
   // একবারই ছোট onboarding দেখাবে
   useEffect(() => {
     if (typeof window === "undefined") return;
