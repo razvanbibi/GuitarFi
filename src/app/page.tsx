@@ -54,7 +54,6 @@ export default function LandingPage() {
             <br />
             Own.
           </h1>
-
           <p
             className="
               mt-8
