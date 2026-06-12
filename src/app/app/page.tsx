@@ -4812,30 +4812,30 @@ active:scale-95
 
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
 
-  <h3 className="font-bold text-lg">
-    Withdraw CELO
-  </h3>
+                    <h3 className="font-bold text-lg">
+                      Withdraw CELO
+                    </h3>
 
-  <input
-    value={devWithdrawCELO}
-    onChange={(e) =>
-      setDevWithdrawCELO(
-        e.target.value
-      )
-    }
-    placeholder="Amount"
-    className="w-full rounded-lg bg-black/30 p-3"
-  />
+                    <input
+                      value={devWithdrawCELO}
+                      onChange={(e) =>
+                        setDevWithdrawCELO(
+                          e.target.value
+                        )
+                      }
+                      placeholder="Amount"
+                      className="w-full rounded-lg bg-black/30 p-3"
+                    />
 
-  <button
-    onClick={handleDevWithdrawCELO}
-    disabled={devRunning}
-    className="w-full rounded-lg bg-orange-500 p-3 font-bold"
-  >
-    Withdraw CELO
-  </button>
+                    <button
+                      onClick={handleDevWithdrawCELO}
+                      disabled={devRunning}
+                      className="w-full rounded-lg bg-orange-500 p-3 font-bold"
+                    >
+                      Withdraw CELO
+                    </button>
 
-</div>
+                  </div>
 
                 </div>
 
