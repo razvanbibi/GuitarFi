@@ -7,7 +7,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [{ name: "user", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
   },
-
   {
     type: "function",
     name: "highestStreak",
