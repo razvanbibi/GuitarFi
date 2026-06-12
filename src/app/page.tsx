@@ -13,7 +13,6 @@ export default function LandingPage() {
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
-
       {/* Navbar */}
       <header className="relative z-10 flex items-center justify-between px-8 py-6">
         <div className="text-white text-2xl font-bold tracking-wide">
