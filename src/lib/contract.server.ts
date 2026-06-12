@@ -5,7 +5,6 @@ import { OXTXN_STREAK_ABI } from "./contract.abi";
 
 // Celo mainnet public RPC (simple & safe)
 const RPC_URL = "https://forno.celo.org";
-
 export function getReadOnlyContractServer() {
   const provider = new JsonRpcProvider(RPC_URL);
 
