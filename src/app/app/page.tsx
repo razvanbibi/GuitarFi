@@ -987,6 +987,7 @@ export default function HomePage() {
       }
 
       setLoading(true);
+      setActiveAction("tap");
 
       const { contract } =
         await getContractWithSigner();
@@ -1019,9 +1020,8 @@ export default function HomePage() {
 
       setStatus(msg || "Tap failed.");
     } finally {
-
       setLoading(false);
-
+      setActiveAction(null);
     }
   }
 
