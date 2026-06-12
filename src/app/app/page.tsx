@@ -817,6 +817,33 @@ export default function HomePage() {
       const { contract } =
         await getContractWithSigner();
 
+      const { contract: tokenContract } =
+        await getTokenContractWithSigner();
+
+      const tuneCost =
+        ethers.parseUnits("50", 18);
+
+      const allowance =
+        await tokenContract.allowance(
+          account,
+          OXTXN_STREAK_CONTRACT
+        );
+
+      if (allowance < tuneCost) {
+
+        setStatus(
+          "Approve GTR..."
+        );
+
+        const approveTx =
+          await tokenContract.approve(
+            OXTXN_STREAK_CONTRACT,
+            ethers.MaxUint256
+          );
+
+        await approveTx.wait();
+      }
+
       setStatus(
         "Playing tune onchain..."
       );
