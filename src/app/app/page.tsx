@@ -2809,7 +2809,7 @@ active:scale-95
                     <ul className="list-disc pl-4 space-y-1 relative">
                       <li>GM once per day</li>
 
-                      <li>Each streak day increases reward (n×100)</li>
+                      <li>Each streak day increases reward (n×1)</li>
 
                       <li
                         className="relative cursor-pointer text-cyan-300"
@@ -3017,9 +3017,11 @@ active:scale-95
                   disabled={
                     !!(
                       loading ||
-                      !pendingTokens ||
-                      pendingTokens === BigInt(0) ||
-                      paused
+                      paused ||
+                      (
+                        (pendingTokens ?? BigInt(0)) === BigInt(0) &&
+                        !hasUnclaimedBadges
+                      )
                     )
                   }
                   className={`claimButton ${isDarkMode ? "claimButtonDark" : "claimButtonLight"
