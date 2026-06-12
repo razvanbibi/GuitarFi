@@ -1066,6 +1066,7 @@ export default function HomePage() {
       }
 
       setLoading(true);
+      setActiveAction("claim");
       setStatus("Sending claim transaction...");
 
       const claimAmount = pendingTokens;
@@ -1121,6 +1122,7 @@ export default function HomePage() {
       );
     } finally {
       setLoading(false);
+      setActiveAction(null);
     }
   }
 
@@ -2927,13 +2929,15 @@ active:scale-95
                       ? "opacity-40 cursor-not-allowed"
                       : "hover:brightness-110 active:scale-95"
                     }
-  `}
+                     `}
                 >
-                  {(pendingTokens ?? BigInt(0)) > BigInt(0)
-                    ? "Claim all"
-                    : recentlyClaimed
-                      ? "Claimed"
-                      : "Claimed"}
+                  {activeAction === "claim"
+                    ? "Processing..."
+                    : (pendingTokens ?? BigInt(0)) > BigInt(0)
+                      ? "Claim all"
+                      : recentlyClaimed
+                        ? "Claimed"
+                        : "Claimed"}
                 </button>
               </div>
             )}
