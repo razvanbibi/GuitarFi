@@ -4786,6 +4786,33 @@ active:scale-95
                     </button>
                   </div>
 
+                  <div className="border border-white/10 rounded-xl p-4 space-y-3">
+
+                    <h3 className="font-bold text-lg">
+                      Withdraw USDM
+                    </h3>
+
+                    <input
+                      value={devWithdrawUSDM}
+                      onChange={(e) =>
+                        setDevWithdrawUSDM(
+                          e.target.value
+                        )
+                      }
+                      placeholder="Amount"
+                      className="w-full rounded-lg bg-black/30 p-3"
+                    />
+
+                    <button
+                      onClick={handleDevWithdrawUSDM}
+                      disabled={devRunning}
+                      className="w-full rounded-lg bg-cyan-500 p-3 font-bold"
+                    >
+                      Withdraw USDM
+                    </button>
+
+                  </div>
+
                 </div>
 
 
