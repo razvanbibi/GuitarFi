@@ -844,15 +844,20 @@ export default function HomePage() {
       );
 
     } catch (err: any) {
-
       console.error(err);
 
-      setStatus(
+      const msg =
+        err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
-        "Play failed"
-      );
+        "";
 
+      if (msg.includes("Mint Identity First")) {
+        setShowIdentityRequired(true);
+        return;
+      }
+
+      setStatus(msg || "Play failed.");
     } finally {
 
       setLoading(false);
