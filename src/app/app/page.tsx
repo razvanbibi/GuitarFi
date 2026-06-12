@@ -5101,7 +5101,6 @@ active:scale-95
             "
             onClick={() => setAboutOpen(false)}
           />
-
           {/* panel */}
           <div
             className="relative z-10 mx-4 max-w-sm w-full rounded-3xl bg-slate-950/95 border border-sky-500/20 shadow-2xl shadow-black/70 px-4 py-4 text-xs text-slate-100 animate-[toast-pop_0.28s_ease-out]"
