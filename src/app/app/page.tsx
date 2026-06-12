@@ -2909,36 +2909,41 @@ active:scale-95
             {account && (
               <div className="flex justify-center mt-2">
                 <button
-                  onClick={handleClaimAll}
-                  disabled={!!(loading || !pendingTokens || pendingTokens === BigInt(0) || paused)}
-                  className={`
-    inline-flex items-center justify-center
-    px-8 py-3 rounded-full
-    text-base font-semibold
-    transition
-    shadow-lg
-    ${rewardTier === "low"
-                      ? "bg-gradient-to-r from-purple-500 to-indigo-500 shadow-purple-900/50 text-slate-50"
-                      : rewardTier === "mid"
-                        ? "bg-gradient-to-r from-sky-500 to-blue-500 shadow-blue-900/50 text-slate-50"
-                        : rewardTier === "big"
-                          ? "bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-900 shadow-amber-500/60"
-                          : "bg-fuchsia-900/40 text-fuchsia-200/80"
-                    }
-    ${loading || !pendingTokens || pendingTokens === BigInt(0) || paused
-                      ? "opacity-40 cursor-not-allowed"
-                      : "hover:brightness-110 active:scale-95"
-                    }
-                     `}
-                >
-                  {activeAction === "claim"
-                    ? "Processing..."
-                    : (pendingTokens ?? BigInt(0)) > BigInt(0)
-                      ? "Claim all"
-                      : recentlyClaimed
-                        ? "Claimed"
-                        : "Claimed"}
-                </button>
+  onClick={handleClaimAll}
+  disabled={
+    !!(
+      loading ||
+      !pendingTokens ||
+      pendingTokens === BigInt(0) ||
+      paused
+    )
+  }
+ className="claimButton"
+>
+  <div className="claimIcon">
+    🎁
+  </div>
+
+  <span className="claimText">
+    {activeAction === "claim"
+      ? "Processing..."
+      : (pendingTokens ?? BigInt(0)) > BigInt(0)
+      ? "Claim All"
+      : "Claimed"}
+  </span>
+  {/* Shimmer */}
+  {!loading &&
+    (pendingTokens ?? BigInt(0)) > BigInt(0 && (
+      <span
+        className="
+          absolute inset-y-0 -left-20 w-16
+          bg-white/20 blur-md
+          rotate-12
+          animate-[shimmer_2.5s_linear_infinite]
+        "
+      />
+    ))}
+</button>
               </div>
             )}
           </section>
