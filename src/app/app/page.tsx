@@ -18,7 +18,7 @@ import Image from "next/image";
 import { ethers } from "ethers";
 
 import TodayMessageLoop from "../TodayMessageLoop";
-
+import { Gift } from "lucide-react";
 
 type Status = string | null;
 
@@ -2909,41 +2909,45 @@ active:scale-95
             {account && (
               <div className="flex justify-center mt-2">
                 <button
-  onClick={handleClaimAll}
-  disabled={
-    !!(
-      loading ||
-      !pendingTokens ||
-      pendingTokens === BigInt(0) ||
-      paused
-    )
-  }
- className="claimButton"
->
-  <div className="claimIcon">
-    🎁
-  </div>
+                  onClick={handleClaimAll}
+                  disabled={
+                    !!(
+                      loading ||
+                      !pendingTokens ||
+                      pendingTokens === BigInt(0) ||
+                      paused
+                    )
+                  }
+                  className={`claimButton ${isDarkMode ? "claimButtonDark" : "claimButtonLight"
+                    }`}
+                >
+                  <div className="claimIcon">
+                    <Gift
+                      size={20}
+                      color={isDarkMode ? "white" : "black"}
+                    />
+                  </div>
 
-  <span className="claimText">
-    {activeAction === "claim"
-      ? "Processing..."
-      : (pendingTokens ?? BigInt(0)) > BigInt(0)
-      ? "Claim All"
-      : "Claimed"}
-  </span>
-  {/* Shimmer */}
-  {!loading &&
-    (pendingTokens ?? BigInt(0)) > BigInt(0 && (
-      <span
-        className="
+                  <span className="claimText">
+                    {activeAction === "claim"
+                      ? "Processing..."
+                      : (pendingTokens ?? BigInt(0)) > BigInt(0)
+                        ? "Claim All"
+                        : "Claimed"}
+                  </span>
+                  {/* Shimmer */}
+                  {!loading &&
+                    (pendingTokens ?? BigInt(0)) > BigInt(0 && (
+                      <span
+                        className="
           absolute inset-y-0 -left-20 w-16
           bg-white/20 blur-md
           rotate-12
           animate-[shimmer_2.5s_linear_infinite]
         "
-      />
-    ))}
-</button>
+                      />
+                    ))}
+                </button>
               </div>
             )}
           </section>
