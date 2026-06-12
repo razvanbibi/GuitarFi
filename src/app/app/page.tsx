@@ -1614,6 +1614,43 @@ export default function HomePage() {
     }
   }
 
+  async function handleDevWithdrawCELO() {
+    try {
+
+      setDevRunning(true);
+
+      const { contract } =
+        await getContractWithSigner();
+
+      const tx =
+        await contract.withdrawCELO(
+          ethers.parseEther(
+            devWithdrawCELO
+          )
+        );
+
+      await tx.wait();
+
+      setStatus(
+        "CELO withdrawn successfully ✅"
+      );
+
+    } catch (err: any) {
+
+      console.error(err);
+
+      setStatus(
+        err?.message ??
+        "CELO withdraw failed"
+      );
+
+    } finally {
+
+      setDevRunning(false);
+
+    }
+  }
+
   async function loadVaultData() {
     try {
       if (!account) return;
