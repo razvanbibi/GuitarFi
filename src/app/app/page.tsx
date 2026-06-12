@@ -5049,21 +5049,21 @@ active:scale-95
       border border-sky-400/20
       bg-slate-950/95
       backdrop-blur-xl
-      p-5
+      px-4 py-3
       shadow-[0_0_40px_rgba(56,189,248,0.2)]
       "
           >
-            <div className="text-center space-y-3">
+            <div className="text-center space-y-2">
 
-              <div className="text-4xl">
+              <div className="text-3xl">
                 🪪
               </div>
 
-              <h3 className="text-lg font-semibold text-white">
+              <h3 className="text-base font-semibold text-white">
                 Mint Identity First
               </h3>
 
-              <p className="text-xs text-slate-400">
+              <p className="text-[11px] leading-4 text-slate-400">
                 You need a GuitarFi Identity NFT
                 before using this feature.
               </p>
