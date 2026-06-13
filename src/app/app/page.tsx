@@ -1663,9 +1663,14 @@ export default function HomePage() {
 
       const { contract } = await getVaultReadOnlyContract();
 
-      const [vaultBal, userBal] = await Promise.all([
+      const [
+        vaultBal,
+        userBal,
+        userCeloBal
+      ] = await Promise.all([
         contract.getVaultBalance(),
         contract.getUserBalance(account),
+        contract.getUserCeloBalance(account),
       ]);
 
       setVaultBalance(
