@@ -1411,6 +1411,54 @@ export default function HomePage() {
     }
   }
 
+  async function handleCeloVaultWithdraw() {
+    try {
+
+      if (!account) {
+        setStatus("Connect wallet first");
+        return;
+      }
+
+      setLoading(true);
+
+      const amount =
+        ethers.parseEther(
+          vaultAmount
+        );
+
+      const { contract } =
+        await getVaultContractWithSigner();
+
+      const tx =
+        await contract.withdrawCelo(
+          amount
+        );
+
+      await tx.wait();
+
+      setStatus(
+        "CELO withdraw successful 💸"
+      );
+
+      await loadVaultData();
+
+    } catch (err: any) {
+
+      console.error(err);
+
+      setStatus(
+        err?.shortMessage ??
+        err?.message ??
+        "Withdraw failed"
+      );
+
+    } finally {
+
+      setLoading(false);
+
+    }
+  }
+
   async function handleVaultWithdraw() {
     try {
       if (!account) {
