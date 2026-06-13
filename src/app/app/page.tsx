@@ -3257,7 +3257,7 @@ active:scale-95
             <div className="grid grid-cols-2 gap-3">
 
               <button
-                onClick={handleVaultDeposit}
+                onClick={handleCeloVaultDeposit}
                 disabled={loading}
                 className="
   group
