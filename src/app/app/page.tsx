@@ -120,6 +120,11 @@ export default function HomePage() {
   const [vaultBalance, setVaultBalance] = useState("0");
 
   const [userVaultBalance, setUserVaultBalance] = useState("0");
+  const [celoVaultBalance, setCeloVaultBalance] =
+    useState("0");
+
+  const [userCeloVaultBalance, setUserCeloVaultBalance] =
+    useState("0");
 
   const [donationAmount, setDonationAmount] = useState<string>("1");
 
