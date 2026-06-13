@@ -1121,7 +1121,7 @@ export default function HomePage() {
         tx = await contract.claimTokens();
       }
       else if (hasBadges) {
-        tx = await contract.claimBadges(); // পরে function name ঠিক করব
+        tx = await contract.claimAllNFTs();
       }
 
       await tx.wait();
