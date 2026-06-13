@@ -3066,7 +3066,6 @@ active:scale-95
     ${isDarkMode ? glassCard : ""}
   `}
           >
-
             <div className="flex items-center justify-between">
               <div>
                 <h2
