@@ -171,6 +171,13 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
+  {
+    type: "function",
+    name: "claimAllNFTs",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
 
   {
     type: "function",
