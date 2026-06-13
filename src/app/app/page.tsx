@@ -3327,7 +3327,7 @@ active:scale-95
               </button>
 
               <button
-                onClick={handleVaultWithdraw}
+                onClick={handleCeloVaultWithdraw}
                 disabled={loading}
                 className="
   group
