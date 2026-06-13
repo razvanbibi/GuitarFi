@@ -3037,7 +3037,10 @@ active:scale-95
                   <span className="claimText">
                     {activeAction === "claim"
                       ? "Processing..."
-                      : (pendingTokens ?? BigInt(0)) > BigInt(0)
+                      : (
+                        (pendingTokens ?? BigInt(0)) > BigInt(0) ||
+                        hasUnclaimedBadges
+                      )
                         ? "Claim All"
                         : "Claimed"}
                   </span>
