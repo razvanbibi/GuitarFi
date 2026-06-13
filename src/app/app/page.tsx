@@ -1090,7 +1090,16 @@ export default function HomePage() {
         return;
       }
 
-      if (!pendingTokens || pendingTokens === BigInt(0)) {
+      const hasBadges =
+        (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
+        (pendingNFT31 ?? BigInt(0)) > BigInt(0);
+
+      if (
+        (pendingTokens ?? BigInt(0)) === BigInt(0) &&
+        !hasBadges
+      ) {
         setStatus("Nothing to claim right now.");
         return;
       }
@@ -1104,14 +1113,6 @@ export default function HomePage() {
       await ensureCeloNetwork();
 
       const { contract } = await getContractWithSigner();
-
-      // 🔥 NEW LOGIC HERE
-      const hasBadges =
-        (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
-        (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
-        (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
-        (pendingNFT31 ?? BigInt(0)) > BigInt(0);
-
       let tx;
 
       if (!hasBadges) {
