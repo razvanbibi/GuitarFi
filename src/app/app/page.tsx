@@ -1327,7 +1327,7 @@ export default function HomePage() {
       setStatus("Approve USDm...");
 
       const approveTx = await usdc.approve(
-        "0x6ea4C7e400cC455712e284883E74B49402C5C818",
+        "0x33FAF6C82003cCEA6a3F4A1d1e9ab9CB7DC40FD4",
         amountScaled
       );
 
