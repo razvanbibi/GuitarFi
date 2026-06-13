@@ -3222,7 +3222,7 @@ active:scale-95
               </p>
 
               <p className="text-xl font-bold text-white">
-                {userCeloVaultBalance} CELO
+                {celoVaultBalance} CELO
               </p>
             </div>
 
