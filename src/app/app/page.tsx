@@ -1297,7 +1297,6 @@ export default function HomePage() {
         },
         2500
       );
-
     } catch (err: any) {
       console.error(err);
 
