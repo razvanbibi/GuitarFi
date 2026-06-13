@@ -1090,16 +1090,16 @@ export default function HomePage() {
         return;
       }
 
+      const hasTokens =
+        (pendingTokens ?? BigInt(0)) > BigInt(0);
+
       const hasBadges =
         (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT31 ?? BigInt(0)) > BigInt(0);
 
-      if (
-        (pendingTokens ?? BigInt(0)) === BigInt(0) &&
-        !hasBadges
-      ) {
+      if (!hasTokens && !hasBadges) {
         setStatus("Nothing to claim right now.");
         return;
       }
@@ -1107,20 +1107,21 @@ export default function HomePage() {
       setLoading(true);
       setActiveAction("claim");
       setStatus("Sending claim transaction...");
-
       const claimAmount = pendingTokens;
-
       await ensureCeloNetwork();
 
       const { contract } = await getContractWithSigner();
+
       let tx;
 
-      if (!hasBadges) {
-        // 👉 only tokens
-        tx = await contract.claimTokens();
-      } else {
-        // 👉 tokens + badges
+      if (hasTokens && hasBadges) {
         tx = await contract.claimAll();
+      }
+      else if (hasTokens) {
+        tx = await contract.claimTokens();
+      }
+      else if (hasBadges) {
+        tx = await contract.claimBadges(); // পরে function name ঠিক করব
       }
 
       await tx.wait();
