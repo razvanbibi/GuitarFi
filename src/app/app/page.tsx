@@ -3969,7 +3969,7 @@ active:scale-95
           </span>
 
           <a
-            href="https://celoscan.io/token/0xf3473730b41f0f5720bc8aa8fade0480062125ba"
+            href="https://celoscan.io/token/0x4C9Bf9f99F638E102dac7D54558A28007c2c7aB8"
             target="_blank"
             rel="noreferrer"
             className={`flex items-center gap-2 transition ${isDarkMode
