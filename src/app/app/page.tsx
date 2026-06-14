@@ -5173,9 +5173,9 @@ active:scale-95
           >
             <div className="grid grid-cols-3 gap-2 text-center text-[11px]">
 
-              {/* 🔥 Streak */}
+              {/* Streak */}
               <div>
-                <p className="text-lg">🔥</p>
+                
                 <p
                   className={`
           font-semibold
