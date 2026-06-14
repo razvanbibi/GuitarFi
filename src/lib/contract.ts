@@ -667,7 +667,6 @@ export function getEthereum() {
   if (typeof window === "undefined") return null;
   return (window as any).ethereum ?? null;
 }
-
 // provider + signer + contract পাওয়ার হেল্পার
 export async function getContractWithSigner() {
   const eth = getEthereum();
