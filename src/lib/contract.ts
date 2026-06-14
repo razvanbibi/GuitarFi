@@ -12,7 +12,7 @@ export const GUITARFI_IDENTITY_CONTRACT =
 export const GUITARFI_BADGES_CONTRACT =
   "0x81Ea8970Bc741833ead691e7b1a67882bA2E5B68";
 export const CELO_CHAIN_ID_HEX = "0xa4ec"; // 42220
-//মিনিমাল ABI
+// ABI
 export const OXTXN_STREAK_ABI = [
   // reads
   {
