@@ -641,7 +641,6 @@ export const GUITARFI_IDENTITY_ABI = [
       },
     ],
   },
-
 ] as const;
 
 export const GUITARFI_BADGES_ABI = [
