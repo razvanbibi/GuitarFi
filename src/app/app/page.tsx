@@ -907,7 +907,10 @@ export default function HomePage() {
       }
 
       setStatus(msg || "Play failed.");
-    } finally {
+      setTunePlaying(false);
+    }
+    finally {
+
 
       setLoading(false);
 
