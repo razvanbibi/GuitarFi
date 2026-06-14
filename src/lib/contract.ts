@@ -662,7 +662,6 @@ export const GUITARFI_BADGES_ABI = [
   },
 ] as const;
 
-
 // MetaMask আছে কিনা চেক
 export function getEthereum() {
   if (typeof window === "undefined") return null;
