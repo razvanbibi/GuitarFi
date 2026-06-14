@@ -111,7 +111,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
-
   {
     type: "function",
     name: "pendingNFTs",
