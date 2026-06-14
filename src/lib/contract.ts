@@ -792,7 +792,6 @@ export async function getIdentityContractWithSigner() {
     contract,
   };
 }
-
 export async function getIdentityReadOnlyContract() {
   const eth = getEthereum();
 
