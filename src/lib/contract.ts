@@ -57,7 +57,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [{ name: "", type: "uint256" }],
   },
-  
   {
     type: "function",
     name: "checkIn",
@@ -65,7 +64,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
-
   {
     type: "function",
     name: "dailyTapBonusClaimed",
