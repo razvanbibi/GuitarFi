@@ -685,7 +685,6 @@ export async function getContractWithSigner() {
   if (network.chainId !== BigInt(42220)) {
     throw new Error("Please switch network to Celo mainnet");
   }
-
   const contract = new Contract(
     OXTXN_STREAK_CONTRACT,
     OXTXN_STREAK_ABI,
