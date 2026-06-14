@@ -94,7 +94,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [],
   },
-
   {
     type: "function",
     name: "convertUSDMToGTR",
@@ -107,7 +106,6 @@ export const OXTXN_STREAK_ABI = [
     ],
     outputs: [],
   },
-
   {
     type: "function",
     name: "convertCELOToGTR",
