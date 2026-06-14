@@ -57,7 +57,7 @@ export const OXTXN_STREAK_ABI = [
     inputs: [],
     outputs: [{ name: "", type: "uint256" }],
   },
-  // writes
+  
   {
     type: "function",
     name: "checkIn",
