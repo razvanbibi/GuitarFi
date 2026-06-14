@@ -12,6 +12,7 @@ import {
   OXTXN_STREAK_CONTRACT,
   getIdentityContractWithSigner,
   getIdentityReadOnlyContract,
+  CELODAILY_VAULT_CONTRACT
 } from "@/lib/contract";
 
 import Image from "next/image";
@@ -1769,6 +1770,27 @@ export default function HomePage() {
         contract.getUserCeloBalance(account),
       ]);
 
+      const provider =
+        new ethers.JsonRpcProvider(
+          "https://forno.celo.org"
+        );
+
+      const contractCeloBalance =
+        await provider.getBalance(
+          CELODAILY_VAULT_CONTRACT
+        );
+
+      setCeloVaultBalance(
+        ethers.formatEther(
+          contractCeloBalance
+        )
+      );
+
+      setUserCeloVaultBalance(
+        ethers.formatEther(
+          userCeloBal
+        )
+      );
 
       setVaultBalance(
         ethers.formatUnits(vaultBal, 18)
