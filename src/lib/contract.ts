@@ -557,7 +557,6 @@ export const CELODAILY_VAULT_ABI = [
       },
     ],
   },
-
   {
     inputs: [
       {
