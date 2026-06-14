@@ -683,7 +683,6 @@ export async function getContractWithSigner() {
     OXTXN_STREAK_ABI,
     signer
   );
-
   return { provider, signer, contract };
 }
 export async function getTokenContractWithSigner() {
