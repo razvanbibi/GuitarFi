@@ -801,7 +801,6 @@ export async function getIdentityReadOnlyContract() {
     throw new Error(
       "Wallet not found"
     );
-
   const provider =
     new BrowserProvider(eth);
   const contract =
