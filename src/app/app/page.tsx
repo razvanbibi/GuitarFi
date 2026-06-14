@@ -132,7 +132,7 @@ export default function HomePage() {
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
   const [profileImage, setProfileImage] =
-  useState("/default-avatar.png");
+    useState("/default-avatar.png");
 
   const [ethReady, setEthReady] = useState(false);
 
@@ -511,6 +511,17 @@ export default function HomePage() {
       } catch { }
     }
   }, [account]);
+
+  useEffect(() => {
+    const savedImage =
+      localStorage.getItem(
+        "guitarfi_profile_image"
+      );
+
+    if (savedImage) {
+      setProfileImage(savedImage);
+    }
+  }, []);
 
   async function saveProfile(name: string, avatar: string) {
     if (!account) return;
@@ -3203,12 +3214,12 @@ active:scale-95
           >
             <div className="flex items-center justify-between">
               <div>
-                
+
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-                  
+
                   CELO Vault
                 </h2>
 
@@ -5177,7 +5188,7 @@ active:scale-95
 
               {/* Streak */}
               <div>
-                
+
                 <p
                   className={`
           font-semibold
@@ -5199,7 +5210,7 @@ active:scale-95
 
               {/* GTR */}
               <div>
-                
+
                 <p
                   className={`
           font-semibold
