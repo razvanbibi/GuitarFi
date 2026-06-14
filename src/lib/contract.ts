@@ -806,7 +806,6 @@ export async function getIdentityReadOnlyContract() {
 
   const provider =
     new BrowserProvider(eth);
-
   const contract =
     new Contract(
       GUITARFI_IDENTITY_CONTRACT,
