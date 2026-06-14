@@ -252,7 +252,6 @@ export const OXTXN_STREAK_ABI = [
     outputs: [],
   },
 
-
   {
     "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "pendingSilver",
