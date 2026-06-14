@@ -2868,7 +2868,12 @@ active:scale-95
                 }}
               >
                 <img
-                  src={profileAvatar || "/avatar.png"}
+                  src={
+                    profileAvatar &&
+                      profileAvatar.startsWith("data:image")
+                      ? profileAvatar
+                      : "/raihan-avatar.jpg"
+                  }
                   alt="User avatar"
                   className="h-full w-full object-cover"
                 />
