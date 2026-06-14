@@ -5619,7 +5619,7 @@ active:scale-95
                   src={
 
                     profileAvatar ||
-                    "/avatar.png"
+                    "/raihan-avatar.jpg"
                   }
                   className="h-12 w-12 rounded-full ring-2 ring-sky-400 animate-[breath_3.6s_ease-in-out_infinite]"
 
@@ -5627,7 +5627,7 @@ active:scale-95
                 />
                 <div>
                   <p className="text-sm font-semibold text-slate-100">
-                    {profileName || "Celo user"}
+                    {profileName || "GuitarFi user"}
                   </p>
                   <p className="text-[11px] text-slate-400">
                     {hasIdentity
@@ -5638,7 +5638,7 @@ active:scale-95
               </div>
 
               <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
-                <span className="text-[11px] uppercase tracking-wider text-slate-400">🔥 Highest streak</span>
+                <span className="text-[11px] uppercase tracking-wider text-slate-400">Highest streak</span>
                 <span className=" text-right
     text-xl font-extrabold
     bg-gradient-to-r from-amber-300 to-yellow-400
@@ -5655,7 +5655,7 @@ active:scale-95
               </div>
 
               <div className="flex items-center justify-center gap-2 pt-2 text-[10px] text-slate-400 text-center">
-                <img src="/logo-0x.png" className="h-4 w-4" />
+                <img src="/logo-0x.jpg" className="h-4 w-4" />
                 GuitarFi Identity NFT
               </div>
             </div>
