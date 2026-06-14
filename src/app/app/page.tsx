@@ -5612,9 +5612,10 @@ active:scale-95
               <div className="flex items-center gap-3">
                 <img
                   src={
-
-                    profileAvatar ||
-                    "/raihan-avatar.jpg"
+                    profileAvatar &&
+                      profileAvatar.startsWith("data:image")
+                      ? profileAvatar
+                      : "/raihan-avatar.jpg"
                   }
                   className="h-12 w-12 rounded-full ring-2 ring-sky-400 animate-[breath_3.6s_ease-in-out_infinite]"
 
