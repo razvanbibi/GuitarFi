@@ -5072,7 +5072,7 @@ active:scale-95
             <div className="flex items-center gap-3">
               {/* Avatar */}
               <img
-                src={profileAvatar || "/raihan-avatar.png"}
+                src={profileAvatar || "/raihan-avatar.jpg"}
                 alt="User avatar"
                 className="h-15 w-15 rounded-full object-cover cursor-pointer"
                 onClick={() => document.getElementById("avatarUpload")?.click()}
@@ -5811,7 +5811,7 @@ function CeloBlockLogo({
   return (
     <div className="flex items-center gap-1">
       <img
-        src={isDark ? "/celo-white.png" : "/celo.jpg"}
+        src={isDark ? "/celo-white.png" : "/celo.png"}
         alt="Celo"
         className="h-6 w-auto object-contain transition-opacity duration-200"
       />
