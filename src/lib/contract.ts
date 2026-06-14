@@ -73,7 +73,6 @@ export const OXTXN_STREAK_ABI = [
     inputs: [{ name: "", type: "address" }],
     outputs: [{ name: "", type: "bool" }],
   },
-
   {
     type: "function",
     name: "lastTapDay",
