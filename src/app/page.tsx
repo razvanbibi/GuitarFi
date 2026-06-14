@@ -14,7 +14,7 @@ export default function LandingPage() {
       {/* Nav */}
       <header className="relative z-10 flex items-center justify-between px-8 py-6">
         <div className="text-white text-2xl font-bold tracking-wide">
-          🎸 GuitarFi
+          GuitarFi
         </div>
         <Link
           href="/app"
@@ -69,18 +69,55 @@ export default function LandingPage() {
             <Link
               href="/app"
               className="
-                rounded-full
-                bg-gradient-to-r
-                from-pink-500
-                to-purple-500
-                px-8
-                py-4
-                text-white
-                font-semibold
-                shadow-xl
-                transition
-                hover:scale-105
-              "
+  group
+  relative
+  isolate
+  overflow-hidden
+
+  rounded-2xl
+  border border-white/15
+
+  px-6 py-3
+
+  text-sm
+  font-semibold
+  tracking-[0.18em]
+  uppercase
+
+  text-slate-300
+
+  backdrop-blur-3xl
+
+  bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
+
+  shadow-[0_10px_30px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.18)]
+
+  transition-all
+  duration-500
+
+  hover:scale-[1.03]
+  hover:border-white/30
+  hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
+
+  before:absolute
+  before:inset-0
+  before:rounded-2xl
+  before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
+
+  after:absolute
+  after:inset-0
+  after:rounded-2xl
+  after:bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.22)_50%,transparent_80%)]
+
+  after:translate-x-[-160%]
+  hover:after:translate-x-[160%]
+
+  after:transition-transform
+  after:duration-[1800ms]
+
+  [&>span]:relative
+  [&>span]:z-10
+"
             >
               Launch App →
             </Link>
