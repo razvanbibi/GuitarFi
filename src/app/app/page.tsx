@@ -880,16 +880,17 @@ export default function HomePage() {
 
       audio.play();
 
-      await refreshData();
-
-      setStatus(
-        "Tune played 🎸 NFT unlocked"
-      );
       setTunePlaying(true);
 
       setTimeout(() => {
         setTunePlaying(false);
       }, 15000);
+
+      await refreshData();
+
+      setStatus(
+        "Tune played 🎸 NFT unlocked"
+      );
 
     } catch (err: any) {
       console.error(err);
