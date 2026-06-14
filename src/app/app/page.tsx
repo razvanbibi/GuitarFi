@@ -821,6 +821,10 @@ export default function HomePage() {
         setStatus("Connect wallet first");
         return;
       }
+      if (!hasIdentityNFT) {
+        setShowIdentityRequired(true);
+        return;
+      }
 
       setLoading(true);
 
