@@ -3201,10 +3201,12 @@ active:scale-95
           >
             <div className="flex items-center justify-between">
               <div>
+                
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
+                  
                   CELO Vault
                 </h2>
 
@@ -5193,9 +5195,9 @@ active:scale-95
 
 
 
-              {/* 💰 GTR */}
+              {/* GTR */}
               <div>
-                <p className="text-lg">💰</p>
+                
                 <p
                   className={`
           font-semibold
