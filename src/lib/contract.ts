@@ -541,7 +541,6 @@ export const CELODAILY_VAULT_ABI = [
       },
     ],
   },
-
   {
     type: "function",
     name: "getUserTotalWithdrawn",
