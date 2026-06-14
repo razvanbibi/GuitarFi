@@ -187,6 +187,7 @@ export default function HomePage() {
   const [showBadgeTooltip, setShowBadgeTooltip] = useState(false);
 
   const [currentTune, setCurrentTune] = useState("");
+  const [tunePlaying, setTunePlaying] = useState(false);
 
   const [convertToken, setConvertToken] =
     useState("USDm");
@@ -884,6 +885,11 @@ export default function HomePage() {
       setStatus(
         "Tune played 🎸 NFT unlocked"
       );
+      setTunePlaying(true);
+
+      setTimeout(() => {
+        setTunePlaying(false);
+      }, 15000);
 
     } catch (err: any) {
       console.error(err);
