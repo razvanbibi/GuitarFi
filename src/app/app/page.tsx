@@ -534,7 +534,9 @@ export default function HomePage() {
     localStorage.setItem(
       `profile:${account}`,
       JSON.stringify({ name, avatar })
+      
     );
+    
 
     // 🔥 instant Redis sync
     try {
@@ -5094,7 +5096,7 @@ active:scale-95
                     if (name !== null) saveProfile(name, profileAvatar);
                   }}
                 >
-                  {profileName || "Celo user"}
+                  {profileName || "GuitarFi user"}
                 </span>
 
                 {/* username REMOVE → blank বা small hint */}
@@ -5809,7 +5811,7 @@ function CeloBlockLogo({
   return (
     <div className="flex items-center gap-1">
       <img
-        src={isDark ? "/celo-white.png" : "/celo.png"}
+        src={isDark ? "/celo-white.png" : "/celo.jpg"}
         alt="Celo"
         className="h-6 w-auto object-contain transition-opacity duration-200"
       />
