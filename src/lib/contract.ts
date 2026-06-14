@@ -577,7 +577,6 @@ export const CELODAILY_VAULT_ABI = [
     stateMutability: "view",
     type: "function",
   },
-
 ] as const;
 
 export const GUITARFI_IDENTITY_ABI = [
