@@ -752,7 +752,6 @@ export async function getVaultContractWithSigner() {
   );
   return { provider, signer, contract };
 }
-
 export async function getVaultReadOnlyContract() {
   const eth = getEthereum();
   if (!eth) throw new Error("Wallet not found");
