@@ -2515,7 +2515,16 @@ ${showExploreMenu
       text-cyan-300
     "
                     >
-                      ▶
+                      {tunePlaying ? (
+                        <div className="guitarfi-equalizer">
+                          <span className="eq-bar"></span>
+                          <span className="eq-bar"></span>
+                          <span className="eq-bar"></span>
+                          <span className="eq-bar"></span>
+                        </div>
+                      ) : (
+                        "▶"
+                      )}
                     </div>
 
                     <div className="flex flex-col items-start">
