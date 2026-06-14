@@ -778,7 +778,6 @@ export async function getIdentityContractWithSigner() {
     new BrowserProvider(eth);
   const signer =
     await provider.getSigner();
-
   const contract =
     new Contract(
       GUITARFI_IDENTITY_CONTRACT,
