@@ -771,7 +771,6 @@ export async function getVaultReadOnlyContract() {
 
 export async function getIdentityContractWithSigner() {
   const eth = getEthereum();
-
   if (!eth)
     throw new Error(
       "Wallet not found"
