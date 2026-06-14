@@ -520,9 +520,9 @@ export default function HomePage() {
     localStorage.setItem(
       `profile:${account}`,
       JSON.stringify({ name, avatar })
-      
+
     );
-    
+
 
     // 🔥 instant Redis sync
     try {
@@ -5034,11 +5034,9 @@ active:scale-95
     ${drawerOpen ? "translate-x-0" : "translate-x-full"}
   `}
         >
-
           {/* header */}
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold text-slate-100">
-
             </h2>
             <button
               onClick={() => setDrawerOpen(false)}
@@ -5048,9 +5046,6 @@ active:scale-95
               ✕
             </button>
           </div>
-
-
-
           <div
             className={`rounded-2xl px-3 py-2.5 flex items-center justify-between gap-3 border 
               ${isDarkMode ? "bg-slate-950/60 border-white/5" : "bg-white/80 border-sky-100/60"}`}
@@ -5058,10 +5053,19 @@ active:scale-95
             <div className="flex items-center gap-3">
               {/* Avatar */}
               <img
-                src={profileAvatar || "/raihan-avatar.jpg"}
+                src={
+                  profileAvatar &&
+                    profileAvatar.startsWith("data:image")
+                    ? profileAvatar
+                    : "/raihan-avatar.jpg"
+                }
                 alt="User avatar"
                 className="h-15 w-15 rounded-full object-cover cursor-pointer"
-                onClick={() => document.getElementById("avatarUpload")?.click()}
+                onClick={() =>
+                  document
+                    .getElementById("avatarUpload")
+                    ?.click()
+                }
               />
 
               {/* hidden file input (OUTSIDE layout) */}
