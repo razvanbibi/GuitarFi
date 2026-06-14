@@ -778,7 +778,6 @@ export async function getIdentityContractWithSigner() {
 
   const provider =
     new BrowserProvider(eth);
-
   const signer =
     await provider.getSigner();
 
