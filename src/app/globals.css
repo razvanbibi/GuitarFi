@@ -743,3 +743,29 @@ body {
     0 100%
   );
 }
+.play-frame:hover .right-arrow {
+  background: #27c39f;
+
+  left: -15%;
+
+  animation: rightArrow8 .6s infinite alternate;
+}
+
+.play-frame:hover .left-arrow {
+  background: #27c39f;
+
+  left: 103%;
+
+  animation: leftArrow8 .6s infinite alternate;
+}
+
+.play-frame:hover .corner {
+  transform: scale(1.25) rotate(45deg);
+}
+
+.play-frame:hover .play-clip {
+  --color: #27c39f;
+
+  box-shadow:
+    inset 0 0 32px #27c39f;
+}
