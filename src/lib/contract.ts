@@ -764,7 +764,6 @@ export async function getIdentityContractWithSigner() {
     throw new Error(
       "Wallet not found"
     );
-
   const provider =
     new BrowserProvider(eth);
   const signer =
