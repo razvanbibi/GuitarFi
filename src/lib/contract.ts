@@ -750,7 +750,6 @@ export async function getVaultContractWithSigner() {
     CELODAILY_VAULT_ABI,
     signer
   );
-
   return { provider, signer, contract };
 }
 
