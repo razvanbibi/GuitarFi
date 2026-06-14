@@ -131,6 +131,8 @@ export default function HomePage() {
 
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
+  const [profileImage, setProfileImage] =
+  useState("/default-avatar.png");
 
   const [ethReady, setEthReady] = useState(false);
 
