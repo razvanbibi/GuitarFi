@@ -463,7 +463,6 @@ body {
   0% {
     box-shadow: 0 0 12px rgba(56, 189, 248, .10);
   }
-
   50% {
     box-shadow:
       0 0 25px rgba(56, 189, 248, .22),
