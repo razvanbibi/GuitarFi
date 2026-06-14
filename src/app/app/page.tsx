@@ -5131,7 +5131,7 @@ active:scale-95
             </div>
 
             {/* Theme toggle button */}
-            <button
+            {/*<button
               type="button"
               onClick={() => setIsDarkMode((prev) => !prev)}
               aria-label="Toggle theme"
@@ -5155,7 +5155,7 @@ active:scale-95
                 className={`absolute top-0.5 h-6 w-6 rounded-full bg-white shadow-md transform transition-transform duration-200
                   ${isDarkMode ? "translate-x-0" : "translate-x-7"}`}
               />
-            </button>
+            </button> */}
           </div>
 
           {/* FID + Neynar score */}
