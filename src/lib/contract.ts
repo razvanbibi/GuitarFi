@@ -686,7 +686,6 @@ export async function getContractWithSigner() {
   const provider = new BrowserProvider(eth);
   const signer = await provider.getSigner();
   const network = await provider.getNetwork();
-
   if (network.chainId !== BigInt(42220)) {
     throw new Error("Please switch network to Celo mainnet");
   }
