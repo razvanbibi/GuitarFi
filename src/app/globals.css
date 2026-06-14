@@ -349,7 +349,6 @@ body {
     opacity: 0;
   }
 }
-
 .animate-avatar-float {
   animation-name: avatar-float;
   animation-timing-function: ease-out;
