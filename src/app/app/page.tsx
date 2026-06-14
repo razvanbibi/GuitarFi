@@ -2506,6 +2506,7 @@ ${showExploreMenu
 
                     <div
                       className="
+                      -ml-4.5
       flex
       h-10 w-10
       items-center justify-center
