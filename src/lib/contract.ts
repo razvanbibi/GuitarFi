@@ -686,7 +686,6 @@ export async function getContractWithSigner() {
 
   return { provider, signer, contract };
 }
-
 export async function getTokenContractWithSigner() {
   const eth = getEthereum();
   if (!eth) throw new Error("Wallet not found");
