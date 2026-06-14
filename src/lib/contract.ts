@@ -626,7 +626,6 @@ export const GUITARFI_IDENTITY_ABI = [
       },
     ],
   },
-
   {
     type: "function",
     name: "tokenURI",
