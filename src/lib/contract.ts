@@ -742,7 +742,6 @@ export function formatToken(amount: bigint): string {
 export async function getVaultContractWithSigner() {
   const eth = getEthereum();
   if (!eth) throw new Error("Wallet not found");
-
   const provider = new BrowserProvider(eth);
   const signer = await provider.getSigner();
 
