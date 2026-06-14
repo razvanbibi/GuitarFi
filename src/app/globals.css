@@ -616,6 +616,7 @@ body {
     height: 3px;
   }
 }
+
 .play-frame {
   position: relative;
   width: 11em;
@@ -640,16 +641,14 @@ body {
 
   box-shadow: inset 0px 0px 15px #195480;
 
-  clip-path: polygon(
-    30% 0%,
-    70% 0%,
-    100% 30%,
-    100% 70%,
-    70% 100%,
-    30% 100%,
-    0% 70%,
-    0% 30%
-  );
+  clip-path: polygon(30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%);
 
   transition: .2s;
 }
@@ -674,4 +673,39 @@ body {
   color: #ddebf0;
 
   z-index: 10;
+}
+
+.corner {
+  position: absolute;
+
+  width: 4em;
+  height: 4em;
+
+  background: #2761c3;
+
+  box-shadow: inset 1px 1px 8px #2781c3;
+
+  transform: rotate(45deg);
+
+  transition: .2s;
+}
+
+.left-top {
+  top: -1.96em;
+  left: -3em;
+}
+
+.right-top {
+  top: -1.98em;
+  left: 91%;
+}
+
+.left-bottom {
+  top: 2.10em;
+  left: -2.15em;
+}
+
+.right-bottom {
+  top: 45%;
+  left: 88%;
 }
