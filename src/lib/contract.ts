@@ -804,7 +804,6 @@ export async function getIdentityReadOnlyContract() {
       GUITARFI_IDENTITY_ABI,
       provider
     );
-
   return {
     provider,
     contract,
