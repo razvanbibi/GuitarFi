@@ -729,7 +729,6 @@ export async function getReadOnlyContract() {
   return { provider, contract };
 }
 
-
 export function formatToken(amount: bigint): string {
   try {
     return formatUnits(amount, 18);
