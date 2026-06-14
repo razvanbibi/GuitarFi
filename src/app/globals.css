@@ -709,3 +709,37 @@ body {
   top: 45%;
   left: 88%;
 }
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+
+  width: 11%;
+  height: 30%;
+
+  top: 35%;
+
+  background: #2761c3;
+
+  transition: .2s;
+}
+
+.left-arrow {
+  left: -13.5%;
+
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 50%
+  );
+}
+
+.right-arrow {
+  left: 102%;
+
+  clip-path: polygon(
+    100% 49%,
+    0 0,
+    0 100%
+  );
+}
