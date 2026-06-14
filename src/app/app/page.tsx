@@ -2530,14 +2530,19 @@ ${showExploreMenu
                       )}
                     </div>
 
-                    <div className="flex flex-col items-start">
-                      <span className="text-sm font-semibold text-white">
-                        Play Guitar Tune
-                      </span>
-                      <span className="text-[8px] text-slate-400">
-                        Cost 50 GTR per play
-                      </span>
+                    <div className="play-frame">
+                      <span className="left-arrow" />
 
+                      <div className="play-clip">
+                        <div className="corner left-top" />
+                        <div className="corner right-top" />
+                        <div className="corner left-bottom" />
+                        <div className="corner right-bottom" />
+
+                        <span className="play-text">P L A Y</span>
+                      </div>
+
+                      <span className="right-arrow" />
                     </div>
 
                   </div>
