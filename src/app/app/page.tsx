@@ -131,9 +131,6 @@ export default function HomePage() {
 
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
-  const [profileImage, setProfileImage] =
-    useState("/default-avatar.png");
-
   const [ethReady, setEthReady] = useState(false);
 
   const [topSupporters, setTopSupporters] = useState<Supporter[]>([]);
@@ -511,17 +508,6 @@ export default function HomePage() {
       } catch { }
     }
   }, [account]);
-
-  useEffect(() => {
-    const savedImage =
-      localStorage.getItem(
-        "guitarfi_profile_image"
-      );
-
-    if (savedImage) {
-      setProfileImage(savedImage);
-    }
-  }, []);
 
   async function saveProfile(name: string, avatar: string) {
     if (!account) return;
