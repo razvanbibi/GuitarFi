@@ -3814,7 +3814,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                 >
                   <img
-                    src="/nfts/acoustic.jpg"
+                    src="/nfts/acoustic.jpeg"
                     alt="Acoustic"
                     className="w-full h-20 object-contain"
                   />
@@ -3842,7 +3842,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                 >
                   <img
-                    src="/nfts/electric.jpg"
+                    src="/nfts/electric.jpeg"
                     alt="Electric"
                     className="w-full h-20 object-contain"
                   />
@@ -3872,7 +3872,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                 >
                   <img
-                    src="/nfts/golden.jpg"
+                    src="/nfts/golden.jpeg"
                     alt="Golden Guitar"
                     className="w-full h-20 object-contain"
                   />
@@ -3938,7 +3938,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       rgba(59,130,246,0.7),
       transparent
     )]
-
     animate-[spin_6s_linear_infinite]
   "
                 />
