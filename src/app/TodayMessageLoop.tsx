@@ -20,18 +20,18 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           👋
         </>
       ),
-      second: "Check in every day to grow your streak and earn GTR.",
+      second: "Building a daily habit on Celo. Onchain music, trade assets, earning GTR",
       hero: true,
     },
     {
       duration: 5000,
-      first: "Do you know, Your rewards grow faster every day?",
+      first: "Do you know, You get NFT for every time you play tune?",
       second: "Missing one day resets streak — don’t blink 👀",
       hero: false,
     },
     {
       duration: 5000,
-      first: "Today is a good day to stay loyal",
+      first: "Trade Celo or USDm for GTR",
       second: "You’re doing better than yesterday 👊",
       hero: false,
     },
