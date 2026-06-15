@@ -1893,9 +1893,6 @@ export default function HomePage() {
 
   const totalEarnedReadable =
     correctedTotalEarned.toLocaleString();
-
-
-
   const glassCard =
     "rounded-3xl bg-white/10 dark:bg-slate-900/25 backdrop-blur-[0.5px] "
   "border border-white/15 dark:border-white/10 " +
@@ -2556,7 +2553,12 @@ ${showExploreMenu
                         <div className="corner left-bottom" />
                         <div className="corner right-bottom" />
 
-                        <span className="play-text">P L A Y</span>
+                        <div className="play-text flex flex-col items-center leading-none">
+                          <span>P L A Y</span>
+                          <span className="text-[8px] font-medium tracking-normal opacity-70 mt-[6px]">
+                            Cost 50 GTR per play
+                          </span>
+                        </div>
                       </div>
 
                       <span className="right-arrow" />
