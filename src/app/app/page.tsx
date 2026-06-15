@@ -614,8 +614,9 @@ export default function HomePage() {
         setStatus("Connect wallet first");
         return;
       }
-
+ 
       setLoading(true);
+      setActiveAction("convert");
 
       const amount =
         convertToken === "USDm"
