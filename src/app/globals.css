@@ -813,7 +813,7 @@ body {
   transition: all .5s ease;
 }
 
-button:active {
+.guitarfi-tap-btn:active {
   transform: scale(0.9);
   transition: all 100ms ease;
 }
