@@ -2780,37 +2780,41 @@ active:scale-95
                     onClick={handleTap}
                     disabled={loading}
                     className="
+guitarfi-tap-btn
+
 group
 relative
 
-h-14
-w-24
-
-rounded-full
-
-bg-white/[0.06]
-backdrop-blur-xl
-
 border border-white/10
 
-text-white
-font-semibold
-text-sm
-
-transition-all
-duration-300
-
 hover:border-sky-400/40
-hover:bg-sky-500/10
-
 hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
 
 active:scale-95
 "
                   >
-                    {activeAction === "tap"
-                      ? "Processing..."
-                      : "Tap"}
+
+                    {activeAction === "tap" ? (
+                      <span className="text-white font-semibold text-sm">
+                        Processing...
+                      </span>
+                    ) : (
+                      <>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 36 36"
+                          width="36px"
+                          height="36px"
+                        >
+                          
+                        </svg>
+
+                        <span className="now">now!</span>
+
+                        <span className="tap">tap</span>
+                      </>
+                    )}
+
                   </button>
 
                   <span className="text-[11px] text-slate-400">
