@@ -3751,7 +3751,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
                 <div className="flex flex-col items-start">
                   <span className="text-sm font-semibold text-white">
-                    Convert to GTR
+                    {activeAction === "convert"
+                      ? "Converting..."
+                      : "Convert to GTR"}
                   </span>
 
                   <span className="text-[10px] text-slate-400">
