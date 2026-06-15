@@ -818,7 +818,7 @@ body {
   transition: all 100ms ease;
 }
 
-button svg {
+.guitarfi-tap-btn svg {
   transition: all 0.5s ease;
   z-index: 2;
 }
