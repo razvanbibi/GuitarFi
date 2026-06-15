@@ -5293,7 +5293,278 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               </button>
             </div>
 
-            {/* Collections content here */}
+            <div
+              className="
+    rounded-3xl
+    border border-violet-500/10
+    bg-[#050816]/90
+    backdrop-blur-xl
+    p-4
+    shadow-[0_0_40px_rgba(80,0,255,0.08)]
+  "
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-sm font-semibold text-white">
+                  My Guitar NFTs
+                </h2>
+              </div>
+
+              {/* NFT Grid */}
+              <div className="grid grid-cols-3 gap-3">
+
+                {/* Acoustic */}
+                <div
+                  className="
+        rounded-2xl
+        border border-white/5
+        bg-gradient-to-b
+        from-violet-950/40
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+      "
+                >
+                  <img
+                    src="/nfts/acoustic.jpg"
+                    alt="Acoustic"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Acoustic
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+                {/* Electric */}
+                <div
+                  className="
+        rounded-2xl
+        border border-violet-500/20
+        bg-gradient-to-b
+        from-violet-900/30
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+      "
+                >
+                  <img
+                    src="/nfts/electric.jpg"
+                    alt="Electric"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Electric
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+                {/* Golden */}
+                <div
+                  className="
+        rounded-2xl
+        border border-amber-400/40
+        bg-gradient-to-b
+        from-amber-500/10
+        to-slate-950/90
+        p-2
+        transition
+        hover:scale-[1.03]
+
+        shadow-[0_0_18px_rgba(251,191,36,0.25)]
+      "
+                >
+                  <img
+                    src="/nfts/golden.jpg"
+                    alt="Golden Guitar"
+                    className="w-full h-20 object-contain"
+                  />
+
+                  <h3 className="mt-2 text-xs text-white">
+                    Golden Guitar
+                  </h3>
+
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
+
+              </div>
+
+              {/* CTA */}
+              <button
+                className="
+  group
+  relative
+
+  w-full
+  overflow-hidden
+
+  rounded-[28px]
+
+  border border-white/10
+
+  bg-[linear-gradient(
+    135deg,
+    rgba(30,41,59,0.95),
+    rgba(88,28,135,0.55),
+    rgba(15,23,42,0.95)
+  )]
+
+  p-[1px]
+
+  transition-all
+  duration-500
+
+  hover:scale-[1.015]
+  hover:shadow-[0_0_60px_rgba(168,85,247,0.25)]
+
+  active:scale-[0.985]
+"
+              >
+                {/* Animated border */}
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition-opacity
+    duration-500
+
+    bg-[conic-gradient(
+      from_180deg,
+      transparent,
+      rgba(168,85,247,0.7),
+      transparent,
+      rgba(59,130,246,0.7),
+      transparent
+    )]
+
+    animate-[spin_6s_linear_infinite]
+  "
+                />
+
+                <div
+                  className="
+    relative
+
+    flex items-center
+    justify-between
+
+    rounded-[27px]
+
+    bg-[#050816]/95
+
+    px-5
+    py-4
+  "
+                >
+                  {/* Left */}
+                  <div className="flex items-center gap-4">
+
+                    <div
+                      className="
+        relative
+
+        flex
+        h-12
+        w-12
+
+        items-center
+        justify-center
+
+        rounded-2xl
+
+        bg-gradient-to-br
+        from-violet-500/20
+        to-sky-500/20
+
+        border border-white/10
+      "
+                    >
+                      <div
+                        className="
+          absolute inset-0
+          rounded-2xl
+
+          bg-violet-500/20
+          blur-xl
+        "
+                      />
+
+                      <span className="relative text-xl">
+                        🎸
+                      </span>
+                    </div>
+
+                    <div className="text-left">
+                      <div
+                        className="
+          text-sm
+          font-bold
+
+          bg-gradient-to-r
+          from-white
+          via-violet-200
+          to-sky-300
+
+          bg-clip-text
+          text-transparent
+        "
+                      >
+                        Guitar Collection
+                      </div>
+
+                      <div className="text-[11px] text-slate-400">
+                        View your premium NFTs
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Right */}
+                  <div
+                    className="
+      flex
+      h-10
+      w-10
+
+      items-center
+      justify-center
+
+      rounded-full
+
+      bg-white/5
+
+      border border-white/10
+
+      text-violet-300
+
+      transition-all
+      duration-300
+
+      group-hover:translate-x-1
+      group-hover:bg-violet-500/15
+    "
+                  >
+                    →
+                  </div>
+
+                </div>
+              </button>
+            </div>
 
           </div>
 
