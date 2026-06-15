@@ -2402,6 +2402,7 @@ ${showExploreMenu
     ${isDarkMode ? glassCard : ""}
   `}
           >
+          <div className="tune-zone-beam" />
             {/* glow */}
             <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-sky-500/10 blur-3xl" />
 
