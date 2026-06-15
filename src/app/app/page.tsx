@@ -6274,7 +6274,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           <div className="mt-3 text-center text-[10px] text-slate-500">
             © 2026 GuitarFi by{" "}
             <a
-              href="https://celoscan.io/token/0xf3473730b41f0f5720bc8aa8fade0480062125ba"
+              href="https://celoscan.io/token/0x4C9Bf9f99F638E102dac7D54558A28007c2c7aB8"
               target="_blank"
               rel="noreferrer"
               className="text-sky-500 hover:underline"
