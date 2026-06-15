@@ -889,3 +889,17 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+
+.tune-zone-hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 2px;
+
+  border-radius: 22px;
+
+  background: inherit;
+
+  z-index: 1;
+}
