@@ -614,7 +614,7 @@ export default function HomePage() {
         setStatus("Connect wallet first");
         return;
       }
- 
+
       setLoading(true);
       setActiveAction("convert");
 
@@ -693,9 +693,8 @@ export default function HomePage() {
       );
 
     } finally {
-
       setLoading(false);
-
+      setActiveAction(null);
     }
   }
 
