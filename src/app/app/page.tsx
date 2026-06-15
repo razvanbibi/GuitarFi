@@ -1897,8 +1897,8 @@ export default function HomePage() {
 
 
   const glassCard =
-    "rounded-3xl bg-white/10 dark:bg-slate-900/55 backdrop-blur-[2px] " +
-    "border border-white/15 dark:border-white/10 " +
+    "rounded-3xl bg-white/10 dark:bg-slate-900/25 backdrop-blur-[0.5px] "
+  "border border-white/15 dark:border-white/10 " +
     "shadow-[0_20px_50px_rgba(0,0,0,0.45)]";
 
   function getBadgeProgress(streak: number) {
@@ -1957,19 +1957,18 @@ export default function HomePage() {
 
   return (
     <main
-  className={`min-h-screen flex flex-col relative overflow-hidden ${
-    isDarkMode ? "text-slate-50" : "text-slate-900"
-  }`}
->
+      className={`min-h-screen flex flex-col relative overflow-hidden ${isDarkMode ? "text-slate-50" : "text-slate-900"
+        }`}
+    >
       {isDarkMode ? (
-  <div className="starfield-bg absolute inset-0 -z-10">
-    <div id="stars" />
-    <div id="stars2" />
-    <div id="stars3" />
-  </div>
-) : (
-  <div className="basedaily-day-bg absolute inset-0 -z-10" />
-)}
+        <div className="starfield-bg absolute inset-0 -z-10">
+          <div id="stars" />
+          <div id="stars2" />
+          <div id="stars3" />
+        </div>
+      ) : (
+        <div className="basedaily-day-bg absolute inset-0 -z-10" />
+      )}
 
 
       {/* dark overlay for contrast */}
