@@ -4728,6 +4728,34 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         </div>
       )}
 
+      {showCeloVault && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
+
+          <div
+            className="absolute inset-0 bg-black/70 backdrop-blur-md"
+            onClick={() => setShowCeloVault(false)}
+          />
+
+          <div
+            className="
+      relative
+      w-full
+      max-w-[420px]
+      rounded-[32px]
+      border border-emerald-400/20
+      bg-[#050816]
+      p-4
+      shadow-[0_0_60px_rgba(16,185,129,0.15)]
+      "
+          >
+
+            {/* এখানে CELO Vault content যাবে */}
+
+          </div>
+
+        </div>
+      )}
+
       {/* Onboarding overlay */}
       {showOnboarding && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 backdrop-blur-sm">
