@@ -2187,6 +2187,10 @@ ${showTradeMenu
                   </button>
 
                   <button
+                    onClick={() => {
+                      setShowCeloVault(true);
+                      setShowTradeMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
