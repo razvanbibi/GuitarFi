@@ -1512,11 +1512,11 @@ export default function HomePage() {
   }
 
   async function handleShare() {
-    const APP_URL = "https://celo-daily.vercel.app/";
+    const APP_URL = "https://guitarfi.vercel.app/";
 
     const text =
       "GuitarFi\n\n" +
-      "Building a daily habit on Celo. Checking in, growing my streak, earning GTR.\n\n" +
+      "Building a daily habit on Celo. Onchain music, trade assets, earning GTR.\n\n" +
       "Join the journey 👇";
 
     try {
