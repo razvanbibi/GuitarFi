@@ -845,7 +845,7 @@ body {
   transition-delay: 300ms;
 }
 
-button:hover .play {
+.guitarfi-tap-btn:hover .tap {
   transform: translateX(200%);
   transition-delay: 300ms;
 }
