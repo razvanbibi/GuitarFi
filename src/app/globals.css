@@ -903,3 +903,8 @@ body {
 
   z-index: 1;
 }
+
+.tune-zone-hero>*:not(.tune-zone-beam) {
+  position: relative;
+  z-index: 2;
+}
