@@ -4983,6 +4983,53 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         </div>
       )}
 
+
+      {showConvertModal && (
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
+
+          <div
+            className="absolute inset-0 bg-black/70 backdrop-blur-md"
+            onClick={() => setShowConvertModal(false)}
+          />
+
+          <div
+            className="
+      relative
+      w-full
+      max-w-[420px]
+      rounded-[32px]
+      border border-sky-400/20
+      bg-[#050816]
+      p-4
+      shadow-[0_0_60px_rgba(56,189,248,0.15)]
+      "
+          >
+
+            {/* close button */}
+
+            <div className="flex justify-end mb-3">
+              <button
+                onClick={() => setShowConvertModal(false)}
+                className="
+          h-10 w-10
+          rounded-full
+          bg-white/5
+          border border-white/10
+          text-slate-300
+          hover:bg-white/10
+          "
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Convert content here */}
+
+          </div>
+
+        </div>
+      )}
+
       {/* Onboarding overlay */}
       {showOnboarding && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 backdrop-blur-sm">
