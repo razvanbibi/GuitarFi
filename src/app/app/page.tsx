@@ -2392,17 +2392,15 @@ ${showExploreMenu
 
           <section
             className={`
-    tune-zone-hero
-
+    tune-zone-card
     relative
     overflow-hidden
-
     p-4
-
     ${isDarkMode ? glassCard : ""}
   `}
           >
-          <div className="tune-zone-beam" />
+            <div className="tune-zone-border-spin" />
+            <div className="absolute inset-[1px] rounded-[inherit] bg-slate-950 z-[1]" />
             {/* glow */}
             <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-sky-500/10 blur-3xl" />
 
