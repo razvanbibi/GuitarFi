@@ -849,3 +849,11 @@ body {
   transform: translateX(200%);
   transition-delay: 300ms;
 }
+
+.tap-processing-state {
+  background: transparent !important;
+  text-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+}
