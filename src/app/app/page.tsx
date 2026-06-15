@@ -2212,6 +2212,10 @@ ${showTradeMenu
                   </button>
 
                   <button
+                    onClick={() => {
+                      setShowConvertModal(true);
+                      setShowTradeMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
