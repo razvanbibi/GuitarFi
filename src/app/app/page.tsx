@@ -2160,7 +2160,30 @@ ${showTradeMenu
       animate-[fade-up_0.25s_ease-out]
     "
                 >
+                  <button
+                    onClick={() => {
+                      setShowConvertModal(true);
+                      setShowTradeMenu(false);
+                    }}
+                    className="
+  rounded-xl
+  px-4 py-2
+  min-w-[120px]
+  text-[13px]
+  text-left
 
+  bg-slate-900/60
+  border border-white/5
+
+  hover:bg-slate-800/80
+  hover:translate-x-1
+
+  transition-all
+  duration-200
+"
+                  >
+                    Convert to GTR
+                  </button>
                   <button
                     onClick={() => {
                       setShowVault(true);
@@ -2211,30 +2234,7 @@ ${showTradeMenu
                     Deposit Celo
                   </button>
 
-                  <button
-                    onClick={() => {
-                      setShowConvertModal(true);
-                      setShowTradeMenu(false);
-                    }}
-                    className="
-  rounded-xl
-  px-4 py-2
-  min-w-[120px]
-  text-[13px]
-  text-left
 
-  bg-slate-900/60
-  border border-white/5
-
-  hover:bg-slate-800/80
-  hover:translate-x-1
-
-  transition-all
-  duration-200
-"
-                  >
-                    Convert to GTR
-                  </button>
                 </div>
               )}
             </div>
