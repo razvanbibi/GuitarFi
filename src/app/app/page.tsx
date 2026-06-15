@@ -2044,23 +2044,21 @@ export default function HomePage() {
           </div>
 
           <button
-            onClick={() => setDrawerOpen(true)}
-            className="
-               h-9 w-9 inline-flex items-center justify-center
-                rounded-xl bg-slate-900/90
-                shadow-lg shadow-black/40
-                transition
-                hover:scale-105
-                  active:scale-95
-                   hover:bg-slate-800
-                   "
+            onClick={() => setDrawerOpen(!drawerOpen)}
+            className="toggle"
           >
-
-            <span className="inline-block w-3.5 space-y-[3px]">
-              <span className="block h-[2px] rounded bg-slate-200" />
-              <span className="block h-[2px] rounded bg-slate-200" />
-              <span className="block h-[2px] rounded bg-slate-200" />
-            </span>
+            <div
+              id="bar1"
+              className={`bars ${drawerOpen ? "bar1-open" : ""}`}
+            />
+            <div
+              id="bar2"
+              className={`bars ${drawerOpen ? "bar2-open" : ""}`}
+            />
+            <div
+              id="bar3"
+              className={`bars ${drawerOpen ? "bar3-open" : ""}`}
+            />
           </button>
         </header>
 
