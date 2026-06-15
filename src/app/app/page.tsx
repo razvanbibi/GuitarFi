@@ -4749,7 +4749,228 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
           >
 
-            {/* এখানে CELO Vault content যাবে */}
+            <div className="flex items-center justify-between">
+              <div>
+
+                <h2
+                  className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                    }`}
+                >
+
+                  CELO Vault
+                </h2>
+
+                <p
+                  className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
+                    }`}
+                >
+                  Deposit or withdraw your CELO instantly
+                </p>
+              </div>
+
+              <div
+                className="
+        px-3 py-1
+        rounded-full
+        bg-emerald-500/10
+        text-emerald-300
+        text-xs
+      "
+              >
+                LIVE
+              </div>
+            </div>
+
+            {/* Balance */}
+
+            <div
+              className="
+      rounded-2xl
+      border border-white/10
+      bg-slate-950/30
+      p-3
+    "
+            >
+              <p className="text-[11px] text-slate-400">
+                Your Vault Balance
+              </p>
+
+              <p className="text-xl font-bold text-white">
+                {celoVaultBalance} CELO
+              </p>
+            </div>
+
+            {/* Amount */}
+
+            <div>
+              <input
+                type="number"
+                min="0"
+                value={vaultAmount}
+                onChange={(e) => setVaultAmount(e.target.value)}
+                placeholder="Enter amount"
+
+                className="
+        w-full
+        rounded-2xl
+        border border-white/10
+        bg-slate-950/40
+
+        px-4 py-3
+
+        text-white
+        outline-none
+
+        focus:border-sky-400
+      "
+              />
+            </div>
+
+            {/* Buttons */}
+
+            <div className="grid grid-cols-2 gap-3">
+
+              <button
+                onClick={handleCeloVaultDeposit}
+                disabled={loading}
+                className="
+  group
+  relative
+
+  overflow-hidden
+
+  rounded-[20px]
+
+  border border-emerald-400/20
+
+  bg-[linear-gradient(135deg,
+  rgba(16,185,129,0.18),
+  rgba(5,150,105,0.08),
+  rgba(15,23,42,0.95))]
+
+  py-3.5
+
+  transition-all
+  duration-500
+
+  hover:border-emerald-400/50
+  hover:shadow-[0_0_35px_rgba(16,185,129,0.20)]
+
+  active:scale-[0.97]
+"
+              >
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(16,185,129,0.20),
+    transparent_70%)]
+  "
+                />
+
+                <div className="relative z-10 flex items-center justify-center gap-2">
+
+                  <div
+                    className="
+      flex h-8 w-8
+      items-center justify-center
+
+      rounded-full
+
+      bg-emerald-400/10
+      border border-emerald-300/20
+
+      text-emerald-300
+      text-sm
+    "
+                  >
+                    ↓
+                  </div>
+
+                  <span className="font-semibold text-white">
+                    Deposit
+                  </span>
+
+                </div>
+              </button>
+
+              <button
+                onClick={handleCeloVaultWithdraw}
+                disabled={loading}
+                className="
+  group
+  relative
+
+  overflow-hidden
+
+  rounded-[20px]
+
+  border border-amber-400/20
+
+  bg-[linear-gradient(135deg,
+  rgba(251,191,36,0.18),
+  rgba(245,158,11,0.08),
+  rgba(15,23,42,0.95))]
+
+  py-3.5
+
+  transition-all
+  duration-500
+
+  hover:border-amber-400/50
+  hover:shadow-[0_0_35px_rgba(251,191,36,0.18)]
+
+  active:scale-[0.97]
+"
+              >
+                <div
+                  className="
+    absolute inset-0
+
+    opacity-0
+    group-hover:opacity-100
+
+    transition
+
+    bg-[radial-gradient(circle_at_center,
+    rgba(251,191,36,0.20),
+    transparent_70%)]
+  "
+                />
+
+                <div className="relative z-10 flex items-center justify-center gap-2">
+
+                  <div
+                    className="
+      flex h-8 w-8
+      items-center justify-center
+
+      rounded-full
+
+      bg-amber-400/10
+      border border-amber-300/20
+
+      text-amber-300
+      text-sm
+    "
+                  >
+                    ↑
+                  </div>
+
+                  <span className="font-semibold text-white">
+                    Withdraw
+                  </span>
+
+                </div>
+              </button>
+
+            </div>
 
           </div>
 
