@@ -2392,9 +2392,13 @@ ${showExploreMenu
 
           <section
             className={`
+    tune-zone-hero
+
     relative
-    overflow-visible
+    overflow-hidden
+
     p-4
+
     ${isDarkMode ? glassCard : ""}
   `}
           >
