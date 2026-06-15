@@ -2296,7 +2296,10 @@ ${showExploreMenu
                 >
 
                   <button
-
+                    onClick={() => {
+                      setShowCollectionsModal(true);
+                      setShowExploreMenu(false);
+                    }}
                     className="
   rounded-xl
   px-4 py-2
