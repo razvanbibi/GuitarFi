@@ -116,7 +116,7 @@ export default function HomePage() {
 
   const [showVault, setShowVault] = useState(false);
   const [showCeloVault, setShowCeloVault] = useState(false);
-
+  const [showConvertModal, setShowConvertModal] = useState(false);
   const [vaultAmount, setVaultAmount] = useState("1");
 
   const [vaultBalance, setVaultBalance] = useState("0");
@@ -4748,8 +4748,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       shadow-[0_0_60px_rgba(16,185,129,0.15)]
       "
           >
-          
+
+
             <div className="flex items-center justify-between">
+
               <div>
 
                 <h2
