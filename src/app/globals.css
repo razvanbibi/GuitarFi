@@ -828,7 +828,7 @@ body {
   transition-delay: 300ms;
 }
 
-button:hover svg {
+.guitarfi-tap-btn:hover svg {
   transform: scale(3) translate(50%);
 }
 
