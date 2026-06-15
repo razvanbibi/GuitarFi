@@ -840,7 +840,7 @@ body {
   z-index: 2;
 }
 
-button:hover .now {
+.guitarfi-tap-btn:hover .now {
   transform: translateX(10px);
   transition-delay: 300ms;
 }
