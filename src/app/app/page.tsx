@@ -115,6 +115,7 @@ export default function HomePage() {
   const [showExploreMenu, setShowExploreMenu] = useState(false);
 
   const [showVault, setShowVault] = useState(false);
+  const [showCeloVault, setShowCeloVault] = useState(false);
 
   const [vaultAmount, setVaultAmount] = useState("1");
 
@@ -2304,7 +2305,7 @@ ${showExploreMenu
   duration-200
 "
                   >
-                    Nexttt
+                    Collections
                   </button>
 
                   <button
