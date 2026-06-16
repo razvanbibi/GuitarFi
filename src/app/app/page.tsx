@@ -5857,15 +5857,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     >
                       Withdraw USDM
                     </button>
-
                   </div>
-
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
-
                     <h3 className="font-bold text-lg">
                       Withdraw CELO
                     </h3>
-
                     <input
                       value={devWithdrawCELO}
                       onChange={(e) =>
@@ -5876,7 +5872,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       placeholder="Amount"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <button
                       onClick={handleDevWithdrawCELO}
                       disabled={devRunning}
@@ -5884,12 +5879,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     >
                       Withdraw CELO
                     </button>
-
                   </div>
-
                 </div>
-
-
                 <hr className="border-white/10 my-1" />
 
                 <div className="text-[11px] text-slate-400 text-center">
