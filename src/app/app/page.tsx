@@ -3537,7 +3537,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-                  🔄 Convert to GTR
+                Convert to GTR
                 </h2>
 
                 <p
