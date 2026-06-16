@@ -94,7 +94,6 @@ export default function LandingPage() {
 
   transition-all
   duration-500
-
   hover:scale-[1.03]
   hover:border-white/30
   hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
