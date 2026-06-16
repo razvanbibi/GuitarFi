@@ -62,7 +62,7 @@ export default function LandingPage() {
             "
           >
             The SocialFi & GameFi Hub built on Celo.
-            Stake, play games, earn rewards and unlock
+            Stake, play tunes, earn rewards and unlock
             exclusive utilities with Guitar Token.
           </p>
           <div className="mt-10 flex justify-center">
