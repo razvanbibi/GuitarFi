@@ -101,7 +101,6 @@ export default function LandingPage() {
   hover:after:translate-x-[160%]
   after:transition-transform
   after:duration-[1800ms]
-
   [&>span]:relative
   [&>span]:z-10
 "
