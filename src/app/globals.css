@@ -732,16 +732,13 @@ body {
 
 .right-arrow {
   left: 102%;
-
   clip-path: polygon(100% 49%,
       0 0,
       0 100%);
 }
 .play-frame:hover .right-arrow {
   background: #27c39f;
-
   left: -15%;
-
   animation: rightArrow8 .6s infinite alternate;
 }
 
