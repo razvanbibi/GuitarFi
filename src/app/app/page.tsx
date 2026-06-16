@@ -5324,16 +5324,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     alt="Acoustic"
                     className="w-full h-20 object-contain"
                   />
-
                   <h3 className="mt-2 text-xs text-white">
                     Acoustic
                   </h3>
-
                   <p className="text-[10px] text-slate-500">
                     NFT
                   </p>
                 </div>
-
                 {/* Electric */}
                 <div
                   className="
