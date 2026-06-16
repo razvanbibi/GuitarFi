@@ -6724,7 +6724,6 @@ function BadgeGlow({
     </div>
   );
 }
-
 function BadgeGhost({ icon }: { icon: string }) {
   return (
     <span className="text-xl opacity-20 grayscale select-none">
