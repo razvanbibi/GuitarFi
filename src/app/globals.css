@@ -105,18 +105,15 @@ body {
 }
 
 @keyframes badge-pulse {
-
   0%,
   100% {
     transform: scale(1);
   }
-
   50% {
     transform: scale(1.12);
   }
 }
 @keyframes badge-glow {
-
   0%,
   100% {
     filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4));
