@@ -81,7 +81,6 @@ export default function LandingPage() {
   tracking-[0.18em]
   uppercase
   text-slate-300
-
   backdrop-blur-3xl
 
   bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
