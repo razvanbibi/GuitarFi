@@ -2017,7 +2017,6 @@ export default function HomePage() {
                     {isMiniPay ? "MiniPay" : "Celo"}
                   </span>
                 </div>
-
                 {/* address */}
                 <span className="text-[11px] px-2 py-1 rounded-full bg-slate-950/70 text-slate-100 mt-0.5">
                   {account.slice(0, 4)}…{account.slice(-4)}
