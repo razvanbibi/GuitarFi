@@ -5956,8 +5956,18 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     transform transition-transform duration-300 ease-out
 
     ${isDarkMode
-              ? "bg-sky-950/70 backdrop-blur-2xl border border-sky-500/10 shadow-2xl shadow-black/70"
-              : "basedaily-drawer-day border border-slate-200 shadow-xl"
+              ? `
+    bg-white/10
+    backdrop-blur-[0.5px]
+    border border-white/15
+    shadow-[0_20px_50px_rgba(0,0,0,0.45)]
+  `
+              : `
+    bg-white/60
+    backdrop-blur-md
+    border border-white/40
+    shadow-[0_20px_50px_rgba(0,0,0,0.12)]
+  `
             }
 
     ${drawerOpen ? "translate-x-0" : "translate-x-full"}
