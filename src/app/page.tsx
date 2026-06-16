@@ -111,7 +111,6 @@ export default function LandingPage() {
 
   after:translate-x-[-160%]
   hover:after:translate-x-[160%]
-
   after:transition-transform
   after:duration-[1800ms]
 
