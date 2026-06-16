@@ -74,7 +74,7 @@ const logoBase64 = await fetchAsBase64(
 
   <!-- avatar -->
   <image
- 
+
   x="72" y="48"
   width="48" height="48"
   clip-path="url(#avatarClip)"/>
