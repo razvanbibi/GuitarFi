@@ -5137,7 +5137,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <span className="text-xs text-slate-400">
                   You Receive
                 </span>
-
                 <span className="text-xs text-sky-300">
                   GTR
                 </span>
