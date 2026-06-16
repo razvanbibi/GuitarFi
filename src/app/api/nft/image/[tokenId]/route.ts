@@ -81,15 +81,13 @@ const logoBase64 = await fetchAsBase64(
   clip-path="url(#avatarClip)"/>
 
 
-
   <!-- name -->
   <text x="132" y="66"
     fill="#e5e7eb"
     font-size="15"
     font-weight="600">
-  
-  </text>
 
+  </text>
   <!-- fid -->
   <text x="132" y="82"
     fill="#94a3b8"
