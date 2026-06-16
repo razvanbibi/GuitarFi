@@ -721,7 +721,6 @@ export default function HomePage() {
         setStatus("No account selected.");
         return;
       }
-
       setAccount(accounts[0]);
 
       await ensureCeloNetwork();
