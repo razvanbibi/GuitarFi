@@ -73,7 +73,6 @@ export default function LandingPage() {
   relative
   isolate
   overflow-hidden
-
   rounded-2xl
   border border-white/15
 
