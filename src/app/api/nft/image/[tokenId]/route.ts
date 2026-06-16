@@ -51,7 +51,6 @@ const logoBase64 = await fetchAsBase64(
     <clipPath id="avatarClip">
       <circle cx="96" cy="72" r="24"/>
     </clipPath>
-
     <!-- gold -->
     <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#fcd34d"/>
