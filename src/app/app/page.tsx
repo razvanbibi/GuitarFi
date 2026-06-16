@@ -4246,7 +4246,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         shadow-[0_0_60px_rgba(0,255,255,0.12)]
       "
           >
-
             {/* Top Header */}
             <div className="mb-4 flex items-center justify-between">
 
