@@ -4544,7 +4544,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               </div>
 
             </div>
-
             {/* Buttons */}
             <div className="mt-6">
 
