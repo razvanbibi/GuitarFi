@@ -4914,18 +4914,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
   group
   relative
-
   overflow-hidden
-
   rounded-[20px]
-
   border border-amber-400/20
-
   bg-[linear-gradient(135deg,
   rgba(251,191,36,0.18),
   rgba(245,158,11,0.08),
   rgba(15,23,42,0.95))]
-
   py-3.5
 
   transition-all
@@ -4933,7 +4928,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
   hover:border-amber-400/50
   hover:shadow-[0_0_35px_rgba(251,191,36,0.18)]
-
   active:scale-[0.97]
 "
               >
