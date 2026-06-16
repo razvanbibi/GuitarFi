@@ -80,7 +80,6 @@ export default function LandingPage() {
   font-semibold
   tracking-[0.18em]
   uppercase
-
   text-slate-300
 
   backdrop-blur-3xl
