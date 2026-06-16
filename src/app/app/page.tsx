@@ -1203,7 +1203,6 @@ export default function HomePage() {
       setIdentityTokenId(
         Number(tokenId)
       );
-
       setHasIdentity(true);
 
       const uri =
