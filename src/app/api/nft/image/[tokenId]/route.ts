@@ -69,7 +69,6 @@ const logoBase64 = await fetchAsBase64(
   <rect x="40" y="24" rx="18" ry="18"
     width="520" height="312"
     fill="url(#grid)"/>
-
   <!-- avatar -->
   <image
 
