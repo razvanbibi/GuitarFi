@@ -6315,20 +6315,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   isolate
   overflow-hidden
   rounded-2xl
-
   border
   px-3 py-1.5
-
   text-[11px]
   font-semibold
   tracking-[0.18em]
   uppercase
-
   backdrop-blur-3xl
   transition-all
   duration-500
   hover:scale-[1.03]
-
   ${isDarkMode
                     ? `
         border-white/15
@@ -6352,7 +6348,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   before:inset-0
   before:rounded-2xl
   before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
-
   after:absolute
   after:inset-0
   after:rounded-2xl
@@ -6361,7 +6356,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   hover:after:translate-x-[160%]
   after:transition-transform
   after:duration-[1800ms]
-
   [&>span]:relative
   [&>span]:z-10
 `}
@@ -6372,7 +6366,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           </div>
         </div>
       )}
-
       {/* About us modal */}
       {aboutOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -6403,14 +6396,12 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             <p className="mb-2 text-[11px] text-slate-300">
               GuitarFi is a miniapp where you Gm to the Celo network every day to increase your streak and unlock GTR rewards.
             </p>
-
             <p className="text-[11px] text-slate-400">
               If you want, you can also support the project by tipping Mento Dollar (USDm) from the Support creator section below. 💙
             </p>
           </div>
         </div>
       )}
-
       {flashGlow && (
         <div
           className="
@@ -6420,7 +6411,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     "
         />
       )}
-
       {showMintIdentity && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           {/* overlay */}
