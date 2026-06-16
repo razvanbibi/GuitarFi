@@ -3534,7 +3534,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 >
                 Convert to GTR
                 </h2>
-
                 <p
                   className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
                     }`}
@@ -3542,7 +3541,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   Swap CELO or USDm for GTR
                 </p>
               </div>
-
               <div
                 className="
   px-3 py-1
@@ -3562,7 +3560,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               >
                 SWAP
               </div>
-
             </div>
 
             {/* FROM */}
