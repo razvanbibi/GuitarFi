@@ -131,7 +131,6 @@ const logoBase64 = await fetchAsBase64(
   </text>
 </g>
 
-
 </svg>
 `;
 
