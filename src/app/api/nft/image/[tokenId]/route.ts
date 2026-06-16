@@ -59,7 +59,6 @@ const logoBase64 = await fetchAsBase64(
       <stop offset="100%" stop-color="#fbbf24"/>
     </linearGradient>
   </defs>
-
   <!-- card -->
   <rect x="40" y="24" rx="18" ry="18"
     width="520" height="312"
