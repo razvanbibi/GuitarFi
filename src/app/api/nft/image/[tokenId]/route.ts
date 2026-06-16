@@ -62,7 +62,6 @@ const logoBase64 = await fetchAsBase64(
   <rect x="40" y="24" rx="18" ry="18"
     width="520" height="312"
     fill="url(#bg)"/>
-
   <!-- glow corner -->
   <circle cx="560" cy="24" r="120"
     fill="rgba(56,189,248,0.22)"
