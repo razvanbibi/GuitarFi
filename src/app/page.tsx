@@ -82,7 +82,6 @@ export default function LandingPage() {
   uppercase
   text-slate-300
   backdrop-blur-3xl
-
   bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
   shadow-[0_10px_30px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.18)]
 
