@@ -1972,7 +1972,6 @@ export default function HomePage() {
         className={`absolute inset-0 pointer-events-none ${isDarkMode ? "bg-slate-950/65" : "bg-white/65"
           }`}
       />
-
       {/* content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-10 pt-6 flex-1 flex flex-col">
         {/* Header */}
