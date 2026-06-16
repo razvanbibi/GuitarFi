@@ -75,7 +75,6 @@ export default function LandingPage() {
   overflow-hidden
   rounded-2xl
   border border-white/15
-
   px-6 py-3
 
   text-sm
