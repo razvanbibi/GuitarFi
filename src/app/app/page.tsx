@@ -5987,7 +5987,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           </div>
           <div
             className={`rounded-2xl px-3 py-2.5 flex items-center justify-between gap-3 border 
-              ${isDarkMode ? "bg-slate-950/60 border-white/5" : "bg-white/80 border-sky-100/60"}`}
+              ${isDarkMode ? "bg-slate-950/25 border-white/5" : "bg-white/80 border-sky-100/60"}`}
           >
             <div className="flex items-center gap-3">
               {/* Avatar */}
@@ -6070,7 +6070,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     px-3 py-3 space-y-1
     text-[11px]
     ${isDarkMode
-                ? "bg-slate-950/60 border border-white/5 text-slate-300"
+                ? "bg-slate-950/25 border border-white/5 text-slate-300"
                 : "bg-white border border-slate-200 text-slate-700"
               }
   `}
@@ -6110,7 +6110,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     rounded-2xl
     px-3 py-3
     ${isDarkMode
-                ? "bg-slate-950/60 border border-white/5"
+                ? "bg-slate-950/25 border border-white/5"
                 : "bg-white border border-slate-200"
               }
   `}
@@ -6168,7 +6168,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               rounded-2xl
                px-3 py-3 space-y-2
               ${isDarkMode
-                ? "bg-slate-950/60 border border-white/5"
+                ? "bg-slate-950/25 border border-white/5"
                 : "bg-white border border-slate-200"
               }
               `}
@@ -6271,7 +6271,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     font-semibold
     transition
     ${isDarkMode
-                  ? "bg-slate-800/60 border border-white/5 text-slate-300 hover:bg-slate-800"
+                  ? "bg-slate-800/2 border border-white/1 text-slate-300 hover:bg-slate-800"
                   : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50"
                 }
   `}
