@@ -13,7 +13,6 @@ export async function GET(
   const owner = await nft.ownerOf(tokenId);
   const { contract } = getReadOnlyContractServer();
   const highestStreak = Number(await contract.highestStreak(owner));
-
   async function fetchAsBase64(url: string): Promise<string | null> {
   try {
     const res = await fetch(url);
