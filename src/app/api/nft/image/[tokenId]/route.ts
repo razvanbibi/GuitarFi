@@ -43,7 +43,6 @@ const logoBase64 = await fetchAsBase64(
     <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
       <path d="M22 0H0V22" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
     </pattern>
-
     <!-- glow -->
     <filter id="softGlow">
       <feGaussianBlur stdDeviation="36"/>
