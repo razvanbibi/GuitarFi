@@ -40,7 +40,6 @@ const logoBase64 = await fetchAsBase64(
       <stop offset="0%" stop-color="#0b1220"/>
       <stop offset="100%" stop-color="#020617"/>
     </linearGradient>
-
     <!-- grid -->
     <pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse">
       <path d="M22 0H0V22" fill="none" stroke="white" stroke-width="1" opacity="0.04"/>
