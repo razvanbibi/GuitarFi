@@ -6090,13 +6090,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     text-[14px]
   `}
               >
-
               </span>
-
             </div>
-
           </div>
-
           {/* Your stats (on-chain) */}
           <div
             className={`
