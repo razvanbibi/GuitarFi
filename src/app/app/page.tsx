@@ -2628,7 +2628,7 @@ ${showExploreMenu
                   >
                     {highestNumber}
                   </div>
-                  <AvatarBubbleStream avatar={profileAvatar || "/avatar.png"} />
+                  <AvatarBubbleStream avatar={profileAvatar || "/raihan-avatar.jpg"} />
 
                   <div
                     className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
