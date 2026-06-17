@@ -4922,7 +4922,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 />
 
                 <div className="relative z-10 flex items-center justify-center gap-2">
-                  {loading ? (
+                  {loading && vaultAction === "deposit" ? (
                     <svg
                       className="h-5 w-5 animate-spin text-emerald-300"
                       viewBox="0 0 24 24"
