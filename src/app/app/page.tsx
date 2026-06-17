@@ -1438,7 +1438,7 @@ export default function HomePage() {
         setStatus("Connect wallet first");
         return;
       }
-
+      setVaultAction("withdraw");
       setLoading(true);
 
       const amount =
