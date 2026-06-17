@@ -3717,8 +3717,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     GTR
                   </span>
 
-                </div>
 
+                </div>
+                <div className="mt-1 text-[10px] text-slate-500">
+                  {convertToken === "USDm"
+                    ? "1 USDm = 1000 GTR"
+                    : "1 CELO = 100 GTR"}
+                </div>
               </div>
 
             </div>
