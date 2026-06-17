@@ -5295,9 +5295,18 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <span className="text-xs text-slate-400">
                   You Receive
                 </span>
-                <span className="text-xs text-sky-300">
-                  GTR
-                </span>
+
+                <div className="flex items-center gap-1">
+
+                  <span className="text-lg font-semibold text-sky-200">
+                    {estimatedGTR.toLocaleString()}
+                  </span>
+
+                  <span className="text-xs text-sky-300">
+                    GTR
+                  </span>
+
+                </div>
 
               </div>
 
