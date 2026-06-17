@@ -1902,11 +1902,8 @@ export default function HomePage() {
   function getBadgeProgress(streak: number) {
     if (streak <= 0) return 0.05; // start একটু বামে
 
-    const estimatedGTR =
-      convertToken === "USDm"
-        ? (Number(convertAmount || 0) * 1000)
-        : (Number(convertAmount || 0) * 100);
-        
+
+
     // milestones
     const silver = 7;
     const gold = 15;
@@ -1957,7 +1954,10 @@ export default function HomePage() {
   }
 
   const badgeProgress = getBadgeProgress(streakNumber);
-
+  const estimatedGTR =
+    convertToken === "USDm"
+      ? (Number(convertAmount || 0) * 1000)
+      : (Number(convertAmount || 0) * 100);
   return (
     <main
       className={`min-h-screen flex flex-col relative overflow-hidden ${isDarkMode ? "text-slate-50" : "text-slate-900"
@@ -3714,7 +3714,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               </div>
 
               <div className="mt-2 text-2xl font-bold text-sky-200">
-                { }
+                {estimatedGTR.toLocaleString()}
               </div>
 
             </div>
