@@ -3318,17 +3318,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </p>
               </div>
 
-              <div
-                className="
-        px-3 py-1
-        rounded-full
-        bg-emerald-500/10
-        text-emerald-300
-        text-xs
-      "
-              >
-                LIVE
-              </div>
+              
             </div>
 
             {/* Balance */}
@@ -4895,17 +4885,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </p>
               </div>
 
-              <div
-                className="
-        px-3 py-1
-        rounded-full
-        bg-emerald-500/10
-        text-emerald-300
-        text-xs
-      "
-              >
-                LIVE
-              </div>
+              
             </div>
 
             {/* Balance */}
