@@ -1389,7 +1389,7 @@ export default function HomePage() {
         setStatus("Connect wallet first");
         return;
       }
-
+      setVaultAction("deposit");
       setLoading(true);
 
       const amount =
