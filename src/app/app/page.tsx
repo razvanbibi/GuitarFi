@@ -215,6 +215,8 @@ export default function HomePage() {
 
   const [devWithdrawUSDM, setDevWithdrawUSDM] = useState("");
   const [devWithdrawCELO, setDevWithdrawCELO] = useState("");
+  const [expandedCollection, setExpandedCollection] =
+    useState(false);
 
 
   // একবারই ছোট onboarding দেখাবে
