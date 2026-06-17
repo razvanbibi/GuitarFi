@@ -3954,6 +3954,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               {/* CTA */}
               <button
                 onClick={() => {
+                  setExpandedCollection(true);
                   setShowCollectionsModal(true);
                   setShowExploreMenu(false);
                 }}
