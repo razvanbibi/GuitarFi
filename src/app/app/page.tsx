@@ -5558,6 +5558,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
               {/* CTA */}
               <button
+                onClick={() =>
+                  setExpandedCollection(!expandedCollection)
+                }
                 className="
   group
   relative
