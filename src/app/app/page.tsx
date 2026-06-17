@@ -4897,13 +4897,34 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 />
 
                 <div className="relative z-10 flex items-center justify-center gap-2">
+                  {loading ? (
+                    <svg
+                      className="h-5 w-5 animate-spin text-emerald-300"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        opacity="0.25"
+                      />
+                      <path
+                        d="M22 12a10 10 0 0 1-10 10"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                      />
+                    </svg>
+                  ) : (
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    className="
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      className="
     stroke-emerald-300
     fill-none
 
@@ -4913,22 +4934,23 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     group-hover:rotate-90
     group-hover:fill-emerald-500/20
   "
-                  >
-                    <path
-                      d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                      strokeWidth="1.5"
-                    />
+                    >
+                      <path
+                        d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                        strokeWidth="1.5"
+                      />
 
-                    <path
-                      d="M8 12H16"
-                      strokeWidth="1.5"
-                    />
+                      <path
+                        d="M8 12H16"
+                        strokeWidth="1.5"
+                      />
 
-                    <path
-                      d="M12 16V8"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
+                      <path
+                        d="M12 16V8"
+                        strokeWidth="1.5"
+                      />
+                    </svg>
+                  )}
 
                   <span className="font-semibold text-white">
                     {loading ? "Depositing..." : "Deposit"}
