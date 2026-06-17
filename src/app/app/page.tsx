@@ -1907,6 +1907,11 @@ export default function HomePage() {
   function getBadgeProgress(streak: number) {
     if (streak <= 0) return 0.05; // start একটু বামে
 
+    const estimatedGTR =
+      convertToken === "USDm"
+        ? (Number(convertAmount || 0) * 1000)
+        : (Number(convertAmount || 0) * 100);
+        
     // milestones
     const silver = 7;
     const gold = 15;
