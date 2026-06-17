@@ -4779,7 +4779,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     )}
 
                     <span className="text-sm font-bold text-amber-300">
-                      Withdraw
+                      {loading && vaultAction === "withdraw"
+                        ? "Withdrawing..."
+                        : "Withdraw"}
                     </span>
 
                     <span className="text-[10px] text-slate-400">
