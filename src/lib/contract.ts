@@ -14,7 +14,7 @@ export const GUITARFI_BADGES_CONTRACT =
 export const CELO_CHAIN_ID_HEX = "0xa4ec"; // 42220
 
 export const OXTXN_STREAK_ABI = [
-  // reads
+  
   {
     type: "function",
     name: "streak",
