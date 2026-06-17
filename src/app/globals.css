@@ -436,7 +436,6 @@ body {
     transform: translate(0, 0) scale(.8);
     opacity: 0;
   }
-
   15% {
     opacity: 1;
   }
@@ -454,24 +453,19 @@ body {
     opacity: 0;
   }
 }
-
-
 @keyframes donateGlow {
   0% {
     box-shadow: 0 0 12px rgba(56, 189, 248, .10);
   }
-
   50% {
     box-shadow:
       0 0 25px rgba(56, 189, 248, .22),
       0 0 45px rgba(56, 189, 248, .10);
   }
-
   100% {
     box-shadow: 0 0 12px rgba(56, 189, 248, .10);
   }
 }
-
 .donate-card-glow {
   animation: donateGlow 3s ease-in-out infinite;
 }
@@ -480,20 +474,16 @@ body {
   0% {
     transform: translateX(-120px) rotate(12deg);
   }
-
   100% {
     transform: translateX(400px) rotate(12deg);
   }
 }
-
 .claimButton {
   width: 58px;
   height: 58px;
 
   border: none;
   border-radius: 999px;
-
-
 
   display: flex;
   align-items: center;
@@ -518,7 +508,6 @@ body {
 .claimButtonLight {
   background: white;
 }
-
 .claimButton:hover {
   width: 180px;
   background: #171717;
@@ -591,7 +580,6 @@ body {
 .eq-bar:nth-child(4) {
   animation-delay: 0.6s;
 }
-
 @keyframes guitarfiEq {
   0% {
     height: 3px;
@@ -715,7 +703,6 @@ body {
 
   transition: .2s;
 }
-
 .left-arrow {
   left: -13.5%;
 
@@ -784,10 +771,8 @@ body {
 
   color: white;
   text-shadow: 2px 2px rgb(116, 116, 116);
-
   text-transform: uppercase;
   cursor: pointer;
-
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 17px;
@@ -884,14 +869,12 @@ body {
   }
 }
 
-
 .starfield-bg {
   height: 100%;
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
 }
-
 #stars {
   width: 1px;
   height: 1px;
