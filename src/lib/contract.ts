@@ -132,7 +132,6 @@ export const OXTXN_STREAK_ABI = [
       },
     ],
   },
-
   {
     type: "function",
     name: "dailyTapCount",
@@ -735,16 +734,13 @@ export async function getVaultReadOnlyContract() {
   if (!eth) throw new Error("Wallet not found");
 
   const provider = new BrowserProvider(eth);
-
   const contract = new Contract(
     CELODAILY_VAULT_CONTRACT,
     CELODAILY_VAULT_ABI,
     provider
   );
-
   return { provider, contract };
 }
-
 export async function getIdentityContractWithSigner() {
   const eth = getEthereum();
   if (!eth)
