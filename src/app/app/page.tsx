@@ -3451,7 +3451,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   </svg>
 
                   <span className="font-semibold text-white">
-                    Deposit
+                    {loading ? "Depositing..." : "Deposit"}
                   </span>
 
                 </div>
