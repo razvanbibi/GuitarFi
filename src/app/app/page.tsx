@@ -976,7 +976,7 @@ export default function HomePage() {
         body: JSON.stringify({ address: account }),
       });
 
-      // আজকের দিন localStorage এ সেভ + UI state সেট
+      // আজকের দিন localStorage এ সেভ + UI state
       const key = getStorageKey(account);
       try {
         window.localStorage.setItem(key, getTodayId());
