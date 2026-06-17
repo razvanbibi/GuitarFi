@@ -5026,22 +5026,41 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
                 <div className="relative z-10 flex items-center justify-center gap-2">
 
-                  <div
-                    className="
+                  {loading && vaultAction === "withdraw" ? (
+                    <svg
+                      className="h-5 w-5 animate-spin text-amber-300"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        opacity="0.25"
+                      />
+                      <path
+                        d="M22 12a10 10 0 0 1-10 10"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                      />
+                    </svg>
+                  ) : (
+                    <div
+                      className="
       flex h-8 w-8
       items-center justify-center
-
       rounded-full
-
       bg-amber-400/10
       border border-amber-300/20
-
       text-amber-300
       text-sm
     "
-                  >
-                    ↑
-                  </div>
+                    >
+                      ↑
+                    </div>
+                  )}
 
                   <span className="font-semibold text-white">
                     {loading && vaultAction === "withdraw"
