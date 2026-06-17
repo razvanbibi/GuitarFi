@@ -3418,22 +3418,37 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
                 <div className="relative z-10 flex items-center justify-center gap-2">
 
-                  <div
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
                     className="
-      flex h-8 w-8
-      items-center justify-center
+    stroke-emerald-300
+    fill-none
 
-      rounded-full
+    transition-all
+    duration-300
 
-      bg-emerald-400/10
-      border border-emerald-300/20
-
-      text-emerald-300
-      text-sm
-    "
+    group-hover:rotate-90
+    group-hover:fill-emerald-500/20
+  "
                   >
-                    ↓
-                  </div>
+                    <path
+                      d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                      strokeWidth="1.5"
+                    />
+
+                    <path
+                      d="M8 12H16"
+                      strokeWidth="1.5"
+                    />
+
+                    <path
+                      d="M12 16V8"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
 
                   <span className="font-semibold text-white">
                     Deposit
@@ -3448,7 +3463,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
   group
   relative
-
   overflow-hidden
 
   rounded-[20px]
@@ -3532,7 +3546,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-                Convert to GTR
+                  Convert to GTR
                 </h2>
                 <p
                   className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
