@@ -4688,7 +4688,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     )}
 
                     <span className="text-sm font-bold text-emerald-300">
-                      Deposit
+                      {loading && vaultAction === "deposit"
+                        ? "Depositing..."
+                        : "Deposit"}
                     </span>
 
                     <span className="text-[10px] text-slate-400">
