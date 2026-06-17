@@ -3074,3 +3074,89 @@ body {
   left: 0;
   color: #67e8f9;
 }
+
+@keyframes onchain-glitch {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: ";1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+  }
+
+  65% {
+    content: "|{f[4";
+  }
+
+  70% {
+    content: "{4%0%";
+  }
+
+  75% {
+    content: "'1_0<";
+  }
+
+  80% {
+    content: "{0%";
+  }
+
+  85% {
+    content: "]>'";
+  }
+
+  90% {
+    content: "4";
+  }
+
+  95% {
+    content: "2";
+  }
+
+  100% {
+    content: "";
+  }
+}
