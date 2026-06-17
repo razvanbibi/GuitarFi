@@ -4652,21 +4652,40 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
                   <div className="relative flex flex-col items-center gap-1">
 
-                    <div
-                      className="
+                    {loading && vaultAction === "deposit" ? (
+                      <svg
+                        className="h-10 w-10 animate-spin text-emerald-300"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          opacity="0.25"
+                        />
+                        <path
+                          d="M22 12a10 10 0 0 1-10 10"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                        />
+                      </svg>
+                    ) : (
+                      <div
+                        className="
       h-12 w-12
       rounded-2xl
-
       flex items-center justify-center
-
       bg-emerald-400/10
       border border-emerald-300/20
-
       text-2xl
     "
-                    >
-                      ↓
-                    </div>
+                      >
+                        ↓
+                      </div>
+                    )}
 
                     <span className="text-sm font-bold text-emerald-300">
                       Deposit
