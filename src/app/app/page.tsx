@@ -5467,7 +5467,18 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   My Guitar NFTs
                 </h2>
               </div>
+              <div
+                className={`
+    transition-all
+    duration-500
+    overflow-y-auto
 
+    ${expandedCollection
+                    ? "max-h-[420px] pr-1"
+                    : "max-h-[120px]"
+                  }
+  `}
+              ></div>
               {/* NFT Grid */}
               <div className="grid grid-cols-3 gap-3">
 
