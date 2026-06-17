@@ -196,7 +196,6 @@ export default function HomePage() {
 
   const [convertToken, setConvertToken] =
     useState("USDm");
-
   const [convertAmount, setConvertAmount] =
     useState("1");
 
@@ -1696,13 +1695,11 @@ export default function HomePage() {
       setStatus("MultiSend successful ✅");
     } catch (err: any) {
       console.error(err);
-
       setStatus(err.message ?? "MultiSend failed");
     } finally {
       setDevRunning(false);
     }
   }
-
   async function handleDevWithdrawUSDM() {
     try {
       setDevRunning(true);
@@ -1827,13 +1824,11 @@ export default function HomePage() {
       console.error("Vault load failed", err);
     }
   }
-
   async function loadDonationLeaderboard() {
     try {
       const provider = new ethers.JsonRpcProvider(
         "https://forno.celo.org"
       );
-
       // ethers v6 interface
       const iface = new ethers.Interface([
         "event Donation(address indexed donor, uint256 amount, uint256 timestamp)"
