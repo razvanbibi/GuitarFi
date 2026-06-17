@@ -5424,7 +5424,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
           <div
             className="absolute inset-0 bg-black/70 backdrop-blur-md"
-            onClick={() => setShowCollectionsModal(false)}
+            onClick={() => {
+              setShowCollectionsModal(false);
+              setExpandedCollection(false);
+            }}
           />
 
           <div
