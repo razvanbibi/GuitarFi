@@ -5044,7 +5044,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   </div>
 
                   <span className="font-semibold text-white">
-                    Withdraw
+                    {loading && vaultAction === "withdraw"
+                      ? "Withdrawing..."
+                      : "Withdraw"}
                   </span>
 
                 </div>
