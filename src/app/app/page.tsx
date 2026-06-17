@@ -1344,7 +1344,7 @@ export default function HomePage() {
       }
 
       const amountScaled = ethers.parseUnits(vaultAmount, 18);
-
+      setVaultAction("deposit");
       setLoading(true);
 
       const { usdc } = await getUSDmContractWithSigner();
@@ -4313,8 +4313,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             <div className="mb-4 flex items-center justify-between">
 
               <div className="flex items-center gap-3">
-
-                {/* Icon */}
                 {/* Icon */}
                 <div
                   className="
