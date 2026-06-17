@@ -2415,18 +2415,23 @@ ${showExploreMenu
 
                 <span
                   className="
-  px-2 py-1
-  rounded-full
+    onchain-badge
 
-  text-[10px]
+    px-2 py-1
 
-  bg-cyan-500/10
-  text-cyan-300
+    rounded-full
 
-  border border-cyan-400/10
-"
+    text-[10px]
+
+    bg-cyan-500/10
+    text-cyan-300
+
+    border border-cyan-400/10
+  "
                 >
-                  ONCHAIN MUSIC
+                  <span className="onchain-text">
+                    ONCHAIN MUSIC
+                  </span>
                 </span>
               </div>
               <p
@@ -3318,7 +3323,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </p>
               </div>
 
-              
+
             </div>
 
             {/* Balance */}
@@ -4885,7 +4890,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </p>
               </div>
 
-              
+
             </div>
 
             {/* Balance */}
