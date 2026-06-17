@@ -3953,6 +3953,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
               {/* CTA */}
               <button
+                onClick={() => {
+                  setShowCollectionsModal(true);
+                  setShowExploreMenu(false);
+                }}
                 className="
   group
   relative
