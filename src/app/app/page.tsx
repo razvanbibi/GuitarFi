@@ -3859,24 +3859,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   My Guitar NFTs
                 </h2>
               </div>
-              <div
-                className={`
-    transition-all
-    duration-500
-    overflow-y-auto
 
-    ${expandedCollection
-                    ? "max-h-[420px] pr-1"
-                    : "max-h-[120px]"
-                  }
-  `}
-              >
-                {/* NFT Grid */}
-                <div className="grid grid-cols-3 gap-3">
+              {/* NFT Grid */}
+              <div className="grid grid-cols-3 gap-3">
 
-                  {/* Acoustic */}
-                  <div
-                    className="
+                {/* Acoustic */}
+                <div
+                  className="
         rounded-2xl
         border border-white/5
         bg-gradient-to-b
@@ -3886,25 +3875,25 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         transition
         hover:scale-[1.03]
       "
-                  >
-                    <img
-                      src="/nfts/acoustic.jpeg"
-                      alt="Acoustic"
-                      className="w-full h-20 object-contain"
-                    />
+                >
+                  <img
+                    src="/nfts/acoustic.jpeg"
+                    alt="Acoustic"
+                    className="w-full h-20 object-contain"
+                  />
 
-                    <h3 className="mt-2 text-xs text-white">
-                      Acoustic
-                    </h3>
+                  <h3 className="mt-2 text-xs text-white">
+                    Acoustic
+                  </h3>
 
-                    <p className="text-[10px] text-slate-500">
-                      NFT
-                    </p>
-                  </div>
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
 
-                  {/* Electric */}
-                  <div
-                    className="
+                {/* Electric */}
+                <div
+                  className="
         rounded-2xl
         border border-violet-500/20
         bg-gradient-to-b
@@ -3914,25 +3903,25 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         transition
         hover:scale-[1.03]
       "
-                  >
-                    <img
-                      src="/nfts/electric.jpeg"
-                      alt="Electric"
-                      className="w-full h-20 object-contain"
-                    />
+                >
+                  <img
+                    src="/nfts/electric.jpeg"
+                    alt="Electric"
+                    className="w-full h-20 object-contain"
+                  />
 
-                    <h3 className="mt-2 text-xs text-white">
-                      Electric
-                    </h3>
+                  <h3 className="mt-2 text-xs text-white">
+                    Electric
+                  </h3>
 
-                    <p className="text-[10px] text-slate-500">
-                      NFT
-                    </p>
-                  </div>
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
+                </div>
 
-                  {/* Golden */}
-                  <div
-                    className="
+                {/* Golden */}
+                <div
+                  className="
         rounded-2xl
         border border-amber-400/40
         bg-gradient-to-b
@@ -3944,73 +3933,26 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
         shadow-[0_0_18px_rgba(251,191,36,0.25)]
       "
-                  >
-                    <img
-                      src="/nfts/golden.jpeg"
-                      alt="Golden Guitar"
-                      className="w-full h-20 object-contain"
-                    />
+                >
+                  <img
+                    src="/nfts/golden.jpeg"
+                    alt="Golden Guitar"
+                    className="w-full h-20 object-contain"
+                  />
 
-                    <h3 className="mt-2 text-xs text-white">
-                      Golden Guitar
-                    </h3>
+                  <h3 className="mt-2 text-xs text-white">
+                    Golden Guitar
+                  </h3>
 
-                    <p className="text-[10px] text-slate-500">
-                      NFT
-                    </p>
-                  </div>
-                  {Array.from({ length: 28 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className="
-      rounded-2xl
-      border border-white/5
-
-      bg-gradient-to-b
-      from-slate-900/60
-      to-slate-950/90
-
-      p-2
-
-      transition
-      hover:scale-[1.03]
-    "
-                    >
-                      <div
-                        className="
-        flex
-        h-20
-        items-center
-        justify-center
-
-        rounded-xl
-
-        border border-dashed
-        border-slate-700
-
-        text-3xl
-      "
-                      >
-                        🎸
-                      </div>
-
-                      <h3 className="mt-2 text-xs text-white">
-                        Guitar #{i + 4}
-                      </h3>
-
-                      <p className="text-[10px] text-slate-500">
-                        Coming Soon
-                      </p>
-                    </div>
-                  ))}
+                  <p className="text-[10px] text-slate-500">
+                    NFT
+                  </p>
                 </div>
+
               </div>
 
               {/* CTA */}
               <button
-                onClick={() =>
-                  setExpandedCollection(!expandedCollection)
-                }
                 className="
   group
   relative
