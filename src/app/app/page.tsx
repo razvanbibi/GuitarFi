@@ -1489,7 +1489,7 @@ export default function HomePage() {
       }
 
       const amountScaled = ethers.parseUnits(vaultAmount, 18);
-
+      setVaultAction("withdraw");
       setLoading(true);
 
       const { contract } = await getVaultContractWithSigner();
