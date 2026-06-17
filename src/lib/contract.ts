@@ -371,7 +371,6 @@ export const OXTXN_TOKEN_ABI = [
     inputs: [{ name: "amount", type: "uint256" }],
     outputs: [],
   },
-
   {
     type: "function",
     name: "mint",
@@ -382,7 +381,6 @@ export const OXTXN_TOKEN_ABI = [
     ],
     outputs: [],
   },
-
   {
     type: "function",
     name: "claim",
@@ -393,7 +391,6 @@ export const OXTXN_TOKEN_ABI = [
     ],
     outputs: [],
   },
-
   {
     type: "function",
     name: "multiSend",
@@ -404,7 +401,6 @@ export const OXTXN_TOKEN_ABI = [
     ],
     outputs: [],
   },
-
   {
     type: "function",
     name: "allowance",
@@ -448,8 +444,6 @@ export const OXTXN_TOKEN_ABI = [
     ],
   },
 ] as const;
-
-
 export const CELODAILY_VAULT_ABI = [
   {
     type: "function",
@@ -704,7 +698,6 @@ export async function getTokenContractWithSigner() {
 export async function getReadOnlyContract() {
   const eth = getEthereum();
   if (!eth) throw new Error("MetaMask / wallet পাওয়া যায়নি");
-
   const provider = new BrowserProvider(eth);
   const network = await provider.getNetwork();
   if (network.chainId !== BigInt(42220)) {
@@ -715,10 +708,8 @@ export async function getReadOnlyContract() {
     OXTXN_STREAK_ABI,
     provider
   );
-
   return { provider, contract };
 }
-
 export function formatToken(amount: bigint): string {
   try {
     return formatUnits(amount, 18);
@@ -726,7 +717,6 @@ export function formatToken(amount: bigint): string {
     return amount.toString();
   }
 }
-
 export async function getVaultContractWithSigner() {
   const eth = getEthereum();
   if (!eth) throw new Error("Wallet not found");
