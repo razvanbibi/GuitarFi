@@ -1475,6 +1475,7 @@ export default function HomePage() {
     } finally {
 
       setLoading(false);
+      setVaultAction(null);
 
     }
   }
