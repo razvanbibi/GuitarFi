@@ -5445,7 +5445,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
             <div className="flex justify-end mb-3">
               <button
-                onClick={() => setShowCollectionsModal(false)}
+                onClick={() => {
+                  setShowCollectionsModal(false);
+                  setExpandedCollection(false);
+                }}
                 className="
           h-10 w-10
           rounded-full
