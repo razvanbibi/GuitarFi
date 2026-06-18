@@ -2046,6 +2046,7 @@ export default function HomePage() {
       image: "/nfts/thunderstrike-guitar.jpeg",
     },
     {
+      id: 9,
       name: "Solar Blaze Guitar",
       image: "/nfts/solar-blaze-guitar.jpeg",
     },
