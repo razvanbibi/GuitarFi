@@ -945,16 +945,9 @@ export default function HomePage() {
       audioRef.current.onended = () => {
         setTunePlaying(false);
       };
-
       await audioRef.current.play();
-
       setTunePlaying(true);
-      if (audioRef.current) {
-        audioRef.current.pause();
-      }
-
       await refreshData();
-
       setStatus(
         "Tune played 🎸 NFT unlocked"
       );
