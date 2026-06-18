@@ -2131,6 +2131,7 @@ export default function HomePage() {
       image: "/nfts/dragonfire-guitar.jpeg",
     },
     {
+      id: 26,
       name: "Ocean Spirit Guitar",
       image: "/nfts/ocean-spirit-guitar.jpeg",
     },
