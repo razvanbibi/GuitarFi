@@ -4156,7 +4156,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   setExpandedCollection(true);
                   setShowCollectionsModal(true);
                   setShowExploreMenu(false);
-                  
+                  loadNFTBalances();
                 }}
                 className="
   group
