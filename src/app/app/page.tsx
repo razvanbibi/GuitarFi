@@ -805,19 +805,35 @@ export default function HomePage() {
   const tunes = [
     {
       name: "Midnight Between US",
-      file: "/music/Midnight Between US.mp3",
+      file: "/music/tune-1.mp3",
     },
     {
       name: "Your Name In The Rain",
-      file: "/music/Your Name In The Rain.mp3",
+      file: "/music/tune-2.mp3",
     },
     {
       name: "Coffee Cups",
-      file: "/music/Coffee Cups.mp3",
+      file: "/music/tune-3.mp3",
     },
     {
       name: "Satellites & Slow Dancing Lights",
-      file: "/music/Satellites & Slow Dancing Lights.mp3",
+      file: "/music/tune-4.mp3",
+    },
+    {
+      name: "The Side Of The Bed You Left Cold",
+      file: "/music/tune-5.mp3",
+    },
+    {
+      name: "Between Your Heart & Mine",
+      file: "/music/tune-6.mp3",
+    },
+    {
+      name: "When The World Gets Quiet",
+      file: "/music/tune-7.mp3",
+    },
+    {
+      name: "I Loved You In The Smallest Things",
+      file: "/music/tune-8.mp3",
     },
   ];
 
