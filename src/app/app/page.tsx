@@ -2141,6 +2141,7 @@ export default function HomePage() {
       image: "/nfts/starlight-symphony-guitar.jpeg",
     },
     {
+      id: 28,
       name: "Shadowcaster Guitar",
       image: "/nfts/shadowcaster-guitar.jpeg",
     },
