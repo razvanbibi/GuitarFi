@@ -5068,19 +5068,58 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
             <div
               className="
-      rounded-2xl
-      border border-white/10
-      bg-slate-950/30
-      p-3
-    "
+    rounded-2xl
+    border border-white/10
+    bg-slate-950/30
+    p-4
+  "
             >
-              <p className="text-[11px] text-slate-400">
-                Your Vault Balance
-              </p>
+              <div className="flex items-center justify-between">
 
-              <p className="text-xl font-bold text-white">
-                {celoVaultBalance} CELO
-              </p>
+                {/* User Balance */}
+                <div className="flex-1 text-center">
+                  <p className="text-[11px] text-slate-400">
+                    Your Balance
+                  </p>
+
+                  <p className="text-lg font-bold text-white mt-1">
+                    {userCeloVaultBalance}
+                  </p>
+
+                  <p className="text-[10px] text-slate-500">
+                    CELO
+                  </p>
+                </div>
+
+                {/* Divider */}
+                <div
+                  className="
+        h-12
+        w-px
+        mx-3
+        bg-gradient-to-b
+        from-transparent
+        via-sky-400/40
+        to-transparent
+      "
+                />
+
+                {/* Total Vault */}
+                <div className="flex-1 text-center">
+                  <p className="text-[11px] text-slate-400">
+                    Vault TVL
+                  </p>
+
+                  <p className="text-lg font-bold text-sky-300 mt-1">
+                    {celoVaultBalance}
+                  </p>
+
+                  <p className="text-[10px] text-slate-500">
+                    CELO
+                  </p>
+                </div>
+
+              </div>
             </div>
 
             {/* Amount */}
