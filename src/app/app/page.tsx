@@ -804,20 +804,20 @@ export default function HomePage() {
 
   const tunes = [
     {
-      name: "Sunset Strings",
-      file: "/music/tune1.mp3",
+      name: "Midnight Between US",
+      file: "/music/Midnight Between US.mp3",
     },
     {
-      name: "Midnight Solo",
-      file: "/music/tune2.mp3",
+      name: "Your Name In The Rain",
+      file: "/music/Your Name In The Rain.mp3",
     },
     {
-      name: "Ocean Chords",
-      file: "/music/tune3.mp3",
+      name: "Coffee Cups",
+      file: "/music/Coffee Cups.mp3",
     },
     {
-      name: "Golden Melody",
-      file: "/music/tune4.mp3",
+      name: "Satellites & Slow Dancing Lights",
+      file: "/music/Satellites & Slow Dancing Lights.mp3",
     },
   ];
 
