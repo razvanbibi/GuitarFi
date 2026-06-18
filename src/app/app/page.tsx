@@ -2410,6 +2410,7 @@ ${showExploreMenu
 
                   <button
                     onClick={() => {
+                      setExpandedCollection(true);
                       setShowCollectionsModal(true);
                       setShowExploreMenu(false);
                     }}
@@ -4029,7 +4030,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   </p>
                 </div>
 
-                {/* Golden */}
+
                 <div
                   className="
         rounded-2xl
@@ -5659,7 +5660,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     </p>
                   </div>
 
-                  {/* Golden */}
+
                   <div
                     className="
         rounded-2xl
