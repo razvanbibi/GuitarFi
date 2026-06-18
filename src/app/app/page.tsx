@@ -12,12 +12,15 @@ import {
   OXTXN_STREAK_CONTRACT,
   getIdentityContractWithSigner,
   getIdentityReadOnlyContract,
-  CELODAILY_VAULT_CONTRACT
+  CELODAILY_VAULT_CONTRACT,
+  GUITARFI_BADGES_CONTRACT,
+  GUITARFI_BADGES_ABI,
 } from "@/lib/contract";
 
 import Image from "next/image";
-import { ethers } from "ethers";
-
+import {
+  ethers, BrowserProvider, Contract,
+} from "ethers";
 import TodayMessageLoop from "../TodayMessageLoop";
 import { Gift } from "lucide-react";
 import { useRef } from "react";
@@ -748,6 +751,20 @@ export default function HomePage() {
       await ensureCeloNetwork();
       const { contract } = await getReadOnlyContract();
 
+      const eth = getEthereum();
+
+      if (!eth) {
+        throw new Error("Wallet not found");
+      }
+
+      const provider = new BrowserProvider(eth);
+
+      const nftContract = new Contract(
+        GUITARFI_BADGES_CONTRACT,
+        GUITARFI_BADGES_ABI,
+        provider
+      );
+
       const [
         st,
         hs,
@@ -783,6 +800,19 @@ export default function HomePage() {
         contract.pendingNFTs(account, 31),
 
       ]);
+
+      const balances: Record<number, number> = {};
+
+      for (let id = 1; id <= 31; id++) {
+        const bal = await nftContract.balanceOf(
+          account,
+          id
+        );
+
+        balances[id] = Number(bal);
+      }
+
+      setNftBalances(balances);
 
       setStreak(st);
       setHighestStreak(hs);
