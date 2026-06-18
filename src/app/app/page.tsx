@@ -2066,6 +2066,7 @@ export default function HomePage() {
       image: "/nfts/neon-pulse-guitar.jpeg",
     },
     {
+      id: 13,
       name: "Obsidian Rift Guitar",
       image: "/nfts/obsidian-rift-guitar.jpeg",
     },
