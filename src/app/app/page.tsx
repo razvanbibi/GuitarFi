@@ -20,6 +20,7 @@ import { ethers } from "ethers";
 
 import TodayMessageLoop from "../TodayMessageLoop";
 import { Gift } from "lucide-react";
+import { useRef } from "react";
 
 type Status = string | null;
 
@@ -193,6 +194,7 @@ export default function HomePage() {
 
   const [currentTune, setCurrentTune] = useState("");
   const [tunePlaying, setTunePlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const [convertToken, setConvertToken] =
     useState("USDm");
