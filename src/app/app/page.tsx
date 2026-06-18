@@ -2016,6 +2016,7 @@ export default function HomePage() {
       : (Number(convertAmount || 0) * 100);
   const additionalNFTs = [
     {
+      id: 3,
       name: "Crimson Flame Guitar",
       image: "/nfts/crimson-flame-guitar.jpeg",
     },
