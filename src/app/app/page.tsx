@@ -5759,7 +5759,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       Electric
                     </h3>
 
-                    <div className="mt-2 flex items-center justify-between">
+                    <div className="mt-1 flex items-center justify-between">
 
                       <span className="text-[10px] text-slate-500">
                         NFT
@@ -5777,9 +5777,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       text-violet-300
     "
                       >
-                        Owned ×
+                        {(nftBalances[2] ?? 0) > 0 ? (
+                          <span className="...">
+                            Owned ×{nftBalances[2]}
+                          </span>
+                        ) : (
+                          <span className="text-[9px] text-slate-500">
+                            Not Owned
+                          </span>
+                        )}
                       </span>
-
                     </div>
                   </div>
 
