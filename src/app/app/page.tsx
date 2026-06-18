@@ -2041,6 +2041,7 @@ export default function HomePage() {
       image: "/nfts/frostbite-guitar.jpeg",
     },
     {
+      id: 8,
       name: "Thunderstrike Guitar",
       image: "/nfts/thunderstrike-guitar.jpeg",
     },
