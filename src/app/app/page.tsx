@@ -2021,6 +2021,7 @@ export default function HomePage() {
       image: "/nfts/crimson-flame-guitar.jpeg",
     },
     {
+      id: 4,
       name: "Midnight Shadow Guitar",
       image: "/nfts/midnight-shadow-guitar.jpeg",
     },
