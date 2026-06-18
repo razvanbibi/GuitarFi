@@ -2026,6 +2026,7 @@ export default function HomePage() {
       image: "/nfts/midnight-shadow-guitar.jpeg",
     },
     {
+      id: 5,
       name: "Sapphire Wave Guitar",
       image: "/nfts/sapphire-wave-guitar.jpeg",
     },
