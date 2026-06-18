@@ -5790,9 +5790,35 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     <h3 className="mt-2 text-xs text-white">
                       Acoustic
                     </h3>
-                    <p className="text-[10px] text-slate-500">
-                      NFT
-                    </p>
+                    <div className="mt-1 flex items-center justify-between">
+
+                      <span className="text-[10px] text-slate-500">
+                        NFT
+                      </span>
+
+                      <span
+                        className="
+      rounded-full
+      border border-violet-500/20
+      bg-violet-500/10
+      px-2
+      py-[2px]
+      text-[9px]
+      font-semibold
+      text-violet-300
+    "
+                      >
+                        {(nftBalances[1] ?? 0) > 0 ? (
+                          <span className="...">
+                            Owned ×{nftBalances[1]}
+                          </span>
+                        ) : (
+                          <span className="text-[9px] text-slate-500">
+                            Not Owned
+                          </span>
+                        )}
+                      </span>
+                    </div>
                   </div>
                   {/* Electric */}
                   <div
