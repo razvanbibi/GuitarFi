@@ -1958,6 +1958,120 @@ export default function HomePage() {
     convertToken === "USDm"
       ? (Number(convertAmount || 0) * 1000)
       : (Number(convertAmount || 0) * 100);
+  const additionalNFTs = [
+    {
+      name: "Crimson Flame Guitar",
+      image: "/nfts/crimson-flame-guitar.jpeg",
+    },
+    {
+      name: "Midnight Shadow Guitar",
+      image: "/nfts/midnight-shadow-guitar.jpeg",
+    },
+    {
+      name: "Sapphire Wave Guitar",
+      image: "/nfts/sapphire-wave-guitar.jpeg",
+    },
+    {
+      name: "Emerald Echo Guitar",
+      image: "/nfts/emerald-echo-guitar.jpeg",
+    },
+    {
+      name: "Frostbite Guitar",
+      image: "/nfts/frostbite-guitar.jpeg",
+    },
+    {
+      name: "Thunderstrike Guitar",
+      image: "/nfts/thunderstrike-guitar.jpeg",
+    },
+    {
+      name: "Solar Blaze Guitar",
+      image: "/nfts/solar-blaze-guitar.jpeg",
+    },
+    {
+      name: "Lunar Melody Guitar",
+      image: "/nfts/lunar-melody-guitar.jpeg",
+    },
+    {
+      name: "Crystal Harmony Guitar",
+      image: "/nfts/crystal-harmony-guitar.jpeg",
+    },
+    {
+      name: "Neon Pulse Guitar",
+      image: "/nfts/neon-pulse-guitar.jpeg",
+    },
+    {
+      name: "Obsidian Rift Guitar",
+      image: "/nfts/obsidian-rift-guitar.jpeg",
+    },
+    {
+      name: "Ivory Dream Guitar",
+      image: "/nfts/ivory-dream-guitar.jpeg",
+    },
+    {
+      name: "Mystic Resonance Guitar",
+      image: "/nfts/mystic-resonance-guitar.jpeg",
+    },
+    {
+      name: "Phoenix String Guitar",
+      image: "/nfts/phoenix-string-guitar.jpeg",
+    },
+    {
+      name: "Aurora Chord Guitar",
+      image: "/nfts/aurora-chord-guitar.jpeg",
+    },
+    {
+      name: "Stormbreaker Guitar",
+      image: "/nfts/stormbreaker-guitar.jpeg",
+    },
+    {
+      name: "Velvet Tone Guitar",
+      image: "/nfts/velvet-tone-guitar.jpeg",
+    },
+    {
+      name: "Cosmic Voyager Guitar",
+      image: "/nfts/cosmic-voyager-guitar.jpeg",
+    },
+    {
+      name: "Inferno Riff Guitar",
+      image: "/nfts/inferno-riff-guitar.jpeg",
+    },
+    {
+      name: "Arctic Whisper Guitar",
+      image: "/nfts/arctic-whisper-guitar.jpeg",
+    },
+    {
+      name: "Royal Sapphire Guitar",
+      image: "/nfts/royal-sapphire-guitar.jpeg",
+    },
+    {
+      name: "Celestial Harmony Guitar",
+      image: "/nfts/celestial-harmony-guitar.jpeg",
+    },
+    {
+      name: "Dragonfire Guitar",
+      image: "/nfts/dragonfire-guitar.jpeg",
+    },
+    {
+      name: "Ocean Spirit Guitar",
+      image: "/nfts/ocean-spirit-guitar.jpeg",
+    },
+    {
+      name: "Starlight Symphony Guitar",
+      image: "/nfts/starlight-symphony-guitar.jpeg",
+    },
+    {
+      name: "Shadowcaster Guitar",
+      image: "/nfts/shadowcaster-guitar.jpeg",
+    },
+    {
+      name: "Eternal Echo Guitar",
+      image: "/nfts/eternal-echo-guitar.jpeg",
+    },
+    {
+      name: "Galaxy Resonance Guitar",
+      image: "/nfts/galaxy-resonance-guitar.jpeg",
+    },
+  ];
   return (
     <main
       className={`min-h-screen flex flex-col relative overflow-hidden ${isDarkMode ? "text-slate-50" : "text-slate-900"
