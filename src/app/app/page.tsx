@@ -2146,6 +2146,7 @@ export default function HomePage() {
       image: "/nfts/shadowcaster-guitar.jpeg",
     },
     {
+      id: 29,
       name: "Eternal Echo Guitar",
       image: "/nfts/eternal-echo-guitar.jpeg",
     },
