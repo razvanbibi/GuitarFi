@@ -2096,6 +2096,7 @@ export default function HomePage() {
       image: "/nfts/stormbreaker-guitar.jpeg",
     },
     {
+      id: 19,
       name: "Velvet Tone Guitar",
       image: "/nfts/velvet-tone-guitar.jpeg",
     },
