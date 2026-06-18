@@ -797,7 +797,48 @@ export default function HomePage() {
     }
   }
 
- 
+  async function loadNFTBalances() {
+
+    if (!account) return;
+
+    try {
+
+      const eth = getEthereum();
+
+      if (!eth) return;
+
+      const provider =
+        new ethers.BrowserProvider(eth);
+
+      const nftContract =
+        new ethers.Contract(
+          GUITARFI_BADGES_CONTRACT,
+          GUITARFI_BADGES_ABI,
+          provider
+        );
+
+      const balances: Record<number, number> = {};
+
+      for (let id = 1; id <= 31; id++) {
+
+        const bal =
+          await nftContract.balanceOf(
+            account,
+            id
+          );
+
+        balances[id] = Number(bal);
+      }
+
+      setNftBalances(balances);
+
+    } catch (err) {
+      console.error(
+        "NFT load failed",
+        err
+      );
+    }
+  }
 
   const tunes = [
     {
