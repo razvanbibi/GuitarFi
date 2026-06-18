@@ -117,6 +117,8 @@ export default function HomePage() {
   const [pendingNFT31, setpendingNFT31] = useState<bigint | null>(null);
   const [nftBalances, setNftBalances] =
     useState<Record<number, number>>({});
+  const [loadingNFTs, setLoadingNFTs] =
+    useState(false);
 
   const [showDonate, setShowDonate] = useState(false);
   const [showTradeMenu, setShowTradeMenu] = useState(false);
