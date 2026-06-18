@@ -2081,6 +2081,7 @@ export default function HomePage() {
       image: "/nfts/mystic-resonance-guitar.jpeg",
     },
     {
+      id: 16,
       name: "Phoenix String Guitar",
       image: "/nfts/phoenix-string-guitar.jpeg",
     },
