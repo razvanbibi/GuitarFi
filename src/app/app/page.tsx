@@ -2071,6 +2071,7 @@ export default function HomePage() {
       image: "/nfts/obsidian-rift-guitar.jpeg",
     },
     {
+      id: 14,
       name: "Ivory Dream Guitar",
       image: "/nfts/ivory-dream-guitar.jpeg",
     },
