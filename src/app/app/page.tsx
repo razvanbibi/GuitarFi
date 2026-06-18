@@ -2031,6 +2031,7 @@ export default function HomePage() {
       image: "/nfts/sapphire-wave-guitar.jpeg",
     },
     {
+      id: 6,
       name: "Emerald Echo Guitar",
       image: "/nfts/emerald-echo-guitar.jpeg",
     },
