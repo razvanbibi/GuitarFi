@@ -2121,6 +2121,7 @@ export default function HomePage() {
       image: "/nfts/royal-sapphire-guitar.jpeg",
     },
     {
+      id: 24,
       name: "Celestial Harmony Guitar",
       image: "/nfts/celestial-harmony-guitar.jpeg",
     },
