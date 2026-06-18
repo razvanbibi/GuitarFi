@@ -5901,9 +5901,32 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         {nft.name}
                       </h3>
 
-                      <p className="text-[10px] text-slate-500">
-                        NFT
-                      </p>
+                      <div className="mt-1 flex items-center justify-between">
+
+                        <span className="text-[10px] text-slate-500">
+                          NFT
+                        </span>
+
+                        <span
+                          className="
+      rounded-full
+      border border-violet-500/20
+      bg-violet-500/10
+      px-2
+      py-[2px]
+      text-[9px]
+      font-semibold
+      text-violet-300
+    "
+                        >
+                          {(nftBalances[nft.id] ?? 0) > 0 ? (
+                            <>Owned ×{nftBalances[nft.id]}</>
+                          ) : (
+                            <>Not Owned</>
+                          )}
+                        </span>
+
+                      </div>
                     </div>
                   ))}
                 </div>
