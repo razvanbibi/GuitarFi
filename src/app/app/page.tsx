@@ -2086,6 +2086,7 @@ export default function HomePage() {
       image: "/nfts/phoenix-string-guitar.jpeg",
     },
     {
+      id: 17,
       name: "Golden Guitar",
       image: "/nfts/golden.jpeg",
     },
