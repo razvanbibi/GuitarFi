@@ -2151,6 +2151,7 @@ export default function HomePage() {
       image: "/nfts/eternal-echo-guitar.jpeg",
     },
     {
+      id: 30,
       name: "Galaxy Resonance Guitar",
       image: "/nfts/galaxy-resonance-guitar.jpeg",
     },
