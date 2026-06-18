@@ -944,6 +944,7 @@ export default function HomePage() {
 
       audioRef.current.onended = () => {
         setTunePlaying(false);
+        setCurrentTune("");
       };
       await audioRef.current.play();
       setTunePlaying(true);
