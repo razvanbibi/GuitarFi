@@ -2076,6 +2076,7 @@ export default function HomePage() {
       image: "/nfts/ivory-dream-guitar.jpeg",
     },
     {
+      id: 15,
       name: "Mystic Resonance Guitar",
       image: "/nfts/mystic-resonance-guitar.jpeg",
     },
