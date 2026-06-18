@@ -2116,6 +2116,7 @@ export default function HomePage() {
       image: "/nfts/arctic-whisper-guitar.jpeg",
     },
     {
+      id: 23,
       name: "Royal Sapphire Guitar",
       image: "/nfts/royal-sapphire-guitar.jpeg",
     },
