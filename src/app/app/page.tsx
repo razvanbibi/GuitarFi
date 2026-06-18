@@ -2091,6 +2091,7 @@ export default function HomePage() {
       image: "/nfts/golden.jpeg",
     },
     {
+      id: 18,
       name: "Stormbreaker Guitar",
       image: "/nfts/stormbreaker-guitar.jpeg",
     },
