@@ -2101,6 +2101,7 @@ export default function HomePage() {
       image: "/nfts/velvet-tone-guitar.jpeg",
     },
     {
+      id: 20,
       name: "Cosmic Voyager Guitar",
       image: "/nfts/cosmic-voyager-guitar.jpeg",
     },
