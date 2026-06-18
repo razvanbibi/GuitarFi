@@ -2036,6 +2036,7 @@ export default function HomePage() {
       image: "/nfts/emerald-echo-guitar.jpeg",
     },
     {
+      id: 7,
       name: "Frostbite Guitar",
       image: "/nfts/frostbite-guitar.jpeg",
     },
