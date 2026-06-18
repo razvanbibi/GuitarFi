@@ -2415,23 +2415,15 @@ ${showExploreMenu
 
                 <span
                   className="
-    onchain-badge
-
     px-2 py-1
-
     rounded-full
-
     text-[10px]
-
     bg-cyan-500/10
     text-cyan-300
-
     border border-cyan-400/10
   "
                 >
-                  <span className="onchain-text">
-                    ONCHAIN MUSIC
-                  </span>
+                  ONCHAIN MUSIC
                 </span>
               </div>
               <p
