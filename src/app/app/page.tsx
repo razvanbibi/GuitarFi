@@ -5688,47 +5688,32 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       NFT
                     </p>
                   </div>
-                  {Array.from({ length: 28 }).map((_, i) => (
+                  {additionalNFTs.map((nft) => (
                     <div
-                      key={i}
+                      key={nft.name}
                       className="
       rounded-2xl
       border border-white/5
-
       bg-gradient-to-b
-      from-slate-900/60
+      from-violet-950/40
       to-slate-950/90
-
       p-2
-
       transition
       hover:scale-[1.03]
     "
                     >
-                      <div
-                        className="
-        flex
-        h-20
-        items-center
-        justify-center
-
-        rounded-xl
-
-        border border-dashed
-        border-slate-700
-
-        text-3xl
-      "
-                      >
-                        🎸
-                      </div>
+                      <img
+                        src={nft.image}
+                        alt={nft.name}
+                        className="w-full h-20 object-contain"
+                      />
 
                       <h3 className="mt-2 text-xs text-white">
-                        Guitar #{i + 4}
+                        {nft.name}
                       </h3>
 
                       <p className="text-[10px] text-slate-500">
-                        Coming Soon
+                        NFT
                       </p>
                     </div>
                   ))}
