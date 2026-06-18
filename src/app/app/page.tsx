@@ -3473,7 +3473,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               </p>
 
               <p className="text-xl font-bold text-white">
-                {celoVaultBalance} CELO
+                {userCeloVaultBalance} CELO
               </p>
             </div>
 
