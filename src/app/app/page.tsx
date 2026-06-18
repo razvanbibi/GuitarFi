@@ -800,11 +800,11 @@ export default function HomePage() {
   }
 
   async function loadNFTBalances() {
-    setLoadingNFTs(true);
+
     if (!account) return;
 
     try {
-
+      setLoadingNFTs(true);
       const eth = getEthereum();
 
       if (!eth) return;
