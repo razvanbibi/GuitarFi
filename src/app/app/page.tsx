@@ -840,6 +840,9 @@ export default function HomePage() {
         err
       );
     }
+    finally {
+      setLoadingNFTs(false);
+    }
   }
 
   const tunes = [
