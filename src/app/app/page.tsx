@@ -899,16 +899,21 @@ export default function HomePage() {
 
       setCurrentTune(random.name);
 
-      const audio =
-        new Audio(random.file);
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
 
-      audio.play();
+      audioRef.current = new Audio(random.file);
+
+      audioRef.current.onended = () => {
+        setTunePlaying(false);
+      };
+
+      await audioRef.current.play();
 
       setTunePlaying(true);
-
-      setTimeout(() => {
-        setTunePlaying(false);
-      }, 15000);
+      
 
       await refreshData();
 
