@@ -2056,6 +2056,7 @@ export default function HomePage() {
       image: "/nfts/lunar-melody-guitar.jpeg",
     },
     {
+      id: 11,
       name: "Crystal Harmony Guitar",
       image: "/nfts/crystal-harmony-guitar.jpeg",
     },
