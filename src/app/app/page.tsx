@@ -2136,6 +2136,7 @@ export default function HomePage() {
       image: "/nfts/ocean-spirit-guitar.jpeg",
     },
     {
+      id: 27,
       name: "Starlight Symphony Guitar",
       image: "/nfts/starlight-symphony-guitar.jpeg",
     },
