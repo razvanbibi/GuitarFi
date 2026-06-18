@@ -2016,8 +2016,8 @@ export default function HomePage() {
       image: "/nfts/phoenix-string-guitar.jpeg",
     },
     {
-      name: "Aurora Chord Guitar",
-      image: "/nfts/aurora-chord-guitar.jpeg",
+      name: "Golden Guitar",
+      image: "/nfts/golden.jpeg",
     },
     {
       name: "Stormbreaker Guitar",
@@ -4045,13 +4045,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                 >
                   <img
-                    src="/nfts/golden.jpeg"
-                    alt="Golden Guitar"
+                    src="/nfts/aurora-chord-guitar.jpeg"
+                    alt="Aurora Chord Guitar"
                     className="w-full h-20 object-contain"
                   />
 
                   <h3 className="mt-2 text-xs text-white">
-                    Golden Guitar
+                    Aurora Chord Guitar
                   </h3>
 
                   <p className="text-[10px] text-slate-500">
@@ -5675,13 +5675,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                   >
                     <img
-                      src="/nfts/golden.jpeg"
-                      alt="Golden Guitar"
+                      src="/nfts/aurora-chord-guitar.jpeg"
+                      alt="Aurora Chord Guitar"
                       className="w-full h-20 object-contain"
                     />
 
                     <h3 className="mt-2 text-xs text-white">
-                      Golden Guitar
+                      Aurora Chord Guitar
                     </h3>
 
                     <p className="text-[10px] text-slate-500">
