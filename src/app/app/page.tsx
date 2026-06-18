@@ -2106,6 +2106,7 @@ export default function HomePage() {
       image: "/nfts/cosmic-voyager-guitar.jpeg",
     },
     {
+      id: 21,
       name: "Inferno Riff Guitar",
       image: "/nfts/inferno-riff-guitar.jpeg",
     },
