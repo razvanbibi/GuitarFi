@@ -913,7 +913,9 @@ export default function HomePage() {
       await audioRef.current.play();
 
       setTunePlaying(true);
-      
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
 
       await refreshData();
 
