@@ -750,70 +750,32 @@ export default function HomePage() {
       setStatus(null);
       await ensureCeloNetwork();
       const { contract } = await getReadOnlyContract();
-
-      const eth = getEthereum();
-
-      if (!eth) {
-        throw new Error("Wallet not found");
-      }
-
-      const provider = new BrowserProvider(eth);
-
-      const nftContract = new Contract(
-        GUITARFI_BADGES_CONTRACT,
-        GUITARFI_BADGES_ABI,
-        provider
-      );
-
       const [
         st,
         hs,
         pt,
         isPaused,
         tEarned,
-
         nft1,
         nft2,
         nft3,
         nft4,
         nft5,
         nft31,
-
       ] = await Promise.all([
-
         contract.streak(account),
-
         contract.highestStreak(account),
-
         contract.pendingTokens(account),
-
         contract.paused(),
-
         contract.totalEarnedTokens(account),
-
         contract.pendingNFTs(account, 1),
         contract.pendingNFTs(account, 2),
         contract.pendingNFTs(account, 3),
         contract.pendingNFTs(account, 4),
         contract.pendingNFTs(account, 5),
-
         contract.pendingNFTs(account, 31),
 
       ]);
-
-      const balances: Record<number, number> = {};
-
-      for (let id = 1; id <= 31; id++) {
-        const bal = await nftContract.balanceOf(
-          account,
-          id
-        );
-
-        balances[id] = Number(bal);
-      }
-
-      setNftBalances(balances);
-
       setStreak(st);
       setHighestStreak(hs);
       setPendingTokens(pt);
@@ -834,6 +796,8 @@ export default function HomePage() {
       setLoading(false);
     }
   }
+
+ 
 
   const tunes = [
     {
@@ -2497,6 +2461,7 @@ ${showExploreMenu
                       setExpandedCollection(true);
                       setShowCollectionsModal(true);
                       setShowExploreMenu(false);
+                      loadNFTBalances();
                     }}
                     className="
   rounded-xl
@@ -4191,6 +4156,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   setExpandedCollection(true);
                   setShowCollectionsModal(true);
                   setShowExploreMenu(false);
+                  
                 }}
                 className="
   group
