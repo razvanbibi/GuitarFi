@@ -2111,6 +2111,7 @@ export default function HomePage() {
       image: "/nfts/inferno-riff-guitar.jpeg",
     },
     {
+      id: 22,
       name: "Arctic Whisper Guitar",
       image: "/nfts/arctic-whisper-guitar.jpeg",
     },
