@@ -800,7 +800,7 @@ export default function HomePage() {
   }
 
   async function loadNFTBalances() {
-
+    setLoadingNFTs(true);
     if (!account) return;
 
     try {
