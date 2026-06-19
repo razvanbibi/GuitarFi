@@ -39,6 +39,11 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
       first: "Consistency unlocks rare guitars 🎸",
       second: "Every daily Gm brings a new collectible.",
     },
+    {
+      duration: 5000,
+      first: "31 unique Guitar NFTs await",
+      second: "Can you complete the entire collection?",
+    },
   ];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
