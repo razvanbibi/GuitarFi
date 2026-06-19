@@ -1445,7 +1445,15 @@ export default function HomePage() {
       setLoading(false);
     }
   }
+  function showVaultToast(message: string) {
 
+    setVaultToast(message);
+
+    setTimeout(() => {
+      setVaultToast(null);
+    }, 2500);
+
+  }
   async function handleCeloVaultDeposit() {
     try {
 
