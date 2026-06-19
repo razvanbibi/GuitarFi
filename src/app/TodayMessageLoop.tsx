@@ -54,6 +54,12 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
       first: "Put your CELO to work",
       second: "Deposit, withdraw and stay liquid anytime.",
     },
+    {
+      duration: 5000,
+      first: "Support the creator behind GuitarFi ❤️",
+      second: "Every contribution keeps the music alive.",
+    }
+
   ];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
