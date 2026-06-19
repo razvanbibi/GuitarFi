@@ -4639,15 +4639,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
         </div>
 
-
-
         {/* Footer */}
         <footer
           className={`mt-auto pt-3 pb-3 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
             }`}
         >
           <span className={isDarkMode ? "" : "text-slate-900"}>
-            Built on Celo 💛
+            Built on Celo
           </span>
 
           <a
@@ -6350,7 +6348,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             <div className="flex items-center gap-3">
               <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center">
                 <img
-                  src="/logo-0x.png"
+                  src="/logo-0x.jpg"
                   alt="0x logo"
                   className="h-full w-full object-contain"
                 />
@@ -6358,15 +6356,15 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               <div className="flex flex-col">
                 <span className="text-sm font-semibold">Welcome to GuitarFi</span>
                 <span className="text-[11px] text-slate-300">
-                  Gn every day on Celo, grow your streak and earn GTR rewards.
+                  Deposit, withdraw and stay liquid anytime.
                 </span>
               </div>
             </div>
 
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
               <li>Tap <span className="font-semibold">Gm</span> once per day to keep your streak alive.</li>
-              <li>Claim your <span className="font-semibold">GTR</span> rewards when the button turns pink.</li>
-              <li>Tip in Mento Dollar (USDm) to climb the supporter leaderboard.</li>
+              <li>Claim your <span className="font-semibold">GTR</span> and Guitar NFTs by clicking the gift button</li>
+              <li>31 unique Guitar NFTs await. Every NFT marks a moment in your journey.</li>
             </ul>
 
             <button
