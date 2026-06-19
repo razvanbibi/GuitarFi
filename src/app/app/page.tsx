@@ -2980,7 +2980,7 @@ to-sky-500/10
       transition-opacity
       duration-500
 
-      bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.18),transparent_70%)]
+      bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.18),transparent_70%)]
     "
                       />
 
