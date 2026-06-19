@@ -2309,17 +2309,8 @@ export default function HomePage() {
                   account={account}
                 />
               </div>
-
-
-
-
-
-
-
             </div>
-
             <div className="mt-4 relative min-h-[70px]">
-
               <button
                 onClick={() => {
                   setShowTradeMenu(!showTradeMenu);
@@ -2333,7 +2324,6 @@ rounded-2xl
 px-5 py-3
 transition-all
 duration-300
-
 ${showTradeMenu
                     ? `
       bg-gradient-to-r
@@ -2355,7 +2345,6 @@ ${showTradeMenu
                 <span className="font-semibold">
                   Trade
                 </span>
-
                 <span>
                   {showTradeMenu ? "−" : "+"}
                 </span>
@@ -2367,7 +2356,6 @@ ${showTradeMenu
       left-[180px]
       top-0
       z-50
-
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
@@ -2383,13 +2371,10 @@ ${showTradeMenu
   min-w-[120px]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
@@ -2407,20 +2392,16 @@ ${showTradeMenu
   min-w-[120x]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
                   >
                     Deposit USDm
                   </button>
-
                   <button
                     onClick={() => {
                       setShowCeloVault(true);
@@ -2432,25 +2413,19 @@ ${showTradeMenu
   min-w-[120px]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
                   >
                     Deposit Celo
                   </button>
-
-
                 </div>
               )}
             </div>
-
             <div className="mt-4 relative">
 
               <button
@@ -6646,7 +6621,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
     ${isDarkMode
               ? `
-     bg-[#050816]/97
+     bg-[#050816]/99
     backdrop-blur-[0.5px]
     border border-white/15
     shadow-[0_20px_50px_rgba(0,0,0,0.45)]

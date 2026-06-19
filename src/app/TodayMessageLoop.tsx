@@ -11,66 +11,67 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
         <>
           Hello{account ? "," : ""}{" "}
           <span
-            className={`font-medium ${
-              isDarkMode ? "text-sky-200" : "text-slate-900"
-            }`}
+            className={`font-medium ${isDarkMode ? "text-sky-200" : "text-slate-900"
+              }`}
           >
             {account ? "guitarist" : "friend"}
           </span>{" "}
           👋
         </>
       ),
-      second: "Building a daily habit on Celo. Onchain music, trade assets, earning GTR",
+      second: "Build your streak. Unlock NFTs. Grow your legend.",
       hero: true,
     },
     {
       duration: 5000,
-      first: "Do you know, You get NFT for every time you play tune?",
-      second: "Missing one day resets streak — don’t blink 👀",
+      first: "Every play unlocks a special guitar NFT",
+      second: "Spin the tune, collect the legend.",
       hero: false,
     },
     {
       duration: 5000,
-      first: "Trade Celo or USDm for GTR",
-      second: "You’re doing better than yesterday 👊",
+      first: "Your next melody is waiting 🎶",
+      second: "Play Tune and discover a random soundtrack.",
       hero: false,
+    },
+    {
+      duration: 5000,
+      first: "Consistency unlocks rare guitars 🎸",
+      second: "Every daily Gm brings a new collectible.",
     },
   ];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
   useEffect(() => {
-  const current = slides[index];
-  const timer = setTimeout(() => {
-    setVisible(false);
-    setTimeout(() => {
-      setIndex((i) => (i + 1) % slides.length);
-      setVisible(true);
-    }, 300);   
-  }, current.duration);
-  return () => clearTimeout(timer);
-}, [index, slides]);
+    const current = slides[index];
+    const timer = setTimeout(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % slides.length);
+        setVisible(true);
+      }, 300);
+    }, current.duration);
+    return () => clearTimeout(timer);
+  }, [index, slides]);
   const slide = slides[index];
   return (
     <div className="relative h-[38px] overflow-hidden">
       <div
-        className={`transition-all duration-300 ease-out ${
-          visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
-        }`}
+        className={`transition-all duration-300 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
+          }`}
       >
         {slide.hero ? (
           <>
-  
+
             <p
-              className={`text-sm leading-tight ${
-                isDarkMode ? "text-slate-200" : "text-slate-900"
-              }`}
+              className={`text-sm leading-tight ${isDarkMode ? "text-slate-200" : "text-slate-900"
+                }`}
             >
               {slide.first}
             </p>
             <p
-              className={`text-[11px] truncate ${
-                isDarkMode ? "text-slate-400" : "text-slate-900"
-              }`}
+              className={`text-[11px] truncate ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                }`}
             >
               {slide.second}
             </p>
@@ -78,16 +79,14 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
         ) : (
           <>
             <p
-              className={`text-[11px] leading-tight ${
-                isDarkMode ? "text-slate-400" : "text-slate-900"
-              }`}
+              className={`text-[11px] leading-tight ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                }`}
             >
               {slide.first}
             </p>
             <p
-              className={`text-[11px] truncate ${
-                isDarkMode ? "text-slate-400" : "text-slate-900"
-              }`}
+              className={`text-[11px] truncate ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                }`}
             >
               {slide.second}
             </p>
