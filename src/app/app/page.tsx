@@ -6528,6 +6528,91 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
       )}
 
+      {vaultToast && (
+        <div
+          className="
+      fixed
+      inset-0
+      z-[9999]
+
+      flex
+      items-center
+      justify-center
+    "
+
+          onClick={() =>
+            setVaultToast(null)
+          }
+        >
+
+          <div
+            onClick={(e) =>
+              e.stopPropagation()
+            }
+
+            className={`
+        group
+        relative
+        isolate
+        overflow-hidden
+
+        rounded-2xl
+
+        border
+
+        px-6
+        py-3
+
+        text-xs
+        font-semibold
+        tracking-[0.15em]
+        uppercase
+
+        backdrop-blur-3xl
+
+        animate-in
+        fade-in
+        zoom-in-95
+
+        ${isDarkMode
+                ? `
+          border-white/15
+          bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
+          text-slate-200
+          shadow-[0_10px_40px_rgba(0,0,0,0.55)]
+          `
+                : `
+          border-sky-300/40
+          bg-[linear-gradient(135deg,rgba(255,255,255,0.95),rgba(230,240,255,0.72))]
+          text-slate-800
+          shadow-[0_10px_30px_rgba(56,189,248,0.25)]
+          `
+              }
+
+        before:absolute
+        before:inset-0
+        before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
+
+        after:absolute
+        after:inset-0
+        after:bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.25)_50%,transparent_80%)]
+        after:translate-x-[-160%]
+        after:animate-[shine_2s_linear]
+
+        [&>span]:relative
+        [&>span]:z-10
+      `}
+          >
+
+            <span>
+              {vaultToast}
+            </span>
+
+          </div>
+
+        </div>
+      )}
+
       {/* Profile drawer (animated */}
       <div
         className={`
