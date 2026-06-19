@@ -956,8 +956,8 @@ export default function HomePage() {
       await audioRef.current.play();
       setTunePlaying(true);
       await refreshData();
-      setStatus(
-        "Tune played 🎸 NFT unlocked"
+      showGlobalToast(
+        "Tune played & NFT unlocked"
       );
 
     } catch (err: any) {
