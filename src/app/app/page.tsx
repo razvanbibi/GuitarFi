@@ -393,7 +393,7 @@ export default function HomePage() {
       setTimeout(() => {
         setTaglineAnim(true);
       }, 50);
-    }, 6000); // 6 seconds
+    }, 11000); // 11 seconds
 
     return () => clearInterval(interval);
   }, []);
