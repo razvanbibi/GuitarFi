@@ -3,7 +3,7 @@ import { getReadOnlyContractServer } from "@/lib/contract.server";
 
 import { ethers } from "ethers";
 
-const NFT_CONTRACT = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
+const NFT_CONTRACT = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
 
 const NFT_ABI = [
   "function ownerOf(uint256 tokenId) view returns (address)"
@@ -22,7 +22,7 @@ export async function GET(
   const highestStreak = Number(await contract.highestStreak(owner));
   return NextResponse.json({
    
-    description: "Dynamic CeloDaily Identity NFT",
+    description: "Dynamic GuitarFi Identity NFT",
     image: `${origin}/api/nft/image/${tokenId}`,
     image_url: `${origin}/api/nft/image/${tokenId}`,
     attributes: [

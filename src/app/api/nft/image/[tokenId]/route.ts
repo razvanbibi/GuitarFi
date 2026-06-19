@@ -1,7 +1,7 @@
 export const runtime = "nodejs";
 import { getReadOnlyContractServer } from "@/lib/contract.server";
 import { ethers } from "ethers";
-const NFT_CONTRACT = "0x934422770B2dA6d6CcA9CcaFf58523eC45491c43";
+const NFT_CONTRACT = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
 const NFT_ABI = ["function ownerOf(uint256) view returns (address)"];
 export async function GET(
   _req: Request,
@@ -26,7 +26,7 @@ export async function GET(
 }
 
 const logoBase64 = await fetchAsBase64(
-  "https://celo-daily.vercel.app/logo-0x.png"
+  "https://guitarfi.vercel.app/logo-0x.jpg"
 );
 
   const svg = `
