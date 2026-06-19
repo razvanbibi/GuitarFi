@@ -16,7 +16,6 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           >
             {account ? "guitarist" : "friend"}
           </span>{" "}
-          👋
         </>
       ),
       second: "Turn activity into GTR⚡Unlock NFTs. Grow your legend.",

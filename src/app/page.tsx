@@ -6,7 +6,7 @@ export default function LandingPage() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/landing.jpg')",
+          backgroundImage: "url('/landing.jpeg')",
         }}
       />
       {/* Dark overlay */}

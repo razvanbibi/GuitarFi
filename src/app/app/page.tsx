@@ -1905,7 +1905,6 @@ export default function HomePage() {
       ]);
 
       const donationTopic = ethers.id("Donation(address,uint256,uint256)");
-
       const logs = await provider.getLogs({
 
         topics: [donationTopic],
