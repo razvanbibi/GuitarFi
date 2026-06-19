@@ -2936,12 +2936,12 @@ ${showExploreMenu
 
     rounded-2xl
 
-    border border-emerald-400/25
+    border border-sky-400/25
 
-    bg-gradient-to-r
-    from-emerald-500/10
-    via-emerald-400/10
-    to-emerald-500/10
+bg-gradient-to-r
+from-sky-500/10
+via-cyan-400/10
+to-sky-500/10
 
     backdrop-blur-xl
 
