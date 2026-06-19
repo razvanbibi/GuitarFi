@@ -4367,13 +4367,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             "
             >
               <span
-                className={`flex items-center gap-2 ${isDarkMode ? "text-slate-100" : "text-slate-900"
+                className={`flex items-center gap-2 font-medium ${isDarkMode ? "text-slate-400" : "text-slate-900"
                   }`}
               >
-                <span className="text-lg"></span> Support creator
+                <span className="text-lg"></span> Community support
               </span>
               <span
-                className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
+                className={`text-[11px] ${isDarkMode ? "text-slate-500" : "text-slate-900"
                   }`}
               >
                 {showDonate ? "Hide" : "Tip in USDm on Celo"}
