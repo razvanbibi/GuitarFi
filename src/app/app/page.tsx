@@ -2948,7 +2948,7 @@ to-sky-500/10
     transition-all
     duration-500
 
-    shadow-[0_0_20px_rgba(16,185,129,0.15)]
+  shadow-[0_0_20px_rgba(56,189,248,0.15)]
 
     cursor-not-allowed
   "
