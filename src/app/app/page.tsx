@@ -335,7 +335,7 @@ export default function HomePage() {
   useEffect(() => {
     const eth = getEthereum();
     if (!eth) {
-      setStatus("Please install MetaMask or a compatible wallet.");
+      showGlobalToast("Please install MetaMask or a compatible wallet.");
       return;
     }
 
@@ -422,7 +422,7 @@ export default function HomePage() {
   async function handleMintIdentity() {
     try {
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
 
@@ -450,7 +450,7 @@ export default function HomePage() {
 
       await loadIdentity();
 
-      setStatus(
+      showGlobalToast(
         "Identity NFT minted 🎉"
       );
 
@@ -459,7 +459,7 @@ export default function HomePage() {
     } catch (err: any) {
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
@@ -626,7 +626,7 @@ export default function HomePage() {
     try {
 
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
 
@@ -644,7 +644,7 @@ export default function HomePage() {
 
       if (convertToken === "USDm") {
 
-        setStatus("Approve USDm...");
+        showGlobalToast("Approve USDm...");
 
         const { usdc } =
           await getUSDmContractWithSigner();
@@ -657,7 +657,7 @@ export default function HomePage() {
 
         await approveTx.wait();
 
-        setStatus("Converting USDm to GTR...");
+        showGlobalToast("Converting USDm to GTR...");
 
         const { contract } =
           await getContractWithSigner();
@@ -677,7 +677,7 @@ export default function HomePage() {
 
       else {
 
-        setStatus("Converting CELO to GTR...");
+        showGlobalToast("Converting CELO to GTR...");
 
         const { contract } =
           await getContractWithSigner();
@@ -691,7 +691,7 @@ export default function HomePage() {
 
       }
 
-      setStatus(
+      showGlobalToast(
         `Successfully converted ${convertAmount} ${convertToken} to GTR 🎸`
       );
 
@@ -701,7 +701,7 @@ export default function HomePage() {
 
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Conversion failed"
@@ -720,7 +720,7 @@ export default function HomePage() {
 
       const eth = getEthereum();
       if (!eth) {
-        setStatus("Please install MetaMask.");
+        showGlobalToast("Please install MetaMask.");
         return;
       }
 
@@ -733,7 +733,7 @@ export default function HomePage() {
       });
 
       if (accounts.length === 0) {
-        setStatus("No account selected.");
+        showGlobalToast("No account selected.");
         return;
       }
       setAccount(accounts[0]);
@@ -743,7 +743,7 @@ export default function HomePage() {
       await refreshData();
     } catch (err: any) {
       console.error(err);
-      setStatus(err.message ?? "Failed to connect wallet.");
+      showGlobalToast(err.message ?? "Failed to connect wallet.");
     }
   }
 
@@ -795,7 +795,7 @@ export default function HomePage() {
       return { pending: pt };
     } catch (err: any) {
       console.error(err);
-      setStatus(err.message ?? "Failed to load data.");
+      showGlobalToast(err.message ?? "Failed to load data.");
     } finally {
       setLoading(false);
     }
@@ -886,7 +886,7 @@ export default function HomePage() {
     try {
 
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
       if (!hasIdentityNFT) {
@@ -913,7 +913,7 @@ export default function HomePage() {
 
       if (allowance < tuneCost) {
 
-        setStatus(
+        showGlobalToast(
           "Approve GTR..."
         );
 
@@ -926,7 +926,7 @@ export default function HomePage() {
         await approveTx.wait();
       }
 
-      setStatus(
+      showGlobalToast(
         "Playing tune onchain..."
       );
 
@@ -974,7 +974,7 @@ export default function HomePage() {
         return;
       }
 
-      setStatus(msg || "Play failed.");
+      showGlobalToast(msg || "Play failed.");
       setTunePlaying(false);
     }
     finally {
@@ -998,12 +998,12 @@ export default function HomePage() {
   async function handleCheckIn() {
     try {
       if (!account) {
-        setStatus("Connect your wallet first.");
+        showGlobalToast("Connect your wallet first.");
         return;
       }
       setLoading(true);
       setActiveAction("gm");
-      setStatus("Sending Gm transaction...");
+      showGlobalToast("Sending Gm transaction...");
       const prevPending = pendingTokens ?? BigInt(0);
 
       await ensureCeloNetwork();
@@ -1020,7 +1020,7 @@ export default function HomePage() {
       const tx = await contract.checkIn();
 
       await tx.wait();
-      setStatus("Gm confirmed 🎉");
+      showGlobalToast("Gm confirmed 🎉");
 
 
       const result = await refreshData();
@@ -1091,7 +1091,7 @@ export default function HomePage() {
         return;
       }
 
-      setStatus(msg || "Gm failed.");
+      showGlobalToast(msg || "Gm failed.");
     } finally {
       setLoading(false);
       setActiveAction(null);
@@ -1101,7 +1101,7 @@ export default function HomePage() {
   async function handleTap() {
     try {
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
 
@@ -1117,7 +1117,7 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus(
+      showGlobalToast(
         "Tap successful 🎸 +0.01 GTR"
       );
 
@@ -1137,7 +1137,7 @@ export default function HomePage() {
         return;
       }
 
-      setStatus(msg || "Tap failed.");
+      showGlobalToast(msg || "Tap failed.");
     } finally {
       setLoading(false);
       setActiveAction(null);
@@ -1175,7 +1175,7 @@ export default function HomePage() {
   async function handleClaimAll() {
     try {
       if (!account) {
-        setStatus("Connect your wallet first.");
+        showGlobalToast("Connect your wallet first.");
         return;
       }
 
@@ -1189,7 +1189,7 @@ export default function HomePage() {
         (pendingNFT31 ?? BigInt(0)) > BigInt(0);
 
       if (!hasTokens && !hasBadges) {
-        setStatus("Nothing to claim right now.");
+        showGlobalToast("Nothing to claim right now.");
         return;
       }
 
@@ -1220,7 +1220,7 @@ export default function HomePage() {
       setpendingNFT3(BigInt(0));
       setpendingNFT31(BigInt(0));
 
-      setStatus("Claim successful 🎉");
+      showGlobalToast("Claim successful 🎉");
 
       setRecentlyClaimed(true);
       await refreshData();
@@ -1235,7 +1235,7 @@ export default function HomePage() {
 
     } catch (err: any) {
       console.error(err);
-      setStatus(
+      showGlobalToast(
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
@@ -1325,7 +1325,7 @@ export default function HomePage() {
   async function handleDonateClick() {
     try {
       if (!account) {
-        setStatus("Connect your wallet first.");
+        showGlobalToast("Connect your wallet first.");
         return;
       }
 
@@ -1333,7 +1333,7 @@ export default function HomePage() {
       const amountNumber = Number(raw);
 
       if (!Number.isFinite(amountNumber) || amountNumber <= 0) {
-        setStatus("Enter a valid donation amount.");
+        showGlobalToast("Enter a valid donation amount.");
         return;
       }
 
@@ -1344,7 +1344,7 @@ export default function HomePage() {
       await ensureCeloNetwork();
 
       // 1️⃣ Approve
-      setStatus("Approve USDm in wallet...");
+      showGlobalToast("Approve USDm in wallet...");
 
       const { usdc } = await getUSDmContractWithSigner();
 
@@ -1374,7 +1374,7 @@ export default function HomePage() {
       await donateTx.wait();
 
       // ✅ success
-      setStatus("Donation successful 💙");
+      showGlobalToast("Donation successful 💙");
 
       await loadDonationLeaderboard();
 
@@ -1388,7 +1388,7 @@ export default function HomePage() {
     } catch (err: any) {
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
@@ -1402,7 +1402,7 @@ export default function HomePage() {
   async function handleVaultDeposit() {
     try {
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
 
@@ -1412,7 +1412,7 @@ export default function HomePage() {
 
       const { usdc } = await getUSDmContractWithSigner();
 
-      setStatus("Approve USDm...");
+      showGlobalToast("Approve USDm...");
 
       const approveTx = await usdc.approve(
         "0x33FAF6C82003cCEA6a3F4A1d1e9ab9CB7DC40FD4",
@@ -1429,14 +1429,14 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("Vault deposit successful 💎");
+      showGlobalToast("Vault deposit successful 💎");
 
       await loadVaultData();
 
     } catch (err: any) {
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Deposit failed"
@@ -1458,7 +1458,7 @@ export default function HomePage() {
     try {
 
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
       setVaultAction("deposit");
@@ -1489,7 +1489,7 @@ export default function HomePage() {
 
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Deposit failed"
@@ -1507,7 +1507,7 @@ export default function HomePage() {
     try {
 
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
       setVaultAction("withdraw");
@@ -1538,7 +1538,7 @@ export default function HomePage() {
 
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Withdraw failed"
@@ -1555,7 +1555,7 @@ export default function HomePage() {
   async function handleVaultWithdraw() {
     try {
       if (!account) {
-        setStatus("Connect wallet first");
+        showGlobalToast("Connect wallet first");
         return;
       }
 
@@ -1569,14 +1569,14 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("Withdraw successful 💸");
+      showGlobalToast("Withdraw successful 💸");
 
       await loadVaultData();
 
     } catch (err: any) {
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Withdraw failed"
@@ -1626,11 +1626,11 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("Mint successful ✅");
+      showGlobalToast("Mint successful ✅");
     } catch (err: any) {
       console.error(err);
 
-      setStatus(err.message ?? "Mint failed");
+      showGlobalToast(err.message ?? "Mint failed");
     } finally {
       setDevRunning(false);
     }
@@ -1647,7 +1647,7 @@ export default function HomePage() {
 
       const burnCount = Number(devBurnCount);
 
-      setStatus(
+      showGlobalToast(
         `Starting ${burnCount} burns...`
       );
 
@@ -1673,14 +1673,14 @@ export default function HomePage() {
         );
       }
 
-      setStatus(
+      showGlobalToast(
         `Success: ${data.total} burns`
       );
 
     } catch (err: any) {
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.message || "Burn failed"
       );
 
@@ -1703,11 +1703,11 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("Claim successful ✅");
+      showGlobalToast("Claim successful ✅");
     } catch (err: any) {
       console.error(err);
 
-      setStatus(err.message ?? "Claim failed");
+      showGlobalToast(err.message ?? "Claim failed");
     } finally {
       setDevRunning(false);
     }
@@ -1726,11 +1726,11 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("Reverse successful ✅");
+      showGlobalToast("Reverse successful ✅");
     } catch (err: any) {
       console.error(err);
 
-      setStatus(err.message ?? "Reverse failed");
+      showGlobalToast(err.message ?? "Reverse failed");
     } finally {
       setDevRunning(false);
     }
@@ -1762,10 +1762,10 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus("MultiSend successful ✅");
+      showGlobalToast("MultiSend successful ✅");
     } catch (err: any) {
       console.error(err);
-      setStatus(err.message ?? "MultiSend failed");
+      showGlobalToast(err.message ?? "MultiSend failed");
     } finally {
       setDevRunning(false);
     }
@@ -1787,7 +1787,7 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus(
+      showGlobalToast(
         "USDm withdrawn successfully ✅"
       );
 
@@ -1795,7 +1795,7 @@ export default function HomePage() {
 
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.message ??
         "USDm withdraw failed"
       );
@@ -1824,7 +1824,7 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus(
+      showGlobalToast(
         "CELO withdrawn successfully ✅"
       );
 
@@ -1832,7 +1832,7 @@ export default function HomePage() {
 
       console.error(err);
 
-      setStatus(
+      showGlobalToast(
         err?.message ??
         "CELO withdraw failed"
       );
