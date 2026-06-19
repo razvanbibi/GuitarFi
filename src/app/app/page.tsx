@@ -2937,7 +2937,7 @@ ${showExploreMenu
                             cursor-not-allowed
                            "
                     >
-                      Gutarist
+                      Guitarist
                     </button>
 
                     <span className="text-[11px] text-slate-400">
@@ -2951,37 +2951,71 @@ ${showExploreMenu
                     onClick={handleCheckIn}
                     disabled={loading || paused === true}
                     className="
-group
-relative
+    group
+    relative
+    overflow-hidden
 
-h-14
-w-24
+    w-[92px]
+    h-12
 
-rounded-full
+    rounded-2xl
 
-bg-white/[0.06]
-backdrop-blur-xl
+    border border-sky-400/25
 
-border border-white/10
+    bg-gradient-to-r
+    from-sky-500/10
+    via-cyan-400/10
+    to-sky-500/10
 
-text-white
-font-semibold
-text-sm
+    backdrop-blur-xl
 
-transition-all
-duration-300
+    transition-all
+    duration-500
 
-hover:border-sky-400/40
-hover:bg-sky-500/10
+    hover:border-sky-300/60
+    hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
 
-hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
-
-active:scale-95
-"
+    active:scale-[0.98]
+  "
                   >
-                    {activeAction === "gm"
-                      ? "Processing..."
-                      : "Gm"}
+                    <div
+                      className="
+      absolute inset-0
+
+      -translate-x-full
+      group-hover:translate-x-full
+
+      transition-transform
+      duration-[1800ms]
+
+      bg-gradient-to-r
+      from-transparent
+      via-white/20
+      to-transparent
+    "
+                    />
+
+                    <div
+                      className="
+      absolute inset-0
+
+      opacity-0
+      group-hover:opacity-100
+
+      transition-opacity
+      duration-500
+
+      bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.18),transparent_70%)]
+    "
+                    />
+
+                    <div className="relative z-10 flex items-center justify-center h-full">
+                      <span className="font-semibold text-slate-100 tracking-wide">
+                        {activeAction === "gm"
+                          ? "Processing"
+                          : "Gm"}
+                      </span>
+                    </div>
                   </button>
                 )}
                 <div className="flex flex-col items-center gap-1">
