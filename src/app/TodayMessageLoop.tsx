@@ -19,7 +19,7 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           👋
         </>
       ),
-      second: "Build your streak. Unlock NFTs. Grow your legend.",
+      second: "Turn activity into GTR⚡Unlock NFTs. Grow your legend.",
       hero: true,
     },
     {
