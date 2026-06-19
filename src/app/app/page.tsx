@@ -2927,17 +2927,68 @@ ${showExploreMenu
                     <button
                       disabled
                       className="
-                      inline-flex items-center justify-center
-                       px-8 py-3 rounded-full
-                        text-base font-semibold
-                         text-emerald-600
-                         bg-emerald-500/10
-                           border border-emerald-400/5
-                            shadow-inner shadow-emerald-900/40
-                            cursor-not-allowed
-                           "
+    group
+    relative
+    overflow-hidden
+
+    w-[132px]
+    h-12
+
+    rounded-2xl
+
+    border border-emerald-400/25
+
+    bg-gradient-to-r
+    from-emerald-500/10
+    via-emerald-400/10
+    to-emerald-500/10
+
+    backdrop-blur-xl
+
+    transition-all
+    duration-500
+
+    shadow-[0_0_20px_rgba(16,185,129,0.15)]
+
+    cursor-not-allowed
+  "
                     >
-                      Guitarist
+                      <div
+                        className="
+      absolute inset-0
+
+      -translate-x-full
+      group-hover:translate-x-full
+
+      transition-transform
+      duration-[1800ms]
+
+      bg-gradient-to-r
+      from-transparent
+      via-white/20
+      to-transparent
+    "
+                      />
+
+                      <div
+                        className="
+      absolute inset-0
+
+      opacity-0
+      group-hover:opacity-100
+
+      transition-opacity
+      duration-500
+
+      bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.18),transparent_70%)]
+    "
+                      />
+
+                      <div className="relative z-10 flex items-center justify-center h-full">
+                        <span className="font-semibold text-emerald-200 tracking-wide">
+                          Guitarist
+                        </span>
+                      </div>
                     </button>
 
                     <span className="text-[11px] text-slate-400">
