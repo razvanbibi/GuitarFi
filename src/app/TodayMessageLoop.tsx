@@ -44,6 +44,11 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
       first: "31 unique Guitar NFTs await",
       second: "Can you complete the entire collection?",
     },
+    {
+      duration: 5000,
+      first: "Your collection tells your story ✨",
+      second: "Every NFT marks a moment in your journey.",
+    },
   ];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
