@@ -49,6 +49,11 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
       first: "Your collection tells your story ✨",
       second: "Every NFT marks a moment in your journey.",
     },
+    {
+      duration: 5000,
+      first: "Put your CELO to work",
+      second: "Deposit, withdraw and stay liquid anytime.",
+    },
   ];
   const [index, setIndex] = useState(0);
   const [visible, setVisible] = useState(true);
