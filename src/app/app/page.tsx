@@ -135,7 +135,7 @@ export default function HomePage() {
   const [userVaultBalance, setUserVaultBalance] = useState("0");
   const [celoVaultBalance, setCeloVaultBalance] =
     useState("0");
-  const [vaultToast, setVaultToast] =
+  const [globalToast, setGlobalToast] =
     useState<string | null>(null);
 
   const [userCeloVaultBalance, setUserCeloVaultBalance] =
@@ -1445,12 +1445,12 @@ export default function HomePage() {
       setLoading(false);
     }
   }
-  function showVaultToast(message: string) {
+  function showGlobalToast(message: string) {
 
-    setVaultToast(message);
+    setGlobalToast(message);
 
     setTimeout(() => {
-      setVaultToast(null);
+      setGlobalToast(null);
     }, 2500);
 
   }
@@ -1479,7 +1479,7 @@ export default function HomePage() {
 
       await tx.wait();
 
-      showVaultToast(
+      setGlobalToast(
         "CELO deposited successfully"
       );
 
@@ -1528,7 +1528,7 @@ export default function HomePage() {
 
       await tx.wait();
 
-      showVaultToast(
+      setGlobalToast(
         "CELO withdrawn successfully"
       );
 
@@ -6528,7 +6528,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
       )}
 
-      {vaultToast && (
+      {globalToast && (
         <div
           className="
       fixed
@@ -6541,7 +6541,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     "
 
           onClick={() =>
-            setVaultToast(null)
+            setGlobalToast(null)
           }
         >
 
@@ -6605,7 +6605,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           >
 
             <span>
-              {vaultToast}
+              {globalToast}
             </span>
 
           </div>
