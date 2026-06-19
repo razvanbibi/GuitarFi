@@ -1528,8 +1528,8 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus(
-        "CELO withdraw successful 💸"
+      showVaultToast(
+        "CELO withdrawn successfully"
       );
 
       await loadVaultData();
