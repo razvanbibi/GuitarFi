@@ -2985,7 +2985,7 @@ to-sky-500/10
                       />
 
                       <div className="relative z-10 flex items-center justify-center h-full">
-                        <span className="font-semibold text-emerald-200 tracking-wide">
+                        <span className="font-semibold text-sky-200 tracking-wide">
                           Guitarist
                         </span>
                       </div>
