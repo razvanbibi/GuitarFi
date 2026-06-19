@@ -1479,8 +1479,8 @@ export default function HomePage() {
 
       await tx.wait();
 
-      setStatus(
-        "CELO deposit successful 💎"
+      showVaultToast(
+        "CELO deposited successfully"
       );
 
       await loadVaultData();
