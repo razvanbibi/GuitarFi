@@ -6551,7 +6551,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
     ${isDarkMode
               ? `
-     bg-[#050816]/70
+     bg-[#050816]/90
     backdrop-blur-[0.5px]
     border border-white/15
     shadow-[0_20px_50px_rgba(0,0,0,0.45)]
