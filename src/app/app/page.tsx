@@ -2513,10 +2513,8 @@ ${showExploreMenu
   min-w-[120px]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
   transition-all
@@ -2568,9 +2566,7 @@ ${showExploreMenu
               <span className="music-note note-3">♬</span>
               <span className="music-note note-4">♪</span>
             </div>
-
           </section>
-
 
           <section
             className={`
@@ -2620,7 +2616,7 @@ ${showExploreMenu
               <div
                 className="
     mt-4
-    rounded-2xl
+    rounded-2xl 
     border border-sky-500/20
     bg-slate-950/40
     p-4
@@ -2636,14 +2632,12 @@ ${showExploreMenu
   relative
 
   overflow-hidden
-
   h-16
   w-full
 
   rounded-[22px]
 
   border border-cyan-400/20
-
   bg-[linear-gradient(135deg,
   rgba(6,182,212,0.12),
   rgba(59,130,246,0.10),
