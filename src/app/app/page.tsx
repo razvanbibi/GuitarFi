@@ -6403,8 +6403,33 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
             <button
               onClick={closeOnboarding}
-              className="mt-2 w-full rounded-full bg-sky-500 text-xs font-semibold text-slate-950 py-2 hover:bg-sky-400 transition active:scale-[0.98] transition-transform
-              "
+              className="
+group
+relative
+overflow-hidden
+
+w-full
+h-12
+
+rounded-2xl
+
+border border-sky-400/25
+
+bg-gradient-to-r
+from-sky-500/10
+via-cyan-400/10
+to-sky-500/10
+
+backdrop-blur-xl
+
+transition-all
+duration-500
+
+hover:border-sky-300/60
+hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
+
+active:scale-[0.98]
+"
             >
               Got it, let&apos;s start
             </button>
