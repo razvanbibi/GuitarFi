@@ -23,7 +23,7 @@ export default function LandingPage() {
             bg-white
             px-6 py-3
             text-sm
-            font-semibold
+            font-semibold 
             text-black
             transition
             hover:scale-105
