@@ -977,8 +977,6 @@ export default function HomePage() {
 
     }
   }
-
-
   function showToast(next: Toast, durationMs = 2000) {
     setToast(next);
     if (next) {
