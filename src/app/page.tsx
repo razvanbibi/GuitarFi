@@ -72,7 +72,7 @@ export default function LandingPage() {
   group
   relative
   isolate
-  overflow-hidden
+  overflow-hidden 
   rounded-2xl
   border border-white/15
   px-6 py-3
