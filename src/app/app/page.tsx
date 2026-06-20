@@ -6334,12 +6334,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       {/* Onboarding overlay */}
       {showOnboarding && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+
           <div
             className="
     w-[90%] max-w-sm rounded-3xl
-    bg-slate-950/80 backdrop-blur-xl
-    border border-sky-400/50
-    shadow-[0_0_25px_rgba(56,189,248,0.45),0_0_60px_rgba(56,189,248,0.25)]
+    bg-slate-950/80  backdrop-blur-xl
+    border border-white/10
+    shadow-[0_0_40px_rgba(56,189,248,0.25),0_0_90px_rgba(168,85,247,0.12)]
     p-5 space-y-3
     animate-[overlayFade_0.55s_ease-out]
             "
