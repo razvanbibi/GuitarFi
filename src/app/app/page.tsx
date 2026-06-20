@@ -6347,7 +6347,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
             <div className="flex items-center gap-3">
               <div
-  className="
+                className="
     relative
     h-11 w-11
     rounded-full
@@ -6358,14 +6358,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
     shadow-[0_0_25px_rgba(56,189,248,0.45)]
   "
->
-  <div
-    className="
+              >
+                <div
+                  className="
       absolute inset-0
       bg-sky-400/20
       blur-xl
     "
-  />
+                />
                 <img
                   src="/logo-0x.jpg"
                   alt="0x logo"
@@ -6373,7 +6373,22 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-semibold">Welcome to GuitarFi</span>
+                <span
+                  className="
+    text-base
+    font-bold
+
+    bg-gradient-to-r
+    from-white
+    via-sky-200
+    to-cyan-300
+
+    bg-clip-text
+    text-transparent
+  "
+                >
+                  Welcome to GuitarFi
+                </span>
                 <span className="text-[11px] text-slate-300">
                   Deposit, withdraw and stay liquid anytime.
                 </span>
