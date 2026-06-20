@@ -1,15 +1,15 @@
 // src/lib/contract.abi.ts
 export const OXTXN_STREAK_ABI = [
-  {
+  { 
     type: "function", 
     name: "streak",
     stateMutability: "view",
     inputs: [{ name: "user", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
-  },
+  }, 
   {
     type: "function",
-    name: "highestStreak",
+    name: "highestStreak", 
     stateMutability: "view",
     inputs: [{ name: "user", type: "address" }],
     outputs: [{ name: "", type: "uint256" }],
