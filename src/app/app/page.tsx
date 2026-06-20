@@ -1855,7 +1855,6 @@ export default function HomePage() {
         new ethers.JsonRpcProvider(
           "https://forno.celo.org"
         );
-
       const contractCeloBalance =
         await provider.getBalance(
           CELODAILY_VAULT_CONTRACT
