@@ -1,7 +1,7 @@
 // src/lib/contract.abi.ts
 export const OXTXN_STREAK_ABI = [
   {
-    type: "function",
+    type: "function", 
     name: "streak",
     stateMutability: "view",
     inputs: [{ name: "user", type: "address" }],
