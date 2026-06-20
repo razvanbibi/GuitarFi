@@ -26,9 +26,8 @@ export async function GET(
 }
 
 const logoBase64 = await fetchAsBase64(
-  "https://guitarfi.vercel.app/logo-0x.jpg"
+  "https://guitarfi.vercel.app/logo-0x.jpg" 
 );
-
   const svg = `
 <svg width="600" height="360" viewBox="0 0 600 360"
   xmlns="http://www.w3.org/2000/svg"
