@@ -77,7 +77,7 @@ export default function LandingPage() {
   border border-white/15
   px-6 py-3
   text-sm
-  font-semibold
+  font-semibold 
   tracking-[0.18em]
   uppercase
   text-slate-300
