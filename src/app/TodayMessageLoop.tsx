@@ -28,13 +28,13 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
       hero: false,
     },
     {
-      duration: 5000,
+      duration: 5000, 
       first: "Your next melody is waiting 🎶",
       second: "Play Tune and discover a random soundtrack.",
       hero: false,
     },
     {
-      duration: 5000,
+      duration: 5000, 
       first: "Consistency unlocks rare guitars 🎸",
       second: "Every daily Gm brings a new collectible.",
     },
