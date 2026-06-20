@@ -3,7 +3,7 @@ type Props = {
   isDarkMode: boolean;
   account: string | null;
 };
-export default function TodayMessageLoop({ isDarkMode, account }: Props) {
+export default function TodayMessageLoop({ isDarkMode, account }: Props) { 
   const slides = [
     {
       duration: 4000,
@@ -18,7 +18,7 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           </span>{" "}
         </>
       ),
-      second: "Turn activity into GTR⚡Unlock NFTs. Grow your legend.",
+      second: "Turn activity into GTR⚡Unlock NFTs. Grow your legend.", 
       hero: true,
     },
     {
