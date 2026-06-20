@@ -6346,7 +6346,26 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           >
 
             <div className="flex items-center gap-3">
-              <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center">
+              <div
+  className="
+    relative
+    h-11 w-11
+    rounded-full
+    overflow-hidden
+    flex items-center justify-center
+
+    ring-2 ring-sky-400/30
+
+    shadow-[0_0_25px_rgba(56,189,248,0.45)]
+  "
+>
+  <div
+    className="
+      absolute inset-0
+      bg-sky-400/20
+      blur-xl
+    "
+  />
                 <img
                   src="/logo-0x.jpg"
                   alt="0x logo"
