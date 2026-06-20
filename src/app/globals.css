@@ -168,7 +168,6 @@ body {
     transform: translateX(-8px) scale(0.9);
     opacity: 0;
   }
-
   60% {
     transform: translateX(2px) scale(1.05);
     opacity: 1;
@@ -178,7 +177,6 @@ body {
     transform: translateX(0) scale(1);
   }
 }
-
 @keyframes avatar-run {
   from {
     left: 5%;
