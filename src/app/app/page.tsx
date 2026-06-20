@@ -557,7 +557,6 @@ export default function HomePage() {
       });
 
       const data = await res.json();
-
       if (!data.ok) {
         console.error("Profile sync failed");
       }
@@ -565,7 +564,6 @@ export default function HomePage() {
       console.error("Profile upload failed", err);
     }
   }
-
   function handleAvatarUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
