@@ -6431,7 +6431,26 @@ hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
 active:scale-[0.98]
 "
             >
-              Got it, let&apos;s start
+              <div
+                className="
+    absolute inset-0
+
+    -translate-x-full
+    group-hover:translate-x-full
+
+    transition-transform
+    duration-[1800ms]
+
+    bg-gradient-to-r
+    from-transparent
+    via-white/20
+    to-transparent
+  "
+              />
+
+              <div className="relative z-10">
+                Got it, let's start
+              </div>
             </button>
           </div>
         </div>
