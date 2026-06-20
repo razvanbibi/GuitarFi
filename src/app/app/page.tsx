@@ -308,13 +308,12 @@ export default function HomePage() {
     const d = new Date();
     return `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`;
   }
-
   function getTimeUntilTomorrowUTC() {
     const now = new Date();
     const tomorrow = new Date(
       Date.UTC(
         now.getUTCFullYear(),
-        now.getUTCMonth(),
+        now.getUTCMonth(), 
         now.getUTCDate() + 1,
         0, 0, 0
       )
@@ -326,7 +325,6 @@ export default function HomePage() {
 
     return `${hours}h ${minutes}m`;
   }
-
 
   function getStorageKey(acc: string) {
     return `celodaily:checkin:${acc.toLowerCase()}`;
