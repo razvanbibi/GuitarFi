@@ -6396,7 +6396,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             </div>
 
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
-              <li>Tap <span className="font-semibold">Gm</span> once per day to keep your streak alive.</li>
+              <li>Play <span className="font-semibold">Tune</span> and discover a random soundtrack.</li>
               <li>Claim your <span className="font-semibold">GTR</span> and Guitar NFTs by clicking the gift button</li>
               <li>31 unique Guitar NFTs await. Every NFT marks a moment in your journey.</li>
             </ul>
