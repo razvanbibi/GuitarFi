@@ -84,7 +84,7 @@ export default function TodayMessageLoop({ isDarkMode, account }: Props) {
           <>
 
             <p
-              className={`text-sm leading-tight ${isDarkMode ? "text-slate-200" : "text-slate-900"
+              className={`text-sm leading-tight ${isDarkMode ? "text-slate-200" : "text-slate-900" 
                 }`}
             >
               {slide.first}
