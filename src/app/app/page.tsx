@@ -686,11 +686,8 @@ export default function HomePage() {
           await contract.convertCELOToGTR({
             value: amount,
           });
-
         await tx.wait();
-
       }
-
       showGlobalToast(
         `Successfully converted ${convertAmount} ${convertToken} to GTR 🎸`
       );
