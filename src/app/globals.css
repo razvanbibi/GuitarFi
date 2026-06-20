@@ -197,12 +197,10 @@ body {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
 }
-
 @keyframes leg-run {
   0% {
     transform: translateY(0);
