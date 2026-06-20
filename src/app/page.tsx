@@ -85,7 +85,7 @@ export default function LandingPage() {
   bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))]
   shadow-[0_10px_30px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.18)]
   transition-all
-  duration-500
+  duration-500 
   hover:scale-[1.03]
   hover:border-white/30
   hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
