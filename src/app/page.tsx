@@ -58,7 +58,7 @@ export default function LandingPage() {
               md:text-xl
               text-white/80
               max-w-2xl
-              mx-auto
+              mx-auto 
             "
           >
             The SocialFi & GameFi Hub built on Celo.
