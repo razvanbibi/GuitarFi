@@ -117,7 +117,7 @@ const logoBase64 = await fetchAsBase64(
 <g transform="translate(300 300)">
   <image
   xlink:href="${logoBase64 ?? ""}"
-  x="-28" y="-8"
+  x="-28" y="-8" 
   width="16" height="16"/>
 
 
