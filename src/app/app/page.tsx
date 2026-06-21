@@ -423,40 +423,28 @@ export default function HomePage() {
         showGlobalToast("Connect wallet first");
         return;
       }
-
       setLoading(true);
       setStatus("Confirm mint in wallet...");
-
       await ensureCeloNetwork();
-
       const eth = getEthereum();
       if (!eth) throw new Error("Wallet not found");
-
       const provider = new ethers.BrowserProvider(eth as any);
       const signer = await provider.getSigner();
-
       const nft = new ethers.Contract(
         IDENTITY_NFT_ADDRESS,
         ["function mint()"],
         signer
       );
-
       const tx = await nft.mint();
       await tx.wait();
-
       setHasIdentityNFT(true);
-
       await loadIdentity();
-
       showGlobalToast(
         "Identity NFT minted 🎉"
       );
-
       setShowMintIdentity(false);
-
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(
         err?.info?.error?.message ??
         err?.shortMessage ??
@@ -467,7 +455,7 @@ export default function HomePage() {
       setLoading(false);
     }
   }
-  
+
   async function getUSDmContractWithSigner() {
     const eth = getEthereum();
     if (!eth) throw new Error("Wallet not found");
