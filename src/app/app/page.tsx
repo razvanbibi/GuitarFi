@@ -527,20 +527,13 @@ export default function HomePage() {
 
   async function saveProfile(name: string, avatar: string) {
     if (!account) return;
-
-    // local state
     setProfileName(name);
     setProfileAvatar(avatar);
-
-    // local storage
     localStorage.setItem(
       `profile:${account}`,
       JSON.stringify({ name, avatar })
 
     );
-
-
-    // 🔥 instant Redis sync
     try {
       const res = await fetch("/api/profile/register", {
         method: "POST",
@@ -553,7 +546,6 @@ export default function HomePage() {
           avatar,
         }),
       });
-
       const data = await res.json();
       if (!data.ok) {
         console.error("Profile sync failed");
@@ -562,10 +554,10 @@ export default function HomePage() {
       console.error("Profile upload failed", err);
     }
   }
+
   function handleAvatarUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
-
     const reader = new FileReader();
     reader.onload = () => {
       const base64 = reader.result as string;
@@ -577,15 +569,10 @@ export default function HomePage() {
   async function ensureCeloNetwork() {
     const eth = getEthereum();
     if (!eth) throw new Error("Wallet not found");
-
-    // 🔥 MiniPay skip
     if ((window as any).ethereum?.isMiniPay) {
       return;
     }
-
     const chainId = await eth.request({ method: "eth_chainId" });
-
-    // Celo mainnet = 0xa4ec (42220)
     if (chainId !== "0xa4ec") {
       try {
         await eth.request({
