@@ -1436,18 +1436,14 @@ export default function HomePage() {
   async function handleDevBurn() {
     try {
       setDevRunning(true);
-
       const burnAmount = ethers.parseUnits(
         devBurnAmount,
         18
       );
-
       const burnCount = Number(devBurnCount);
-
       showGlobalToast(
         `Starting ${burnCount} burns...`
       );
-
       const res = await fetch(
         "/api/dev-burn-flood",
         {
@@ -1461,26 +1457,20 @@ export default function HomePage() {
           }),
         }
       );
-
       const data = await res.json();
-
       if (!res.ok) {
         throw new Error(
           data.error || "Burn failed"
         );
       }
-
       showGlobalToast(
         `Success: ${data.total} burns`
       );
-
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(
         err?.message || "Burn failed"
       );
-
     } finally {
       setDevRunning(false);
     }
