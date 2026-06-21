@@ -6162,22 +6162,17 @@ active:scale-[0.98]
             transition-opacity duration-300
             ${drawerOpen ? "opacity-100" : "opacity-0"}
           `}
-
-
           onClick={() => {
             setDrawerOpen(false);
             setShowBadgeInfo(false);
           }}
-
         />
-
         {/* panel */}
         <div
           className={`
     w-4/5 max-w-xs
     p-4 flex flex-col gap-4
     transform transition-transform duration-300 ease-out
-
     ${isDarkMode
               ? `
      bg-[#050816]/99
@@ -6192,7 +6187,6 @@ active:scale-[0.98]
     shadow-[0_20px_50px_rgba(0,0,0,0.12)]
   `
             }
-
     ${drawerOpen ? "translate-x-0" : "translate-x-full"}
   `}
         >
@@ -6229,7 +6223,6 @@ active:scale-[0.98]
                     ?.click()
                 }
               />
-
               {/* hidden file input (OUTSIDE layout) */}
               <input
                 id="avatarUpload"
@@ -6238,7 +6231,6 @@ active:scale-[0.98]
                 onChange={handleAvatarUpload}
                 className="hidden"
               />
-
               {/* Name */}
               <div className="flex flex-col">
                 <span
@@ -6250,14 +6242,12 @@ active:scale-[0.98]
                 >
                   {profileName || "GuitarFi user"}
                 </span>
-
                 {/* username REMOVE → blank বা small hint */}
                 <span className="text-[11px] text-slate-400">
                   Tap name to edit
                 </span>
               </div>
             </div>
-
             {/* Theme toggle button */}
             {/*<button
               type="button"
@@ -6307,12 +6297,9 @@ active:scale-[0.98]
       ${isDarkMode ? "text-slate-100" : "text-slate-900 font-semibold"}
     `}
               >
-
               </span>
             </div>
-
             <div className="flex justify-between">
-
               <span
                 className={`
     ${isDarkMode ? "text-sky-300" : "text-sky-500"}
@@ -6338,7 +6325,6 @@ active:scale-[0.98]
 
               {/* Streak */}
               <div>
-
                 <p
                   className={`
           font-semibold
@@ -6355,12 +6341,8 @@ active:scale-[0.98]
                   Streak
                 </p>
               </div>
-
-
-
               {/* GTR */}
               <div>
-
                 <p
                   className={`
           font-semibold
@@ -6380,7 +6362,6 @@ active:scale-[0.98]
 
             </div>
           </div>
-
           {/* Contact dev */}
           <div
             className={`
@@ -6392,7 +6373,6 @@ active:scale-[0.98]
               }
               `}
           >
-
             <p
               className={`
     text-xs font-semibold
@@ -6403,7 +6383,6 @@ active:scale-[0.98]
             </p>
 
             <div className="flex items-center gap-3 text-[20px] text-slate-300">
-
               <a
                 href="https://x.com/Oxxtxn"
                 target="_blank"
@@ -6420,11 +6399,8 @@ active:scale-[0.98]
               >
                 ✉️
               </a>
-
             </div>
           </div>
-
-
 
           {/* bottom row */}
           <div className="mt-auto flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-800/60">
