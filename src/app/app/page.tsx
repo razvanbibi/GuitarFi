@@ -1711,24 +1711,18 @@ export default function HomePage() {
         (streak / silver) * (pSilver - pStart)
       );
     }
-
-    // 7 → 15
     if (streak < gold) {
       return (
         pSilver +
         ((streak - silver) / (gold - silver)) * (pGold - pSilver)
       );
     }
-
-    // 15 → 30 (slower)
     if (streak < diamond) {
       return (
         pGold +
         ((streak - gold) / (diamond - gold)) * (pDiamond - pGold)
       );
     }
-
-    // 30 → 100 (slowest)
     if (streak < legendary) {
       return (
         pDiamond +
@@ -1736,10 +1730,8 @@ export default function HomePage() {
         (pLegendary - pDiamond)
       );
     }
-
     return pLegendary;
   }
-
   const badgeProgress = getBadgeProgress(streakNumber);
   const estimatedGTR =
     convertToken === "USDm"
@@ -1901,9 +1893,6 @@ export default function HomePage() {
       ) : (
         <div className="basedaily-day-bg absolute inset-0 -z-10" />
       )}
-
-
-      {/* dark overlay for contrast */}
       <div
         className={`absolute inset-0 pointer-events-none ${isDarkMode ? "bg-slate-950/65" : "bg-white/65"
           }`}
@@ -1919,7 +1908,6 @@ export default function HomePage() {
                 alt="0x logo"
                 className="h-full w-full object-contain transition-opacity duration-200"
               />
-
             </div>
             <div className="flex flex-col leading-tight">
               <span
@@ -1928,18 +1916,14 @@ export default function HomePage() {
               >
                 GuitarFi
               </span>
-
               <span
                 className={`text-[11px] ${isDarkMode ? "text-slate-300" : "text-slate-700"
                   } ${taglineAnim ? "animate-[fade-up_0.6s_ease-out]" : ""}`}
               >
-
                 Building a daily habit on Celo
               </span>
             </div>
-
           </div>
-
           <div className="shrink-0 ml-auto mr-4">
             {account ? (
               <div className="flex flex-col items-end gap-1 pr-2">
@@ -1975,7 +1959,6 @@ export default function HomePage() {
               </button>
             )}
           </div>
-
           <button
             onClick={() => setDrawerOpen(!drawerOpen)}
             className="toggle"
@@ -1994,9 +1977,6 @@ export default function HomePage() {
             />
           </button>
         </header>
-
-
-
         <div
           className="
     grid
@@ -2007,7 +1987,6 @@ export default function HomePage() {
     items-start
   "
         >
-
           {/* Welcome / wallet card */}
           <section
             className={`
@@ -2016,7 +1995,6 @@ export default function HomePage() {
     ${isDarkMode ? glassCard : ""}
   `}
           >
-
             {/* top row */}
             <div className="flex items-start justify-between gap-3">
               {/* left text */}
@@ -2211,20 +2189,16 @@ ${showExploreMenu
   min-w-[120px]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
-
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
                   >
                     Collections
                   </button>
-
                   <button
                     onClick={() => {
                       setShowMintIdentity(true);
@@ -2246,7 +2220,6 @@ ${showExploreMenu
                   >
                     Identity
                   </button>
-
                   <button
                     onClick={() => {
                       setShowDonate(true);
@@ -2258,12 +2231,10 @@ ${showExploreMenu
   min-w-[120px]
   text-[13px]
   text-left
-
   bg-slate-900/60
   border border-white/5
   hover:bg-slate-800/80
   hover:translate-x-1
-
   transition-all
   duration-200
 "
@@ -2272,18 +2243,12 @@ ${showExploreMenu
                   </button>
                 </div>
               )}
-
-
-
-
             </div>
-
             {/* Guitar Animation */}
             <div className="pointer-events-none absolute inset-0 overflow-visible">
               <div className="absolute right-10 bottom-8 text-5xl opacity-10">
                 🎸
               </div>
-
               <span className="music-note note-1">♪</span>
               <span className="music-note note-2">♫</span>
               <span className="music-note note-3">♬</span>
