@@ -710,29 +710,23 @@ export default function HomePage() {
   async function connectWallet() {
     try {
       setStatus(null);
-
       const eth = getEthereum();
       if (!eth) {
         showGlobalToast("Please install MetaMask.");
         return;
       }
-
       if ((window as any).ethereum?.isMiniPay) {
         console.log("Connecting via MiniPay...");
       }
-
       const accounts: string[] = await eth.request({
         method: "eth_requestAccounts",
       });
-
       if (accounts.length === 0) {
         showGlobalToast("No account selected.");
         return;
       }
       setAccount(accounts[0]);
-
       await ensureCeloNetwork();
-
       await refreshData();
     } catch (err: any) {
       console.error(err);
@@ -771,20 +765,17 @@ export default function HomePage() {
         contract.pendingNFTs(account, 4),
         contract.pendingNFTs(account, 5),
         contract.pendingNFTs(account, 31),
-
       ]);
       setStreak(st);
       setHighestStreak(hs);
       setPendingTokens(pt);
       setPendingRewards(formatToken(pt));
       setPaused(isPaused);
-
       setpendingNFT1(nft1);
       setpendingNFT2(nft2);
       setpendingNFT3(nft3);
       setpendingNFT31(nft31);
       setTotalEarned(tEarned);
-
       return { pending: pt };
     } catch (err: any) {
       console.error(err);
