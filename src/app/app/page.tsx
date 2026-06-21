@@ -2935,13 +2935,10 @@ to-sky-500/10
                         </span>
                       </div>
                     </button>
-
                     <span className="text-[11px] text-slate-400">
                       Next Gm in {getTimeUntilTomorrowUTC()}
                     </span>
                   </div>
-
-
                 ) : (
                   <button
                     onClick={handleCheckIn}
@@ -2950,61 +2947,45 @@ to-sky-500/10
     group
     relative
     overflow-hidden
-
     w-[92px]
     h-12
-
     rounded-2xl
-
     border border-sky-400/25
-
     bg-gradient-to-r
     from-sky-500/10
     via-cyan-400/10
     to-sky-500/10
-
     backdrop-blur-xl
-
     transition-all
     duration-500
-
     hover:border-sky-300/60
     hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
-
     active:scale-[0.98]
   "
                   >
                     <div
                       className="
       absolute inset-0
-
       -translate-x-full
       group-hover:translate-x-full
-
       transition-transform
       duration-[1800ms]
-
       bg-gradient-to-r
       from-transparent
       via-white/20
       to-transparent
     "
                     />
-
                     <div
                       className="
       absolute inset-0
-
       opacity-0
       group-hover:opacity-100
-
       transition-opacity
       duration-500
-
       bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.18),transparent_70%)]
     "
                     />
-
                     <div className="relative z-10 flex items-center justify-center h-full">
                       <span className="font-semibold text-slate-100 tracking-wide">
                         {activeAction === "gm"
