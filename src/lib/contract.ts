@@ -1,7 +1,7 @@
 // src/lib/contract.ts
 "use client";
 import { BrowserProvider, Contract, formatUnits } from "ethers";
-export const OXTXN_STREAK_CONTRACT =
+export const GUITARFI_SMART_CONTRACT =
   "0x3C9A2992B29DD130b8E678E00eEdE76b717Ee885";
 export const OXTXN_TOKEN_CONTRACT =
   "0x4C9Bf9f99F638E102dac7D54558A28007c2c7aB8";
@@ -672,7 +672,7 @@ export async function getContractWithSigner() {
     throw new Error("Please switch network to Celo mainnet");
   }
   const contract = new Contract(
-    OXTXN_STREAK_CONTRACT,
+    GUITARFI_SMART_CONTRACT,
     OXTXN_STREAK_ABI,
     signer
   );
@@ -703,7 +703,7 @@ export async function getReadOnlyContract() {
     throw new Error("Please switch network to Celo mainnet");
   }
   const contract = new Contract(
-    OXTXN_STREAK_CONTRACT,
+    GUITARFI_SMART_CONTRACT,
     OXTXN_STREAK_ABI,
     provider
   );

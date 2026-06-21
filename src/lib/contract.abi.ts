@@ -16,6 +16,6 @@ export const OXTXN_STREAK_ABI = [
   },
   
 ] as const;
-export const OXTXN_STREAK_CONTRACT =
+export const GUITARFI_SMART_CONTRACT =
   "0x3C9A2992B29DD130b8E678E00eEdE76b717Ee885";
 

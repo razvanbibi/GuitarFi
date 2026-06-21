@@ -8,7 +8,7 @@ import {
   getTokenContractWithSigner,
   getVaultContractWithSigner,
   getVaultReadOnlyContract,
-  OXTXN_STREAK_CONTRACT,
+  GUITARFI_SMART_CONTRACT,
   getIdentityContractWithSigner,
   getIdentityReadOnlyContract,
   CELODAILY_VAULT_CONTRACT,
@@ -516,7 +516,7 @@ export default function HomePage() {
           await getUSDmContractWithSigner();
         const approveTx =
           await usdc.approve(
-            OXTXN_STREAK_CONTRACT,
+            GUITARFI_SMART_CONTRACT,
             amount
           );
         await approveTx.wait();
@@ -726,7 +726,7 @@ export default function HomePage() {
       const allowance =
         await tokenContract.allowance(
           account,
-          OXTXN_STREAK_CONTRACT
+          GUITARFI_SMART_CONTRACT
         );
       if (allowance < tuneCost) {
         showGlobalToast(
@@ -734,7 +734,7 @@ export default function HomePage() {
         );
         const approveTx =
           await tokenContract.approve(
-            OXTXN_STREAK_CONTRACT,
+            GUITARFI_SMART_CONTRACT,
             ethers.MaxUint256
           );
         await approveTx.wait();
@@ -807,21 +807,15 @@ export default function HomePage() {
       const { contract } = await getContractWithSigner();
       const tx = await contract.checkIn();
       await tx.wait();
-      showGlobalToast("Gm confirmed 🎉");
+      showGlobalToast("Gm confirmed");
       const result = await refreshData();
       const newPending =
         result?.pending ?? pendingTokens ?? BigInt(0);
       setPendingTokens(newPending);
-      await fetch("/api/leaderboard/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ address: account }),
-      });
       const key = getStorageKey(account);
       try {
         window.localStorage.setItem(key, getTodayId());
       } catch {
-        // ignore
       }
       setHasCheckedInToday(true);
       await new Promise((r) => setTimeout(r, 300));
