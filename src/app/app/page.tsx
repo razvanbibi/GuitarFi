@@ -3496,16 +3496,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <p className="text-[11px] text-slate-400">
                     Vault TVL
                   </p>
-
                   <p className="text-lg font-bold text-sky-300 mt-1">
                     {celoVaultBalance}
                   </p>
-
                   <p className="text-[10px] text-slate-500">
                     CELO
                   </p>
                 </div>
-
               </div>
             </div>
 
