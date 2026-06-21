@@ -5864,15 +5864,11 @@ active:scale-[0.98]
       {showDevPanel && (
 
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-
           <div className="w-[95vw] max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl bg-slate-950 border border-sky-400/40 p-6">
-
             <div className="flex justify-between items-center">
-
               <span className="text-sm font-semibold text-sky-300">
                 Dev panel
               </span>
-
               <button
                 onClick={() => {
                   setShowDevPanel(false);
@@ -5883,36 +5879,23 @@ active:scale-[0.98]
               >
                 ✕
               </button>
-
             </div>
-
             {!devUnlocked && (
-
               <input
-
                 type="password"
-
                 maxLength={4}
-
                 value={devPasswordInput}
-
                 onChange={(e) => {
-
                   const val = e.target.value;
-
                   setDevPasswordInput(val);
-
                   if (val === DEV_PASSWORD) {
-
                     setDevUnlocked(true);
-
                   }
                 }}
                 placeholder="Enter 4-digit password"
                 className="w-full rounded-xl px-3 py-2 text-xs bg-slate-900 border border-slate-700 text-slate-100"
               />
             )}
-
             {devUnlocked && (
               <div className="flex flex-col gap-2">
 
