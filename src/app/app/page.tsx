@@ -4887,21 +4887,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <p className="text-[11px] text-slate-400">
                     Vault TVL
                   </p>
-
                   <p className="text-lg font-bold text-sky-300 mt-1">
                     {celoVaultBalance}
                   </p>
-
                   <p className="text-[10px] text-slate-500">
                     CELO
                   </p>
                 </div>
-
               </div>
             </div>
-
             {/* Amount */}
-
             <div>
               <input
                 type="number"
@@ -4909,53 +4904,38 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 value={vaultAmount}
                 onChange={(e) => setVaultAmount(e.target.value)}
                 placeholder="Enter amount"
-
                 className="
         w-full
         rounded-2xl
         border border-white/10
         bg-slate-950/40
-
         px-4 py-3
-
         text-white
         outline-none
-
         focus:border-sky-400
       "
               />
             </div>
-
             {/* Buttons */}
-
             <div className="grid grid-cols-2 gap-3">
-
               <button
                 onClick={handleCeloVaultDeposit}
                 disabled={loading}
                 className="
   group
   relative
-
   overflow-hidden
-
   rounded-[20px]
-
   border border-emerald-400/20
-
   bg-[linear-gradient(135deg,
   rgba(16,185,129,0.18),
   rgba(5,150,105,0.08),
   rgba(15,23,42,0.95))]
-
   py-3.5
-
   transition-all
   duration-500
-
   hover:border-emerald-400/50
   hover:shadow-[0_0_35px_rgba(16,185,129,0.20)]
-
   active:scale-[0.97]
 "
               >
