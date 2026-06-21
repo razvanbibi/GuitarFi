@@ -1178,10 +1178,7 @@ export default function HomePage() {
       );
     }
   }
-
-
   const rewardTier = getRewardTier(pendingTokens);
-
 
   function getRewardTier(amount: bigint | null) {
     if (!amount || amount === BigInt(0)) return "none";
@@ -1194,16 +1191,9 @@ export default function HomePage() {
     if (amount < big) return "mid";
     return "big";
   }
-
-
   function handleSelectDonation(amount: number) {
     setDonationAmount(amount.toString());
   }
-
-
-
-
-
 
   async function handleDonateClick() {
     try {
@@ -1211,56 +1201,35 @@ export default function HomePage() {
         showGlobalToast("Connect your wallet first.");
         return;
       }
-
       const raw = donationAmount.trim();
       const amountNumber = Number(raw);
-
       if (!Number.isFinite(amountNumber) || amountNumber <= 0) {
         showGlobalToast("Enter a valid donation amount.");
         return;
       }
-
       const amountScaled = ethers.parseUnits(raw, 18);
-
       setLoading(true);
-
       await ensureCeloNetwork();
-
-      // 1️⃣ Approve
       showGlobalToast("Approve USDm in wallet...");
-
       const { usdc } = await getUSDmContractWithSigner();
-
       const approveTx = await usdc.approve(
-
         amountScaled
       );
-
       await approveTx.wait();
-
-      // 2️⃣ Donate
       setStatus("Confirm donation in wallet...");
-
       const eth = getEthereum();
       if (!eth) throw new Error("Wallet not found");
-
       const provider = new ethers.BrowserProvider(eth as any);
       const signer = await provider.getSigner();
-
       const donationContract = new ethers.Contract(
         "0x33FAF6C82003cCEA6a3F4A1d1e9ab9CB7DC40FD4",
         ["function donate(uint256 amount)"],
         signer
       );
-
       const donateTx = await donationContract.donate(amountScaled);
       await donateTx.wait();
-
-      // ✅ success
       showGlobalToast("Donation successful 💙");
-
       await loadDonationLeaderboard();
-
       showToast(
         {
           type: "donation",
@@ -1270,7 +1239,6 @@ export default function HomePage() {
       );
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(
         err?.info?.error?.message ??
         err?.shortMessage ??
