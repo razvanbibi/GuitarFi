@@ -4942,18 +4942,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <div
                   className="
     absolute inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition
-
     bg-[radial-gradient(circle_at_center,
     rgba(16,185,129,0.20),
     transparent_70%)]
   "
                 />
-
                 <div className="relative z-10 flex items-center justify-center gap-2">
                   {loading && vaultAction === "deposit" ? (
                     <svg
@@ -4985,10 +4981,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       className="
     stroke-emerald-300
     fill-none
-
     transition-all
     duration-300
-
     group-hover:rotate-90
     group-hover:fill-emerald-500/20
   "
@@ -4997,12 +4991,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
                         strokeWidth="1.5"
                       />
-
                       <path
                         d="M8 12H16"
                         strokeWidth="1.5"
                       />
-
                       <path
                         d="M12 16V8"
                         strokeWidth="1.5"
@@ -5015,10 +5007,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       ? "Depositing..."
                       : "Deposit"}
                   </span>
-
                 </div>
               </button>
-
               <button
                 onClick={handleCeloVaultWithdraw}
                 disabled={loading}
@@ -5033,10 +5023,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   rgba(245,158,11,0.08),
   rgba(15,23,42,0.95))]
   py-3.5
-
   transition-all
   duration-500
-
   hover:border-amber-400/50
   hover:shadow-[0_0_35px_rgba(251,191,36,0.18)]
   active:scale-[0.97]
@@ -5045,18 +5033,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <div
                   className="
     absolute inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition
-
     bg-[radial-gradient(circle_at_center,
     rgba(251,191,36,0.20),
     transparent_70%)]
   "
                 />
-
                 <div className="relative z-10 flex items-center justify-center gap-2">
 
                   {loading && vaultAction === "withdraw" ? (
@@ -5094,23 +5078,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       ↑
                     </div>
                   )}
-
                   <span className="font-semibold text-white">
                     {loading && vaultAction === "withdraw"
                       ? "Withdrawing..."
                       : "Withdraw"}
                   </span>
-
                 </div>
               </button>
-
             </div>
-
           </div>
-
         </div>
       )}
-
 
       {showConvertModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
