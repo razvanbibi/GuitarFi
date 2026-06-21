@@ -4305,9 +4305,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               {status}
             </div>
           )}
-
         </div>
-
         {/* Footer */}
         <footer
           className={`mt-auto pt-3 pb-3 flex items-center justify-between text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-700"
@@ -4316,7 +4314,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           <span className={isDarkMode ? "" : "text-slate-900"}>
             Built on Celo
           </span>
-
           <a
             href="https://celoscan.io/token/0x4C9Bf9f99F638E102dac7D54558A28007c2c7aB8"
             target="_blank"
@@ -4327,7 +4324,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               }`}
           >
             <span>Powered by</span>
-
             <span className="flex items-center gap-1">
               <img
                 src="/celo-logo.jpg"
@@ -4338,15 +4334,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             </span>
           </a>
         </footer>
-
       </div>
-
-
-
-
-
-
-
 
       {showVault && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
