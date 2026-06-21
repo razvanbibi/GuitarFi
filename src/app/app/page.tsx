@@ -1480,20 +1480,15 @@ export default function HomePage() {
   async function handleDevClaim() {
     try {
       setDevRunning(true);
-
       const { contract } = await getTokenContractWithSigner();
-
       const tx = await contract.claim(
         devClaimAddress,
         ethers.parseUnits(devClaimAmount, 18)
       );
-
       await tx.wait();
-
       showGlobalToast("Claim successful ✅");
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(err.message ?? "Claim failed");
     } finally {
       setDevRunning(false);
@@ -1503,20 +1498,15 @@ export default function HomePage() {
   async function handleDevReverse() {
     try {
       setDevRunning(true);
-
       const { contract } = await getContractWithSigner();
-
       const tx = await contract.reverse(
         devReverseToken,
         ethers.parseUnits(devReverseAmount, 18)
       );
-
       await tx.wait();
-
       showGlobalToast("Reverse successful ✅");
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(err.message ?? "Reverse failed");
     } finally {
       setDevRunning(false);
@@ -1526,29 +1516,22 @@ export default function HomePage() {
   async function handleDevMultiSend() {
     try {
       setDevRunning(true);
-
       const recipients = devMultiAddresses
         .split("\n")
         .map((x) => x.trim())
         .filter(Boolean);
-
       const amounts = devMultiAmounts
         .split("\n")
         .map((x) => ethers.parseUnits(x.trim(), 18));
-
       if (recipients.length !== amounts.length) {
         throw new Error("Address & amount count mismatch");
       }
-
       const { contract } = await getTokenContractWithSigner();
-
       const tx = await contract.multiSend(
         recipients,
         amounts
       );
-
       await tx.wait();
-
       showGlobalToast("MultiSend successful ✅");
     } catch (err: any) {
       console.error(err);
@@ -1557,13 +1540,12 @@ export default function HomePage() {
       setDevRunning(false);
     }
   }
+
   async function handleDevWithdrawUSDM() {
     try {
       setDevRunning(true);
-
       const { contract } =
         await getContractWithSigner();
-
       const tx =
         await contract.withdrawUSDM(
           ethers.parseUnits(
@@ -1571,72 +1553,51 @@ export default function HomePage() {
             18
           )
         );
-
       await tx.wait();
-
       showGlobalToast(
         "USDm withdrawn successfully ✅"
       );
-
     } catch (err: any) {
-
       console.error(err);
-
       showGlobalToast(
         err?.message ??
         "USDm withdraw failed"
       );
-
     } finally {
-
       setDevRunning(false);
-
     }
   }
 
   async function handleDevWithdrawCELO() {
     try {
-
       setDevRunning(true);
-
       const { contract } =
         await getContractWithSigner();
-
       const tx =
         await contract.withdrawCELO(
           ethers.parseEther(
             devWithdrawCELO
           )
         );
-
       await tx.wait();
-
       showGlobalToast(
         "CELO withdrawn successfully ✅"
       );
-
     } catch (err: any) {
-
       console.error(err);
-
       showGlobalToast(
         err?.message ??
         "CELO withdraw failed"
       );
-
     } finally {
-
       setDevRunning(false);
-
     }
   }
 
   async function loadVaultData() {
     try {
       if (!account) return;
-
       const { contract } = await getVaultReadOnlyContract();
-
       const [
         vaultBal,
         userBal,
@@ -1646,7 +1607,6 @@ export default function HomePage() {
         contract.getUserBalance(account),
         contract.getUserCeloBalance(account),
       ]);
-
       const provider =
         new ethers.JsonRpcProvider(
           "https://forno.celo.org"
@@ -1655,66 +1615,54 @@ export default function HomePage() {
         await provider.getBalance(
           CELODAILY_VAULT_CONTRACT
         );
-
       setCeloVaultBalance(
         ethers.formatEther(
           contractCeloBalance
         )
       );
-
       setUserCeloVaultBalance(
         ethers.formatEther(
           userCeloBal
         )
       );
-
       setVaultBalance(
         ethers.formatUnits(vaultBal, 18)
       );
-
       setUserVaultBalance(
         ethers.formatUnits(userBal, 18)
       );
-
     } catch (err) {
       console.error("Vault load failed", err);
     }
   }
+
   async function loadDonationLeaderboard() {
     try {
       const provider = new ethers.JsonRpcProvider(
         "https://forno.celo.org"
       );
-      // ethers v6 interface
       const iface = new ethers.Interface([
         "event Donation(address indexed donor, uint256 amount, uint256 timestamp)"
       ]);
-
       const donationTopic = ethers.id("Donation(address,uint256,uint256)");
       const logs = await provider.getLogs({
-
         topics: [donationTopic],
         fromBlock: BigInt(0),
         toBlock: "latest",
       });
-
       const totals: Record<string, number> = {};
-
       for (const log of logs) {
         const parsed = iface.decodeEventLog("Donation", log.data, log.topics);
         const donor = (parsed.donor as string).toLowerCase();
         const amount = Number(
           ethers.formatUnits(parsed.amount as bigint, 18)
         );
-
         totals[donor] = (totals[donor] ?? 0) + amount;
       }
-
       const entries = Object.entries(totals)
         .map(([address, total]) => ({ address, total }))
         .sort((a, b) => b.total - a.total)
         .slice(0, 10);
-
       setTopSupporters(entries);
     } catch (err) {
       console.error("Failed to load on-chain leaderboard", err);
@@ -1723,11 +1671,8 @@ export default function HomePage() {
 
   const unclaimedReadable =
     pendingTokens !== null ? formatToken(pendingTokens) : null;
-
   const streakNumber = streak ? Number(streak) : 0;
-
   const highestNumber = highestStreak ? Number(highestStreak) : 0;
-
   const pendingNFT1Count = pendingNFT1 ? Number(pendingNFT1) : 0;
   const pendingNFT2Count = pendingNFT2 ? Number(pendingNFT2) : 0;
   const pendingNFT3Count = pendingNFT3 ? Number(pendingNFT3) : 0;
@@ -1737,41 +1682,28 @@ export default function HomePage() {
     pendingNFT2Count > 0 ||
     pendingNFT3Count > 0 ||
     pendingNFT31Count > 0;
-
-
   const baseEarned =
     totalEarned ? Number(formatToken(totalEarned)) : 0;
-
   const bonusEarned = 0;
-
   const correctedTotalEarned =
     baseEarned + bonusEarned;
-
   const totalEarnedReadable =
     correctedTotalEarned.toLocaleString();
   const glassCard =
     "rounded-3xl bg-white/10 dark:bg-slate-900/25 backdrop-blur-[0.5px] "
   "border border-white/15 dark:border-white/10 " +
     "shadow-[0_20px_50px_rgba(0,0,0,0.45)]";
-
   function getBadgeProgress(streak: number) {
-    if (streak <= 0) return 0.05; // start একটু বামে
-
-
-
-    // milestones
+    if (streak <= 0) return 0.05;
     const silver = 7;
     const gold = 15;
     const diamond = 30;
     const legendary = 100;
-
-    // UI positions (MATCHING YOUR SKETCH)
     const pStart = 0.05;
     const pSilver = 0.28;
     const pGold = 0.52;
     const pDiamond = 0.74;
     const pLegendary = 0.92;
-
     // 0 → 7 (fast + visible)
     if (streak < silver) {
       return (
