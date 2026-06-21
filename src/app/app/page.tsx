@@ -4128,8 +4128,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             </div>
           </section>
 
-
-
           {/* Donation */}
           <section
             className={`
@@ -4160,7 +4158,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 {showDonate ? "Hide" : "Tip in USDm on Celo"}
               </span>
             </button>
-
             {showDonate && (
               <div className="mt-3 space-y-3 text-xs bg-slate-950/80 rounded-2xl p-3 shadow-inner shadow-slate-950">
                 <p className="text-slate-300">Tip in USDm on Celo</p>
