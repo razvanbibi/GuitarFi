@@ -1118,12 +1118,9 @@ export default function HomePage() {
       setpendingNFT2(BigInt(0));
       setpendingNFT3(BigInt(0));
       setpendingNFT31(BigInt(0));
-
       showGlobalToast("Claim successful 🎉");
-
       setRecentlyClaimed(true);
       await refreshData();
-
       showToast(
         {
           type: "claim",
@@ -1131,7 +1128,6 @@ export default function HomePage() {
         },
         2500
       );
-
     } catch (err: any) {
       console.error(err);
       showGlobalToast(
