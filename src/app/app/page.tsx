@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import {
   getEthereum,
@@ -16,7 +15,6 @@ import {
   GUITARFI_BADGES_CONTRACT,
   GUITARFI_BADGES_ABI,
 } from "@/lib/contract";
-
 import Image from "next/image";
 import {
   ethers, BrowserProvider, Contract,
@@ -26,13 +24,11 @@ import { Gift } from "lucide-react";
 import { useRef } from "react";
 
 type Status = string | null;
-
 type Toast =
   | { type: "checkin"; message: string }
   | { type: "claim"; message: string }
   | { type: "donation"; message: string }
   | null;
-
 type Supporter = {
   address: string;
   total: number;
@@ -41,8 +37,6 @@ type Supporter = {
 };
 
 const USDM_TOKEN_ADDRESS = "0x765DE816845861e75A25fCA122bb6898B8B1282a";
-
-
 
 function AvatarBubbleStream({ avatar }: { avatar: string }) {
   const [bubbles, setBubbles] = useState<
@@ -60,7 +54,6 @@ function AvatarBubbleStream({ avatar }: { avatar: string }) {
         },
       ]);
     }, 1200);
-
     return () => clearInterval(interval);
   }, []);
 
