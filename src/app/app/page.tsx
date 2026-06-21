@@ -5733,7 +5733,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       {/* Onboarding overlay */}
       {showOnboarding && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-
           <div
             className="
     w-[90%] max-w-sm rounded-3xl
@@ -5744,7 +5743,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     animate-[overlayFade_0.55s_ease-out]
             "
           >
-
             <div className="flex items-center gap-3">
               <div
                 className="
@@ -5753,9 +5751,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     rounded-full
     overflow-hidden
     flex items-center justify-center
-
     ring-2 ring-sky-400/30
-
     shadow-[0_0_25px_rgba(56,189,248,0.45)]
   "
               >
@@ -5777,12 +5773,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   className="
     text-base
     font-bold
-
     bg-gradient-to-r
     from-white
     via-sky-200
     to-cyan-300
-
     bg-clip-text
     text-transparent
   "
@@ -5794,13 +5788,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </span>
               </div>
             </div>
-
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
               <li>Play <span className="font-semibold">Tune</span> and discover a random soundtrack.</li>
               <li>Claim your <span className="font-semibold">GTR</span> and Guitar NFTs by clicking the gift button</li>
               <li>31 unique Guitar NFTs await. Every NFT marks a moment in your journey.</li>
             </ul>
-
             <button
               onClick={closeOnboarding}
               className="
