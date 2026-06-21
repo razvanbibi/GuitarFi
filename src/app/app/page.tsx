@@ -973,40 +973,20 @@ export default function HomePage() {
       setActiveAction("gm");
       showGlobalToast("Sending Gm transaction...");
       const prevPending = pendingTokens ?? BigInt(0);
-
       await ensureCeloNetwork();
-
-
-
-
-
-
-      // normal MetaMask tx (no gasless)
-
       const { contract } = await getContractWithSigner();
-
       const tx = await contract.checkIn();
-
       await tx.wait();
       showGlobalToast("Gm confirmed 🎉");
-
-
       const result = await refreshData();
-
       const newPending =
         result?.pending ?? pendingTokens ?? BigInt(0);
-
       setPendingTokens(newPending);
-
-
-
       await fetch("/api/leaderboard/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ address: account }),
       });
-
-      // আজকের দিন localStorage এ সেভ + UI state
       const key = getStorageKey(account);
       try {
         window.localStorage.setItem(key, getTodayId());
@@ -1014,13 +994,7 @@ export default function HomePage() {
         // ignore
       }
       setHasCheckedInToday(true);
-
-
-
       await new Promise((r) => setTimeout(r, 300));
-
-
-
       const diff = newPending - prevPending;
       if (diff > BigInt(0)) {
         showToast(
@@ -1039,26 +1013,18 @@ export default function HomePage() {
           2000
         );
       }
-
-
       triggerAvatarRun(badgeProgress);
-
-
-
     } catch (err: any) {
       console.error(err);
-
       const msg =
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
         "";
-
       if (msg.includes("Mint Identity First")) {
         setShowIdentityRequired(true);
         return;
       }
-
       showGlobalToast(msg || "Gm failed.");
     } finally {
       setLoading(false);
