@@ -3255,8 +3255,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       GTR
                     </span>
                   </span>
-
-
                   <span
                     className={`text-3xl font-bold tracking-tight ${isDarkMode ? "text-sky-200" : "text-sky-500"
                       }`}
@@ -3296,7 +3294,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         ? <BadgeGlow icon="🎸" count={pendingNFT1Count} />
                         : <BadgeGhost icon="🎸" />
                       }
-
                       {pendingNFT2Count > 0
                         ? <BadgeGlow icon="⚡" count={pendingNFT2Count} />
                         : <BadgeGhost icon="⚡" />
@@ -3311,7 +3308,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       }
                     </div>
                   </div>
-
                   {/* ✅ Identity button — ALWAYS LIVE */}
                   <button
                     onClick={() => setShowMintIdentity(true)}
@@ -3321,20 +3317,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   isolate
   overflow-hidden
   rounded-2xl
-
   border
   px-3 py-1.5
-
   text-[11px]
   font-semibold
   tracking-[0.18em]
   uppercase
-
   backdrop-blur-3xl
   transition-all
   duration-500
   hover:scale-[1.03]
-
   ${isDarkMode
                         ? `
         border-white/15
@@ -3353,12 +3345,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         hover:shadow-[0_15px_45px_rgba(56,189,248,0.28)]
       `
                       }
-
   before:absolute
   before:inset-0
   before:rounded-2xl
   before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
-
   after:absolute
   after:inset-0
   after:rounded-2xl
@@ -3367,21 +3357,18 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   hover:after:translate-x-[160%]
   after:transition-transform
   after:duration-[1800ms]
-
   [&>span]:relative
   [&>span]:z-10
 `}
                   >
                     {hasIdentityNFT ? "View Identity" : "Mint Identity"}
                   </button>
-
                   <button
                     onClick={() => setShowVault(true)}
                     className="
     flex h-10 w-10 items-center justify-center
     overflow-hidden
     rounded-2xl
-    
     transition-all
     hover:scale-105
   "
