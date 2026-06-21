@@ -2996,7 +2996,6 @@ to-sky-500/10
                   </button>
                 )}
                 <div className="flex flex-col items-center gap-1">
-
                   <button
                     onClick={handleTap}
                     disabled={loading}
@@ -3004,14 +3003,10 @@ to-sky-500/10
 guitarfi-tap-btn
 group
 relative
-
 border border-white/10
-
 hover:border-sky-400/40
 hover:shadow-[0_0_25px_rgba(56,189,248,0.25)]
-
 active:scale-95
-
 ${activeAction === "tap" ? "tap-processing-state" : ""}
 `}
                   >
@@ -3027,9 +3022,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                           width="36px"
                           height="36px"
                         >
-
-
-
                           <rect width="36" height="36" x="0" y="0" fill="#38BDF8"></rect>
                           <path
                             fill="#e53935"
@@ -3064,27 +3056,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                             d="M15.078,19.043c1.957-0.326,5.122-0.529,4.435,1.304c-0.489,1.304-7.185,2.185-7.185,0.652 C12.328,19.467,15.078,19.043,15.078,19.043z"
                           ></path>
                         </svg>
-
                         <span className="now">now!</span>
-
                         <span className="tap">tap</span>
-
-
                       </>
                     )}
                   </button>
-
                   <span className="text-[11px] text-slate-400">
                     Tap to earn GTR
                   </span>
-
                 </div>
-
               </div>
-
             )}
-
-
             {paused && (
               <p className="text-[11px] text-amber-300 mt-1">
                 The contract is currently paused. Please try again later.
