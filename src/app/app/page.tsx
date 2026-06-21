@@ -2830,7 +2830,6 @@ ${showExploreMenu
                       {!leaderboardLoading && leaderboard.length === 0 && (
                         <p className="text-slate-400">No data yet</p>
                       )}
-
                       <ul className="space-y-2">
                         {leaderboard.map((u, i) => (
                           <li
@@ -2840,8 +2839,6 @@ ${showExploreMenu
                               : ""
                               }`}
                           >
-
-
                             <div className="flex items-center gap-2">
                               <img
                                 src={
@@ -2851,14 +2848,12 @@ ${showExploreMenu
                                 }
                                 className="h-6 w-6 rounded-full object-cover ring-1 ring-sky-400/30"
                               />
-
                               <span>
                                 #{i + 1}{" "}
                                 {u.name
                                   ? u.name
                                   : `${u.address.slice(0, 6)}…${u.address.slice(-4)}`}
                               </span>
-
                             </div>
                             <span
                               className={`
@@ -2868,19 +2863,14 @@ ${showExploreMenu
                             >
                               {u.highestStreak}
                             </span>
-
                           </li>
                         ))}
                       </ul>
                     </div>
                   )}
-
-
                 </div>
-
               </div>
             </div>
-
             <p
               className={`text-xs -mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-900"
                 }`}
