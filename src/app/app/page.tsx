@@ -1283,7 +1283,7 @@ export default function HomePage() {
       setLoading(false);
     }
   }
-  
+
   function showGlobalToast(message: string) {
     setGlobalToast(message);
     setTimeout(() => {
@@ -1294,47 +1294,35 @@ export default function HomePage() {
 
   async function handleCeloVaultDeposit() {
     try {
-
       if (!account) {
         showGlobalToast("Connect wallet first");
         return;
       }
       setVaultAction("deposit");
       setLoading(true);
-
       const amount =
         ethers.parseEther(
           vaultAmount
         );
-
       const { contract } =
         await getVaultContractWithSigner();
-
       const tx =
         await contract.depositCelo({
           value: amount,
         });
-
       await tx.wait();
-
       setGlobalToast(
         "CELO deposited successfully"
       );
-
       await loadVaultData();
-
     } catch (err: any) {
-
       console.error(err);
-
       showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Deposit failed"
       );
-
     } finally {
-
       setLoading(false);
       setVaultAction(null);
 
