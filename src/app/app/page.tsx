@@ -4161,7 +4161,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             {showDonate && (
               <div className="mt-3 space-y-3 text-xs bg-slate-950/80 rounded-2xl p-3 shadow-inner shadow-slate-950">
                 <p className="text-slate-300">Tip in USDm on Celo</p>
-
                 <div className="flex flex-wrap gap-2">
                   {[1, 5, 10, 100].map((v) => (
                     <button
@@ -4178,7 +4177,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     </button>
                   ))}
                 </div>
-
                 <div className="flex items-center gap-2">
                   <input
                     type="number"
@@ -4198,27 +4196,19 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     group
     relative
     overflow-hidden
-
     w-full
     h-12
-
     rounded-2xl
-
     border border-sky-400/25
-
     bg-gradient-to-r
     from-sky-500/10
     via-cyan-400/10
     to-sky-500/10
-
     backdrop-blur-xl
-
     transition-all
     duration-500
-
     hover:border-sky-300/60
     hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
-
     active:scale-[0.98]
   "
                   >
@@ -4226,50 +4216,38 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     <div
                       className="
       absolute inset-0
-
       -translate-x-full
       group-hover:translate-x-full
-
       transition-transform
       duration-[1800ms]
-
       bg-gradient-to-r
       from-transparent
       via-white/20
       to-transparent
     "
                     />
-
                     {/* pulse glow */}
                     <div
                       className="
       absolute inset-0
-
       opacity-0
       group-hover:opacity-100
-
       transition-opacity
       duration-500
-
       bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.18),transparent_70%)]
     "
                     />
-
                     <div className="relative z-10 flex items-center justify-center gap-3">
-
                       <span
                         className="
         text-sky-300
-
         transition-transform
         duration-500
-
         group-hover:translate-x-1
       "
                       >
                         →
                       </span>
-
                       <span
                         className="
         font-semibold
@@ -4279,11 +4257,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       >
                         Donate
                       </span>
-
                     </div>
                   </button>
                 </div>
-
                 <div className="space-y-1">
                   <p className="text-[11px] text-slate-500">Top supporters</p>
                   {topSupporters.length === 0 ? (
@@ -4319,7 +4295,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     </ul>
                   )}
                 </div>
-
               </div>
             )}
           </section>
