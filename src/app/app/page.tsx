@@ -1331,50 +1331,37 @@ export default function HomePage() {
 
   async function handleCeloVaultWithdraw() {
     try {
-
       if (!account) {
         showGlobalToast("Connect wallet first");
         return;
       }
       setVaultAction("withdraw");
       setLoading(true);
-
       const amount =
         ethers.parseEther(
           vaultAmount
         );
-
       const { contract } =
         await getVaultContractWithSigner();
-
       const tx =
         await contract.withdrawCelo(
           amount
         );
-
       await tx.wait();
-
       setGlobalToast(
         "CELO withdrawn successfully"
       );
-
       await loadVaultData();
-
     } catch (err: any) {
-
       console.error(err);
-
       showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Withdraw failed"
       );
-
     } finally {
-
       setLoading(false);
       setVaultAction(null);
-
     }
   }
 
