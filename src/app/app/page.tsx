@@ -3072,8 +3072,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 The contract is currently paused. Please try again later.
               </p>
             )}
-
-
             <div className="relative group inline-flex">
               <div className="relative inline-flex">
                 <button
@@ -3086,9 +3084,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 >
                   <span className="text-lg"></span> GuitarPath
                 </button>
-
               </div>
-
             </div>
             {/* progress path */}
             <div className="relative mt-1 mb-2"
@@ -3129,7 +3125,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <span className="absolute left-[74%] -translate-x-1/2"></span>
                 <span className="absolute left-[92%] -translate-x-1/2"></span>
               </div>
-
               {/* avatar progress */}
               <div
                 data-avatar-main
