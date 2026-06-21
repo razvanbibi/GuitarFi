@@ -3936,16 +3936,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     alt="Acoustic"
                     className="w-full h-20 object-contain"
                   />
-
                   <h3 className="mt-2 text-xs text-white">
                     Acoustic
                   </h3>
-
                   <p className="text-[10px] text-slate-500">
                     NFT
                   </p>
                 </div>
-
                 {/* Electric */}
                 <div
                   className="
@@ -3964,17 +3961,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     alt="Electric"
                     className="w-full h-20 object-contain"
                   />
-
                   <h3 className="mt-2 text-xs text-white">
                     Electric
                   </h3>
-
                   <p className="text-[10px] text-slate-500">
                     NFT
                   </p>
                 </div>
-
-
                 <div
                   className="
         rounded-2xl
@@ -3985,7 +3978,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         p-2
         transition
         hover:scale-[1.03]
-
         shadow-[0_0_18px_rgba(251,191,36,0.25)]
       "
                 >
@@ -3994,18 +3986,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     alt="Aurora Chord Guitar"
                     className="w-full h-20 object-contain"
                   />
-
                   <h3 className="mt-2 text-xs text-white">
                     Aurora Chord Guitar
                   </h3>
-
                   <p className="text-[10px] text-slate-500">
                     NFT
                   </p>
                 </div>
-
               </div>
-
               {/* CTA */}
               <button
                 onClick={() => {
