@@ -2756,8 +2756,6 @@ ${showExploreMenu
               </div>
             </div>
           </section>
-
-
           {/* Today card */}
           <section
             className={`
@@ -2802,7 +2800,6 @@ ${showExploreMenu
                         : "/raihan-avatar.jpg"
                     }
                   />
-
                   <div
                     className={`text-[11px] ${isDarkMode ? "text-slate-400" : "text-slate-900"
                       }`}
@@ -2822,15 +2819,12 @@ ${showExploreMenu
       text-xs
       overflow-y-auto overflow-visible
       z-20
-
       ${isDarkMode
                           ? "bg-slate-950/90 text-slate-200"
                           : "bg-white text-slate-900 border border-slate-200 shadow-lg"
                         }
     `}
                     >
-
-
                       {leaderboardLoading && <p className="text-slate-400">Loading…</p>}
 
                       {!leaderboardLoading && leaderboard.length === 0 && (
