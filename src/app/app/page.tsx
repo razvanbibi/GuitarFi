@@ -252,7 +252,7 @@ export default function HomePage() {
     const tomorrow = new Date(
       Date.UTC(
         now.getUTCFullYear(),
-        now.getUTCMonth(), 
+        now.getUTCMonth(),
         now.getUTCDate() + 1,
         0, 0, 0
       )
@@ -2233,6 +2233,7 @@ ${showExploreMenu
               </div>
             </div>
           </section>
+
           {/* Today card */}
           <section
             className={`
@@ -2640,7 +2641,12 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 {/* avatar bubble */}
                 <div className="relative h-7 w-7 rounded-full overflow-hidden ring-2 ring-sky-400 bg-slate-900 z-10">
                   <img
-                    src={profileAvatar || "/avatar.png"}
+                    src={
+                      profileAvatar &&
+                        profileAvatar.startsWith("data:image")
+                        ? profileAvatar
+                        : "/raihan-avatar.jpg"
+                    }
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -4286,7 +4292,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           </div>
         </div>
       )}
-      
+
       {showCeloVault && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
 
