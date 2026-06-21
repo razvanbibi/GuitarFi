@@ -5262,13 +5262,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
     absolute
     inset-0
-
     -translate-x-[160%]
     group-hover:translate-x-[160%]
-
     transition-transform
     duration-[1800ms]
-
     bg-[linear-gradient(
       120deg,
       transparent,
@@ -5277,7 +5274,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     )]
   "
               />
-
               <div className="relative z-10 flex items-center justify-center gap-3">
 
                 <div
@@ -5285,38 +5281,29 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       flex
       h-9
       w-9
-
       items-center
       justify-center
-
       rounded-full
-
       bg-sky-400/10
       border border-sky-300/20
-
       text-sky-300
     "
                 >
                   ⇄
                 </div>
-
                 <div className="flex flex-col items-start">
                   <span className="text-sm font-semibold text-white">
                     {activeAction === "convert"
                       ? "Converting..."
                       : "Convert to GTR"}
                   </span>
-
                   <span className="text-[10px] text-slate-400">
                     Instant swap
                   </span>
                 </div>
-
               </div>
             </button>
-
           </div>
-
         </div>
       )}
 
