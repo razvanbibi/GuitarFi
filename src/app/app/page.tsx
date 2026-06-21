@@ -6508,20 +6508,16 @@ active:scale-[0.98]
       "
           >
             <div className="text-center space-y-2">
-
               <div className="text-3xl">
                 🪪
               </div>
-
               <h3 className="text-base font-semibold text-white">
                 Mint Identity First
               </h3>
-
               <p className="text-[11px] leading-4 text-slate-400">
                 You need a GuitarFi Identity NFT
                 before using this feature.
               </p>
-
               <button
                 onClick={() => {
                   setShowIdentityRequired(false);
@@ -6636,7 +6632,6 @@ active:scale-[0.98]
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={() => setShowMintIdentity(false)}
           />
-
           {/* modal */}
           <div className="
       relative z-10 w-[90%] max-w-sm
@@ -6656,7 +6651,6 @@ active:scale-[0.98]
     tracking-tight
     transition-all
     duration-500
-
     ${hasIdentityNFT
                   ? `
           bg-gradient-to-r from-emerald-300 via-sky-300 to-blue-400
@@ -6689,8 +6683,6 @@ active:scale-[0.98]
                 />
               )}
             </h3>
-
-
             {/* NFT preview card */}
             <div
               className="
@@ -6731,8 +6723,6 @@ active:scale-[0.98]
                       : "/raihan-avatar.jpg"
                   }
                   className="h-12 w-12 rounded-full ring-2 ring-sky-400 animate-[breath_3.6s_ease-in-out_infinite]"
-
-
                 />
                 <div>
                   <p className="text-sm font-semibold text-slate-100">
@@ -6745,7 +6735,6 @@ active:scale-[0.98]
                   </p>
                 </div>
               </div>
-
               <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
                 <span className="text-[11px] uppercase tracking-wider text-slate-400">Highest streak</span>
                 <span className=" text-right
@@ -6756,19 +6745,14 @@ active:scale-[0.98]
   ">
                   {highestNumber}
                 </span>
-
-
                 <span className="text-right text-sm font-semibold text-sky-300">
-
                 </span>
               </div>
-
               <div className="flex items-center justify-center gap-2 pt-2 text-[10px] text-slate-400 text-center">
                 <img src="/logo-0x.jpg" className="h-4 w-4" />
                 GuitarFi Identity NFT
               </div>
             </div>
-
             {/* mint button */}
             <div className="flex justify-center mt-3">
               <button
@@ -6803,14 +6787,10 @@ active:scale-[0.98]
               >
                 {hasIdentityNFT ? "Minted ✓" : "Mint"}
               </button>
-
             </div>
-
           </div>
         </div>
       )}
-
-
     </main>
   );
 }
