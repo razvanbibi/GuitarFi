@@ -2875,14 +2875,12 @@ ${showExploreMenu
               className={`text-xs -mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-900"
                 }`}
             >
-
               {account
                 ? hasCheckedInToday
                   ? "You've already checked in today. Come back tomorrow!"
                   : "Tap Gm to unlock today’s GTR reward."
                 : "Connect your wallet to start your daily Gm streak."}
             </p>
-
             {account && (
               <div className="flex justify-center gap-4 mt-2">
                 {hasCheckedInToday ? (
@@ -2893,60 +2891,44 @@ ${showExploreMenu
     group
     relative
     overflow-hidden
-
     w-[132px]
     h-12
-
     rounded-2xl
-
     border border-sky-400/25
-
 bg-gradient-to-r
 from-sky-500/10
 via-cyan-400/10
 to-sky-500/10
-
     backdrop-blur-xl
-
     transition-all
     duration-500
-
   shadow-[0_0_20px_rgba(56,189,248,0.15)]
-
     cursor-not-allowed
   "
                     >
                       <div
                         className="
       absolute inset-0
-
       -translate-x-full
       group-hover:translate-x-full
-
       transition-transform
       duration-[1800ms]
-
       bg-gradient-to-r
       from-transparent
       via-white/20
       to-transparent
     "
                       />
-
                       <div
                         className="
       absolute inset-0
-
       opacity-0
       group-hover:opacity-100
-
       transition-opacity
       duration-500
-
       bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.18),transparent_70%)]
     "
                       />
-
                       <div className="relative z-10 flex items-center justify-center h-full">
                         <span className="font-semibold text-sky-200 tracking-wide">
                           Guitarist
