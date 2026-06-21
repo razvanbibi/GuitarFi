@@ -4832,17 +4832,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
           >
             <div className="flex items-center justify-between">
-
               <div>
-
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-
                   CELO Vault
                 </h2>
-
                 <p
                   className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
                     }`}
@@ -4850,12 +4846,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   Deposit or withdraw your CELO instantly
                 </p>
               </div>
-
-
             </div>
-
             {/* Balance */}
-
             <div
               className="
     rounded-2xl
@@ -4871,16 +4863,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <p className="text-[11px] text-slate-400">
                     Your Balance
                   </p>
-
                   <p className="text-lg font-bold text-white mt-1">
                     {userCeloVaultBalance}
                   </p>
-
                   <p className="text-[10px] text-slate-500">
                     CELO
                   </p>
                 </div>
-
                 {/* Divider */}
                 <div
                   className="
@@ -4893,7 +4882,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         to-transparent
       "
                 />
-
                 {/* Total Vault */}
                 <div className="flex-1 text-center">
                   <p className="text-[11px] text-slate-400">
