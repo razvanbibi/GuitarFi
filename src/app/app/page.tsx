@@ -4059,20 +4059,15 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     <div
                       className="
         relative
-
         flex
         h-12
         w-12
-
         items-center
         justify-center
-
         rounded-2xl
-
         bg-gradient-to-br
         from-violet-500/20
         to-sky-500/20
-
         border border-white/10
       "
                     >
@@ -4080,74 +4075,57 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         className="
           absolute inset-0
           rounded-2xl
-
           bg-violet-500/20
           blur-xl
         "
                       />
-
                       <span className="relative text-xl">
                         🎸
                       </span>
                     </div>
-
                     <div className="text-left">
                       <div
                         className="
           text-sm
           font-bold
-
           bg-gradient-to-r
           from-white
           via-violet-200
           to-sky-300
-
           bg-clip-text
           text-transparent
         "
                       >
                         Guitar Collection
                       </div>
-
                       <div className="text-[11px] text-slate-400">
                         View your premium NFTs
                       </div>
                     </div>
-
                   </div>
-
                   {/* Right */}
                   <div
                     className="
       flex
       h-10
       w-10
-
       items-center
       justify-center
-
       rounded-full
-
       bg-white/5
-
       border border-white/10
-
       text-violet-300
-
       transition-all
       duration-300
-
       group-hover:translate-x-1
       group-hover:bg-violet-500/15
     "
                   >
                     →
                   </div>
-
                 </div>
               </button>
             </div>
-
           </section>
 
 
