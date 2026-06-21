@@ -2765,7 +2765,6 @@ ${showExploreMenu
     ${isDarkMode ? glassCard : ""}
   `}
           >
-
             <div className="flex items-center justify-between">
               <h2 className="text-sm font-semibold text-slate-100 flex items-center gap-2">
                 <CeloBlockLogo
@@ -2775,13 +2774,11 @@ ${showExploreMenu
               </h2>
               {/* RIGHT: stats */}
               <div className="flex gap-6 text-center">
-
                 <div>
                   <div
                     className={`text-xl font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                       }`}
                   >
-
                     {streakNumber}
                   </div>
                   <div
@@ -2790,9 +2787,7 @@ ${showExploreMenu
                   >
                     Current
                   </div>
-
                 </div>
-
                 <div className="relative">
                   <div
                     className={`text-xl font-semibold ${isDarkMode ? "text-sky-300" : "text-sky-500"
