@@ -5799,47 +5799,35 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 group
 relative
 overflow-hidden
-
 w-full
 h-12
-
 rounded-2xl
-
 border border-sky-400/25
-
 bg-gradient-to-r
 from-sky-500/10
 via-cyan-400/10
 to-sky-500/10
-
 backdrop-blur-xl
-
 transition-all
 duration-500
-
 hover:border-sky-300/60
 hover:shadow-[0_0_30px_rgba(56,189,248,0.25)]
-
 active:scale-[0.98]
 "
             >
               <div
                 className="
     absolute inset-0
-
     -translate-x-full
     group-hover:translate-x-full
-
     transition-transform
     duration-[1800ms]
-
     bg-gradient-to-r
     from-transparent
     via-white/20
     to-transparent
   "
               />
-
               <div className="relative z-10">
                 Got it, let's start
               </div>
