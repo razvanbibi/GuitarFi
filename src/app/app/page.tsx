@@ -5898,27 +5898,22 @@ active:scale-[0.98]
             )}
             {devUnlocked && (
               <div className="flex flex-col gap-2">
-
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-
                   {/* MINT */}
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">Mint Tokens</h3>
-
                     <input
                       value={devMintAddress}
                       onChange={(e) => setDevMintAddress(e.target.value)}
                       placeholder="Wallet address"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <input
                       value={devMintAmount}
                       onChange={(e) => setDevMintAmount(e.target.value)}
                       placeholder="Amount"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <button
                       onClick={handleDevMint}
                       disabled={devRunning}
@@ -5927,18 +5922,15 @@ active:scale-[0.98]
                       Mint
                     </button>
                   </div>
-
                   {/* BURN */}
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">Burn Tokens</h3>
-
                     <input
                       value={devBurnAmount}
                       onChange={(e) => setDevBurnAmount(e.target.value)}
                       placeholder="Amount"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <input
                       type="number"
                       value={devBurnCount}
@@ -5955,7 +5947,6 @@ active:scale-[0.98]
     outline-none
   "
                     />
-
                     <button
                       onClick={handleDevBurn}
                       disabled={devRunning}
@@ -5964,25 +5955,21 @@ active:scale-[0.98]
                       Burn
                     </button>
                   </div>
-
                   {/* CLAIM */}
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">Claim From Contract</h3>
-
                     <input
                       value={devClaimAddress}
                       onChange={(e) => setDevClaimAddress(e.target.value)}
                       placeholder="Wallet address"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <input
                       value={devClaimAmount}
                       onChange={(e) => setDevClaimAmount(e.target.value)}
                       placeholder="Amount"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <button
                       onClick={handleDevClaim}
                       disabled={devRunning}
@@ -5991,25 +5978,21 @@ active:scale-[0.98]
                       Claim
                     </button>
                   </div>
-
                   {/* REVERSE */}
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">Reverse Tokens</h3>
-
                     <input
                       value={devReverseToken}
                       onChange={(e) => setDevReverseToken(e.target.value)}
                       placeholder="Token contract"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <input
                       value={devReverseAmount}
                       onChange={(e) => setDevReverseAmount(e.target.value)}
                       placeholder="Amount"
                       className="w-full rounded-lg bg-black/30 p-3"
                     />
-
                     <button
                       onClick={handleDevReverse}
                       disabled={devRunning}
@@ -6018,25 +6001,21 @@ active:scale-[0.98]
                       Reverse
                     </button>
                   </div>
-
                   {/* MULTISEND */}
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">MultiSend</h3>
-
                     <textarea
                       value={devMultiAddresses}
                       onChange={(e) => setDevMultiAddresses(e.target.value)}
                       placeholder="One address per line"
                       className="w-full rounded-lg bg-black/30 p-3 h-32"
                     />
-
                     <textarea
                       value={devMultiAmounts}
                       onChange={(e) => setDevMultiAmounts(e.target.value)}
                       placeholder="One amount per line"
                       className="w-full rounded-lg bg-black/30 p-3 h-32"
                     />
-
                     <button
                       onClick={handleDevMultiSend}
                       disabled={devRunning}
@@ -6045,7 +6024,6 @@ active:scale-[0.98]
                       MultiSend
                     </button>
                   </div>
-
                   <div className="border border-white/10 rounded-xl p-4 space-y-3">
                     <h3 className="font-bold text-lg">
                       Withdraw USDM
@@ -6092,21 +6070,13 @@ active:scale-[0.98]
                   </div>
                 </div>
                 <hr className="border-white/10 my-1" />
-
                 <div className="text-[11px] text-slate-400 text-center">
-
                   NFT actions
-
                 </div>
-
               </div>
-
             )}
-
           </div>
-
         </div>
-
       )}
 
       {globalToast && (
