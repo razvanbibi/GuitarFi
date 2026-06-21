@@ -3893,9 +3893,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             </button>
           </section>
 
-
-
-
           {/* Badge progress + badge list */}
           <section
             className={`
@@ -3903,7 +3900,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     ${isDarkMode ? glassCard : ""}
   `}
           >
-
             <div
               className="
     rounded-3xl
@@ -3920,10 +3916,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   My Guitar NFTs
                 </h2>
               </div>
-
               {/* NFT Grid */}
               <div className="grid grid-cols-3 gap-3">
-
                 {/* Acoustic */}
                 <div
                   className="
