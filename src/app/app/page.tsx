@@ -3790,24 +3790,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       p-3
     "
             >
-
               <div className="flex items-center justify-between">
-
                 <span className="text-xs text-slate-400">
                   You Receive
                 </span>
-
                 <div className="flex items-center gap-1">
-
                   <span className="text-lg font-semibold text-sky-200">
                     {estimatedGTR.toLocaleString()}
                   </span>
-
                   <span className="text-xs text-sky-300">
                     GTR
                   </span>
-
-
                 </div>
                 <div className="mt-1 text-[10px] text-slate-500">
                   {convertToken === "USDm"
@@ -3815,11 +3808,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     : "1 CELO = 100 GTR"}
                 </div>
               </div>
-
             </div>
-
-            {/* BUTTON */}
-
             <button
               onClick={handleConvert}
               disabled={loading}
