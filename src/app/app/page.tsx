@@ -1256,37 +1256,24 @@ export default function HomePage() {
         showGlobalToast("Connect wallet first");
         return;
       }
-
       const amountScaled = ethers.parseUnits(vaultAmount, 18);
       setVaultAction("deposit");
       setLoading(true);
-
       const { usdc } = await getUSDmContractWithSigner();
-
       showGlobalToast("Approve USDm...");
-
       const approveTx = await usdc.approve(
         "0x33FAF6C82003cCEA6a3F4A1d1e9ab9CB7DC40FD4",
         amountScaled
       );
-
       await approveTx.wait();
-
       setStatus("Deposit confirmation...");
-
       const { contract } = await getVaultContractWithSigner();
-
       const tx = await contract.deposit(amountScaled);
-
       await tx.wait();
-
       showGlobalToast("Vault deposit successful 💎");
-
       await loadVaultData();
-
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(
         err?.shortMessage ??
         err?.message ??
@@ -1296,15 +1283,15 @@ export default function HomePage() {
       setLoading(false);
     }
   }
+  
   function showGlobalToast(message: string) {
-
     setGlobalToast(message);
-
     setTimeout(() => {
       setGlobalToast(null);
     }, 2500);
 
   }
+
   async function handleCeloVaultDeposit() {
     try {
 
