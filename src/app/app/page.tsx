@@ -3373,7 +3373,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     hover:scale-105
   "
                   >
-
                     <Image
                       src="/vault.png"
                       alt="Vault"
@@ -3381,9 +3380,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       height={55}
                       className="object-contain"
                     />
-
                   </button>
-
                 </div>
               </div>
             </div>
