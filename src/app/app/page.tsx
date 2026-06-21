@@ -795,40 +795,29 @@ export default function HomePage() {
   }
 
   async function loadNFTBalances() {
-
     if (!account) return;
-
     try {
       setLoadingNFTs(true);
       const eth = getEthereum();
-
       if (!eth) return;
-
       const provider =
         new ethers.BrowserProvider(eth);
-
       const nftContract =
         new ethers.Contract(
           GUITARFI_BADGES_CONTRACT,
           GUITARFI_BADGES_ABI,
           provider
         );
-
       const balances: Record<number, number> = {};
-
       for (let id = 1; id <= 31; id++) {
-
         const bal =
           await nftContract.balanceOf(
             account,
             id
           );
-
         balances[id] = Number(bal);
       }
-
       setNftBalances(balances);
-
     } catch (err) {
       console.error(
         "NFT load failed",
@@ -2122,7 +2111,6 @@ ${showTradeMenu
               )}
             </div>
             <div className="mt-4 relative">
-
               <button
                 onClick={() => {
                   setShowExploreMenu(!showExploreMenu);
@@ -2136,7 +2124,6 @@ rounded-2xl
 px-5 py-3
 transition-all
 duration-300
-
 ${showExploreMenu
                     ? `
       bg-gradient-to-r
@@ -2158,7 +2145,6 @@ ${showExploreMenu
                 <span className="font-semibold">
                   Explore
                 </span>
-
                 <span>
                   {showExploreMenu ? "−" : "+"}
                 </span>
@@ -2384,7 +2370,6 @@ ${showExploreMenu
                         "▶"
                       )}
                     </div>
-
                     <div className="play-frame">
                       <span className="left-arrow" />
                       <div className="play-clip">
