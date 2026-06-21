@@ -467,23 +467,20 @@ export default function HomePage() {
       setLoading(false);
     }
   }
+  
   async function getUSDmContractWithSigner() {
     const eth = getEthereum();
     if (!eth) throw new Error("Wallet not found");
-
     const provider = new ethers.BrowserProvider(eth as any);
     const signer = await provider.getSigner();
-
     const usdcAbi = [
       "function transfer(address to, uint256 amount) returns (bool)",
       "function allowance(address owner, address spender) view returns (uint256)",
       "function approve(address spender, uint256 amount) returns (bool)",
     ];
-
     const usdc = new ethers.Contract(USDM_TOKEN_ADDRESS, usdcAbi, signer);
     return { provider, signer, usdc };
   }
-
 
   useEffect(() => {
     if (!account || !ethReady) return;
@@ -492,30 +489,24 @@ export default function HomePage() {
       try {
         const eth = getEthereum();
         if (!eth) return;
-
         const provider = new ethers.BrowserProvider(eth as any);
         const nft = new ethers.Contract(
           IDENTITY_NFT_ADDRESS,
           ["function balanceOf(address owner) view returns (uint256)"],
           provider
         );
-
         const balance = Number(await nft.balanceOf(account));
-
         setHasIdentityNFT(balance > 0);
       } catch (err) {
         console.error("Identity NFT check failed", err);
       }
     }
-
     checkIdentityNFT();
   }, [account, ethReady]);
 
   useEffect(() => {
     if (!account) return;
-
     const saved = localStorage.getItem(`profile:${account}`);
-
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -532,7 +523,6 @@ export default function HomePage() {
     localStorage.setItem(
       `profile:${account}`,
       JSON.stringify({ name, avatar })
-
     );
     try {
       const res = await fetch("/api/profile/register", {
