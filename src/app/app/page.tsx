@@ -1070,11 +1070,9 @@ export default function HomePage() {
   function triggerAvatarRun(badgeProgress: number) {
     const runner = document.getElementById("avatar-runner");
     if (!runner) return;
-
     runner.style.setProperty("--target-x", `${badgeProgress * 100}%`);
     runner.classList.remove("hidden");
     runner.style.animation = "avatar-run 3s ease-out forwards";
-
     const originals = document.querySelectorAll("[data-avatar-main]");
     originals.forEach((el) => {
       (el as HTMLElement).style.opacity = "0";
@@ -1087,31 +1085,24 @@ export default function HomePage() {
         showGlobalToast("Connect your wallet first.");
         return;
       }
-
       const hasTokens =
         (pendingTokens ?? BigInt(0)) > BigInt(0);
-
       const hasBadges =
         (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT31 ?? BigInt(0)) > BigInt(0);
-
       if (!hasTokens && !hasBadges) {
         showGlobalToast("Nothing to claim right now.");
         return;
       }
-
       setLoading(true);
       setActiveAction("claim");
       setStatus("Sending claim transaction...");
       const claimAmount = pendingTokens;
       await ensureCeloNetwork();
-
       const { contract } = await getContractWithSigner();
-
       let tx;
-
       if (hasTokens && hasBadges) {
         tx = await contract.claimAll();
       }
@@ -1121,7 +1112,6 @@ export default function HomePage() {
       else if (hasBadges) {
         tx = await contract.claimAllNFTs();
       }
-
       await tx.wait();
       setPendingTokens(BigInt(0));
       setpendingNFT1(BigInt(0));
