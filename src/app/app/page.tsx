@@ -3151,10 +3151,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 onAnimationEnd={() => {
                   const runner = document.getElementById("avatar-runner");
                   if (!runner) return;
-
                   runner.classList.add("hidden");
                   runner.style.animation = "none";
-
                   const originals = document.querySelectorAll("[data-avatar-main]");
                   originals.forEach(el => {
                     (el as HTMLElement).style.opacity = "1";
