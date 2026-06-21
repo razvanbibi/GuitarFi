@@ -6828,7 +6828,6 @@ function BadgeCard({
         >
           {icon}
         </span>
-
         <span
           className={`text-[11px] ${isDarkMode ? "text-slate-100" : "text-slate-900"
             }`}
@@ -6836,7 +6835,6 @@ function BadgeCard({
           {name}
         </span>
       </div>
-
       <span
         className={`text-[11px] font-semibold ${isDarkMode ? "text-slate-400" : "text-slate-900"
           }`}
@@ -6846,7 +6844,6 @@ function BadgeCard({
     </div>
   );
 }
-
 function BadgeGlow({
   icon,
   count,
@@ -6865,7 +6862,6 @@ function BadgeGlow({
       >
         {icon}
       </span>
-
       {count > 1 && (
         <span
           className="
@@ -6888,7 +6884,6 @@ function BadgeGhost({ icon }: { icon: string }) {
     </span>
   );
 }
-
 function CeloBlockLogo({
   checkedIn,
   isDark,
@@ -6903,7 +6898,6 @@ function CeloBlockLogo({
         alt="Celo"
         className="h-6 w-auto object-contain transition-opacity duration-200"
       />
-
       {checkedIn && (
         <span className="ml-1 text-xs text-emerald-400 animate-[fade-up_0.3s_ease-out]">
           ✓
