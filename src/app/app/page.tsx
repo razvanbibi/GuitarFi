@@ -3686,18 +3686,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       ↑
                     </div>
                   )}
-
                   <span className="font-semibold text-white">
                     {loading && vaultAction === "withdraw"
                       ? "Withdrawing..."
                       : "Withdraw"}
                   </span>
-
                 </div>
               </button>
-
             </div>
-
           </section>
 
           {/* GTR Converter */}
