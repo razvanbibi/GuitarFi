@@ -18,7 +18,7 @@ export async function GET(
   const nft = new ethers.Contract(NFT_CONTRACT, NFT_ABI, provider);
   const owner: string = await nft.ownerOf(tokenId);
  
-  const { contract } = getReadOnlyContractServer();
+  const { contract } = getReadOnlyContractServer(); 
   const highestStreak = Number(await contract.highestStreak(owner));
   return NextResponse.json({
    
