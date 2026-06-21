@@ -3475,12 +3475,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <p className="text-lg font-bold text-white mt-1">
                     {userCeloVaultBalance}
                   </p>
-
                   <p className="text-[10px] text-slate-500">
                     CELO
                   </p>
                 </div>
-
                 {/* Divider */}
                 <div
                   className="
@@ -3493,7 +3491,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         to-transparent
       "
                 />
-
                 {/* Total Vault */}
                 <div className="flex-1 text-center">
                   <p className="text-[11px] text-slate-400">
