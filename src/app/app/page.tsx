@@ -1371,24 +1371,16 @@ export default function HomePage() {
         showGlobalToast("Connect wallet first");
         return;
       }
-
       const amountScaled = ethers.parseUnits(vaultAmount, 18);
       setVaultAction("withdraw");
       setLoading(true);
-
       const { contract } = await getVaultContractWithSigner();
-
       const tx = await contract.withdraw(amountScaled);
-
       await tx.wait();
-
       showGlobalToast("Withdraw successful 💸");
-
       await loadVaultData();
-
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(
         err?.shortMessage ??
         err?.message ??
