@@ -5317,7 +5317,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               setExpandedCollection(false);
             }}
           />
-
           <div
             className="
       relative
@@ -5330,7 +5329,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       shadow-[0_0_60px_rgba(168,85,247,0.15)]
       "
           >
-
             <div className="flex justify-end mb-3">
               <button
                 onClick={() => {
@@ -5349,7 +5347,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 ✕
               </button>
             </div>
-
             <div
               className="
     rounded-3xl
@@ -5371,7 +5368,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     transition-all
     duration-500
     overflow-y-auto
-
     ${expandedCollection
                     ? "max-h-[420px] pr-1"
                     : "max-h-[120px]"
@@ -5450,17 +5446,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       alt="Electric"
                       className="w-full h-20 object-contain"
                     />
-
                     <h3 className="mt-2 text-xs text-white">
                       Electric
                     </h3>
-
                     <div className="mt-1 flex items-center justify-between">
 
                       <span className="text-[10px] text-slate-500">
                         NFT
                       </span>
-
                       <span
                         className="
       rounded-full
@@ -5485,8 +5478,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       </span>
                     </div>
                   </div>
-
-
                   <div
                     className="
         rounded-2xl
@@ -5497,7 +5488,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         p-2
         transition
         hover:scale-[1.03]
-
         shadow-[0_0_18px_rgba(251,191,36,0.25)]
       "
                   >
@@ -5506,17 +5496,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       alt="Aurora Chord Guitar"
                       className="w-full h-20 object-contain"
                     />
-
                     <h3 className="mt-2 text-xs text-white">
                       Aurora Chord Guitar
                     </h3>
-
                     <div className="mt-1 flex items-center justify-between">
-
                       <span className="text-[10px] text-slate-500">
                         NFT
                       </span>
-
                       <span
                         className="
       rounded-full
@@ -5560,17 +5546,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         alt={nft.name}
                         className="w-full h-20 object-contain"
                       />
-
                       <h3 className="mt-2 text-xs text-white">
                         {nft.name}
                       </h3>
-
                       <div className="mt-1 flex items-center justify-between">
-
                         <span className="text-[10px] text-slate-500">
                           NFT
                         </span>
-
                         <span
                           className="
       rounded-full
@@ -5589,15 +5571,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                             <>Not Owned</>
                           )}
                         </span>
-
                       </div>
                     </div>
                   ))}
                 </div>
-
               </div>
-
-
               {/* CTA */}
               <button
                 onClick={() =>
@@ -5606,29 +5584,21 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
   group
   relative
-
   w-full
   overflow-hidden
-
   rounded-[28px]
-
   border border-white/10
-
   bg-[linear-gradient(
     135deg,
     rgba(30,41,59,0.95),
     rgba(88,28,135,0.55),
     rgba(15,23,42,0.95)
   )]
-
   p-[1px]
-
   transition-all
   duration-500
-
   hover:scale-[1.015]
   hover:shadow-[0_0_60px_rgba(168,85,247,0.25)]
-
   active:scale-[0.985]
 "
               >
@@ -5636,13 +5606,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <div
                   className="
     absolute inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition-opacity
     duration-500
-
     bg-[conic-gradient(
       from_180deg,
       transparent,
@@ -5651,46 +5618,34 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       rgba(59,130,246,0.7),
       transparent
     )]
-
     animate-[spin_6s_linear_infinite]
   "
                 />
-
                 <div
                   className="
     relative
-
     flex items-center
     justify-between
-
     rounded-[27px]
-
     bg-[#050816]/95
-
     px-5
     py-4
   "
                 >
                   {/* Left */}
                   <div className="flex items-center gap-4">
-
                     <div
                       className="
         relative
-
         flex
         h-12
         w-12
-
         items-center
         justify-center
-
         rounded-2xl
-
         bg-gradient-to-br
         from-violet-500/20
         to-sky-500/20
-
         border border-white/10
       "
                     >
@@ -5698,42 +5653,34 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         className="
           absolute inset-0
           rounded-2xl
-
           bg-violet-500/20
           blur-xl
         "
                       />
-
                       <span className="relative text-xl">
                         🎸
                       </span>
                     </div>
-
                     <div className="text-left">
                       <div
                         className="
           text-sm
           font-bold
-
           bg-gradient-to-r
           from-white
           via-violet-200
           to-sky-300
-
           bg-clip-text
           text-transparent
         "
                       >
                         Guitar Collection
                       </div>
-
                       <div className="text-[11px] text-slate-400">
                         View your premium NFTs
                       </div>
                     </div>
-
                   </div>
-
                   {/* Right */}
                   <div
                     className="
@@ -5776,16 +5723,12 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       "→"
                     )}
                   </div>
-
                 </div>
               </button>
             </div>
-
           </div>
-
         </div>
       )}
-
 
       {/* Onboarding overlay */}
       {showOnboarding && (
