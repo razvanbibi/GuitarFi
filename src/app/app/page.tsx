@@ -1038,39 +1038,28 @@ export default function HomePage() {
         showGlobalToast("Connect wallet first");
         return;
       }
-
       setLoading(true);
       setActiveAction("tap");
-
       const { contract } =
         await getContractWithSigner();
-
       setStatus("Confirm tap...");
-
       const tx = await contract.tap();
-
       await tx.wait();
-
       showGlobalToast(
         "Tap successful 🎸 +0.01 GTR"
       );
-
       await refreshData();
-
     } catch (err: any) {
       console.error(err);
-
       const msg =
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
         "";
-
       if (msg.includes("Mint Identity First")) {
         setShowIdentityRequired(true);
         return;
       }
-
       showGlobalToast(msg || "Tap failed.");
     } finally {
       setLoading(false);
