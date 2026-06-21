@@ -87,7 +87,6 @@ function AvatarBubbleStream({ avatar }: { avatar: string }) {
   );
 }
 
-
 export default function HomePage() {
   const [account, setAccount] = useState<string | null>(null);
   const [streak, setStreak] = useState<bigint | null>(null);
@@ -95,22 +94,18 @@ export default function HomePage() {
   const [pendingRewards, setPendingRewards] = useState("0");
   const [pendingTokens, setPendingTokens] = useState<bigint | null>(null);
   const [paused, setPaused] = useState<boolean | null>(null);
-
   const [totalEarned, setTotalEarned] = useState<bigint | null>(null);
-
   const [loading, setLoading] = useState(false);
   const [vaultAction, setVaultAction] = useState<
     "deposit" | "withdraw" | null
   >(null);
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>(null);
-
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
   const [recentlyClaimed, setRecentlyClaimed] = useState(false);
   const [toast, setToast] = useState<Toast>(null);
-
   const [pendingNFT1, setpendingNFT1] = useState<bigint | null>(null);
   const [pendingNFT2, setpendingNFT2] = useState<bigint | null>(null);
   const [pendingNFT3, setpendingNFT3] = useState<bigint | null>(null);
@@ -119,119 +114,83 @@ export default function HomePage() {
     useState<Record<number, number>>({});
   const [loadingNFTs, setLoadingNFTs] =
     useState(false);
-
   const [showDonate, setShowDonate] = useState(false);
   const [showTradeMenu, setShowTradeMenu] = useState(false);
   const [showExploreMenu, setShowExploreMenu] = useState(false);
-
   const [showVault, setShowVault] = useState(false);
   const [showCeloVault, setShowCeloVault] = useState(false);
   const [showConvertModal, setShowConvertModal] = useState(false);
   const [showCollectionsModal, setShowCollectionsModal] = useState(false);
   const [vaultAmount, setVaultAmount] = useState("1");
-
   const [vaultBalance, setVaultBalance] = useState("0");
-
   const [userVaultBalance, setUserVaultBalance] = useState("0");
   const [celoVaultBalance, setCeloVaultBalance] =
     useState("0");
   const [globalToast, setGlobalToast] =
     useState<string | null>(null);
-
   const [userCeloVaultBalance, setUserCeloVaultBalance] =
     useState("0");
-
   const [donationAmount, setDonationAmount] = useState<string>("1");
-
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
   const [ethReady, setEthReady] = useState(false);
-
   const [topSupporters, setTopSupporters] = useState<Supporter[]>([]);
-
   const [taglineAnim, setTaglineAnim] = useState(true);
-
   const [showOnboarding, setShowOnboarding] = useState(false);
-  // Theme (day / night)
   const [isDarkMode, setIsDarkMode] = useState(true);
-
   const [showBadgeInfo, setShowBadgeInfo] = useState(false);
-
   const [flashGlow, setFlashGlow] = useState(false);
-
   const [showRewardsTip, setShowRewardsTip] = useState(false);
   const [showBadgesTip, setShowBadgesTip] = useState(false);
-
   const [showLeaderboard, setShowLeaderboard] = useState(false);
-
   const [leaderboard, setLeaderboard] = useState<
     { address: string; highestStreak: number; name?: string | null; avatar?: string | null }[]
   >([]);
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
-
   const [showMintIdentity, setShowMintIdentity] = useState(false);
-
   const IDENTITY_NFT_ADDRESS = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
   const DEV_PASSWORD = "1245";
-
   const [hasIdentityNFT, setHasIdentityNFT] = useState<boolean | null>(null);
   const [identityTokenId, setIdentityTokenId] = useState<number | null>(null);
-
   const [showDevPanel, setShowDevPanel] = useState(false);
   const [devPasswordInput, setDevPasswordInput] = useState("");
   const [devUnlocked, setDevUnlocked] = useState(false);
   const [devRunning, setDevRunning] = useState(false);
-
   const [devMintAddress, setDevMintAddress] = useState("");
   const [devMintAmount, setDevMintAmount] = useState("");
-
   const [devBurnAmount, setDevBurnAmount] = useState("");
   const [devBurnCount, setDevBurnCount] = useState("500");
-
   const [devClaimAddress, setDevClaimAddress] = useState("");
   const [devClaimAmount, setDevClaimAmount] = useState("");
-
   const [devReverseToken, setDevReverseToken] = useState("");
   const [devReverseAmount, setDevReverseAmount] = useState("");
-
   const [devMultiAddresses, setDevMultiAddresses] = useState("");
   const [devMultiAmounts, setDevMultiAmounts] = useState("");
-
   const [isMiniPay, setIsMiniPay] = useState(false);
   const [showBadgeTooltip, setShowBadgeTooltip] = useState(false);
-
   const [currentTune, setCurrentTune] = useState("");
   const [tunePlaying, setTunePlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const [convertToken, setConvertToken] =
     useState("USDm");
   const [convertAmount, setConvertAmount] =
     useState("1");
-
   const [hasIdentity, setHasIdentity] =
     useState(false);
-
   const [identityURI, setIdentityURI] =
     useState("");
-
   const [identityImage, setIdentityImage] =
     useState("");
-
   const [identityMetadata, setIdentityMetadata] =
     useState<any>(null);
   const [showIdentityRequired, setShowIdentityRequired] = useState(false);
-
   const [devWithdrawUSDM, setDevWithdrawUSDM] = useState("");
   const [devWithdrawCELO, setDevWithdrawCELO] = useState("");
   const [expandedCollection, setExpandedCollection] =
     useState(false);
 
-
-  // একবারই ছোট onboarding দেখাবে
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     const seen = window.localStorage.getItem("celodaily_onboarding_v1");
     if (!seen) {
       setShowOnboarding(true);
@@ -243,14 +202,9 @@ export default function HomePage() {
     setShowOnboarding(false);
   };
 
-
-
-  // প্রথমবার লোড হলে থিম পড়ে আনা
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     const stored = window.localStorage.getItem("celodaily_theme");
-
     if (stored === "dark") {
       setIsDarkMode(true);
     } else if (stored === "light") {
@@ -261,7 +215,6 @@ export default function HomePage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     window.localStorage.setItem(
       "celodaily_theme",
       isDarkMode ? "dark" : "light"
@@ -277,9 +230,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     const eth = (window as any).ethereum;
-
     if (eth?.isMiniPay) {
       setIsMiniPay(true);
       console.log("✅ MiniPay detected");
@@ -287,23 +238,18 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-
     if (
       account &&
       hasIdentityNFT
     ) {
-
       loadIdentity();
 
     }
-
   }, [
     account,
     hasIdentityNFT
   ]);
 
-
-  // ---- helpers for localStorage-based daily gm ----
   function getTodayId() {
     const d = new Date();
     return `${d.getUTCFullYear()}-${d.getUTCMonth() + 1}-${d.getUTCDate()}`;
@@ -319,13 +265,10 @@ export default function HomePage() {
       )
     );
     const diff = tomorrow.getTime() - now.getTime();
-
     const hours = Math.floor(diff / 36e5);
     const minutes = Math.floor((diff % 36e5) / 6e4);
-
     return `${hours}h ${minutes}m`;
   }
-
   function getStorageKey(acc: string) {
     return `celodaily:checkin:${acc.toLowerCase()}`;
   }
