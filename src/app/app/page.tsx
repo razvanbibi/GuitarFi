@@ -3733,14 +3733,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 SWAP
               </div>
             </div>
-            {/* FROM */}
-
             <div className="space-y-2">
-
               <label className="text-xs text-slate-400">
                 From
               </label>
-
               <div
                 className="
         flex items-center gap-3
@@ -3750,7 +3746,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         p-3
       "
               >
-
                 <select
                   value={convertToken}
                   onChange={(e) =>
@@ -3765,12 +3760,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <option value="CELO">
                     CELO
                   </option>
-
                   <option value="USDm">
                     USDm
                   </option>
                 </select>
-
                 <input
                   type="number"
                   min="0"
@@ -3787,17 +3780,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           text-white
         "
                 />
-
               </div>
-
             </div>
-
-            {/* ARROW */}
-
-
-
-            {/* TO */}
-
             <div
               className="
       rounded-2xl
