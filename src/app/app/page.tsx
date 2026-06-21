@@ -4338,7 +4338,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
       {showVault && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
-
           {/* Backdrop */}
           <div
             className="
@@ -4348,7 +4347,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
             onClick={() => setShowVault(false)}
           />
-
           {/* Modal */}
           <div
             className="
@@ -4377,7 +4375,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     hover:scale-105
   "
                 >
-
                   <Image
                     src="/vault.png"
                     alt="Vault"
