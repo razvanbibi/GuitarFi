@@ -6451,10 +6451,7 @@ active:scale-[0.98]
                 Share
               </span>
             </button>
-
           </div>
-
-
           <div className="pt-2">
             <button
               onClick={() => setShowDevPanel(true)}
@@ -6474,7 +6471,6 @@ active:scale-[0.98]
               Dev panel
             </button>
           </div>
-
           <div className="mt-3 text-center text-[10px] text-slate-500">
             © 2026 GuitarFi by{" "}
             <a
@@ -6487,9 +6483,7 @@ active:scale-[0.98]
             </a>{" "}
             — All rights reserved.
           </div>
-
         </div>
-
       </div>
 
       {showIdentityRequired && (
