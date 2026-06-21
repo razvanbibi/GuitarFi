@@ -5092,12 +5092,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
 
       {showConvertModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
-
           <div
             className="absolute inset-0 bg-black/70 backdrop-blur-md"
             onClick={() => setShowConvertModal(false)}
           />
-
           <div
             className="
       relative
@@ -5110,10 +5108,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       shadow-[0_0_60px_rgba(56,189,248,0.15)]
       "
           >
-
-
             <div className="flex items-center justify-between">
-
               <div>
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
@@ -5121,7 +5116,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 >
                   Convert to GTR
                 </h2>
-
                 <p
                   className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
                     }`}
@@ -5129,7 +5123,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   Swap CELO or USDm for GTR
                 </p>
               </div>
-
               <div
                 className="
   px-3 py-1
