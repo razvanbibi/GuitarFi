@@ -886,62 +886,45 @@ export default function HomePage() {
         setShowIdentityRequired(true);
         return;
       }
-
       setLoading(true);
-
       const { contract } =
         await getContractWithSigner();
-
       const { contract: tokenContract } =
         await getTokenContractWithSigner();
-
       const tuneCost =
         ethers.parseUnits("50", 18);
-
       const allowance =
         await tokenContract.allowance(
           account,
           OXTXN_STREAK_CONTRACT
         );
-
       if (allowance < tuneCost) {
-
         showGlobalToast(
           "Approve GTR..."
         );
-
         const approveTx =
           await tokenContract.approve(
             OXTXN_STREAK_CONTRACT,
             ethers.MaxUint256
           );
-
         await approveTx.wait();
       }
-
       showGlobalToast(
         "Playing tune onchain..."
       );
-
       const tx =
         await contract.playTune();
-
       await tx.wait();
-
       const random =
         tunes[Math.floor(
           Math.random() * tunes.length
         )];
-
       setCurrentTune(random.name);
-
       if (audioRef.current) {
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
       }
-
       audioRef.current = new Audio(random.file);
-
       audioRef.current.onended = () => {
         setTunePlaying(false);
         setCurrentTune("");
@@ -952,27 +935,21 @@ export default function HomePage() {
       showGlobalToast(
         "Tune played & NFT unlocked"
       );
-
     } catch (err: any) {
       console.error(err);
-
       const msg =
         err?.info?.error?.message ??
         err?.shortMessage ??
         err?.message ??
         "";
-
       if (msg.includes("Mint Identity First")) {
         setShowIdentityRequired(true);
         return;
       }
-
       showGlobalToast(msg || "Play failed.");
       setTunePlaying(false);
     }
     finally {
-
-
       setLoading(false);
 
     }
