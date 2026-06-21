@@ -4005,29 +4005,21 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
   group
   relative
-
   w-full
   overflow-hidden
-
   rounded-[28px]
-
   border border-white/10
-
   bg-[linear-gradient(
     135deg,
     rgba(30,41,59,0.95),
     rgba(88,28,135,0.55),
     rgba(15,23,42,0.95)
   )]
-
   p-[1px]
-
   transition-all
   duration-500
-
   hover:scale-[1.015]
   hover:shadow-[0_0_60px_rgba(168,85,247,0.25)]
-
   active:scale-[0.985]
 "
               >
@@ -4035,13 +4027,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <div
                   className="
     absolute inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition-opacity
     duration-500
-
     bg-[conic-gradient(
       from_180deg,
       transparent,
@@ -4053,18 +4042,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     animate-[spin_6s_linear_infinite]
   "
                 />
-
                 <div
                   className="
     relative
-
     flex items-center
     justify-between
-
     rounded-[27px]
-
     bg-[#050816]/95
-
     px-5
     py-4
   "
