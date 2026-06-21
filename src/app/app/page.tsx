@@ -3697,16 +3697,13 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           </section>
 
           {/* GTR Converter */}
-
           <section
             className={`
     p-4 space-y-4
     ${isDarkMode ? glassCard : ""}
   `}
           >
-
             <div className="flex items-center justify-between">
-
               <div>
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
@@ -3724,7 +3721,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               <div
                 className="
   px-3 py-1
-
   rounded-full
 
   border border-sky-400/20
