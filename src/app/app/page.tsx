@@ -4384,7 +4384,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   />
 
                 </div>
-
                 {/* Title */}
                 <div>
                   <h2
@@ -4397,13 +4396,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   >
                     Vault
                   </h2>
-
                   <p className="text-xs text-slate-400">
                     Store your USDm securely
                   </p>
                 </div>
               </div>
-
               {/* Close */}
               <button
                 onClick={() => setShowVault(false)}
@@ -4435,7 +4432,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           shadow-[0_0_50px_rgba(255,180,0,0.08)]
         "
             >
-
               {/* Glow */}
               <div
                 className="
@@ -4444,7 +4440,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             pointer-events-none
           "
               />
-
               {/* Bottom Beam */}
               <div
                 className="
@@ -4456,16 +4451,12 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             to-transparent
           "
               />
-
               <div className="relative flex items-center justify-between">
-
                 {/* Left */}
                 <div>
-
                   <p className="text-[13px] font-medium text-yellow-100/70">
                     Total Vault Balance
                   </p>
-
                   <h2
                     className="
                 mt-1
@@ -4478,9 +4469,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   >
                     {vaultBalance} USDm
                   </h2>
-
                 </div>
-
                 {/* Right */}
                 <div className="relative flex items-center">
 
@@ -4502,7 +4491,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       strokeWidth="2.5"
                       strokeLinecap="round"
                     />
-
                     <defs>
                       <linearGradient
                         id="gold"
@@ -4516,98 +4504,74 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       </linearGradient>
                     </defs>
                   </svg>
-
                   {/* Coin */}
                   <div className="relative z-10 text-[52px]">
                     🪙
                   </div>
-
                 </div>
               </div>
             </div>
-
             {/* User Balance */}
             <div
               className="
   mt-5
-
   rounded-[24px]
-
   border border-white/5
-
   bg-white/[0.03]
-
   backdrop-blur-xl
-
   px-5
   py-4
-
   text-center
 "
             >
-
               <div
                 className="
     text-[11px]
-
     uppercase
     tracking-[0.22em]
-
     text-slate-500
   "
               >
                 YOUR VAULT BALANCE
               </div>
-
               <div
                 className="
     mt-2
-
     flex
     items-end
     justify-center
     gap-2
   "
               >
-
                 <span
                   className="
       text-[34px]
       font-black
       leading-none
-
       bg-gradient-to-r
       from-white
       via-yellow-100
       to-yellow-300
-
       bg-clip-text
       text-transparent
     "
                 >
                   {Number(userVaultBalance).toFixed(2)}
                 </span>
-
                 <span
                   className="
       mb-1
-
       text-sm
       font-semibold
-
       text-yellow-300
     "
                 >
                   USDm
                 </span>
-
               </div>
-
             </div>
-
             {/* Input */}
             <div className="mt-5">
-
               <div
                 className="
       flex items-center
@@ -4618,7 +4582,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       py-4
     "
               >
-
                 <input
                   type="number"
                   min="0"
@@ -4635,7 +4598,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         placeholder:text-slate-500
       "
                 />
-
                 <div
                   className="
         ml-3
@@ -4646,20 +4608,15 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       "
                 >
                   USDm
-
                   <span className="text-slate-500">
                     ▼
                   </span>
                 </div>
-
               </div>
-
             </div>
             {/* Buttons */}
             <div className="mt-6">
-
               <div className="grid grid-cols-2 gap-3">
-
                 {/* Deposit */}
                 <button
                   onClick={handleVaultDeposit}
@@ -4667,42 +4624,31 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   group
   relative
   overflow-hidden
-
   rounded-[24px]
-
   border
   border-emerald-400/20
-
   bg-[linear-gradient(
     135deg,
     rgba(16,185,129,0.25),
     rgba(5,150,105,0.08)
   )]
-
   py-4
-
   transition-all
   duration-500
-
   hover:scale-[1.03]
   hover:border-emerald-300/40
   hover:shadow-[0_0_40px_rgba(16,185,129,0.25)]
-
   active:scale-[0.97]
 "
                 >
                   <div
                     className="
     absolute inset-0
-
     bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.2),transparent_50%)]
-
     opacity-70
   "
                   />
-
                   <div className="relative flex flex-col items-center gap-1">
-
                     {loading && vaultAction === "deposit" ? (
                       <svg
                         className="h-10 w-10 animate-spin text-emerald-300"
@@ -4737,20 +4683,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         ↓
                       </div>
                     )}
-
                     <span className="text-sm font-bold text-emerald-300">
                       {loading && vaultAction === "deposit"
                         ? "Depositing..."
                         : "Deposit"}
                     </span>
-
                     <span className="text-[10px] text-slate-400">
                       Add USDm
                     </span>
-
                   </div>
                 </button>
-
                 {/* Withdraw */}
                 <button
                   onClick={handleVaultWithdraw}
@@ -4758,40 +4700,30 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   group
   relative
   overflow-hidden
-
   rounded-[24px]
-
   border
   border-amber-400/20
-
   bg-[linear-gradient(
     135deg,
     rgba(251,191,36,0.22),
     rgba(245,158,11,0.08)
   )]
-
   py-4
-
   transition-all
   duration-500
-
   hover:scale-[1.03]
   hover:border-amber-300/40
   hover:shadow-[0_0_40px_rgba(251,191,36,0.25)]
-
   active:scale-[0.97]
 "
                 >
                   <div
                     className="
     absolute inset-0
-
     bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.2),transparent_50%)]
-
     opacity-70
   "
                   />
-
                   <div className="relative flex flex-col items-center gap-1">
 
                     {loading && vaultAction === "withdraw" ? (
@@ -4828,22 +4760,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                         ↑
                       </div>
                     )}
-
                     <span className="text-sm font-bold text-amber-300">
                       {loading && vaultAction === "withdraw"
                         ? "Withdrawing..."
                         : "Withdraw"}
                     </span>
-
                     <span className="text-[10px] text-slate-400">
                       Redeem USDm
                     </span>
-
                   </div>
                 </button>
-
               </div>
-
               {/* Bottom Text */}
               <div
                 className="
@@ -4853,7 +4780,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     text-slate-400
   "
               >
-
                 {/* Shield Icon */}
                 <div
                   className="
@@ -4864,7 +4790,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       shadow-[0_0_12px_rgba(59,130,246,0.18)]
     "
                 >
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -4876,20 +4801,16 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
                     <path d="M9 12l2 2 4-4" />
                   </svg>
-
                 </div>
-
                 <span className="font-medium">
                   Your assets. Your control.
                 </span>
-
               </div>
-
             </div>
           </div>
         </div>
       )}
-
+      
       {showCeloVault && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
 
