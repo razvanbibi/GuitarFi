@@ -1067,19 +1067,6 @@ export default function HomePage() {
     }
   }
 
-  async function loadLeaderboard() {
-    try {
-      setLeaderboardLoading(true);
-      const res = await fetch("/api/leaderboard/lifetime");
-      if (!res.ok) return;
-      const data = await res.json();
-      setLeaderboard(data);
-    } finally {
-      setLeaderboardLoading(false);
-    }
-  }
-
-
   function triggerAvatarRun(badgeProgress: number) {
     const runner = document.getElementById("avatar-runner");
     if (!runner) return;
@@ -1093,7 +1080,6 @@ export default function HomePage() {
       (el as HTMLElement).style.opacity = "0";
     });
   }
-
 
   async function handleClaimAll() {
     try {
