@@ -2269,7 +2269,6 @@ ${showExploreMenu
             <div className="absolute inset-[1px] rounded-[inherit] bg-slate-950 z-[1]" />
             {/* glow */}
             <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-sky-500/10 blur-3xl" />
-
             <div className="relative z-10">
               <div className="flex items-center justify-between">
                 <h2
@@ -2278,8 +2277,6 @@ ${showExploreMenu
                 >
                   Tune zone
                 </h2>
-
-
                 <span
                   className="
     px-2 py-1
@@ -2299,7 +2296,6 @@ ${showExploreMenu
               >
                 Keep your streak alive and let the music grow.
               </p>
-
               {/* quote */}
               <div
                 className="
@@ -2318,27 +2314,20 @@ ${showExploreMenu
                   className="
   group
   relative
-
   overflow-hidden
   h-16
   w-full
-
   rounded-[22px]
-
   border border-cyan-400/20
   bg-[linear-gradient(135deg,
   rgba(6,182,212,0.12),
   rgba(59,130,246,0.10),
   rgba(15,23,42,0.95))]
-
   backdrop-blur-xl
-
   transition-all
   duration-500
-
   hover:border-cyan-400/40
   hover:shadow-[0_0_40px_rgba(34,211,238,0.18)]
-
   active:scale-[0.98]
 "
                 >
@@ -2349,27 +2338,21 @@ ${showExploreMenu
     inset-0
     opacity-0
     group-hover:opacity-100
-
     transition
-
     bg-[radial-gradient(circle_at_center,
     rgba(34,211,238,0.18),
     transparent_65%)]
   "
                   />
-
                   {/* Moving Shine */}
                   <div
                     className="
     absolute
     inset-0
-
     -translate-x-[150%]
     group-hover:translate-x-[150%]
-
     transition-transform
     duration-[1800ms]
-
     bg-[linear-gradient(
     120deg,
     transparent,
@@ -2377,21 +2360,16 @@ ${showExploreMenu
     transparent)]
   "
                   />
-
                   <div className="relative z-10 flex items-center justify-center gap-3">
-
                     <div
                       className="
                       -ml-4.5
       flex
       h-10 w-10
       items-center justify-center
-
       rounded-full
-
       bg-cyan-400/10
       border border-cyan-300/20
-
       text-cyan-300
     "
                     >
@@ -2409,13 +2387,11 @@ ${showExploreMenu
 
                     <div className="play-frame">
                       <span className="left-arrow" />
-
                       <div className="play-clip">
                         <div className="corner left-top" />
                         <div className="corner right-top" />
                         <div className="corner left-bottom" />
                         <div className="corner right-bottom" />
-
                         <div className="play-text flex flex-col items-center leading-none">
                           <span>P L A Y</span>
                           <span className="text-[8px] font-medium tracking-normal opacity-70 mt-[6px]">
@@ -2423,24 +2399,19 @@ ${showExploreMenu
                           </span>
                         </div>
                       </div>
-
                       <span className="right-arrow" />
                     </div>
-
                   </div>
                 </button>
-
                 <p className="text-xs text-slate-400">
                   Unlock a fresh melody on every play.
                 </p>
               </div>
-
               {/* animated notes */}
               <div className="mt-4 flex items-center gap-3 text-xl">
                 <span className="animate-bounce">♪</span>
                 <span className="animate-bounce delay-100">♫</span>
                 <span className="animate-bounce delay-200">♬</span>
-
                 {currentTune && (
                   <div className="text-xs text-sky-300">
                     Now playing: {currentTune}
@@ -2519,7 +2490,6 @@ ${showExploreMenu
     `}
                     >
                       {leaderboardLoading && <p className="text-slate-400">Loading…</p>}
-
                       {!leaderboardLoading && leaderboard.length === 0 && (
                         <p className="text-slate-400">No data yet</p>
                       )}
