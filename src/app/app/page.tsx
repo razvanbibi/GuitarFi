@@ -3456,12 +3456,8 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   Deposit or withdraw your CELO instantly
                 </p>
               </div>
-
-
             </div>
-
             {/* Balance */}
-
             <div
               className="
     rounded-2xl
@@ -3471,13 +3467,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   "
             >
               <div className="flex items-center justify-between">
-
                 {/* User Balance */}
                 <div className="flex-1 text-center">
                   <p className="text-[11px] text-slate-400">
                     Your Balance
                   </p>
-
                   <p className="text-lg font-bold text-white mt-1">
                     {userCeloVaultBalance}
                   </p>
