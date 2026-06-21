@@ -3175,11 +3175,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 </div>
               </div>
             </div>
-
           </section>
 
           {/* Rewards card */}
-
           <section
             className={`
     p-4 space-y-3
@@ -3187,7 +3185,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     ${flashGlow ? "ring-2 ring-sky-400 animate-pulse" : ""}
   `}
           >
-
             <div className="relative group inline-flex">
               <div className="relative inline-flex">
                 <button
@@ -3200,7 +3197,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 >
                   <span className="text-lg"></span> Rewards
                 </button>
-
                 {showRewardsTip && (
                   <div className="absolute z-50 top-full mt-2 w-64 rounded-2xl
                     bg-slate-950/95 backdrop-blur-xl
@@ -3209,25 +3205,18 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     <p className="font-semibold text-sky-300 mb-1">How rewards work</p>
                     <ul className="list-disc pl-4 space-y-1 relative">
                       <li>GM once per day</li>
-
                       <li>Each streak day increases reward (n×1)</li>
-
                       <li
                         className="relative cursor-pointer text-cyan-300"
                         onClick={() => setShowBadgeTooltip(!showBadgeTooltip)}
                       >
                         Badge milestones unlock collectible Guitar NFTs
-
-
                       </li>
                     </ul>
                   </div>
                 )}
               </div>
-
-
             </div>
-
             <div className="space-y-2 text-sm">
               <div
                 className={`
