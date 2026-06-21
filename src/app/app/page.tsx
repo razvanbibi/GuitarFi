@@ -336,21 +336,17 @@ export default function HomePage() {
       showGlobalToast("Please install MetaMask or a compatible wallet.");
       return;
     }
-
     const handleAccountsChanged = (accs: string[]) => {
       setAccount(accs[0] ?? null);
     };
     const handleChainChanged = () => {
       window.location.reload();
     };
-
     eth.request({ method: "eth_accounts" }).then((accs: string[]) => {
       if (accs.length > 0) setAccount(accs[0]);
     });
-
     eth.on("accountsChanged", handleAccountsChanged);
     eth.on("chainChanged", handleChainChanged);
-
     return () => {
       if (!eth.removeListener) return;
       eth.removeListener("accountsChanged", handleAccountsChanged);
@@ -359,44 +355,31 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-
     if (!account || !ethReady) return;
-
     void refreshData();
-
     try {
       const key = getStorageKey(account);
       const stored = window.localStorage.getItem(key);
       setHasCheckedInToday(stored === getTodayId());
     } catch {
-      // ignore
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [account, ethReady]);
 
   useEffect(() => {
     if (!account) return;
-
     loadVaultData();
   }, [account]);
 
-
   useEffect(() => {
-    // initial animation already true
-
     const interval = setInterval(() => {
       setTaglineAnim(false);
-
       // re-trigger animation
       setTimeout(() => {
         setTaglineAnim(true);
       }, 50);
     }, 11000); // 11 seconds
-
     return () => clearInterval(interval);
   }, []);
-
-
 
   useEffect(() => {
     void loadDonationLeaderboard();
@@ -404,18 +387,14 @@ export default function HomePage() {
 
   useEffect(() => {
     if (!showLeaderboard) return;
-
     const close = () => setShowLeaderboard(false);
     window.addEventListener("click", close);
-
     return () => window.removeEventListener("click", close);
   }, [showLeaderboard]);
 
   const IDENTITY_NFT_ABI = [
     "function mint() external",
   ];
-
-
 
   async function handleMintIdentity() {
     try {
