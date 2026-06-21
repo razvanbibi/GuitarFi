@@ -1393,12 +1393,10 @@ export default function HomePage() {
 
   async function handleShare() {
     const APP_URL = "https://guitarfi.vercel.app/";
-
     const text =
       "GuitarFi\n\n" +
       "Building a daily habit on Celo. Onchain music, trade assets, earning GTR.\n\n" +
       "Join the journey 👇";
-
     try {
       if (navigator.share) {
         await navigator.share({
@@ -1410,7 +1408,6 @@ export default function HomePage() {
         await navigator.clipboard.writeText(
           text + "\n" + APP_URL
         );
-
         alert("Link copied! Share it anywhere 🚀");
       }
     } catch (err) {
@@ -1421,20 +1418,15 @@ export default function HomePage() {
   async function handleDevMint() {
     try {
       setDevRunning(true);
-
       const { contract } = await getTokenContractWithSigner();
-
       const tx = await contract.mint(
         devMintAddress,
         ethers.parseUnits(devMintAmount, 18)
       );
-
       await tx.wait();
-
       showGlobalToast("Mint successful ✅");
     } catch (err: any) {
       console.error(err);
-
       showGlobalToast(err.message ?? "Mint failed");
     } finally {
       setDevRunning(false);
