@@ -3722,22 +3722,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
   px-3 py-1
   rounded-full
-
   border border-sky-400/20
-
   bg-sky-500/10
-
   text-sky-300
   text-[10px]
   font-medium
-
   backdrop-blur-xl
 "
               >
                 SWAP
               </div>
             </div>
-
             {/* FROM */}
 
             <div className="space-y-2">
