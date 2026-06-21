@@ -5126,33 +5126,23 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               <div
                 className="
   px-3 py-1
-
   rounded-full
-
   border border-sky-400/20
-
   bg-sky-500/10
-
   text-sky-300
   text-[10px]
   font-medium
-
   backdrop-blur-xl
 "
               >
                 SWAP
               </div>
-
             </div>
-
             {/* FROM */}
-
             <div className="space-y-2">
-
               <label className="text-xs text-slate-400">
                 From
               </label>
-
               <div
                 className="
         flex items-center gap-3
@@ -5162,7 +5152,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
         p-3
       "
               >
-
                 <select
                   value={convertToken}
                   onChange={(e) =>
@@ -5177,12 +5166,10 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   <option value="CELO">
                     CELO
                   </option>
-
                   <option value="USDm">
                     USDm
                   </option>
                 </select>
-
                 <input
                   type="number"
                   min="0"
@@ -5199,17 +5186,9 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           text-white
         "
                 />
-
               </div>
-
             </div>
-
-            {/* ARROW */}
-
-
-
             {/* TO */}
-
             <div
               className="
       rounded-2xl
@@ -5218,23 +5197,17 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
       p-3
     "
             >
-
               <div className="flex items-center justify-between">
-
                 <span className="text-xs text-slate-400">
                   You Receive
                 </span>
-
                 <div className="flex items-center gap-1">
-
                   <span className="text-lg font-semibold text-sky-200">
                     {estimatedGTR.toLocaleString()}
                   </span>
-
                   <span className="text-xs text-sky-300">
                     GTR
                   </span>
-
                 </div>
                 <div className="mt-1 text-[10px] text-slate-500">
                   {convertToken === "USDm"
@@ -5242,46 +5215,32 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                     : "1 CELO = 100 GTR"}
                 </div>
               </div>
-
               <div className="mt-2 text-2xl font-bold text-sky-200">
                 { }
               </div>
-
             </div>
-
             {/* BUTTON */}
-
             <button
               onClick={handleConvert}
               disabled={loading}
               className="
   group
   relative
-
   w-full
   h-16
-
   overflow-hidden
-
   rounded-[22px]
-
   border border-sky-400/20
-
   bg-[linear-gradient(135deg,
   rgba(14,165,233,0.18),
   rgba(59,130,246,0.12),
   rgba(15,23,42,0.95))]
-
   backdrop-blur-xl
-
   transition-all
   duration-500
-
   hover:border-sky-400/50
   hover:shadow-[0_0_40px_rgba(56,189,248,0.20)]
-
   active:scale-[0.98]
-
   disabled:opacity-50
 "
             >
@@ -5290,18 +5249,14 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
     absolute
     inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition
-
     bg-[radial-gradient(circle_at_center,
     rgba(56,189,248,0.22),
     transparent_70%)]
   "
               />
-
               {/* Moving shine */}
               <div
                 className="
