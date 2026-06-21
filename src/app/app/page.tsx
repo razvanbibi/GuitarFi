@@ -3407,7 +3407,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                       color={isDarkMode ? "white" : "black"}
                     />
                   </div>
-
                   <span className="claimText">
                     {activeAction === "claim"
                       ? "Processing..."
@@ -3435,7 +3434,6 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             )}
           </section>
 
-          {/* USDm Vault Quick Actions */}
 
           <section
             className={`
@@ -3445,15 +3443,12 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
           >
             <div className="flex items-center justify-between">
               <div>
-
                 <h2
                   className={`text-sm font-semibold ${isDarkMode ? "text-slate-100" : "text-slate-900"
                     }`}
                 >
-
                   CELO Vault
                 </h2>
-
                 <p
                   className={`text-xs mt-1 ${isDarkMode ? "text-slate-400" : "text-slate-600"
                     }`}
