@@ -620,64 +620,39 @@ export default function HomePage() {
 
   async function handleConvert() {
     try {
-
       if (!account) {
         showGlobalToast("Connect wallet first");
         return;
       }
-
       setLoading(true);
       setActiveAction("convert");
-
       const amount =
         convertToken === "USDm"
           ? ethers.parseUnits(convertAmount, 18)
           : ethers.parseEther(convertAmount);
-
-      // ------------------
-      // USDm -> GTR
-      // ------------------
-
       if (convertToken === "USDm") {
-
         showGlobalToast("Approve USDm...");
-
         const { usdc } =
           await getUSDmContractWithSigner();
-
         const approveTx =
           await usdc.approve(
             OXTXN_STREAK_CONTRACT,
             amount
           );
-
         await approveTx.wait();
-
         showGlobalToast("Converting USDm to GTR...");
-
         const { contract } =
           await getContractWithSigner();
-
         const tx =
           await contract.convertUSDMToGTR(
             amount
           );
-
         await tx.wait();
-
       }
-
-      // ------------------
-      // CELO -> GTR
-      // ------------------
-
       else {
-
         showGlobalToast("Converting CELO to GTR...");
-
         const { contract } =
           await getContractWithSigner();
-
         const tx =
           await contract.convertCELOToGTR({
             value: amount,
@@ -687,19 +662,14 @@ export default function HomePage() {
       showGlobalToast(
         `Successfully converted ${convertAmount} ${convertToken} to GTR 🎸`
       );
-
       await refreshData();
-
     } catch (err: any) {
-
       console.error(err);
-
       showGlobalToast(
         err?.shortMessage ??
         err?.message ??
         "Conversion failed"
       );
-
     } finally {
       setLoading(false);
       setActiveAction(null);
