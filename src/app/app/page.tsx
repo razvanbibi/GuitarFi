@@ -951,13 +951,6 @@ export default function HomePage() {
       showGlobalToast("Claim successful 🎉");
       setRecentlyClaimed(true);
       await refreshData();
-      showToast(
-        {
-          type: "claim",
-          message: `Claimed ${formatToken(claimAmount!)} GTR`,
-        },
-        2500
-      );
     } catch (err: any) {
       console.error(err);
       showGlobalToast(
