@@ -3815,31 +3815,21 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
               className="
   group
   relative
-
   w-full
   h-16
-
   overflow-hidden
-
   rounded-[22px]
-
   border border-sky-400/20
-
   bg-[linear-gradient(135deg,
   rgba(14,165,233,0.18),
   rgba(59,130,246,0.12),
   rgba(15,23,42,0.95))]
-
   backdrop-blur-xl
-
   transition-all
   duration-500
-
   hover:border-sky-400/50
   hover:shadow-[0_0_40px_rgba(56,189,248,0.20)]
-
   active:scale-[0.98]
-
   disabled:opacity-50
 "
             >
@@ -3848,30 +3838,23 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 className="
     absolute
     inset-0
-
     opacity-0
     group-hover:opacity-100
-
     transition
-
     bg-[radial-gradient(circle_at_center,
     rgba(56,189,248,0.22),
     transparent_70%)]
   "
               />
-
               {/* Moving shine */}
               <div
                 className="
     absolute
     inset-0
-
     -translate-x-[160%]
     group-hover:translate-x-[160%]
-
     transition-transform
     duration-[1800ms]
-
     bg-[linear-gradient(
       120deg,
       transparent,
@@ -3880,44 +3863,34 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
     )]
   "
               />
-
               <div className="relative z-10 flex items-center justify-center gap-3">
-
                 <div
                   className="
       flex
       h-9
       w-9
-
       items-center
       justify-center
-
       rounded-full
-
       bg-sky-400/10
       border border-sky-300/20
-
       text-sky-300
     "
                 >
                   ⇄
                 </div>
-
                 <div className="flex flex-col items-start">
                   <span className="text-sm font-semibold text-white">
                     {activeAction === "convert"
                       ? "Converting..."
                       : "Convert to GTR"}
                   </span>
-
                   <span className="text-[10px] text-slate-400">
                     Instant swap
                   </span>
                 </div>
-
               </div>
             </button>
-
           </section>
 
 
