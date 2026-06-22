@@ -292,7 +292,7 @@ body {
       transparent 60%);
 }
 
-/* DIAGONAL FLOW LINES (VISIBLE + NON-UNIFORM) */
+/* DIAGONAL FLOW LINES */
 .basedaily-day-bg::after {
   content: "";
   position: absolute;
