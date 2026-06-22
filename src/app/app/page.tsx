@@ -784,15 +784,7 @@ export default function HomePage() {
 
     }
   }
-  function showToast(next: Toast, durationMs = 2000) {
-    setToast(next);
-    if (next) {
-      setTimeout(() => {
-        setToast(null);
-      }, durationMs);
-    }
-  }
-
+ 
   async function handleCheckIn() {
     try {
       if (!account) {
@@ -821,21 +813,9 @@ export default function HomePage() {
       await new Promise((r) => setTimeout(r, 300));
       const diff = newPending - prevPending;
       if (diff > BigInt(0)) {
-        showToast(
-          {
-            type: "checkin",
-            message: `+${formatToken(diff)} GTR unlocked`,
-          },
-          2000
-        );
+       
       } else {
-        showToast(
-          {
-            type: "checkin",
-            message: "Gm successful 🎉",
-          },
-          2000
-        );
+        
       }
       triggerAvatarRun(badgeProgress);
     } catch (err: any) {
