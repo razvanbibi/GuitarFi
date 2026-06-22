@@ -876,7 +876,7 @@ export default function HomePage() {
     if (!runner) return;
     runner.style.setProperty("--target-x", `${badgeProgress * 100}%`);
     runner.classList.remove("hidden");
-    runner.style.animation = "avatar-run 1.5s ease-out forwards";
+    runner.style.animation = "avatar-run 1s ease-out forwards";
     const originals = document.querySelectorAll("[data-avatar-main]");
     originals.forEach((el) => {
       (el as HTMLElement).style.opacity = "0";
@@ -2546,7 +2546,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                   `${badgeProgress * 100}%`
                 );
                 runner.classList.remove("hidden");
-                runner.style.animation = "avatar-run 1.5s ease-out forwards";
+                runner.style.animation = "avatar-run 1s ease-out forwards";
                 // hide original avatar briefly
                 const originals = document.querySelectorAll("[data-avatar-main]");
                 originals.forEach(el => {
