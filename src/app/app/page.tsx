@@ -1047,13 +1047,6 @@ export default function HomePage() {
       await donateTx.wait();
       showGlobalToast("Donation successful 💙");
       await loadDonationLeaderboard();
-      showToast(
-        {
-          type: "donation",
-          message: `Thank you! Donated ${amountNumber} USDm 💙`,
-        },
-        2500
-      );
     } catch (err: any) {
       console.error(err);
       showGlobalToast(
