@@ -715,6 +715,10 @@ export default function HomePage() {
       name: "You Make Ordinary Days Feel Golden",
       file: "/music/tune-11.mp3",
     },
+    {
+      name: "Stealing Sunsets With You",
+      file: "/music/tune-12.mp3",
+    },
   ];
 
   async function handlePlayTune() {
