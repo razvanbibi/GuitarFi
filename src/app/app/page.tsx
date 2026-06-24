@@ -1973,7 +1973,6 @@ ${showExploreMenu
       left-[180px]
       -top-[65px]
       z-50
-
       flex flex-col gap-2
       animate-[fade-up_0.25s_ease-out]
     "
@@ -2047,7 +2046,6 @@ ${showExploreMenu
                 </div>
               )}
             </div>
-            {/* Guitar Animation */}
             <div className="pointer-events-none absolute inset-0 overflow-visible">
               <div className="absolute right-10 bottom-8 text-5xl opacity-10">
                 🎸
@@ -5236,7 +5234,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
                 <img
                   src="/logo-0x.jpg"
                   alt="0x logo"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain" 
                 />
               </div>
               <div className="flex flex-col">
@@ -5261,11 +5259,11 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
             </div>
             <ul className="text-[11px] text-slate-200 space-y-1 pl-4 list-disc">
               <li>Play <span className="font-semibold">Tune</span> and discover a random soundtrack.</li>
-              <li>Claim your <span className="font-semibold">GTR</span> and Guitar NFTs by clicking the gift button</li>
+              <li>Claim your <span className="font-semibold">GTR</span> and Guitar NFTs by clicking the gift button</li> 
               <li>31 unique Guitar NFTs await. Every NFT marks a moment in your journey.</li>
             </ul>
             <button
-              onClick={closeOnboarding}
+              onClick={closeOnboarding} 
               className="
 group
 relative
@@ -5290,7 +5288,7 @@ active:scale-[0.98]
                 className="
     absolute inset-0
     -translate-x-full
-    group-hover:translate-x-full
+    group-hover:translate-x-full 
     transition-transform
     duration-[1800ms]
     bg-gradient-to-r
@@ -5309,7 +5307,7 @@ active:scale-[0.98]
 
       {/* Toast popup */}
       {toast && (
-        <div className="pointer-events-none fixed top-6 left-0 right-0 flex justify-center z-40">
+        <div className="pointer-events-none fixed top-6 left-0 right-0 flex justify-center z-40"> 
           <div
             className="pointer-events-auto rounded-2xl bg-slate-950/95 border border-sky-400/60 px-4 py-2.5 text-xs text-sky-50 shadow-lg backdrop-blur-lg flex items-center gap-2 animate-[toast-pop_0.28s_ease-out]"
           >
@@ -5328,8 +5326,8 @@ active:scale-[0.98]
                 {toast.message}
               </span>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> 
       )}
 
       {showDevPanel && (
