@@ -703,6 +703,10 @@ export default function HomePage() {
       name: "I Loved You In The Smallest Things",
       file: "/music/tune-8.mp3",
     },
+    {
+      name: "We Were Almost Forever",
+      file: "/music/tune-9.mp3",
+    },
   ];
 
   async function handlePlayTune() {
