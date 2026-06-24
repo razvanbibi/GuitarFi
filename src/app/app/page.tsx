@@ -711,6 +711,10 @@ export default function HomePage() {
       name: "Seen At 2:17 AM",
       file: "/music/tune-10.mp3",
     },
+    {
+      name: "You Make Ordinary Days Feel Golden",
+      file: "/music/tune-11.mp3",
+    },
   ];
 
   async function handlePlayTune() {
