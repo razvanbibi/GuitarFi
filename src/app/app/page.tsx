@@ -155,7 +155,7 @@ export default function HomePage() {
   const [devBurnCount, setDevBurnCount] = useState("500");
   const [devClaimAddress, setDevClaimAddress] = useState("");
   const [devClaimAmount, setDevClaimAmount] = useState("");
-  const [devReverseToken, setDevReverseToken] = useState("");
+  const [devReverseToken, setDevReverseToken] = useState(""); 
   const [devReverseAmount, setDevReverseAmount] = useState("");
   const [devMultiAddresses, setDevMultiAddresses] = useState("");
   const [devMultiAmounts, setDevMultiAmounts] = useState("");
@@ -285,7 +285,7 @@ export default function HomePage() {
     eth.on("chainChanged", handleChainChanged);
     return () => {
       if (!eth.removeListener) return;
-      eth.removeListener("accountsChanged", handleAccountsChanged);
+      eth.removeListener("accountsChanged", handleAccountsChanged); 
       eth.removeListener("chainChanged", handleChainChanged);
     };
   }, []);
@@ -313,7 +313,7 @@ export default function HomePage() {
       setTimeout(() => {
         setTaglineAnim(true);
       }, 50);
-    }, 11000); // 11 seconds
+    }, 11000); // 11 sec
     return () => clearInterval(interval);
   }, []);
 
