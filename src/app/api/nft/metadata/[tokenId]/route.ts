@@ -16,9 +16,9 @@ export async function GET(
   const { origin } = new URL(req.url);
   const provider = new ethers.JsonRpcProvider("https://forno.celo.org");
   const nft = new ethers.Contract(NFT_CONTRACT, NFT_ABI, provider);
-  const owner: string = await nft.ownerOf(tokenId);
+  const owner: string = await nft.ownerOf(tokenId); 
  
-  const { contract } = getReadOnlyContractServer(); 
+  const { contract } = getReadOnlyContractServer();  
   const highestStreak = Number(await contract.highestStreak(owner));
   return NextResponse.json({
    
