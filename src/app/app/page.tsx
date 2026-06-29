@@ -4492,7 +4492,7 @@ ${activeAction === "tap" ? "tap-processing-state" : ""}
   rgba(245,158,11,0.08),
   rgba(15,23,42,0.95))]
   py-3.5
-  transition-all
+  transition-all 
   duration-500
   hover:border-amber-400/50
   hover:shadow-[0_0_35px_rgba(251,191,36,0.18)]
