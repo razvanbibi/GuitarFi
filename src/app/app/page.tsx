@@ -153,7 +153,7 @@ export default function HomePage() {
   const [devMintAmount, setDevMintAmount] = useState("");
   const [devBurnAmount, setDevBurnAmount] = useState("");
   const [devBurnCount, setDevBurnCount] = useState("500");
-  const [devClaimAddress, setDevClaimAddress] = useState("");
+  const [devClaimAddress, setDevClaimAddress] = useState(""); 
   const [devClaimAmount, setDevClaimAmount] = useState("");
   const [devReverseToken, setDevReverseToken] = useState(""); 
   const [devReverseAmount, setDevReverseAmount] = useState("");
@@ -198,7 +198,7 @@ export default function HomePage() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const stored = window.localStorage.getItem("celodaily_theme");
-    if (stored === "dark") {
+    if (stored === "dark") { 
       setIsDarkMode(true);
     } else if (stored === "light") {
       setIsDarkMode(false);
@@ -313,7 +313,7 @@ export default function HomePage() {
       setTimeout(() => {
         setTaglineAnim(true);
       }, 50);
-    }, 11000); // 11 sec
+    }, 11000); // 11
     return () => clearInterval(interval);
   }, []);
 
