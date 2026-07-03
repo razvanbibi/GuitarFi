@@ -1761,7 +1761,7 @@ export default function HomePage() {
         px-3 py-1.5
         rounded-full
         text-[11px] font-semibold
-        bg-sky-500/90
+        bg-sky-500/90 
         text-slate-950
         shadow-md
         hover:bg-sky-400
