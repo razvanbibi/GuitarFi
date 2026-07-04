@@ -1,4 +1,4 @@
-// src/lib/contract.abi.ts
+// src/lib/contract.ab
 export const OXTXN_STREAK_ABI = [
   { 
     type: "function", 
