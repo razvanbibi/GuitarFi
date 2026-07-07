@@ -25,7 +25,7 @@ export async function GET(
     description: "Dynamic GuitarFi Identity NFT",
     image: `${origin}/api/nft/image/${tokenId}`,
     image_url: `${origin}/api/nft/image/${tokenId}`,
-    attributes: [
+    attributes: [ 
       {
         trait_type: "Highest Streak",
         value: highestStreak,
