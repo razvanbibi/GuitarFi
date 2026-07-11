@@ -919,7 +919,7 @@ export default function HomePage() {
         (pendingNFT1 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT2 ?? BigInt(0)) > BigInt(0) ||
         (pendingNFT3 ?? BigInt(0)) > BigInt(0) ||
-        (pendingNFT31 ?? BigInt(0)) > BigInt(0);
+        (pendingNFT31 ?? BigInt(0)) > BigInt(0); 
       if (!hasTokens && !hasBadges) {
         showGlobalToast("Nothing to claim right now.");
         return;
