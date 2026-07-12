@@ -17,7 +17,7 @@ export async function GET(
   try {
     const res = await fetch(url);
     if (!res.ok) return null;
-    const buf = Buffer.from(await res.arrayBuffer());
+    const buf = Buffer.from(await res.arrayBuffer()); 
     const mime = res.headers.get("content-type") || "image/png";
     return `data:${mime};base64,${buf.toString("base64")}`;
   } catch {
