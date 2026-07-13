@@ -45,7 +45,7 @@ const logoBase64 = await fetchAsBase64(
     <!-- glow -->
     <filter id="softGlow">
       <feGaussianBlur stdDeviation="36"/>
-    </filter>
+    </filter> 
     <!-- avatar clip -->
     <clipPath id="avatarClip"> 
       <circle cx="96" cy="72" r="24"/>
