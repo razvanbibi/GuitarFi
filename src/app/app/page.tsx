@@ -132,7 +132,7 @@ export default function HomePage() {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [showBadgeInfo, setShowBadgeInfo] = useState(false);
-  const [flashGlow, setFlashGlow] = useState(false);
+  const [flashGlow, setFlashGlow] = useState(false); 
   const [showRewardsTip, setShowRewardsTip] = useState(false);
   const [showBadgesTip, setShowBadgesTip] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
