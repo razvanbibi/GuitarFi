@@ -120,7 +120,7 @@ export default function HomePage() {
   const [celoVaultBalance, setCeloVaultBalance] =
     useState("0");
   const [globalToast, setGlobalToast] =
-    useState<string | null>(null);
+    useState<string | null>(null); 
   const [userCeloVaultBalance, setUserCeloVaultBalance] =
     useState("0");
   const [donationAmount, setDonationAmount] = useState<string>("1");
