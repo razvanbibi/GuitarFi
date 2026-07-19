@@ -135,7 +135,7 @@ export default function HomePage() {
   const [flashGlow, setFlashGlow] = useState(false); 
   const [showRewardsTip, setShowRewardsTip] = useState(false);
   const [showBadgesTip, setShowBadgesTip] = useState(false);
-  const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const [showLeaderboard, setShowLeaderboard] = useState(false); 
   const [leaderboard, setLeaderboard] = useState<
     { address: string; highestStreak: number; name?: string | null; avatar?: string | null }[]
   >([]);
