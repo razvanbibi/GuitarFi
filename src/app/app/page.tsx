@@ -156,7 +156,7 @@ export default function HomePage() {
   const [devClaimAddress, setDevClaimAddress] = useState(""); 
   const [devClaimAmount, setDevClaimAmount] = useState("");
   const [devReverseToken, setDevReverseToken] = useState(""); 
-  const [devReverseAmount, setDevReverseAmount] = useState("");
+  const [devReverseAmount, setDevReverseAmount] = useState(""); 
   const [devMultiAddresses, setDevMultiAddresses] = useState("");
   const [devMultiAmounts, setDevMultiAmounts] = useState("");
   const [isMiniPay, setIsMiniPay] = useState(false);
