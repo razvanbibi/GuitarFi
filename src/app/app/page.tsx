@@ -167,7 +167,7 @@ export default function HomePage() {
   const [convertToken, setConvertToken] =
     useState("USDm");
   const [convertAmount, setConvertAmount] =
-    useState("1");
+    useState("1"); 
   const [hasIdentity, setHasIdentity] =
     useState(false);
   const [identityURI, setIdentityURI] =
