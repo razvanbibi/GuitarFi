@@ -162,7 +162,7 @@ export default function HomePage() {
   const [isMiniPay, setIsMiniPay] = useState(false);
   const [showBadgeTooltip, setShowBadgeTooltip] = useState(false);
   const [currentTune, setCurrentTune] = useState("");
-  const [tunePlaying, setTunePlaying] = useState(false);
+  const [tunePlaying, setTunePlaying] = useState(false); 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [convertToken, setConvertToken] =
     useState("USDm");
