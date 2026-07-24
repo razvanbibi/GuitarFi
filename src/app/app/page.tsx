@@ -106,7 +106,7 @@ export default function HomePage() {
   const [nftBalances, setNftBalances] =
     useState<Record<number, number>>({});
   const [loadingNFTs, setLoadingNFTs] =
-    useState(false);
+    useState(false); 
   const [showDonate, setShowDonate] = useState(false);
   const [showTradeMenu, setShowTradeMenu] = useState(false);
   const [showExploreMenu, setShowExploreMenu] = useState(false);
@@ -122,7 +122,7 @@ export default function HomePage() {
   const [globalToast, setGlobalToast] =
     useState<string | null>(null); 
   const [userCeloVaultBalance, setUserCeloVaultBalance] =
-    useState("0");
+    useState("0"); 
   const [donationAmount, setDonationAmount] = useState<string>("1");
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
@@ -133,7 +133,7 @@ export default function HomePage() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [showBadgeInfo, setShowBadgeInfo] = useState(false); 
   const [flashGlow, setFlashGlow] = useState(false); 
-  const [showRewardsTip, setShowRewardsTip] = useState(false);
+  const [showRewardsTip, setShowRewardsTip] = useState(false); 
   const [showBadgesTip, setShowBadgesTip] = useState(false);
   const [showLeaderboard, setShowLeaderboard] = useState(false); 
   const [leaderboard, setLeaderboard] = useState<
