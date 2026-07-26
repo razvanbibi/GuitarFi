@@ -126,7 +126,7 @@ export default function HomePage() {
   const [donationAmount, setDonationAmount] = useState<string>("1");
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png");
-  const [ethReady, setEthReady] = useState(false);
+  const [ethReady, setEthReady] = useState(false); 
   const [topSupporters, setTopSupporters] = useState<Supporter[]>([]);
   const [taglineAnim, setTaglineAnim] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
