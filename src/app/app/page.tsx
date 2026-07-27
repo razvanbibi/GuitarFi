@@ -57,7 +57,7 @@ function AvatarBubbleStream({ avatar }: { avatar: string }) {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return ( 
     <div className="pointer-events-none absolute inset-0 overflow-visible">
       {bubbles.map((b) => (
         <img
