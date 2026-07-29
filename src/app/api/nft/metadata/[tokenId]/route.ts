@@ -3,7 +3,7 @@ import { getReadOnlyContractServer } from "@/lib/contract.server";
 
 import { ethers } from "ethers";
 
-const NFT_CONTRACT = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
+const NFT_CONTRACT = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df"; 
 
 const NFT_ABI = [
   "function ownerOf(uint256 tokenId) view returns (address)"
