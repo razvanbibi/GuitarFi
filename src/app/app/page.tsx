@@ -146,7 +146,7 @@ export default function HomePage() {
   const [hasIdentityNFT, setHasIdentityNFT] = useState<boolean | null>(null);
   const [identityTokenId, setIdentityTokenId] = useState<number | null>(null);
   const [showDevPanel, setShowDevPanel] = useState(false);
-  const [devPasswordInput, setDevPasswordInput] = useState("");
+  const [devPasswordInput, setDevPasswordInput] = useState(""); 
   const [devUnlocked, setDevUnlocked] = useState(false);
   const [devRunning, setDevRunning] = useState(false);
   const [devMintAddress, setDevMintAddress] = useState("");
