@@ -309,7 +309,7 @@ export default function HomePage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setTaglineAnim(false);
-      // re-trigger animation
+      // re animation
       setTimeout(() => {
         setTaglineAnim(true);
       }, 50);
