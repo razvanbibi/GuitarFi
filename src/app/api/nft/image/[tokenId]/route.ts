@@ -78,7 +78,7 @@ const logoBase64 = await fetchAsBase64(
   <!-- name -->
   <text x="132" y="66"
     fill="#e5e7eb"
-    font-size="15"
+    font-size="15" 
     font-weight="600">
   </text>
   <!-- fid -->
