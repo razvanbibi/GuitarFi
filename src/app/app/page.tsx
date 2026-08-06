@@ -101,7 +101,7 @@ export default function HomePage() {
   const [toast, setToast] = useState<Toast>(null); 
   const [pendingNFT1, setpendingNFT1] = useState<bigint | null>(null); 
   const [pendingNFT2, setpendingNFT2] = useState<bigint | null>(null);
-  const [pendingNFT3, setpendingNFT3] = useState<bigint | null>(null);
+  const [pendingNFT3, setpendingNFT3] = useState<bigint | null>(null); 
   const [pendingNFT31, setpendingNFT31] = useState<bigint | null>(null);
   const [nftBalances, setNftBalances] =
     useState<Record<number, number>>({});
