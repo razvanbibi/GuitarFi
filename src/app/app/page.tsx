@@ -109,7 +109,7 @@ export default function HomePage() {
     useState(false); 
   const [showDonate, setShowDonate] = useState(false);
   const [showTradeMenu, setShowTradeMenu] = useState(false);
-  const [showExploreMenu, setShowExploreMenu] = useState(false);
+  const [showExploreMenu, setShowExploreMenu] = useState(false); 
   const [showVault, setShowVault] = useState(false);
   const [showCeloVault, setShowCeloVault] = useState(false);
   const [showConvertModal, setShowConvertModal] = useState(false);
