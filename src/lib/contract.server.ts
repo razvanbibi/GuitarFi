@@ -6,7 +6,7 @@ const RPC_URL = "https://forno.celo.org";
 export function getReadOnlyContractServer() {
   const provider = new JsonRpcProvider(RPC_URL); 
   const contract = new Contract(
-    GUITARFI_SMART_CONTRACT,
+    GUITARFI_SMART_CONTRACT, 
     OXTXN_STREAK_ABI, 
     provider
   );
