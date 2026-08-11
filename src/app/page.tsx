@@ -38,7 +38,7 @@ export default function LandingPage() {
           <h1
             className="
               text-5xl
-              md:text-7xl
+              md:text-7xl 
               font-bold
               leading-none
               text-white
