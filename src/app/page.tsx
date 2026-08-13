@@ -40,7 +40,7 @@ export default function LandingPage() {
               text-5xl
               md:text-7xl 
               font-bold
-              leading-none
+              leading-none 
               text-white
               drop-shadow-xl
             "
