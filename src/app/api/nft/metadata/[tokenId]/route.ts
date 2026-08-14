@@ -12,7 +12,7 @@ export async function GET(
   req: Request,
   { params }: { params: { tokenId: string } }
 ) {
-  const tokenId = Number(params.tokenId);
+  const tokenId = Number(params.tokenId); 
   const { origin } = new URL(req.url);
   const provider = new ethers.JsonRpcProvider("https://forno.celo.org");
   const nft = new ethers.Contract(NFT_CONTRACT, NFT_ABI, provider);
