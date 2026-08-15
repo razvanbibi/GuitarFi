@@ -93,7 +93,7 @@ export default function LandingPage() {
   before:inset-0
   before:rounded-2xl 
   before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
-  after:absolute
+  after:absolute 
   after:inset-0 
   after:rounded-2xl
   after:bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.22)_50%,transparent_80%)]
