@@ -169,7 +169,7 @@ export default function HomePage() {
   const [convertAmount, setConvertAmount] =
     useState("1"); 
   const [hasIdentity, setHasIdentity] =
-    useState(false);
+    useState(false); 
   const [identityURI, setIdentityURI] =
     useState("");
   const [identityImage, setIdentityImage] =
