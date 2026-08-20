@@ -171,7 +171,7 @@ export default function HomePage() {
   const [hasIdentity, setHasIdentity] =
     useState(false); 
   const [identityURI, setIdentityURI] =
-    useState("");
+    useState(""); 
   const [identityImage, setIdentityImage] =
     useState("");
   const [identityMetadata, setIdentityMetadata] =
