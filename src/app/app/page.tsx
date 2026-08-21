@@ -114,7 +114,7 @@ export default function HomePage() {
   const [showCeloVault, setShowCeloVault] = useState(false);
   const [showConvertModal, setShowConvertModal] = useState(false);
   const [showCollectionsModal, setShowCollectionsModal] = useState(false); 
-  const [vaultAmount, setVaultAmount] = useState("1");
+  const [vaultAmount, setVaultAmount] = useState("1"); 
   const [vaultBalance, setVaultBalance] = useState("0"); 
   const [userVaultBalance, setUserVaultBalance] = useState("0");
   const [celoVaultBalance, setCeloVaultBalance] =
