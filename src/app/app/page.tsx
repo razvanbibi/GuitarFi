@@ -173,7 +173,7 @@ export default function HomePage() {
   const [identityURI, setIdentityURI] =
     useState(""); 
   const [identityImage, setIdentityImage] =
-    useState("");
+    useState(""); 
   const [identityMetadata, setIdentityMetadata] =
     useState<any>(null);
   const [showIdentityRequired, setShowIdentityRequired] = useState(false);
