@@ -93,7 +93,7 @@ export default function HomePage() {
     "deposit" | "withdraw" | null
   >(null);
   const [activeAction, setActiveAction] = useState<string | null>(null);
-  const [status, setStatus] = useState<Status>(null);
+  const [status, setStatus] = useState<Status>(null); 
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false); 
   const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
