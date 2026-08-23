@@ -39,7 +39,7 @@ export default function LandingPage() {
             className="
               text-5xl
               md:text-7xl 
-              font-bold
+              font-bold 
               leading-none 
               text-white
               drop-shadow-xl
