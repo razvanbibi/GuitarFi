@@ -5,7 +5,7 @@ import {
   getContractWithSigner,
   getReadOnlyContract,
   formatToken,
-  getTokenContractWithSigner,
+  getTokenContractWithSigner, 
   getVaultContractWithSigner,
   getVaultReadOnlyContract,
   GUITARFI_SMART_CONTRACT,
