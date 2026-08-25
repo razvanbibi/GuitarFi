@@ -180,7 +180,7 @@ export default function HomePage() {
   const [devWithdrawUSDM, setDevWithdrawUSDM] = useState("");
   const [devWithdrawCELO, setDevWithdrawCELO] = useState("");
   const [expandedCollection, setExpandedCollection] =
-    useState(false);
+    useState(false); 
 
   useEffect(() => {
     if (typeof window === "undefined") return;
