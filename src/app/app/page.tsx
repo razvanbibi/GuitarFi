@@ -94,7 +94,7 @@ export default function HomePage() {
   >(null);
   const [activeAction, setActiveAction] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>(null); 
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false); 
   const [aboutOpen, setAboutOpen] = useState(false); 
   const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
   const [recentlyClaimed, setRecentlyClaimed] = useState(false);
