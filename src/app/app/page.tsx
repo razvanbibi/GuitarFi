@@ -75,7 +75,7 @@ function AvatarBubbleStream({ avatar }: { avatar: string }) {
             setBubbles((prev) => prev.filter((x) => x.id !== b.id))
           }
         />
-      ))}
+      ))} 
     </div>
   );
 }
