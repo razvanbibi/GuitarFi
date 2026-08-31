@@ -90,7 +90,7 @@ export default function LandingPage() {
   hover:border-white/30
   hover:shadow-[0_15px_45px_rgba(0,0,0,0.55),0_0_25px_rgba(255,255,255,0.12)]
   before:absolute
-  before:inset-0
+  before:inset-0 
   before:rounded-2xl 
   before:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.35),transparent_45%)]
   after:absolute 
