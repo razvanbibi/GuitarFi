@@ -128,7 +128,7 @@ export default function HomePage() {
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png"); 
   const [ethReady, setEthReady] = useState(false); 
   const [topSupporters, setTopSupporters] = useState<Supporter[]>([]); 
-  const [taglineAnim, setTaglineAnim] = useState(true);
+  const [taglineAnim, setTaglineAnim] = useState(true); 
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true); 
   const [showBadgeInfo, setShowBadgeInfo] = useState(false); 
