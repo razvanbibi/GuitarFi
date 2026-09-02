@@ -116,7 +116,7 @@ export default function HomePage() {
   const [showCollectionsModal, setShowCollectionsModal] = useState(false); 
   const [vaultAmount, setVaultAmount] = useState("1"); 
   const [vaultBalance, setVaultBalance] = useState("0"); 
-  const [userVaultBalance, setUserVaultBalance] = useState("0");
+  const [userVaultBalance, setUserVaultBalance] = useState("0"); 
   const [celoVaultBalance, setCeloVaultBalance] =
     useState("0"); 
   const [globalToast, setGlobalToast] =
