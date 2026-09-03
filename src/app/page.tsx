@@ -98,7 +98,7 @@ export default function LandingPage() {
   after:rounded-2xl 
   after:bg-[linear-gradient(120deg,transparent_20%,rgba(255,255,255,0.22)_50%,transparent_80%)]
   after:translate-x-[-160%]
-  hover:after:translate-x-[160%]
+  hover:after:translate-x-[160%] 
   after:transition-transform
   after:duration-[1800ms]
   [&>span]:relative
