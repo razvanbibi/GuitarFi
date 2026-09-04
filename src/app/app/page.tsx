@@ -122,7 +122,7 @@ export default function HomePage() {
   const [globalToast, setGlobalToast] =
     useState<string | null>(null); 
   const [userCeloVaultBalance, setUserCeloVaultBalance] =
-    useState("0");  
+    useState("0");
   const [donationAmount, setDonationAmount] = useState<string>("1");
   const [profileName, setProfileName] = useState<string>("");
   const [profileAvatar, setProfileAvatar] = useState<string>("/avatar.png"); 
