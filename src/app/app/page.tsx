@@ -43,7 +43,7 @@ function AvatarBubbleStream({ avatar }: { avatar: string }) {
     { id: number; left: number; size: number }[]
   >([]);
 
-  useEffect(() => {
+  useEffect(() => { 
     const interval = setInterval(() => {
       setBubbles((prev) => [
         ...prev,
