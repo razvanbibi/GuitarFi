@@ -96,7 +96,7 @@ export default function HomePage() {
   const [status, setStatus] = useState<Status>(null); 
   const [drawerOpen, setDrawerOpen] = useState(false); 
   const [aboutOpen, setAboutOpen] = useState(false); 
-  const [hasCheckedInToday, setHasCheckedInToday] = useState(false);
+  const [hasCheckedInToday, setHasCheckedInToday] = useState(false); 
   const [recentlyClaimed, setRecentlyClaimed] = useState(false); 
   const [toast, setToast] = useState<Toast>(null); 
   const [pendingNFT1, setpendingNFT1] = useState<bigint | null>(null); 
