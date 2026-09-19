@@ -138,7 +138,7 @@ export default function HomePage() {
   const [showLeaderboard, setShowLeaderboard] = useState(false); 
   const [leaderboard, setLeaderboard] = useState<
     { address: string; highestStreak: number; name?: string | null; avatar?: string | null }[]
-  >([]);
+  >([]); 
   const [leaderboardLoading, setLeaderboardLoading] = useState(false);
   const [showMintIdentity, setShowMintIdentity] = useState(false);
   const IDENTITY_NFT_ADDRESS = "0xa2bd91092C7b0817C8D7fC0C5a6a6059248193Df";
