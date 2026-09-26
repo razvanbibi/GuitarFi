@@ -87,7 +87,7 @@ export default function HomePage() {
   const [pendingRewards, setPendingRewards] = useState("0");
   const [pendingTokens, setPendingTokens] = useState<bigint | null>(null);
   const [paused, setPaused] = useState<boolean | null>(null);
-  const [totalEarned, setTotalEarned] = useState<bigint | null>(null);
+  const [totalEarned, setTotalEarned] = useState<bigint | null>(null); 
   const [loading, setLoading] = useState(false);
   const [vaultAction, setVaultAction] = useState<
     "deposit" | "withdraw" | null
