@@ -155,7 +155,7 @@ export default function HomePage() {
   const [devBurnCount, setDevBurnCount] = useState("500"); 
   const [devClaimAddress, setDevClaimAddress] = useState(""); 
   const [devClaimAmount, setDevClaimAmount] = useState("");
-  const [devReverseToken, setDevReverseToken] = useState(""); 
+  const [devReverseToken, setDevReverseToken] = useState("");
   const [devReverseAmount, setDevReverseAmount] = useState("");
   const [devMultiAddresses, setDevMultiAddresses] = useState("");
   const [devMultiAmounts, setDevMultiAmounts] = useState("");
